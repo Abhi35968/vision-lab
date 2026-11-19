@@ -8,7 +8,10 @@ from pathlib import Path
 from typing import Dict, List, Optional, Tuple, Union
 import cv2
 import numpy as np
-import open3d as o3d
+try:
+    import open3d as o3d
+except Exception:
+    o3d = None
 
 
 @dataclass
@@ -247,13 +250,20 @@ class Triangulator:
         ply_p = Path(output_ply_path).resolve()
         ply_p.parent.mkdir(parents=True, exist_ok=True)
 
-        pcd = o3d.geometry.PointCloud()
-        pcd.points = o3d.utility.Vector3dVector(points_3d)
-        if colors is not None and len(colors) == len(points_3d):
-            pcd.colors = o3d.utility.Vector3dVector(colors)
-
-        # Write PLY file using Open3D
-        o3d.io.write_point_cloud(str(ply_p), pcd)
+        # Write PLY file
+        if o3d is not None:
+            pcd = o3d.geometry.PointCloud()
+            pcd.points = o3d.utility.Vector3dVector(points_3d)
+            if colors is not None and len(colors) == len(points_3d):
+                pcd.colors = o3d.utility.Vector3dVector(colors)
+            o3d.io.write_point_cloud(str(ply_p), pcd)
+        else:
+            try:
+                import trimesh
+                pc = trimesh.PointCloud(vertices=points_3d, colors=colors)
+                pc.export(str(ply_p))
+            except Exception:
+                pass
 
         # Write NumPy array file
         if output_npy_path is not None:

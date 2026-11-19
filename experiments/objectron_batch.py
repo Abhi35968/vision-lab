@@ -27,7 +27,10 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
-import open3d as o3d
+try:
+    import open3d as o3d
+except Exception:
+    o3d = None
 import pandas as pd
 import pycolmap
 
@@ -376,9 +379,17 @@ def process(video, model, engine, category=None, out_root=None, name=None, run_o
     obj = xyz[obj_all]
     corners = None
     if len(obj) >= 4:
-        pc = o3d.geometry.PointCloud()
-        pc.points = o3d.utility.Vector3dVector(obj); pc.colors = o3d.utility.Vector3dVector(rgb[obj_all])
-        o3d.io.write_point_cloud(str(vdir / "object_points.ply"), pc, write_ascii=True)
+        if o3d is not None:
+            pc = o3d.geometry.PointCloud()
+            pc.points = o3d.utility.Vector3dVector(obj); pc.colors = o3d.utility.Vector3dVector(rgb[obj_all])
+            o3d.io.write_point_cloud(str(vdir / "object_points.ply"), pc, write_ascii=True)
+        else:
+            try:
+                import trimesh
+                pc = trimesh.PointCloud(vertices=obj, colors=rgb[obj_all])
+                pc.export(str(vdir / "object_points.ply"))
+            except Exception:
+                pass
         centre, R, extent, corners = obb_from_points(obj, up_vector=up)
         save_json({"units": "arbitrary COLMAP units", "num_points": int(len(obj)), "center": centre,
                    "rotation_matrix_columns_are_axes": R, "extent": extent, "corners": corners},

@@ -238,7 +238,7 @@ def render_feature_matching_interactive(kfs, focal_px=1300, key_prefix="fm"):
     i = c[0].slider("Keyframe A", 0, len(kfs) - 2, 0, key=f"{key_prefix}_i")
     max_gap = min(15, len(kfs) - 1 - i)
     gap = c[1].slider("Frame Step", 1, max(1, max_gap), min(2, max_gap), key=f"{key_prefix}_gap")
-    nfeat = c[2].select_slider("Max Features", [500, 1000, 2000, 4000], 1500, key=f"{key_prefix}_n")
+    nfeat = c[2].select_slider("Max Features", [500, 1000, 2000, 4000], 1000, key=f"{key_prefix}_n")
     det_choice = c[3].selectbox("Detector", ["Both (SIFT & ORB)", "SIFT", "ORB"], index=0, key=f"{key_prefix}_det")
     j = min(i + gap, len(kfs) - 1)
 
@@ -526,7 +526,7 @@ def render_walkthrough(rdir: Path):
                     scene=dict(aspectmode="data", xaxis=dict(visible=False), yaxis=dict(visible=False), zaxis=dict(visible=False)),
                     height=520, margin=dict(l=0, r=0, t=30, b=0),
                 )
-                st.plotly_chart(fig_dense, use_container_width=True)
+                st.plotly_chart(fig_dense, width="stretch")
             with d_tab2:
                 if mesh_ply.exists():
                     import trimesh
@@ -553,7 +553,7 @@ def render_walkthrough(rdir: Path):
                         scene=dict(aspectmode="data", xaxis=dict(visible=False), yaxis=dict(visible=False), zaxis=dict(visible=False)),
                         height=520, margin=dict(l=0, r=0, t=30, b=0),
                     )
-                    st.plotly_chart(fig_m, use_container_width=True)
+                    st.plotly_chart(fig_m, width="stretch")
 
     with t5:
         if not m.get("pointnet_prediction"):
@@ -914,19 +914,19 @@ def page_dev_video():
         with col_d1:
             audit_fig = OUT / "final_audit" / "comparison_old_vs_new.png"
             if audit_fig.exists():
-                st.image(str(audit_fig), caption="Forensic Comparison: Corrupted 14.5m Baseline vs. Repaired 2.35m Geometry", use_container_width=True)
+                st.image(str(audit_fig), caption="Forensic Comparison: Corrupted 14.5m Baseline vs. Repaired 2.35m Geometry", width="stretch")
             else:
                 comp_fig = OUT / "experiments" / "comprehensive_evaluation" / "density_and_classification_comparison.png"
                 if comp_fig.exists():
-                    st.image(str(comp_fig), caption="Point Density & Multimodal Decision Fusion Benchmark", use_container_width=True)
+                    st.image(str(comp_fig), caption="Point Density & Multimodal Decision Fusion Benchmark", width="stretch")
         with col_d2:
             repaired_fig = OUT / "final_audit" / "repaired_pipeline_views.png"
             if repaired_fig.exists():
-                st.image(str(repaired_fig), caption="Repaired Pipeline Orthographic Projections (Front, Side, Top)", use_container_width=True)
+                st.image(str(repaired_fig), caption="Repaired Pipeline Orthographic Projections (Front, Side, Top)", width="stretch")
             else:
                 robust_fig = OUT / "experiments" / "comprehensive_evaluation" / "pointnet_noise_and_outlier_sensitivity.png"
                 if robust_fig.exists():
-                    st.image(str(robust_fig), caption="PointNet Noise & Outlier Sensitivity Degradation", use_container_width=True)
+                    st.image(str(robust_fig), caption="PointNet Noise & Outlier Sensitivity Degradation", width="stretch")
 
         class_json = OUT / "classification_3d" / "classification_result.json"
         if class_json.exists():
@@ -974,7 +974,7 @@ def page_dev_video():
                     height=560,
                     margin=dict(l=0, r=0, t=30, b=0),
                 )
-                st.plotly_chart(fig_dense, use_container_width=True)
+                st.plotly_chart(fig_dense, width="stretch")
                 st.caption("Drag to rotate, scroll to zoom. Solid, gap-free dense object surface reconstructed via multi-view monocular inverse depth unprojection.")
             else:
                 st.warning(f"Point cloud file not found at {dense_ply_path}")
@@ -1006,7 +1006,7 @@ def page_dev_video():
                     height=560,
                     margin=dict(l=0, r=0, t=30, b=0),
                 )
-                st.plotly_chart(fig_m, use_container_width=True)
+                st.plotly_chart(fig_m, width="stretch")
                 st.caption("Watertight screened Poisson reconstruction fitted to oriented dense surface normals.")
             else:
                 st.warning(f"Poisson mesh not found at {poisson_ply}")
