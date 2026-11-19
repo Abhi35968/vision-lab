@@ -1643,16 +1643,26 @@ def run_sfm_colmap(args):
         t0 = time.time()
         reader = pycolmap.ImageReaderOptions()
         reader.camera_model = "SIMPLE_RADIAL"
+        n_threads = min(4, os.cpu_count() or 2)
+        extract_opts = pycolmap.FeatureExtractionOptions()
+        extract_opts.num_threads = n_threads
+        extract_opts.max_image_size = 1600
+        match_opts = pycolmap.FeatureMatchingOptions()
+        match_opts.num_threads = n_threads
+        map_opts = pycolmap.IncrementalPipelineOptions()
+        map_opts.num_threads = n_threads
+
         pycolmap.extract_features(db, keyframes_dir, camera_mode=pycolmap.CameraMode.SINGLE,
-                                  reader_options=reader, device=pycolmap.Device.cpu)
+                                  reader_options=reader, extraction_options=extract_opts,
+                                  device=pycolmap.Device.cpu)
         t_feat = round(time.time() - t0, 1)
 
         t0 = time.time()
-        pycolmap.match_exhaustive(db, device=pycolmap.Device.cpu)
+        pycolmap.match_exhaustive(db, matching_options=match_opts, device=pycolmap.Device.cpu)
         t_match = round(time.time() - t0, 1)
 
         t0 = time.time()
-        maps = pycolmap.incremental_mapping(db, keyframes_dir, sparse)
+        maps = pycolmap.incremental_mapping(db, keyframes_dir, sparse, options=map_opts)
         t_map = round(time.time() - t0, 1)
 
         if not maps:

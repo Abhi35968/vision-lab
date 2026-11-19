@@ -123,10 +123,19 @@ def run_colmap(kf_dir, work, calibration=None):
     else:
         reader.camera_model = "SIMPLE_RADIAL"
     t0 = time.time()
+    n_threads = min(4, os.cpu_count() or 2)
+    extract_opts = pycolmap.FeatureExtractionOptions()
+    extract_opts.num_threads = n_threads
+    extract_opts.max_image_size = 1600
+    match_opts = pycolmap.FeatureMatchingOptions()
+    match_opts.num_threads = n_threads
+    map_opts = pycolmap.IncrementalPipelineOptions()
+    map_opts.num_threads = n_threads
+
     pycolmap.extract_features(db, kf_dir, camera_mode=pycolmap.CameraMode.SINGLE, reader_options=reader,
-                              device=pycolmap.Device.cpu)
-    pycolmap.match_exhaustive(db, device=pycolmap.Device.cpu)
-    maps = pycolmap.incremental_mapping(db, kf_dir, work / "sparse")
+                              extraction_options=extract_opts, device=pycolmap.Device.cpu)
+    pycolmap.match_exhaustive(db, matching_options=match_opts, device=pycolmap.Device.cpu)
+    maps = pycolmap.incremental_mapping(db, kf_dir, work / "sparse", options=map_opts)
     elapsed = time.time() - t0
     db.unlink(missing_ok=True)
     if not maps:
