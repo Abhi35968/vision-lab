@@ -1,0 +1,76 @@
+{
+  "video": "07_shoe",
+  "category": "shoe",
+  "total_frames": 266,
+  "fps": 30.0,
+  "duration_s": 8.9,
+  "width": 960,
+  "height": 1280,
+  "keyframes": 40,
+  "mean_sharpness": 46.2782433071564,
+  "colmap_time_s": 203.4,
+  "colmap_registered": 40,
+  "colmap_points": 33671,
+  "colmap_reproj_mean_px": 0.5778001538700486,
+  "colmap_track_length": 7.46636571530397,
+  "colmap_focal_px": 1056.2713262576342,
+  "own_registered": 40,
+  "own_points": 12105,
+  "own_reproj_median_px": 0.967,
+  "own_time_s": 39.4,
+  "frames_with_target": 17,
+  "detection_rate_pct": 42.5,
+  "category_in_coco": false,
+  "exact_label_rate_pct": NaN,
+  "label_counts": {
+    "handbag": 7,
+    "vase": 4,
+    "cell phone": 4,
+    "backpack": 2
+  },
+  "selection_modes": {
+    "most central instance": 17
+  },
+  "mean_confidence": 0.2842133553589092,
+  "views_with_mask_and_pose": 17,
+  "object_points": 344,
+  "object_points_pct_of_scene": 1.0216506786255235,
+  "held_out_views": 9,
+  "object_points_selection": 268,
+  "held_out_in_mask_pct": 99.83416252072968,
+  "held_out_in_mask_min_pct": 99.6268656716418,
+  "baseline_in_mask_pct": 10.313853992390417,
+  "obb_extent": [
+    2.4912982690028986,
+    1.828853105810309,
+    0.9243022388426254
+  ],
+  "mask_height_covered_pct": 77.45710197083292,
+  "pointnet_prediction": "stairs",
+  "pointnet_confidence": 0.7931,
+  "pointnet_top3": [
+    [
+      "stairs",
+      0.7931
+    ],
+    [
+      "monitor",
+      0.0928
+    ],
+    [
+      "laptop",
+      0.0432
+    ]
+  ],
+  "category_in_modelnet": false,
+  "pointnet_correct": null,
+  "status": "ok",
+  "total_time_s": 257.6,
+  "dense_points": 103701,
+  "dense_multiplier": 3.08,
+  "mesh_triangles": 387928,
+  "mesh_vertices": 194841,
+  "consensus_prediction": "plant",
+  "consensus_confidence": 0.35938414713941697,
+  "consensus_status": "UNCERTAIN_REJECTED"
+}

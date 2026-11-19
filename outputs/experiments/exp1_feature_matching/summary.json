@@ -1,0 +1,56 @@
+{
+  "pair_level_mean": [
+    {
+      "detector": "SIFT",
+      "keypoints": 702.3695652173913,
+      "ratio_test_matches": 219.19565217391303,
+      "ransac_inliers": 155.02173913043478,
+      "inlier_ratio": 0.6806226398627636,
+      "extract_ms": 276.52639239054025,
+      "match_ms": 24.665586956278116,
+      "ransac_ms": 22.279326087458607
+    },
+    {
+      "detector": "ORB",
+      "keypoints": 1621.7173913043478,
+      "ratio_test_matches": 485.5217391304348,
+      "ransac_inliers": 350.9782608695652,
+      "inlier_ratio": 0.7126363868237372,
+      "extract_ms": 33.96116956513573,
+      "match_ms": 17.567978261744745,
+      "ransac_ms": 17.092954347785764
+    }
+  ],
+  "pipeline_level": [
+    {
+      "detector": "SIFT",
+      "runs": 5,
+      "registered_cameras": 13.0,
+      "registered_min": 12,
+      "registered_max": 21,
+      "points_3d": 611.0,
+      "points_min": 539,
+      "points_max": 1350,
+      "mean_track_length": 3.9,
+      "reproj_median_px": 0.916,
+      "reproj_mean_px": 2.909,
+      "runtime_s": 25.5
+    },
+    {
+      "detector": "ORB",
+      "runs": 5,
+      "registered_cameras": 13.0,
+      "registered_min": 13,
+      "registered_max": 13,
+      "points_3d": 741.0,
+      "points_min": 741,
+      "points_max": 741,
+      "mean_track_length": 4.57,
+      "reproj_median_px": 1.01,
+      "reproj_mean_px": 3.736,
+      "runtime_s": 16.5
+    }
+  ],
+  "n_features": 2000,
+  "num_pairs": 46
+}

@@ -1,0 +1,100 @@
+# ==============================================================================
+# Pipeline Configuration: 3D Scene and Object Reconstruction (SfM + DL)
+# ==============================================================================
+
+# Video Ingestion and Keyframe Preprocessing
+preprocessing:
+  video_path: "data/raw_videos/synthetic_sample_video.mp4"
+  output_frames_dir: "data/extracted_frames"
+  frame_step: 4                 # Subsample: sample 1 out of every N frames
+  blur_threshold: 100.0         # Variance of Laplacian threshold (higher = sharper required)
+  min_brightness: 30.0          # Minimum mean grayscale intensity (underexposure guard)
+  max_brightness: 230.0         # Maximum mean grayscale intensity (overexposure guard)
+  min_contrast: 15.0            # Minimum standard deviation of grayscale intensities
+  min_time_delta_seconds: 0.15  # Minimum temporal delta between consecutive keyframes
+  max_time_gap_seconds: 2.0     # Maximum allowable gap before forcing keyframe consideration
+  ssim_threshold: 0.92          # Inter-frame SSIM threshold to drop static redundant frames
+  max_image_dimension: 1920     # Resize largest image dimension (width/height) to this cap
+  export_format: "png"
+
+# Camera Calibration Settings
+calibration:
+  intrinsics_file: "config/camera_intrinsics.json"
+  auto_estimate_if_uncalibrated: true
+  assumed_horizontal_fov_degrees: 65.0   # Standard smartphone wide camera FoV assumption
+
+# Feature Detection & Correspondence Matching
+features:
+  detector: "SIFT"              # Options: "SIFT", "ORB"
+  sift:
+    n_features: 4000
+    contrast_threshold: 0.04
+    edge_threshold: 10.0
+    sigma: 1.6
+  orb:
+    n_features: 3000
+    scale_factor: 1.2
+    n_levels: 8
+  matcher: "FLANN"              # Options: "FLANN", "BF"
+  lowe_ratio: 0.75              # Lowe's ratio test threshold
+  ransac_reproj_threshold: 2.0  # RANSAC reprojection error threshold in pixels
+
+# Structure from Motion (SfM)
+sfm:
+  engine: "COLMAP"              # Primary production engine: "COLMAP", baseline: "OPENCV_2VIEW"
+  colmap:
+    camera_model: "PINHOLE"     # Or "OPENCV" if modeling radial distortion
+    single_camera: true         # Shared camera intrinsics across all frames
+    ba_global_function_tolerance: 1.0e-5
+    min_triangulation_angle_deg: 2.0
+  export_ply_path: "outputs/sfm/scene_sparse.ply"
+  camera_poses_path: "outputs/sfm/camera_poses.json"
+  visibility_tracks_path: "outputs/sfm/visibility_tracks.json"
+
+# 2D Semantic Perception (YOLO)
+perception:
+  model_name: "yolov8m.pt"      # Pretrained weights identifier (COCO pretrained)
+  confidence_threshold: 0.45
+  iou_threshold: 0.50
+  target_classes:
+    - "chair"
+    - "table"
+    - "laptop"
+    - "monitor"
+    - "bottle"
+  tracker_type: "bytetrack"
+  tracked_output_path: "outputs/detections_2d/tracked_objects.json"
+
+# 2D-to-3D Geometric Association & Object Cloud Extraction
+association:
+  min_view_observations: 3      # Minimum number of views where a 3D point must project into 2D bbox
+  bbox_expansion_factor: 0.05   # Slight bounding box margin padding (5%)
+  statistical_outlier_removal:
+    enabled: true
+    nb_neighbors: 20
+    std_ratio: 1.5
+  dbscan_clustering:
+    enabled: true
+    eps: 0.12                   # Neighborhood radius (in reconstruction units)
+    min_samples: 10
+  export_object_clouds_dir: "outputs/objects_3d"
+
+# 3D Deep Learning (PointNet Classification)
+classification_3d:
+  model_weights: "models/weights/pointnet_modelnet40.pth"
+  num_points: 1024              # Standard PointNet point sampling requirement
+  sampling_method: "FPS"        # "FPS" (Farthest Point Sampling) or "RANDOM"
+  normalize_unit_sphere: true   # Zero-mean center and scale coordinates to max radius 1.0
+  classes_file: "config/pointnet_classes.json"
+  batch_size: 1
+
+# 3D Scene Visualization
+visualization:
+  open3d_window_name: "3D Scene & Object Reconstruction Visualizer"
+  window_width: 1280
+  window_height: 720
+  point_size: 2.0
+  show_camera_frustums: true
+  frustum_scale: 0.15
+  show_bounding_boxes: true
+

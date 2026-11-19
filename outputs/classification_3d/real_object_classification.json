@@ -1,0 +1,122 @@
+{
+  "sparse_sfm_validated_29": {
+    "description": "29 validated SfM points (measured)",
+    "num_points": 29,
+    "predicted_class": "person",
+    "confidence": 0.4044,
+    "top5": [
+      {
+        "class_id": 24,
+        "class_name": "person",
+        "confidence": 0.4044,
+        "log_prob": -0.9054
+      },
+      {
+        "class_id": 31,
+        "class_name": "stairs",
+        "confidence": 0.3123,
+        "log_prob": -1.1638
+      },
+      {
+        "class_id": 19,
+        "class_name": "lamp",
+        "confidence": 0.1019,
+        "log_prob": -2.2842
+      },
+      {
+        "class_id": 26,
+        "class_name": "plant",
+        "confidence": 0.0734,
+        "log_prob": -2.6122
+      },
+      {
+        "class_id": 0,
+        "class_name": "airplane",
+        "confidence": 0.0507,
+        "log_prob": -2.9818
+      }
+    ],
+    "bottle_in_top5_confidence": null,
+    "correct": false
+  },
+  "sparse_sfm_candidates_47": {
+    "description": "All 47 candidate SfM points (measured)",
+    "num_points": 47,
+    "predicted_class": "lamp",
+    "confidence": 0.8414,
+    "top5": [
+      {
+        "class_id": 19,
+        "class_name": "lamp",
+        "confidence": 0.8414,
+        "log_prob": -0.1727
+      },
+      {
+        "class_id": 24,
+        "class_name": "person",
+        "confidence": 0.0727,
+        "log_prob": -2.6215
+      },
+      {
+        "class_id": 26,
+        "class_name": "plant",
+        "confidence": 0.0483,
+        "log_prob": -3.0309
+      },
+      {
+        "class_id": 32,
+        "class_name": "stool",
+        "confidence": 0.0085,
+        "log_prob": -4.7714
+      },
+      {
+        "class_id": 9,
+        "class_name": "cone",
+        "confidence": 0.0081,
+        "log_prob": -4.8215
+      }
+    ],
+    "bottle_in_top5_confidence": null,
+    "correct": false
+  },
+  "fitted_mesh_surface_2048": {
+    "description": "2,048 points sampled on the fitted bottle mesh (model, not measured)",
+    "num_points": 2048,
+    "predicted_class": "bottle",
+    "confidence": 0.996,
+    "top5": [
+      {
+        "class_id": 5,
+        "class_name": "bottle",
+        "confidence": 0.996,
+        "log_prob": -0.004
+      },
+      {
+        "class_id": 37,
+        "class_name": "vase",
+        "confidence": 0.0038,
+        "log_prob": -5.5826
+      },
+      {
+        "class_id": 38,
+        "class_name": "wardrobe",
+        "confidence": 0.0001,
+        "log_prob": -9.2263
+      },
+      {
+        "class_id": 15,
+        "class_name": "flower_pot",
+        "confidence": 0.0001,
+        "log_prob": -9.5572
+      },
+      {
+        "class_id": 9,
+        "class_name": "cone",
+        "confidence": 0.0,
+        "log_prob": -10.3815
+      }
+    ],
+    "bottle_in_top5_confidence": 0.996,
+    "correct": true
+  }
+}

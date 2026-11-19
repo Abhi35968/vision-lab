@@ -1,0 +1,91 @@
+{
+  "predicted_class": "unknown",
+  "predicted_confidence": 0.0,
+  "is_uncertain": true,
+  "status": "UNCERTAIN_REJECTED",
+  "modality_weights": {
+    "weight_2d": 0.5,
+    "weight_3d": 0.5
+  },
+  "yolo_summary": {
+    "total_valid_frames": 39,
+    "class_counts": {
+      "toaster": 2,
+      "suitcase": 13,
+      "cell phone": 24
+    },
+    "dominant_yolo_class": "cell phone",
+    "mapped_candidates": [
+      "toaster",
+      "suitcase",
+      "radio"
+    ]
+  },
+  "pointnet_summary": {
+    "raw_unaligned_class": "plant",
+    "raw_unaligned_confidence": 0.44521042704582214,
+    "canonical_upright_class": "plant",
+    "canonical_upright_confidence": 0.7449241280555725,
+    "input_points": 53181,
+    "domain_gap": "Evaluated on 53181 input points (TTA\u00d710, resampled to 1024). Dense input point cloud provides strong structural coverage."
+  },
+  "top_candidates": [
+    {
+      "class_name": "plant",
+      "fused_confidence": 0.3861,
+      "yolo_confidence": 0.0,
+      "pointnet_confidence": 0.7449,
+      "support_modality": "3D_POINTNET"
+    },
+    {
+      "class_name": "flower_pot",
+      "fused_confidence": 0.1559,
+      "yolo_confidence": 0.0,
+      "pointnet_confidence": 0.1214,
+      "support_modality": "3D_POINTNET"
+    },
+    {
+      "class_name": "monitor",
+      "fused_confidence": 0.1195,
+      "yolo_confidence": 0.0,
+      "pointnet_confidence": 0.0714,
+      "support_modality": "3D_POINTNET"
+    },
+    {
+      "class_name": "airplane",
+      "fused_confidence": 0.0781,
+      "yolo_confidence": 0.0,
+      "pointnet_confidence": 0.0305,
+      "support_modality": "3D_POINTNET"
+    },
+    {
+      "class_name": "person",
+      "fused_confidence": 0.0569,
+      "yolo_confidence": 0.0,
+      "pointnet_confidence": 0.0162,
+      "support_modality": "3D_POINTNET"
+    }
+  ],
+  "decision_rationale": "Dense 3D cloud (53181 points); balanced multimodal voting enabled (50% 2D / 50% 3D). Low confidence, insufficient class margin, or modality disagreement (YOLO='cell phone'; PointNet='plant'). Flagged as UNCERTAIN rather than outputting misleading class.",
+  "modality_predictions": {
+    "yolo_only": {
+      "class_name": "cell phone",
+      "evidence_score": 0.0,
+      "confidence_calibrated": false,
+      "dominant_detection_class": "cell phone",
+      "detection_agreement": 1.0,
+      "detection_count": 39,
+      "multiview_consensus": true
+    },
+    "pointnet_only": {
+      "class_name": "plant",
+      "evidence_score": 0.7449241280555725,
+      "confidence_calibrated": false
+    },
+    "fused_diagnostic": {
+      "class_name": "plant",
+      "evidence_score": 0.3860586904326092,
+      "confidence_calibrated": false
+    }
+  }
+}

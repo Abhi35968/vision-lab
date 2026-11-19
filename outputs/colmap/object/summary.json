@@ -1,0 +1,25 @@
+{
+  "colmap_points_total": 4853,
+  "views_with_mask": 40,
+  "selection_views": 22,
+  "held_out_views": 18,
+  "selection_rule": ">= 2 masked observations and >= 80% inside the mask",
+  "object_points_from_selection_views": 20,
+  "object_points_final_all_views": 29,
+  "held_out_object_points_in_mask_pct": {
+    "mean": 83.88888888888889,
+    "median": 95.0,
+    "min": 25.0
+  },
+  "held_out_scene_points_in_mask_pct_baseline_mean": 16.496096343613342,
+  "object_obb_extent": [
+    1.6069778770861807,
+    1.1609392775056884,
+    0.958508229140415
+  ],
+  "median_share_of_bbox_height_covered_by_points": 0.17435594911688962,
+  "own_sfm_comparison": {
+    "object_points": 29,
+    "mean_in_mask_pct_all_views": 64.65517241379311
+  }
+}

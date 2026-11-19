@@ -1,0 +1,3 @@
+engine,registered,points_3d,mean_reproj_px,mean_track_length,focal_px,focal_source
+Own incremental SfM (stored run),32,2077,3.118,3.41,1300.0,assumed
+"COLMAP (pycolmap, CPU)",47,4853,0.793,5.29,1637.4,self-calibrated

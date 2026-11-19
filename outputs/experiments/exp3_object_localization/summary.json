@@ -1,0 +1,39 @@
+{
+  "views_evaluated": 28,
+  "validated_object_points": 29,
+  "scene_points": 2077,
+  "object_points_in_mask_pct": {
+    "mean": 64.65517241379311,
+    "median": 75.86206896551724,
+    "min": 0.0,
+    "std": 30.965227110400445
+  },
+  "scene_points_in_mask_pct_baseline": {
+    "mean": 19.45285095261022
+  },
+  "mean_mask_area_pct": 27.227857142857143,
+  "centroid_inside_bbox_pct": 85.71428571428571,
+  "centroid_norm_position_mean": [
+    0.5365259452417674,
+    0.09480050331779412
+  ],
+  "centroid_norm_position_std": [
+    0.3152245078630389,
+    0.07290568480365872
+  ],
+  "centroid_rms_deviation_fraction_of_bbox": 0.3177154324977783,
+  "detector_2d": {
+    "keyframes": 47,
+    "detected": 40,
+    "detection_rate_pct": 85.1063829787234,
+    "class_label_counts": {
+      "vase": 22,
+      "bottle": 13,
+      "none": 7,
+      "cup": 5
+    },
+    "most_common_label_share_pct": 55.0,
+    "confidence_mean": 0.41790749999999993,
+    "confidence_std": 0.15684744570556122
+  }
+}

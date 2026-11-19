@@ -1,0 +1,76 @@
+{
+  "video": "09_book",
+  "category": "book",
+  "total_frames": 360,
+  "fps": 30.0,
+  "duration_s": 12.0,
+  "width": 960,
+  "height": 1280,
+  "keyframes": 40,
+  "mean_sharpness": 248.65773182439733,
+  "colmap_time_s": 220.2,
+  "colmap_registered": 40,
+  "colmap_points": 42341,
+  "colmap_reproj_mean_px": 0.45437913253688106,
+  "colmap_track_length": 7.9879077017548,
+  "colmap_focal_px": 1070.4855869850728,
+  "own_registered": 40,
+  "own_points": 9578,
+  "own_reproj_median_px": 1.87,
+  "own_time_s": 46.4,
+  "frames_with_target": 23,
+  "detection_rate_pct": 57.5,
+  "category_in_coco": true,
+  "exact_label_rate_pct": 21.73913043478261,
+  "label_counts": {
+    "surfboard": 13,
+    "stop sign": 5,
+    "book": 5
+  },
+  "selection_modes": {
+    "most central instance": 18,
+    "category label": 5
+  },
+  "mean_confidence": 0.2851106291231902,
+  "views_with_mask_and_pose": 23,
+  "object_points": 6196,
+  "object_points_pct_of_scene": 14.633570298292435,
+  "held_out_views": 11,
+  "object_points_selection": 5656,
+  "held_out_in_mask_pct": 99.17545325961169,
+  "held_out_in_mask_min_pct": 98.74469589816125,
+  "baseline_in_mask_pct": 31.40304583350331,
+  "obb_extent": [
+    5.868054800156395,
+    5.431854438401225,
+    0.8913355785501325
+  ],
+  "mask_height_covered_pct": 98.81750686310362,
+  "pointnet_prediction": "stairs",
+  "pointnet_confidence": 0.4991,
+  "pointnet_top3": [
+    [
+      "stairs",
+      0.4991
+    ],
+    [
+      "monitor",
+      0.1147
+    ],
+    [
+      "mantel",
+      0.0902
+    ]
+  ],
+  "category_in_modelnet": false,
+  "pointnet_correct": null,
+  "status": "ok",
+  "total_time_s": 284.3,
+  "dense_points": 88873,
+  "dense_multiplier": 2.1,
+  "mesh_triangles": 355542,
+  "mesh_vertices": 178639,
+  "consensus_prediction": "bookshelf",
+  "consensus_confidence": 0.41780853778510063,
+  "consensus_status": "UNCERTAIN_REJECTED"
+}

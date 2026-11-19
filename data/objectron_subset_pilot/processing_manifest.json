@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "source_manifest": "D:\\7thsem\\3DCV_proj\\data\\objectron_subset_pilot\\manifest.json",
+  "runs": [
+    {
+      "source_key": "bike/batch-4/47",
+      "class": "bicycle",
+      "split": "train",
+      "sha256": "dd9dc59e771a1f14c2701b6838b30215f81ea7a82dba99b9ba7259bc8a839342",
+      "video": "D:\\7thsem\\3DCV_proj\\data\\objectron_subset_pilot\\media\\bike\\batch-4\\47\\video.MOV",
+      "started_at_utc": "2026-11-18T07:44:50.350074Z",
+      "return_code": 0,
+      "status": "completed",
+      "finished_at_utc": "2026-11-18T07:47:08.784836Z"
+    },
+    {
+      "source_key": "book/batch-2/11",
+      "class": "book",
+      "split": "train",
+      "sha256": "fae670be21bed30c43d93c651b7a4cdf025ff098858ea571c0eeeb64c3a5c9fa",
+      "video": "D:\\7thsem\\3DCV_proj\\data\\objectron_subset_pilot\\media\\book\\batch-2\\11\\video.MOV",
+      "started_at_utc": "2026-11-18T07:47:08.790674Z",
+      "return_code": 0,
+      "status": "completed",
+      "finished_at_utc": "2026-11-18T07:48:11.510969Z"
+    },
+    {
+      "source_key": "bottle/batch-28/31",
+      "class": "bottle",
+      "split": "train",
+      "sha256": "ecac760ef4ebbb17ea0d3550f373bcfc6991b559b9ef4dfb04373b0197fd0e70",
+      "video": "D:\\7thsem\\3DCV_proj\\data\\objectron_subset_pilot\\media\\bottle\\batch-28\\31\\video.MOV",
+      "started_at_utc": "2026-11-18T07:48:11.510969Z",
+      "return_code": 0,
+      "status": "completed",
+      "finished_at_utc": "2026-11-18T07:50:20.647224Z"
+    },
+    {
+      "source_key": "camera/batch-6/33",
+      "class": "camera",
+      "split": "train",
+      "sha256": "10f90e6e69d6c69e8684f9e50326c631d95de4fb59f073d4d9f3290103728a03",
+      "video": "D:\\7thsem\\3DCV_proj\\data\\objectron_subset_pilot\\media\\camera\\batch-6\\33\\video.MOV",
+      "started_at_utc": "2026-11-18T07:50:20.650710Z",
+      "return_code": 0,
+      "status": "completed",
+      "finished_at_utc": "2026-11-18T07:51:33.112420Z"
+    },
+    {
+      "source_key": "cereal_box/batch-23/39",
+      "class": "cereal_box",
+      "split": "train",
+      "sha256": "ece92753ff11506d96ba33cf3cafa76024e8632ab28bcad12c134b08de82e37c",
+      "video": "D:\\7thsem\\3DCV_proj\\data\\objectron_subset_pilot\\media\\cereal_box\\batch-23\\39\\video.MOV",
+      "started_at_utc": "2026-11-18T07:51:33.119946Z",
+      "return_code": 0,
+      "status": "completed",
+      "finished_at_utc": "2026-11-18T07:53:47.285742Z"
+    },
+    {
+      "source_key": "cup/batch-20/34",
+      "class": "cup",
+      "split": "train",
+      "sha256": "19390207baeb2b6e6b97c06fcdb4eb1f0e5afdca8e71cd85d63f0e74d438c082",
+      "video": "D:\\7thsem\\3DCV_proj\\data\\objectron_subset_pilot\\media\\cup\\batch-20\\34\\video.MOV",
+      "started_at_utc": "2026-11-18T08:07:22.728226Z",
+      "return_code": 0,
+      "status": "completed",
+      "finished_at_utc": "2026-11-18T09:48:04.288802Z"
+    },
+    {
+      "source_key": "laptop/batch-26/20",
+      "class": "laptop",
+      "split": "train",
+      "sha256": "ff091a57bd2dd087ff3a18606d9a9965fac96e49571363d8f2ad9a842cdc88e7",
+      "video": "D:\\7thsem\\3DCV_proj\\data\\objectron_subset_pilot\\media\\laptop\\batch-26\\20\\video.MOV",
+      "started_at_utc": "2026-11-18T09:48:04.305954Z",
+      "return_code": 0,
+      "status": "completed",
+      "finished_at_utc": "2026-11-18T10:04:52.727260Z"
+    },
+    {
+      "source_key": "shoe/batch-38/5",
+      "class": "shoe",
+      "split": "train",
+      "sha256": "b156a8bc21fe05610e815f807c130d72b7ae2590da3e17550b3ddbad2d6aee51",
+      "video": "D:\\7thsem\\3DCV_proj\\data\\objectron_subset_pilot\\media\\shoe\\batch-38\\5\\video.MOV",
+      "started_at_utc": "2026-11-18T10:04:52.766610Z",
+      "return_code": 0,
+      "status": "completed",
+      "finished_at_utc": "2026-11-18T10:06:15.938239Z"
+    }
+  ],
+  "updated_at_utc": "2026-11-18T10:06:15.939239Z",
+  "failures": []
+}

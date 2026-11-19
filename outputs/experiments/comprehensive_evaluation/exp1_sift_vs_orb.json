@@ -1,0 +1,16 @@
+{
+  "SIFT": {
+    "mean_keypoints": 840.0,
+    "mean_inliers": 158.4,
+    "inlier_ratio_pct": 77.1,
+    "feature_time_ms": 148.87,
+    "matching_time_ms": 18.61
+  },
+  "ORB": {
+    "mean_keypoints": 1322.6,
+    "mean_inliers": 305.8,
+    "inlier_ratio_pct": 86.9,
+    "feature_time_ms": 20.95,
+    "matching_time_ms": 9.21
+  }
+}

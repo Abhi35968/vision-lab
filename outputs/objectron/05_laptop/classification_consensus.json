@@ -1,0 +1,87 @@
+{
+  "predicted_class": "unknown",
+  "predicted_confidence": 0.0,
+  "is_uncertain": true,
+  "status": "UNCERTAIN_REJECTED",
+  "modality_weights": {
+    "weight_2d": 0.5,
+    "weight_3d": 0.5
+  },
+  "yolo_summary": {
+    "total_valid_frames": 40,
+    "class_counts": {
+      "laptop": 40
+    },
+    "dominant_yolo_class": "laptop",
+    "mapped_candidates": [
+      "laptop"
+    ]
+  },
+  "pointnet_summary": {
+    "raw_unaligned_class": "toilet",
+    "raw_unaligned_confidence": 0.5322377681732178,
+    "canonical_upright_class": "bookshelf",
+    "canonical_upright_confidence": 0.685092031955719,
+    "input_points": 77244,
+    "domain_gap": "Evaluated on 77244 input points (TTA\u00d710, resampled to 1024). Dense input point cloud provides strong structural coverage."
+  },
+  "top_candidates": [
+    {
+      "class_name": "bookshelf",
+      "fused_confidence": 0.4011,
+      "yolo_confidence": 0.0,
+      "pointnet_confidence": 0.6851,
+      "support_modality": "3D_POINTNET"
+    },
+    {
+      "class_name": "monitor",
+      "fused_confidence": 0.1915,
+      "yolo_confidence": 0.0,
+      "pointnet_confidence": 0.1561,
+      "support_modality": "3D_POINTNET"
+    },
+    {
+      "class_name": "stairs",
+      "fused_confidence": 0.0773,
+      "yolo_confidence": 0.0,
+      "pointnet_confidence": 0.0254,
+      "support_modality": "3D_POINTNET"
+    },
+    {
+      "class_name": "dresser",
+      "fused_confidence": 0.0675,
+      "yolo_confidence": 0.0,
+      "pointnet_confidence": 0.0194,
+      "support_modality": "3D_POINTNET"
+    },
+    {
+      "class_name": "tv_stand",
+      "fused_confidence": 0.0633,
+      "yolo_confidence": 0.0,
+      "pointnet_confidence": 0.017,
+      "support_modality": "3D_POINTNET"
+    }
+  ],
+  "decision_rationale": "Dense 3D cloud (77244 points); balanced multimodal voting enabled (50% 2D / 50% 3D). Low confidence, insufficient class margin, or modality disagreement (YOLO='laptop'; PointNet='bookshelf'). Flagged as UNCERTAIN rather than outputting misleading class.",
+  "modality_predictions": {
+    "yolo_only": {
+      "class_name": "laptop",
+      "evidence_score": 1.0,
+      "confidence_calibrated": false,
+      "dominant_detection_class": "laptop",
+      "detection_agreement": 1.0,
+      "detection_count": 40,
+      "multiview_consensus": true
+    },
+    "pointnet_only": {
+      "class_name": "bookshelf",
+      "evidence_score": 0.685092031955719,
+      "confidence_calibrated": false
+    },
+    "fused_diagnostic": {
+      "class_name": "bookshelf",
+      "evidence_score": 0.4011469120481599,
+      "confidence_calibrated": false
+    }
+  }
+}

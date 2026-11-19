@@ -1,0 +1,69 @@
+{
+  "execution_date": "2026-11-11 13:55:34",
+  "total_execution_time_seconds": 22.32,
+  "peak_ram_mb": 809.6,
+  "stage_timings_seconds": {
+    "1_quality_assessment": 9.201,
+    "2_frame_selection": 0.029,
+    "3_yolo_segmentation": 2.371,
+    "4_5_6_sfm_and_points": 0.005,
+    "7_point_cloud_opt": 0.001,
+    "8_poisson_reconstruction": 0.307,
+    "9_metric_scale": 1.52,
+    "10_texture_mapping": 4.041,
+    "11_glb_export": 0.126
+  },
+  "stage_status": {
+    "1_quality_assessment": "SUCCESS",
+    "2_frame_selection": "SUCCESS",
+    "3_yolo_segmentation": "SUCCESS",
+    "4_5_6_sfm_and_points": "SUCCESS",
+    "7_point_cloud_opt": "SUCCESS",
+    "8_poisson_reconstruction": "SUCCESS",
+    "9_metric_scale": "UNVERIFIED_NO_MARKER",
+    "10_texture_mapping": "SUCCESS",
+    "11_glb_export": "SUCCESS"
+  },
+  "input_video": {
+    "path": "data\\raw_videos\\Vdo.mp4",
+    "total_frames": 572,
+    "fps": 59.6,
+    "resolution": "1080x1920",
+    "selected_keyframes": 47
+  },
+  "sfm_reconstruction": {
+    "registered_cameras": 33,
+    "raw_candidate_points": 47,
+    "optimized_points": 41
+  },
+  "mesh_geometry": {
+    "vertices": 2162,
+    "faces": 4320,
+    "is_watertight": true,
+    "dimensions_sfm_units": [
+      2.592,
+      6.903,
+      2.592
+    ]
+  },
+  "texturing": {
+    "texture_resolution": "1024x1024",
+    "textured_vertices": 1104,
+    "cameras_contributing": 32
+  },
+  "export_glb": {
+    "file_size_kb": 547.1,
+    "has_embedded_texture": true,
+    "mobile_share_url": "http://10.0.3.94:8501"
+  },
+  "aruco_metric_scale": {
+    "markers_detected": 0,
+    "scale_factor_cm_per_unit": 1.0,
+    "status": "APPROXIMATED",
+    "confidence_tier": "UNVERIFIED",
+    "limitations": [
+      "Camera intrinsics approximated based on image resolution; precise metric scale requires checkerboard calibration.",
+      "No ArUco marker detected in video keyframes. Defaulting to nominal tabletop baseline scale (1.0)."
+    ]
+  }
+}

@@ -1,0 +1,663 @@
+{
+  "overall": {
+    "videos": 10,
+    "videos_reconstructed": 10,
+    "colmap_registration_rate_pct_mean": 100.0,
+    "own_registration_rate_pct_mean": 88.5,
+    "colmap_points_mean": 18022.6,
+    "colmap_reproj_mean_px_mean": 0.6091682514551546,
+    "detection_rate_pct_mean": 80.0,
+    "videos_with_object_cloud": 9,
+    "held_out_in_mask_pct_mean": 92.39670031071816,
+    "baseline_in_mask_pct_mean": 27.370778847922224,
+    "pointnet_evaluable": 5,
+    "pointnet_correct": 0
+  },
+  "videos": [
+    {
+      "video": "01_bottle",
+      "category": "bottle",
+      "total_frames": 198,
+      "fps": 30.0,
+      "duration_s": 6.6,
+      "width": 960,
+      "height": 1280,
+      "keyframes": 40,
+      "mean_sharpness": 65.42121003033719,
+      "colmap_time_s": 48.3,
+      "colmap_registered": 40,
+      "colmap_points": 7944,
+      "colmap_reproj_mean_px": 0.5847147619553211,
+      "colmap_track_length": 5.874622356495468,
+      "colmap_focal_px": 1051.261449191956,
+      "own_registered": 40,
+      "own_points": 5195,
+      "own_reproj_median_px": 0.975,
+      "own_time_s": 33.9,
+      "frames_with_target": 40,
+      "detection_rate_pct": 100.0,
+      "category_in_coco": true,
+      "exact_label_rate_pct": 100.0,
+      "label_counts": {
+        "bottle": 40
+      },
+      "selection_modes": {
+        "category label": 40
+      },
+      "mean_confidence": 0.8523913808166981,
+      "views_with_mask_and_pose": 40,
+      "object_points": 3817,
+      "object_points_pct_of_scene": 48.04884189325277,
+      "held_out_views": 20,
+      "object_points_selection": 3135,
+      "held_out_in_mask_pct": 95.88835725677832,
+      "held_out_in_mask_min_pct": 53.46092503987241,
+      "baseline_in_mask_pct": 51.10775427995973,
+      "obb_extent": [
+        6.6297518140550995,
+        2.4778191422472085,
+        2.0103064226072047
+      ],
+      "mask_height_covered_pct": 98.97790823919361,
+      "pointnet_prediction": "stairs",
+      "pointnet_confidence": 0.9617,
+      "pointnet_top3": [
+        [
+          "stairs",
+          0.9617
+        ],
+        [
+          "person",
+          0.0257
+        ],
+        [
+          "plant",
+          0.0043
+        ]
+      ],
+      "category_in_modelnet": true,
+      "pointnet_correct": false,
+      "status": "ok",
+      "total_time_s": 96.2
+    },
+    {
+      "video": "02_bottle",
+      "category": "bottle",
+      "total_frames": 219,
+      "fps": 29.9,
+      "duration_s": 7.3,
+      "width": 960,
+      "height": 1280,
+      "keyframes": 40,
+      "mean_sharpness": 74.93923030914037,
+      "colmap_time_s": 75.0,
+      "colmap_registered": 40,
+      "colmap_points": 13769,
+      "colmap_reproj_mean_px": 0.658779135246611,
+      "colmap_track_length": 8.859975306848717,
+      "colmap_focal_px": 1066.148730619687,
+      "own_registered": 40,
+      "own_points": 9336,
+      "own_reproj_median_px": 0.582,
+      "own_time_s": 34.3,
+      "frames_with_target": 40,
+      "detection_rate_pct": 100.0,
+      "category_in_coco": true,
+      "exact_label_rate_pct": 100.0,
+      "label_counts": {
+        "bottle": 40
+      },
+      "selection_modes": {
+        "category label": 40
+      },
+      "mean_confidence": 0.8704419285058975,
+      "views_with_mask_and_pose": 40,
+      "object_points": 3158,
+      "object_points_pct_of_scene": 22.935579925920546,
+      "held_out_views": 20,
+      "object_points_selection": 2686,
+      "held_out_in_mask_pct": 98.60014892032763,
+      "held_out_in_mask_min_pct": 96.57483246463143,
+      "baseline_in_mask_pct": 32.76672234730191,
+      "obb_extent": [
+        10.07085260161653,
+        3.878894704960083,
+        3.77685469666591
+      ],
+      "mask_height_covered_pct": 98.9460708637898,
+      "pointnet_prediction": "stairs",
+      "pointnet_confidence": 0.9758,
+      "pointnet_top3": [
+        [
+          "stairs",
+          0.9758
+        ],
+        [
+          "person",
+          0.0062
+        ],
+        [
+          "chair",
+          0.005
+        ]
+      ],
+      "category_in_modelnet": true,
+      "pointnet_correct": false,
+      "status": "ok",
+      "total_time_s": 122.2
+    },
+    {
+      "video": "03_cup",
+      "category": "cup",
+      "total_frames": 145,
+      "fps": 30.0,
+      "duration_s": 4.8,
+      "width": 960,
+      "height": 1280,
+      "keyframes": 40,
+      "mean_sharpness": 48.632187164969494,
+      "colmap_time_s": 40.9,
+      "colmap_registered": 40,
+      "colmap_points": 6921,
+      "colmap_reproj_mean_px": 0.6328244202691312,
+      "colmap_track_length": 7.970813466262101,
+      "colmap_focal_px": 998.9358703803475,
+      "own_registered": 40,
+      "own_points": 2439,
+      "own_reproj_median_px": 0.783,
+      "own_time_s": 17.2,
+      "frames_with_target": 40,
+      "detection_rate_pct": 100.0,
+      "category_in_coco": true,
+      "exact_label_rate_pct": 100.0,
+      "label_counts": {
+        "cup": 40
+      },
+      "selection_modes": {
+        "category label": 40
+      },
+      "mean_confidence": 0.8157737091183662,
+      "views_with_mask_and_pose": 40,
+      "object_points": 77,
+      "object_points_pct_of_scene": 1.1125559890189278,
+      "held_out_views": 20,
+      "object_points_selection": 69,
+      "held_out_in_mask_pct": 92.02898550724638,
+      "held_out_in_mask_min_pct": 73.91304347826086,
+      "baseline_in_mask_pct": 2.2243895390839468,
+      "obb_extent": [
+        2.847841575753273,
+        2.3429191715970443,
+        2.331905858736664
+      ],
+      "mask_height_covered_pct": 87.47436535104904,
+      "pointnet_prediction": "stairs",
+      "pointnet_confidence": 0.7194,
+      "pointnet_top3": [
+        [
+          "stairs",
+          0.7194
+        ],
+        [
+          "lamp",
+          0.1935
+        ],
+        [
+          "plant",
+          0.0318
+        ]
+      ],
+      "category_in_modelnet": true,
+      "pointnet_correct": false,
+      "status": "ok",
+      "total_time_s": 66.7
+    },
+    {
+      "video": "04_chair",
+      "category": "chair",
+      "total_frames": 210,
+      "fps": 29.9,
+      "duration_s": 7.0,
+      "width": 960,
+      "height": 1280,
+      "keyframes": 40,
+      "mean_sharpness": 30.020747367154655,
+      "colmap_time_s": 25.8,
+      "colmap_registered": 40,
+      "colmap_points": 2369,
+      "colmap_reproj_mean_px": 0.9332950966206114,
+      "colmap_track_length": 6.2224567327986495,
+      "colmap_focal_px": 1050.0853769904793,
+      "own_registered": 2,
+      "own_points": 14,
+      "own_reproj_median_px": 1.971,
+      "own_time_s": 10.0,
+      "frames_with_target": 40,
+      "detection_rate_pct": 100.0,
+      "category_in_coco": true,
+      "exact_label_rate_pct": 92.5,
+      "label_counts": {
+        "chair": 37,
+        "couch": 3
+      },
+      "selection_modes": {
+        "category label": 40
+      },
+      "mean_confidence": 0.7554746776819229,
+      "views_with_mask_and_pose": 40,
+      "object_points": 354,
+      "object_points_pct_of_scene": 14.94301392992824,
+      "held_out_views": 20,
+      "object_points_selection": 294,
+      "held_out_in_mask_pct": 82.95918367346938,
+      "held_out_in_mask_min_pct": 3.741496598639456,
+      "baseline_in_mask_pct": 25.960320810468556,
+      "obb_extent": [
+        6.481789647759447,
+        4.760183442677304,
+        3.4422138801143847
+      ],
+      "mask_height_covered_pct": 99.40388479052054,
+      "pointnet_prediction": "person",
+      "pointnet_confidence": 0.6102,
+      "pointnet_top3": [
+        [
+          "person",
+          0.6102
+        ],
+        [
+          "stairs",
+          0.1338
+        ],
+        [
+          "plant",
+          0.1121
+        ]
+      ],
+      "category_in_modelnet": true,
+      "pointnet_correct": false,
+      "status": "ok",
+      "total_time_s": 45.0
+    },
+    {
+      "video": "05_laptop",
+      "category": "laptop",
+      "total_frames": 306,
+      "fps": 30.0,
+      "duration_s": 10.2,
+      "width": 960,
+      "height": 1280,
+      "keyframes": 40,
+      "mean_sharpness": 407.3675734946772,
+      "colmap_time_s": 131.5,
+      "colmap_registered": 40,
+      "colmap_points": 20698,
+      "colmap_reproj_mean_px": 0.5834627624794493,
+      "colmap_track_length": 8.852256256643154,
+      "colmap_focal_px": 972.7440516981532,
+      "own_registered": 40,
+      "own_points": 8661,
+      "own_reproj_median_px": 0.63,
+      "own_time_s": 40.0,
+      "frames_with_target": 40,
+      "detection_rate_pct": 100.0,
+      "category_in_coco": true,
+      "exact_label_rate_pct": 100.0,
+      "label_counts": {
+        "laptop": 40
+      },
+      "selection_modes": {
+        "category label": 40
+      },
+      "mean_confidence": 0.8910115778446197,
+      "views_with_mask_and_pose": 40,
+      "object_points": 8580,
+      "object_points_pct_of_scene": 41.45328051019422,
+      "held_out_views": 20,
+      "object_points_selection": 7909,
+      "held_out_in_mask_pct": 84.27550891389556,
+      "held_out_in_mask_min_pct": 0.025287646984448093,
+      "baseline_in_mask_pct": 51.5711662962605,
+      "obb_extent": [
+        10.915928410899586,
+        8.75993796509373,
+        5.502027909838889
+      ],
+      "mask_height_covered_pct": 99.5825880826175,
+      "pointnet_prediction": "person",
+      "pointnet_confidence": 0.5068,
+      "pointnet_top3": [
+        [
+          "person",
+          0.5068
+        ],
+        [
+          "monitor",
+          0.1666
+        ],
+        [
+          "plant",
+          0.1059
+        ]
+      ],
+      "category_in_modelnet": true,
+      "pointnet_correct": false,
+      "status": "ok",
+      "total_time_s": 189.4
+    },
+    {
+      "video": "06_camera",
+      "category": "camera",
+      "total_frames": 293,
+      "fps": 30.0,
+      "duration_s": 9.8,
+      "width": 960,
+      "height": 1280,
+      "keyframes": 40,
+      "mean_sharpness": 29.584092900810077,
+      "colmap_time_s": 37.6,
+      "colmap_registered": 40,
+      "colmap_points": 4623,
+      "colmap_reproj_mean_px": 0.7095826514873432,
+      "colmap_track_length": 5.656067488643738,
+      "colmap_focal_px": 1013.186470391487,
+      "own_registered": 32,
+      "own_points": 2675,
+      "own_reproj_median_px": 1.027,
+      "own_time_s": 19.3,
+      "frames_with_target": 39,
+      "detection_rate_pct": 97.5,
+      "category_in_coco": false,
+      "exact_label_rate_pct": NaN,
+      "label_counts": {
+        "cell phone": 24,
+        "suitcase": 13,
+        "toaster": 2
+      },
+      "selection_modes": {
+        "most central instance": 39
+      },
+      "mean_confidence": 0.43048642040827334,
+      "views_with_mask_and_pose": 39,
+      "object_points": 869,
+      "object_points_pct_of_scene": 18.797317759030932,
+      "held_out_views": 19,
+      "object_points_selection": 660,
+      "held_out_in_mask_pct": 94.24242424242425,
+      "held_out_in_mask_min_pct": 87.42424242424242,
+      "baseline_in_mask_pct": 27.456538816216405,
+      "obb_extent": [
+        3.3353158139718784,
+        2.7090783564261756,
+        1.524339973525327
+      ],
+      "mask_height_covered_pct": 98.30359823961201,
+      "pointnet_prediction": "stairs",
+      "pointnet_confidence": 0.7441,
+      "pointnet_top3": [
+        [
+          "stairs",
+          0.7441
+        ],
+        [
+          "plant",
+          0.1285
+        ],
+        [
+          "person",
+          0.0777
+        ]
+      ],
+      "category_in_modelnet": false,
+      "pointnet_correct": null,
+      "status": "ok",
+      "total_time_s": 70.1
+    },
+    {
+      "video": "07_shoe",
+      "category": "shoe",
+      "total_frames": 266,
+      "fps": 30.0,
+      "duration_s": 8.9,
+      "width": 960,
+      "height": 1280,
+      "keyframes": 40,
+      "mean_sharpness": 46.2782433071564,
+      "colmap_time_s": 203.4,
+      "colmap_registered": 40,
+      "colmap_points": 33671,
+      "colmap_reproj_mean_px": 0.5778001538700486,
+      "colmap_track_length": 7.46636571530397,
+      "colmap_focal_px": 1056.2713262576342,
+      "own_registered": 40,
+      "own_points": 12105,
+      "own_reproj_median_px": 0.967,
+      "own_time_s": 39.4,
+      "frames_with_target": 17,
+      "detection_rate_pct": 42.5,
+      "category_in_coco": false,
+      "exact_label_rate_pct": NaN,
+      "label_counts": {
+        "handbag": 7,
+        "vase": 4,
+        "cell phone": 4,
+        "backpack": 2
+      },
+      "selection_modes": {
+        "most central instance": 17
+      },
+      "mean_confidence": 0.2842133553589092,
+      "views_with_mask_and_pose": 17,
+      "object_points": 344,
+      "object_points_pct_of_scene": 1.0216506786255235,
+      "held_out_views": 9,
+      "object_points_selection": 268,
+      "held_out_in_mask_pct": 99.83416252072968,
+      "held_out_in_mask_min_pct": 99.6268656716418,
+      "baseline_in_mask_pct": 10.313853992390417,
+      "obb_extent": [
+        2.4912982690028986,
+        1.828853105810309,
+        0.9243022388426254
+      ],
+      "mask_height_covered_pct": 77.45710197083292,
+      "pointnet_prediction": "stairs",
+      "pointnet_confidence": 0.7931,
+      "pointnet_top3": [
+        [
+          "stairs",
+          0.7931
+        ],
+        [
+          "monitor",
+          0.0928
+        ],
+        [
+          "laptop",
+          0.0432
+        ]
+      ],
+      "category_in_modelnet": false,
+      "pointnet_correct": null,
+      "status": "ok",
+      "total_time_s": 257.6
+    },
+    {
+      "video": "08_bike",
+      "category": "bike",
+      "total_frames": 308,
+      "fps": 25.0,
+      "duration_s": 12.3,
+      "width": 960,
+      "height": 1280,
+      "keyframes": 40,
+      "mean_sharpness": 113.88338738838111,
+      "colmap_time_s": 133.8,
+      "colmap_registered": 40,
+      "colmap_points": 29984,
+      "colmap_reproj_mean_px": 0.4661889076955057,
+      "colmap_track_length": 6.947105122732124,
+      "colmap_focal_px": 1054.2572763842084,
+      "own_registered": 40,
+      "own_points": 10075,
+      "own_reproj_median_px": 0.547,
+      "own_time_s": 34.2,
+      "frames_with_target": 40,
+      "detection_rate_pct": 100.0,
+      "category_in_coco": true,
+      "exact_label_rate_pct": 0.0,
+      "label_counts": {
+        "motorcycle": 40
+      },
+      "selection_modes": {
+        "category label": 40
+      },
+      "mean_confidence": 0.7424643404781819,
+      "views_with_mask_and_pose": 40,
+      "object_points": 3382,
+      "object_points_pct_of_scene": 11.279348986125934,
+      "held_out_views": 20,
+      "object_points_selection": 2777,
+      "held_out_in_mask_pct": 84.56607850198057,
+      "held_out_in_mask_min_pct": 64.71011883327331,
+      "baseline_in_mask_pct": 13.53321771611526,
+      "obb_extent": [
+        6.618833453749023,
+        4.735966252030182,
+        3.3552725834062853
+      ],
+      "mask_height_covered_pct": 96.17452441874222,
+      "pointnet_prediction": "airplane",
+      "pointnet_confidence": 0.5634,
+      "pointnet_top3": [
+        [
+          "airplane",
+          0.5634
+        ],
+        [
+          "stairs",
+          0.2943
+        ],
+        [
+          "plant",
+          0.0483
+        ]
+      ],
+      "category_in_modelnet": false,
+      "pointnet_correct": null,
+      "status": "ok",
+      "total_time_s": 183.5
+    },
+    {
+      "video": "09_book",
+      "category": "book",
+      "total_frames": 360,
+      "fps": 30.0,
+      "duration_s": 12.0,
+      "width": 960,
+      "height": 1280,
+      "keyframes": 40,
+      "mean_sharpness": 248.65773182439733,
+      "colmap_time_s": 220.2,
+      "colmap_registered": 40,
+      "colmap_points": 42341,
+      "colmap_reproj_mean_px": 0.45437913253688106,
+      "colmap_track_length": 7.9879077017548,
+      "colmap_focal_px": 1070.4855869850728,
+      "own_registered": 40,
+      "own_points": 9578,
+      "own_reproj_median_px": 1.87,
+      "own_time_s": 46.4,
+      "frames_with_target": 23,
+      "detection_rate_pct": 57.5,
+      "category_in_coco": true,
+      "exact_label_rate_pct": 21.73913043478261,
+      "label_counts": {
+        "surfboard": 13,
+        "stop sign": 5,
+        "book": 5
+      },
+      "selection_modes": {
+        "most central instance": 18,
+        "category label": 5
+      },
+      "mean_confidence": 0.2851106291231902,
+      "views_with_mask_and_pose": 23,
+      "object_points": 6196,
+      "object_points_pct_of_scene": 14.633570298292435,
+      "held_out_views": 11,
+      "object_points_selection": 5656,
+      "held_out_in_mask_pct": 99.17545325961169,
+      "held_out_in_mask_min_pct": 98.74469589816125,
+      "baseline_in_mask_pct": 31.40304583350331,
+      "obb_extent": [
+        5.868054800156395,
+        5.431854438401225,
+        0.8913355785501325
+      ],
+      "mask_height_covered_pct": 98.81750686310362,
+      "pointnet_prediction": "stairs",
+      "pointnet_confidence": 0.4991,
+      "pointnet_top3": [
+        [
+          "stairs",
+          0.4991
+        ],
+        [
+          "monitor",
+          0.1147
+        ],
+        [
+          "mantel",
+          0.0902
+        ]
+      ],
+      "category_in_modelnet": false,
+      "pointnet_correct": null,
+      "status": "ok",
+      "total_time_s": 284.3
+    },
+    {
+      "video": "10_cereal_box",
+      "category": "cereal_box",
+      "total_frames": 210,
+      "fps": 30.0,
+      "duration_s": 7.0,
+      "width": 960,
+      "height": 1280,
+      "keyframes": 40,
+      "mean_sharpness": 157.18264474761472,
+      "colmap_time_s": 98.1,
+      "colmap_registered": 40,
+      "colmap_points": 17906,
+      "colmap_reproj_mean_px": 0.49065549239064193,
+      "colmap_track_length": 5.983525075393723,
+      "colmap_focal_px": 1049.8198764340045,
+      "own_registered": 40,
+      "own_points": 9604,
+      "own_reproj_median_px": 0.379,
+      "own_time_s": 31.0,
+      "frames_with_target": 1,
+      "detection_rate_pct": 2.5,
+      "category_in_coco": false,
+      "exact_label_rate_pct": NaN,
+      "label_counts": {
+        "donut": 1
+      },
+      "selection_modes": {
+        "most central instance": 1
+      },
+      "mean_confidence": 0.21542131900787354,
+      "views_with_mask_and_pose": 1,
+      "object_points": 0,
+      "object_points_pct_of_scene": 0.0,
+      "held_out_views": 0,
+      "object_points_selection": 3,
+      "held_out_in_mask_pct": NaN,
+      "held_out_in_mask_min_pct": NaN,
+      "baseline_in_mask_pct": NaN,
+      "status": "ok",
+      "total_time_s": 138.9
+    }
+  ]
+}

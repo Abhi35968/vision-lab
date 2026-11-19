@@ -1,0 +1,4 @@
+tag,focal_px,registered_cams,points_3d,mean_reproj_px,median_reproj_px,p90_px,p95_px,below_1px_pct,below_4px_pct,outliers_gt4px,time_sec
+focal_935,935.0,11,384,4.352,1.649,4.972,8.557,29.26,84.84,227,13.06
+focal_1300,1300.0,32,2077,3.118,1.028,4.313,7.294,48.93,88.93,780,15.52
+focal_1663,1662.8,12,340,1.303,0.757,2.748,3.677,61.88,95.79,59,13.18

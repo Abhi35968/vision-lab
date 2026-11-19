@@ -1,0 +1,62 @@
+{
+  "high_confidence": {
+    "tier_name": "high_confidence",
+    "count": 14,
+    "mean_distance": 0.36284345388412476,
+    "median_distance": 0.13546261191368103,
+    "std_distance": 0.398869127035141,
+    "p90_distance": 0.9850974082946777,
+    "min_distance": 0.03500986099243164,
+    "max_distance": 1.133828043937683
+  },
+  "moderate_confidence": {
+    "tier_name": "moderate_confidence",
+    "count": 15,
+    "mean_distance": 0.4786019027233124,
+    "median_distance": 0.3097100257873535,
+    "std_distance": 0.381752073764801,
+    "p90_distance": 1.000322699546814,
+    "min_distance": 0.028009891510009766,
+    "max_distance": 1.011192798614502
+  },
+  "low_confidence": {
+    "tier_name": "low_confidence",
+    "count": 13,
+    "mean_distance": 0.5790590643882751,
+    "median_distance": 0.3510098457336426,
+    "std_distance": 0.4459896385669708,
+    "p90_distance": 1.0915855169296265,
+    "min_distance": 0.07734822481870651,
+    "max_distance": 1.339019775390625
+  },
+  "geometric_outliers": {
+    "tier_name": "geometric_outliers",
+    "count": 5,
+    "mean_distance": 0.9435393214225769,
+    "median_distance": 0.7773101329803467,
+    "std_distance": 0.9027205109596252,
+    "p90_distance": 2.0154459476470947,
+    "min_distance": 0.07029008865356445,
+    "max_distance": 2.499616861343384
+  },
+  "combined_validated": {
+    "tier_name": "combined_validated",
+    "count": 29,
+    "mean_distance": 0.4227185845375061,
+    "median_distance": 0.19561004638671875,
+    "std_distance": 0.3943745195865631,
+    "p90_distance": 0.9966111779212952,
+    "min_distance": 0.028009891510009766,
+    "max_distance": 1.133828043937683
+  },
+  "all_candidates": {
+    "tier_name": "all_candidates",
+    "count": 47,
+    "mean_distance": 0.5213682055473328,
+    "median_distance": 0.2632264792919159,
+    "std_distance": 0.5133815407752991,
+    "p90_distance": 1.0846275091171265,
+    "min_distance": 0.028009891510009766,
+    "max_distance": 2.499616861343384
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "video": "08_bike",
+  "category": "bike",
+  "total_frames": 308,
+  "fps": 25.0,
+  "duration_s": 12.3,
+  "width": 960,
+  "height": 1280,
+  "keyframes": 40,
+  "mean_sharpness": 113.88338738838111,
+  "colmap_time_s": 133.8,
+  "colmap_registered": 40,
+  "colmap_points": 29984,
+  "colmap_reproj_mean_px": 0.4661889076955057,
+  "colmap_track_length": 6.947105122732124,
+  "colmap_focal_px": 1054.2572763842084,
+  "own_registered": 40,
+  "own_points": 10075,
+  "own_reproj_median_px": 0.547,
+  "own_time_s": 34.2,
+  "frames_with_target": 40,
+  "detection_rate_pct": 100.0,
+  "category_in_coco": true,
+  "exact_label_rate_pct": 0.0,
+  "label_counts": {
+    "motorcycle": 40
+  },
+  "selection_modes": {
+    "category label": 40
+  },
+  "mean_confidence": 0.7424643404781819,
+  "views_with_mask_and_pose": 40,
+  "object_points": 3382,
+  "object_points_pct_of_scene": 11.279348986125934,
+  "held_out_views": 20,
+  "object_points_selection": 2777,
+  "held_out_in_mask_pct": 84.56607850198057,
+  "held_out_in_mask_min_pct": 64.71011883327331,
+  "baseline_in_mask_pct": 13.53321771611526,
+  "obb_extent": [
+    6.618833453749023,
+    4.735966252030182,
+    3.3552725834062853
+  ],
+  "mask_height_covered_pct": 96.17452441874222,
+  "pointnet_prediction": "airplane",
+  "pointnet_confidence": 0.5634,
+  "pointnet_top3": [
+    [
+      "airplane",
+      0.5634
+    ],
+    [
+      "stairs",
+      0.2943
+    ],
+    [
+      "plant",
+      0.0483
+    ]
+  ],
+  "category_in_modelnet": false,
+  "pointnet_correct": null,
+  "status": "ok",
+  "total_time_s": 183.5,
+  "dense_points": 68722,
+  "dense_multiplier": 2.29,
+  "mesh_triangles": 285615,
+  "mesh_vertices": 143392,
+  "consensus_prediction": "plant",
+  "consensus_confidence": 0.2768734504330331,
+  "consensus_status": "UNCERTAIN_REJECTED"
+}

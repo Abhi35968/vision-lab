@@ -1,0 +1,88 @@
+{
+  "predicted_class": "unknown",
+  "predicted_confidence": 0.0,
+  "is_uncertain": true,
+  "status": "UNCERTAIN_REJECTED",
+  "modality_weights": {
+    "weight_2d": 0.5,
+    "weight_3d": 0.5
+  },
+  "yolo_summary": {
+    "total_valid_frames": 40,
+    "class_counts": {
+      "cup": 40
+    },
+    "dominant_yolo_class": "cup",
+    "mapped_candidates": [
+      "cup",
+      "bottle"
+    ]
+  },
+  "pointnet_summary": {
+    "raw_unaligned_class": "piano",
+    "raw_unaligned_confidence": 0.36452949047088623,
+    "canonical_upright_class": "plant",
+    "canonical_upright_confidence": 0.4136185348033905,
+    "input_points": 21465,
+    "domain_gap": "Evaluated on 21465 input points (TTA\u00d710, resampled to 1024). Dense input point cloud provides strong structural coverage."
+  },
+  "top_candidates": [
+    {
+      "class_name": "plant",
+      "fused_confidence": 0.2623,
+      "yolo_confidence": 0.0,
+      "pointnet_confidence": 0.4136,
+      "support_modality": "3D_POINTNET"
+    },
+    {
+      "class_name": "person",
+      "fused_confidence": 0.184,
+      "yolo_confidence": 0.0,
+      "pointnet_confidence": 0.2036,
+      "support_modality": "3D_POINTNET"
+    },
+    {
+      "class_name": "monitor",
+      "fused_confidence": 0.1834,
+      "yolo_confidence": 0.0,
+      "pointnet_confidence": 0.2021,
+      "support_modality": "3D_POINTNET"
+    },
+    {
+      "class_name": "flower_pot",
+      "fused_confidence": 0.1064,
+      "yolo_confidence": 0.0,
+      "pointnet_confidence": 0.0681,
+      "support_modality": "3D_POINTNET"
+    },
+    {
+      "class_name": "stairs",
+      "fused_confidence": 0.0878,
+      "yolo_confidence": 0.0,
+      "pointnet_confidence": 0.0464,
+      "support_modality": "3D_POINTNET"
+    }
+  ],
+  "decision_rationale": "Dense 3D cloud (21465 points); balanced multimodal voting enabled (50% 2D / 50% 3D). Low confidence, insufficient class margin, or modality disagreement (YOLO='cup'; PointNet='plant'). Flagged as UNCERTAIN rather than outputting misleading class.",
+  "modality_predictions": {
+    "yolo_only": {
+      "class_name": "cup",
+      "evidence_score": 0.5882352941176471,
+      "confidence_calibrated": false,
+      "dominant_detection_class": "cup",
+      "detection_agreement": 1.0,
+      "detection_count": 40,
+      "multiview_consensus": true
+    },
+    "pointnet_only": {
+      "class_name": "plant",
+      "evidence_score": 0.4136185348033905,
+      "confidence_calibrated": false
+    },
+    "fused_diagnostic": {
+      "class_name": "plant",
+      "evidence_score": 0.262323864685437,
+      "confidence_calibrated": false
+    }
+  }
+}

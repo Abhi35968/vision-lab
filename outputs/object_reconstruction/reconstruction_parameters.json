@@ -1,0 +1,20 @@
+{
+  "cap_center_world": [
+    -1.48139,
+    -2.60379,
+    6.2176
+  ],
+  "total_height": 6.9031,
+  "body_radius": 1.2959,
+  "axis_tilt_x_deg": -0.0,
+  "axis_tilt_z_deg": 0.0,
+  "shoulder_z_ratio": 0.65,
+  "neck_z_ratio": 0.82,
+  "cap_z_ratio": 0.9,
+  "neck_radius_ratio": 0.38,
+  "cap_radius_ratio": 0.42,
+  "base_radius_ratio": 0.95,
+  "base_chamfer_z_ratio": 0.05,
+  "axial_resolution": 60,
+  "angular_resolution": 36
+}

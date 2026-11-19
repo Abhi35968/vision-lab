@@ -1,0 +1,30 @@
+[
+  {
+    "detector": "SIFT",
+    "runs": 5,
+    "registered_cameras": 13.0,
+    "registered_min": 12,
+    "registered_max": 21,
+    "points_3d": 611.0,
+    "points_min": 539,
+    "points_max": 1350,
+    "mean_track_length": 3.9,
+    "reproj_median_px": 0.916,
+    "reproj_mean_px": 2.909,
+    "runtime_s": 25.5
+  },
+  {
+    "detector": "ORB",
+    "runs": 5,
+    "registered_cameras": 13.0,
+    "registered_min": 13,
+    "registered_max": 13,
+    "points_3d": 741.0,
+    "points_min": 741,
+    "points_max": 741,
+    "mean_track_length": 4.57,
+    "reproj_median_px": 1.01,
+    "reproj_mean_px": 3.736,
+    "runtime_s": 16.5
+  }
+]

@@ -1,0 +1,73 @@
+{
+  "video": "05_laptop",
+  "category": "laptop",
+  "total_frames": 306,
+  "fps": 30.0,
+  "duration_s": 10.2,
+  "width": 960,
+  "height": 1280,
+  "keyframes": 40,
+  "mean_sharpness": 407.3675734946772,
+  "colmap_time_s": 131.5,
+  "colmap_registered": 40,
+  "colmap_points": 20698,
+  "colmap_reproj_mean_px": 0.5834627624794493,
+  "colmap_track_length": 8.852256256643154,
+  "colmap_focal_px": 972.7440516981532,
+  "own_registered": 40,
+  "own_points": 8661,
+  "own_reproj_median_px": 0.63,
+  "own_time_s": 40.0,
+  "frames_with_target": 40,
+  "detection_rate_pct": 100.0,
+  "category_in_coco": true,
+  "exact_label_rate_pct": 100.0,
+  "label_counts": {
+    "laptop": 40
+  },
+  "selection_modes": {
+    "category label": 40
+  },
+  "mean_confidence": 0.8910115778446197,
+  "views_with_mask_and_pose": 40,
+  "object_points": 8580,
+  "object_points_pct_of_scene": 41.45328051019422,
+  "held_out_views": 20,
+  "object_points_selection": 7909,
+  "held_out_in_mask_pct": 84.27550891389556,
+  "held_out_in_mask_min_pct": 0.025287646984448093,
+  "baseline_in_mask_pct": 51.5711662962605,
+  "obb_extent": [
+    10.915928410899586,
+    8.75993796509373,
+    5.502027909838889
+  ],
+  "mask_height_covered_pct": 99.5825880826175,
+  "pointnet_prediction": "person",
+  "pointnet_confidence": 0.5068,
+  "pointnet_top3": [
+    [
+      "person",
+      0.5068
+    ],
+    [
+      "monitor",
+      0.1666
+    ],
+    [
+      "plant",
+      0.1059
+    ]
+  ],
+  "category_in_modelnet": true,
+  "pointnet_correct": false,
+  "status": "ok",
+  "total_time_s": 189.4,
+  "dense_points": 82999,
+  "dense_multiplier": 4.01,
+  "mesh_triangles": 334857,
+  "mesh_vertices": 168228,
+  "consensus_prediction": "bookshelf",
+  "consensus_confidence": 0.4011469120481599,
+  "consensus_status": "UNCERTAIN_REJECTED"
+}

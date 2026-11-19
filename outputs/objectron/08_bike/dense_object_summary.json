@@ -1,0 +1,26 @@
+{
+  "total_views_processed": 10,
+  "raw_points_fused": 115977,
+  "clean_points_count": 68722,
+  "retention_rate_pct": 59.3,
+  "sparse_points_reference_count": 29984,
+  "density_multiplier": 2.29,
+  "mesh_vertices_count": 143392,
+  "mesh_triangles_count": 285615,
+  "raw_ply_path": "D:\\7thsem\\3DCV_proj\\outputs\\objectron\\08_bike\\dense_object_raw_fused.ply",
+  "clean_ply_path": "D:\\7thsem\\3DCV_proj\\outputs\\objectron\\08_bike\\dense_object_clean_optimized.ply",
+  "mesh_ply_path": "D:\\7thsem\\3DCV_proj\\outputs\\objectron\\08_bike\\dense_object_poisson_mesh.ply",
+  "summary_json_path": "D:\\7thsem\\3DCV_proj\\outputs\\objectron\\08_bike\\dense_object_summary.json",
+  "execution_time_s": 71.39,
+  "mesh_diagnostics": {
+    "is_watertight": false,
+    "is_edge_manifold": false,
+    "is_vertex_manifold": false,
+    "is_self_intersecting": true,
+    "num_vertices": 143392,
+    "num_triangles": 285615
+  },
+  "notes": [
+    "Global object anchor world position: [3.54, -0.712, 6.682]"
+  ]
+}

@@ -1,0 +1,447 @@
+{
+  "total_observations": 7049,
+  "total_reconstructed_points": 2077,
+  "total_registered_cameras": 32,
+  "error_thresholds_px": {
+    "subpixel": 1.0,
+    "good": 2.0,
+    "outlier": 4.0,
+    "severe_outlier": 10.0
+  },
+  "error_distribution_counts": {
+    "below_1px": 3449,
+    "below_2px": 5048,
+    "below_4px": 6269,
+    "below_10px": 6817,
+    "above_4px": 780,
+    "above_10px": 232
+  },
+  "error_distribution_percentages": {
+    "pct_below_1px": 48.93,
+    "pct_below_2px": 71.61,
+    "pct_below_4px": 88.93,
+    "pct_below_10px": 96.71,
+    "pct_above_4px": 11.07,
+    "pct_above_10px": 3.29
+  },
+  "high_error_summary": {
+    "total_high_error_tracks": 179,
+    "total_high_error_cameras": 11,
+    "high_error_cameras_list": [
+      0,
+      1,
+      11,
+      15,
+      19,
+      20,
+      27,
+      28,
+      29,
+      30,
+      31
+    ]
+  },
+  "top_25_outliers": [
+    {
+      "observation_id": 146,
+      "camera_id": 1,
+      "image_name": "keyframe_0001_orig_00016.png",
+      "point_id": 39,
+      "track_id": 140,
+      "reprojection_error_px": 887.832,
+      "obs_coords": [
+        845.11,
+        932.28
+      ],
+      "proj_coords": [
+        -42.7,
+        938.79
+      ]
+    },
+    {
+      "observation_id": 145,
+      "camera_id": 0,
+      "image_name": "keyframe_0000_orig_00000.png",
+      "point_id": 39,
+      "track_id": 140,
+      "reprojection_error_px": 871.281,
+      "obs_coords": [
+        783.45,
+        979.81
+      ],
+      "proj_coords": [
+        -87.19,
+        1013.22
+      ]
+    },
+    {
+      "observation_id": 5677,
+      "camera_id": 27,
+      "image_name": "keyframe_0027_orig_00336.png",
+      "point_id": 1560,
+      "track_id": 2417,
+      "reprojection_error_px": 780.35,
+      "obs_coords": [
+        74.85,
+        863.63
+      ],
+      "proj_coords": [
+        845.83,
+        743.06
+      ]
+    },
+    {
+      "observation_id": 3566,
+      "camera_id": 15,
+      "image_name": "keyframe_0015_orig_00192.png",
+      "point_id": 981,
+      "track_id": 1738,
+      "reprojection_error_px": 614.28,
+      "obs_coords": [
+        13.43,
+        498.55
+      ],
+      "proj_coords": [
+        627.45,
+        516.54
+      ]
+    },
+    {
+      "observation_id": 2850,
+      "camera_id": 11,
+      "image_name": "keyframe_0011_orig_00140.png",
+      "point_id": 806,
+      "track_id": 1326,
+      "reprojection_error_px": 393.587,
+      "obs_coords": [
+        569.87,
+        489.96
+      ],
+      "proj_coords": [
+        863.05,
+        752.55
+      ]
+    },
+    {
+      "observation_id": 2851,
+      "camera_id": 12,
+      "image_name": "keyframe_0012_orig_00152.png",
+      "point_id": 806,
+      "track_id": 1326,
+      "reprojection_error_px": 387.554,
+      "obs_coords": [
+        629.54,
+        604.78
+      ],
+      "proj_coords": [
+        922.26,
+        858.77
+      ]
+    },
+    {
+      "observation_id": 4937,
+      "camera_id": 20,
+      "image_name": "keyframe_0020_orig_00252.png",
+      "point_id": 1324,
+      "track_id": 2158,
+      "reprojection_error_px": 373.218,
+      "obs_coords": [
+        876.82,
+        928.21
+      ],
+      "proj_coords": [
+        505.04,
+        895.52
+      ]
+    },
+    {
+      "observation_id": 6395,
+      "camera_id": 31,
+      "image_name": "keyframe_0031_orig_00384.png",
+      "point_id": 1825,
+      "track_id": 2815,
+      "reprojection_error_px": 223.412,
+      "obs_coords": [
+        22.31,
+        69.0
+      ],
+      "proj_coords": [
+        245.32,
+        82.39
+      ]
+    },
+    {
+      "observation_id": 6394,
+      "camera_id": 30,
+      "image_name": "keyframe_0030_orig_00372.png",
+      "point_id": 1825,
+      "track_id": 2815,
+      "reprojection_error_px": 222.296,
+      "obs_coords": [
+        77.88,
+        70.71
+      ],
+      "proj_coords": [
+        299.69,
+        85.47
+      ]
+    },
+    {
+      "observation_id": 6393,
+      "camera_id": 29,
+      "image_name": "keyframe_0029_orig_00360.png",
+      "point_id": 1825,
+      "track_id": 2815,
+      "reprojection_error_px": 221.935,
+      "obs_coords": [
+        118.1,
+        71.95
+      ],
+      "proj_coords": [
+        339.61,
+        85.74
+      ]
+    },
+    {
+      "observation_id": 6392,
+      "camera_id": 28,
+      "image_name": "keyframe_0028_orig_00348.png",
+      "point_id": 1825,
+      "track_id": 2815,
+      "reprojection_error_px": 217.027,
+      "obs_coords": [
+        208.27,
+        83.89
+      ],
+      "proj_coords": [
+        424.86,
+        97.8
+      ]
+    },
+    {
+      "observation_id": 6391,
+      "camera_id": 27,
+      "image_name": "keyframe_0027_orig_00336.png",
+      "point_id": 1825,
+      "track_id": 2815,
+      "reprojection_error_px": 215.086,
+      "obs_coords": [
+        346.99,
+        77.8
+      ],
+      "proj_coords": [
+        561.8,
+        88.72
+      ]
+    },
+    {
+      "observation_id": 380,
+      "camera_id": 2,
+      "image_name": "keyframe_0002_orig_00028.png",
+      "point_id": 118,
+      "track_id": 340,
+      "reprojection_error_px": 203.291,
+      "obs_coords": [
+        1067.1,
+        649.26
+      ],
+      "proj_coords": [
+        863.86,
+        645.02
+      ]
+    },
+    {
+      "observation_id": 379,
+      "camera_id": 0,
+      "image_name": "keyframe_0000_orig_00000.png",
+      "point_id": 118,
+      "track_id": 340,
+      "reprojection_error_px": 194.245,
+      "obs_coords": [
+        942.74,
+        758.79
+      ],
+      "proj_coords": [
+        748.62,
+        751.78
+      ]
+    },
+    {
+      "observation_id": 1323,
+      "camera_id": 4,
+      "image_name": "keyframe_0004_orig_00056.png",
+      "point_id": 376,
+      "track_id": 667,
+      "reprojection_error_px": 167.491,
+      "obs_coords": [
+        846.27,
+        580.37
+      ],
+      "proj_coords": [
+        1000.99,
+        644.5
+      ]
+    },
+    {
+      "observation_id": 96,
+      "camera_id": 0,
+      "image_name": "keyframe_0000_orig_00000.png",
+      "point_id": 26,
+      "track_id": 66,
+      "reprojection_error_px": 125.201,
+      "obs_coords": [
+        150.48,
+        941.06
+      ],
+      "proj_coords": [
+        38.33,
+        996.71
+      ]
+    },
+    {
+      "observation_id": 97,
+      "camera_id": 1,
+      "image_name": "keyframe_0001_orig_00016.png",
+      "point_id": 26,
+      "track_id": 66,
+      "reprojection_error_px": 121.08,
+      "obs_coords": [
+        188.34,
+        872.61
+      ],
+      "proj_coords": [
+        78.89,
+        924.39
+      ]
+    },
+    {
+      "observation_id": 6638,
+      "camera_id": 29,
+      "image_name": "keyframe_0029_orig_00360.png",
+      "point_id": 1908,
+      "track_id": 2919,
+      "reprojection_error_px": 105.716,
+      "obs_coords": [
+        628.9,
+        1747.9
+      ],
+      "proj_coords": [
+        523.77,
+        1736.7
+      ]
+    },
+    {
+      "observation_id": 524,
+      "camera_id": 1,
+      "image_name": "keyframe_0001_orig_00016.png",
+      "point_id": 171,
+      "track_id": 401,
+      "reprojection_error_px": 100.221,
+      "obs_coords": [
+        871.29,
+        614.36
+      ],
+      "proj_coords": [
+        775.18,
+        642.77
+      ]
+    },
+    {
+      "observation_id": 3244,
+      "camera_id": 12,
+      "image_name": "keyframe_0012_orig_00152.png",
+      "point_id": 886,
+      "track_id": 1443,
+      "reprojection_error_px": 66.273,
+      "obs_coords": [
+        965.82,
+        881.03
+      ],
+      "proj_coords": [
+        1007.99,
+        932.15
+      ]
+    },
+    {
+      "observation_id": 6478,
+      "camera_id": 31,
+      "image_name": "keyframe_0031_orig_00384.png",
+      "point_id": 1851,
+      "track_id": 2842,
+      "reprojection_error_px": 62.953,
+      "obs_coords": [
+        784.59,
+        1102.16
+      ],
+      "proj_coords": [
+        727.87,
+        1129.47
+      ]
+    },
+    {
+      "observation_id": 5870,
+      "camera_id": 23,
+      "image_name": "keyframe_0023_orig_00288.png",
+      "point_id": 1639,
+      "track_id": 2514,
+      "reprojection_error_px": 62.885,
+      "obs_coords": [
+        657.64,
+        503.48
+      ],
+      "proj_coords": [
+        717.82,
+        521.72
+      ]
+    },
+    {
+      "observation_id": 456,
+      "camera_id": 1,
+      "image_name": "keyframe_0001_orig_00016.png",
+      "point_id": 143,
+      "track_id": 367,
+      "reprojection_error_px": 62.879,
+      "obs_coords": [
+        812.17,
+        806.39
+      ],
+      "proj_coords": [
+        751.93,
+        788.37
+      ]
+    },
+    {
+      "observation_id": 5971,
+      "camera_id": 29,
+      "image_name": "keyframe_0029_orig_00360.png",
+      "point_id": 1667,
+      "track_id": 2547,
+      "reprojection_error_px": 61.517,
+      "obs_coords": [
+        639.98,
+        793.61
+      ],
+      "proj_coords": [
+        701.04,
+        801.05
+      ]
+    },
+    {
+      "observation_id": 6693,
+      "camera_id": 31,
+      "image_name": "keyframe_0031_orig_00384.png",
+      "point_id": 1925,
+      "track_id": 2988,
+      "reprojection_error_px": 60.623,
+      "obs_coords": [
+        777.94,
+        1096.38
+      ],
+      "proj_coords": [
+        724.58,
+        1125.16
+      ]
+    }
+  ],
+  "policy_note": "Outlier observations are diagnosed and exported for inspection; they are NOT automatically deleted to preserve traceability."
+}

@@ -1,0 +1,142 @@
+{
+  "created_at_utc": "2026-11-18T10:26:54.994158Z",
+  "source_manifest": "D:\\7thsem\\3DCV_proj\\data\\objectron_subset_pilot\\manifest.json",
+  "canonical_label_aliases": {
+    "bike": "bicycle",
+    "motobike": "bicycle",
+    "cerealboxes": "cereal_box",
+    "shoes": "shoe"
+  },
+  "counts": {
+    "bicycle:matched": 1,
+    "book:matched": 1,
+    "bottle:matched": 1,
+    "camera:matched": 1,
+    "cereal_box:matched": 1,
+    "chair:matched": 1,
+    "cup:mismatch": 1,
+    "cup:missing_annotation": 1,
+    "laptop:matched": 1,
+    "shoe:matched": 1
+  },
+  "matched_samples": 8,
+  "total_samples": 10,
+  "samples": [
+    {
+      "source_key": "cup/batch-48/1",
+      "status": "missing_annotation",
+      "expected_class": "cup",
+      "labels": []
+    },
+    {
+      "source_key": "bike/batch-4/47",
+      "status": "matched",
+      "expected_class": "bicycle",
+      "raw_labels": [
+        "bike"
+      ],
+      "canonical_labels": [
+        "bicycle"
+      ],
+      "frame_annotations": 351
+    },
+    {
+      "source_key": "book/batch-2/11",
+      "status": "matched",
+      "expected_class": "book",
+      "raw_labels": [
+        "book"
+      ],
+      "canonical_labels": [
+        "book"
+      ],
+      "frame_annotations": 252
+    },
+    {
+      "source_key": "bottle/batch-28/31",
+      "status": "matched",
+      "expected_class": "bottle",
+      "raw_labels": [
+        "bottle"
+      ],
+      "canonical_labels": [
+        "bottle"
+      ],
+      "frame_annotations": 170
+    },
+    {
+      "source_key": "camera/batch-6/33",
+      "status": "matched",
+      "expected_class": "camera",
+      "raw_labels": [
+        "camera"
+      ],
+      "canonical_labels": [
+        "camera"
+      ],
+      "frame_annotations": 212
+    },
+    {
+      "source_key": "cereal_box/batch-23/39",
+      "status": "matched",
+      "expected_class": "cereal_box",
+      "raw_labels": [
+        "cerealboxes"
+      ],
+      "canonical_labels": [
+        "cereal_box"
+      ],
+      "frame_annotations": 320
+    },
+    {
+      "source_key": "chair/batch-17/15",
+      "status": "matched",
+      "expected_class": "chair",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 183
+    },
+    {
+      "source_key": "cup/batch-20/34",
+      "status": "mismatch",
+      "expected_class": "cup",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 180
+    },
+    {
+      "source_key": "laptop/batch-26/20",
+      "status": "matched",
+      "expected_class": "laptop",
+      "raw_labels": [
+        "laptop"
+      ],
+      "canonical_labels": [
+        "laptop"
+      ],
+      "frame_annotations": 313
+    },
+    {
+      "source_key": "shoe/batch-38/5",
+      "status": "matched",
+      "expected_class": "shoe",
+      "raw_labels": [
+        "shoe",
+        "shoe"
+      ],
+      "canonical_labels": [
+        "shoe",
+        "shoe"
+      ],
+      "frame_annotations": 275
+    }
+  ]
+}

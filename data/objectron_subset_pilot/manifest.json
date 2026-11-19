@@ -1,0 +1,378 @@
+{
+  "schema_version": 1,
+  "dataset": "Google Objectron",
+  "source_repository": "https://github.com/google-research-datasets/Objectron",
+  "source_bucket": "https://storage.googleapis.com/objectron",
+  "license": "Computational Use of Data Agreement 1.0 (C-UDA-1.0)",
+  "license_url": "https://github.com/google-research-datasets/Objectron#license",
+  "created_at_utc": "2026-11-18T07:32:16.128057Z",
+  "split": "train",
+  "samples": [
+    {
+      "source_key": "cup/batch-48/1",
+      "class": "cup",
+      "objectron_class": "cup",
+      "split": "train",
+      "assets": {
+        "video": {
+          "path": "D:\\7thsem\\3DCV_proj\\data\\objectron_subset_pilot\\media\\cup\\batch-48\\1\\video.MOV",
+          "bytes": 20150988,
+          "sha256": "37b6fd1cb5f392f37f65673b513c97a1a7948ff1f6a3302df1f2381608860447",
+          "downloaded": true
+        }
+      },
+      "updated_at_utc": "2026-11-18T07:32:57.498542Z",
+      "annotation_validation": {
+        "status": "missing_annotation",
+        "expected_class": "cup",
+        "labels": []
+      }
+    },
+    {
+      "source_key": "bike/batch-4/47",
+      "class": "bicycle",
+      "objectron_class": "bike",
+      "split": "train",
+      "assets": {
+        "video": {
+          "path": "D:\\7thsem\\3DCV_proj\\data\\objectron_subset_pilot\\media\\bike\\batch-4\\47\\video.MOV",
+          "bytes": 22651858,
+          "sha256": "dd9dc59e771a1f14c2701b6838b30215f81ea7a82dba99b9ba7259bc8a839342",
+          "downloaded": true
+        },
+        "annotation": {
+          "path": "D:\\7thsem\\3DCV_proj\\data\\objectron_subset_pilot\\media\\bike\\batch-4\\47\\annotation.pbdata",
+          "bytes": 225778,
+          "sha256": "1192ec604e69f72553d4f54c60e79663c2ebf2e65720e9d63222e5fe8f6ff7b1",
+          "downloaded": true
+        },
+        "geometry": {
+          "path": "D:\\7thsem\\3DCV_proj\\data\\objectron_subset_pilot\\media\\bike\\batch-4\\47\\geometry.pbdata",
+          "bytes": 2961286,
+          "sha256": "6c0bd26c8f6bc4fe20e1e9221ad3da79c2588c0b5fbf4c2c4a99118d70fd3662",
+          "downloaded": true
+        }
+      },
+      "updated_at_utc": "2026-11-18T07:33:45.641928Z",
+      "annotation_validation": {
+        "status": "matched",
+        "expected_class": "bicycle",
+        "raw_labels": [
+          "bike"
+        ],
+        "canonical_labels": [
+          "bicycle"
+        ],
+        "frame_annotations": 351
+      }
+    },
+    {
+      "source_key": "book/batch-2/11",
+      "class": "book",
+      "objectron_class": "book",
+      "split": "train",
+      "assets": {
+        "video": {
+          "path": "D:\\7thsem\\3DCV_proj\\data\\objectron_subset_pilot\\media\\book\\batch-2\\11\\video.MOV",
+          "bytes": 17916641,
+          "sha256": "fae670be21bed30c43d93c651b7a4cdf025ff098858ea571c0eeeb64c3a5c9fa",
+          "downloaded": true
+        },
+        "annotation": {
+          "path": "D:\\7thsem\\3DCV_proj\\data\\objectron_subset_pilot\\media\\book\\batch-2\\11\\annotation.pbdata",
+          "bytes": 162121,
+          "sha256": "cd98c306fa7d11f05abf5f9d2c40d9d35b09497d2b66895131845a28532dd906",
+          "downloaded": true
+        },
+        "geometry": {
+          "path": "D:\\7thsem\\3DCV_proj\\data\\objectron_subset_pilot\\media\\book\\batch-2\\11\\geometry.pbdata",
+          "bytes": 1423988,
+          "sha256": "8328a3d13171c95eaecc8ed35f314e79741c98fc8985f7dc2772d8384043b8c1",
+          "downloaded": true
+        }
+      },
+      "updated_at_utc": "2026-11-18T07:34:01.226036Z",
+      "annotation_validation": {
+        "status": "matched",
+        "expected_class": "book",
+        "raw_labels": [
+          "book"
+        ],
+        "canonical_labels": [
+          "book"
+        ],
+        "frame_annotations": 252
+      }
+    },
+    {
+      "source_key": "bottle/batch-28/31",
+      "class": "bottle",
+      "objectron_class": "bottle",
+      "split": "train",
+      "assets": {
+        "video": {
+          "path": "D:\\7thsem\\3DCV_proj\\data\\objectron_subset_pilot\\media\\bottle\\batch-28\\31\\video.MOV",
+          "bytes": 13140851,
+          "sha256": "ecac760ef4ebbb17ea0d3550f373bcfc6991b559b9ef4dfb04373b0197fd0e70",
+          "downloaded": true
+        },
+        "annotation": {
+          "path": "D:\\7thsem\\3DCV_proj\\data\\objectron_subset_pilot\\media\\bottle\\batch-28\\31\\annotation.pbdata",
+          "bytes": 109397,
+          "sha256": "d6a07576a2eb245ef2f911d1fcf6bd84db86077881b1bb2d4826f034401bf088",
+          "downloaded": true
+        },
+        "geometry": {
+          "path": "D:\\7thsem\\3DCV_proj\\data\\objectron_subset_pilot\\media\\bottle\\batch-28\\31\\geometry.pbdata",
+          "bytes": 4482623,
+          "sha256": "07ad66ead258b4e9a93d67324225d45a03bc4e7bc07cb7b81a1c5457fc1155e9",
+          "downloaded": true
+        }
+      },
+      "updated_at_utc": "2026-11-18T07:34:16.700657Z",
+      "annotation_validation": {
+        "status": "matched",
+        "expected_class": "bottle",
+        "raw_labels": [
+          "bottle"
+        ],
+        "canonical_labels": [
+          "bottle"
+        ],
+        "frame_annotations": 170
+      }
+    },
+    {
+      "source_key": "camera/batch-6/33",
+      "class": "camera",
+      "objectron_class": "camera",
+      "split": "train",
+      "assets": {
+        "video": {
+          "path": "D:\\7thsem\\3DCV_proj\\data\\objectron_subset_pilot\\media\\camera\\batch-6\\33\\video.MOV",
+          "bytes": 15890582,
+          "sha256": "10f90e6e69d6c69e8684f9e50326c631d95de4fb59f073d4d9f3290103728a03",
+          "downloaded": true
+        },
+        "annotation": {
+          "path": "D:\\7thsem\\3DCV_proj\\data\\objectron_subset_pilot\\media\\camera\\batch-6\\33\\annotation.pbdata",
+          "bytes": 136403,
+          "sha256": "043605104a4195db424f06f725c01386f199b9feec04369aec228e0834fde59c",
+          "downloaded": true
+        },
+        "geometry": {
+          "path": "D:\\7thsem\\3DCV_proj\\data\\objectron_subset_pilot\\media\\camera\\batch-6\\33\\geometry.pbdata",
+          "bytes": 3648942,
+          "sha256": "7917e0416d7cca4a6484e5c51ede0b158395c76b6275f6d93fcd923d2023836b",
+          "downloaded": true
+        }
+      },
+      "updated_at_utc": "2026-11-18T07:34:29.324434Z",
+      "annotation_validation": {
+        "status": "matched",
+        "expected_class": "camera",
+        "raw_labels": [
+          "camera"
+        ],
+        "canonical_labels": [
+          "camera"
+        ],
+        "frame_annotations": 212
+      }
+    },
+    {
+      "source_key": "cereal_box/batch-23/39",
+      "class": "cereal_box",
+      "objectron_class": "cereal_box",
+      "split": "train",
+      "assets": {
+        "video": {
+          "path": "D:\\7thsem\\3DCV_proj\\data\\objectron_subset_pilot\\media\\cereal_box\\batch-23\\39\\video.MOV",
+          "bytes": 24209277,
+          "sha256": "ece92753ff11506d96ba33cf3cafa76024e8632ab28bcad12c134b08de82e37c",
+          "downloaded": true
+        },
+        "annotation": {
+          "path": "D:\\7thsem\\3DCV_proj\\data\\objectron_subset_pilot\\media\\cereal_box\\batch-23\\39\\annotation.pbdata",
+          "bytes": 205852,
+          "sha256": "f4972917f00e48e51a25653bed652c066cf5ad138de16c5ca483a9130dc55a8b",
+          "downloaded": true
+        },
+        "geometry": {
+          "path": "D:\\7thsem\\3DCV_proj\\data\\objectron_subset_pilot\\media\\cereal_box\\batch-23\\39\\geometry.pbdata",
+          "bytes": 4972259,
+          "sha256": "49b7f59f10a883000743a97497fe785302e73aedc5caa69b6c314b4556c7a9bc",
+          "downloaded": true
+        }
+      },
+      "updated_at_utc": "2026-11-18T07:34:45.196239Z",
+      "annotation_validation": {
+        "status": "matched",
+        "expected_class": "cereal_box",
+        "raw_labels": [
+          "cerealboxes"
+        ],
+        "canonical_labels": [
+          "cereal_box"
+        ],
+        "frame_annotations": 320
+      }
+    },
+    {
+      "source_key": "chair/batch-17/15",
+      "class": "chair",
+      "objectron_class": "chair",
+      "split": "train",
+      "assets": {
+        "video": {
+          "path": "D:\\7thsem\\3DCV_proj\\data\\objectron_subset_pilot\\media\\chair\\batch-17\\15\\video.MOV",
+          "bytes": 13991389,
+          "sha256": "df4789e4c4078bdb49ee6e8433fe4cb73400846ca7625faa1d80c0a21bbfef67",
+          "downloaded": true
+        },
+        "annotation": {
+          "path": "D:\\7thsem\\3DCV_proj\\data\\objectron_subset_pilot\\media\\chair\\batch-17\\15\\annotation.pbdata",
+          "bytes": 117755,
+          "sha256": "72936411338df9368c4694007bdfe84c03764e69e1127b9cb817c5e1cdd594ce",
+          "downloaded": true
+        },
+        "geometry": {
+          "path": "D:\\7thsem\\3DCV_proj\\data\\objectron_subset_pilot\\media\\chair\\batch-17\\15\\geometry.pbdata",
+          "bytes": 7424278,
+          "sha256": "5a3a2b79f989b77234e54b71dfd57b2c20eea3985d3a8b934c36402b3f704bea",
+          "downloaded": true
+        }
+      },
+      "updated_at_utc": "2026-11-18T07:35:01.639629Z",
+      "annotation_validation": {
+        "status": "matched",
+        "expected_class": "chair",
+        "raw_labels": [
+          "chair"
+        ],
+        "canonical_labels": [
+          "chair"
+        ],
+        "frame_annotations": 183
+      }
+    },
+    {
+      "source_key": "cup/batch-20/34",
+      "class": "cup",
+      "objectron_class": "cup",
+      "split": "train",
+      "assets": {
+        "video": {
+          "path": "D:\\7thsem\\3DCV_proj\\data\\objectron_subset_pilot\\media\\cup\\batch-20\\34\\video.MOV",
+          "bytes": 13570062,
+          "sha256": "19390207baeb2b6e6b97c06fcdb4eb1f0e5afdca8e71cd85d63f0e74d438c082",
+          "downloaded": true
+        },
+        "annotation": {
+          "path": "D:\\7thsem\\3DCV_proj\\data\\objectron_subset_pilot\\media\\cup\\batch-20\\34\\annotation.pbdata",
+          "bytes": 115826,
+          "sha256": "5332282afa823cb1881929bc5e6ed8095a24b4e5301e0ff1babc052dc36e59ec",
+          "downloaded": true
+        },
+        "geometry": {
+          "path": "D:\\7thsem\\3DCV_proj\\data\\objectron_subset_pilot\\media\\cup\\batch-20\\34\\geometry.pbdata",
+          "bytes": 7976875,
+          "sha256": "1c9a910a98e73a6d90b2cd9d466118625050de1f17b60207d5b3bc89e20744a4",
+          "downloaded": true
+        }
+      },
+      "updated_at_utc": "2026-11-18T07:35:17.760135Z",
+      "annotation_validation": {
+        "status": "mismatch",
+        "expected_class": "cup",
+        "raw_labels": [
+          "chair"
+        ],
+        "canonical_labels": [
+          "chair"
+        ],
+        "frame_annotations": 180
+      }
+    },
+    {
+      "source_key": "laptop/batch-26/20",
+      "class": "laptop",
+      "objectron_class": "laptop",
+      "split": "train",
+      "assets": {
+        "video": {
+          "path": "D:\\7thsem\\3DCV_proj\\data\\objectron_subset_pilot\\media\\laptop\\batch-26\\20\\video.MOV",
+          "bytes": 25284835,
+          "sha256": "ff091a57bd2dd087ff3a18606d9a9965fac96e49571363d8f2ad9a842cdc88e7",
+          "downloaded": true
+        },
+        "annotation": {
+          "path": "D:\\7thsem\\3DCV_proj\\data\\objectron_subset_pilot\\media\\laptop\\batch-26\\20\\annotation.pbdata",
+          "bytes": 201346,
+          "sha256": "7117970c117ee0c394a12184e48fefcfcd5f1ee7bce3fe9d984f467cfc86ed6a",
+          "downloaded": true
+        },
+        "geometry": {
+          "path": "D:\\7thsem\\3DCV_proj\\data\\objectron_subset_pilot\\media\\laptop\\batch-26\\20\\geometry.pbdata",
+          "bytes": 1958413,
+          "sha256": "5752dac8409aabc0ad78da04b17ddf669176e740e64741acbfe6fe95a29e9041",
+          "downloaded": true
+        }
+      },
+      "updated_at_utc": "2026-11-18T07:35:35.913647Z",
+      "annotation_validation": {
+        "status": "matched",
+        "expected_class": "laptop",
+        "raw_labels": [
+          "laptop"
+        ],
+        "canonical_labels": [
+          "laptop"
+        ],
+        "frame_annotations": 313
+      }
+    },
+    {
+      "source_key": "shoe/batch-38/5",
+      "class": "shoe",
+      "objectron_class": "shoe",
+      "split": "train",
+      "assets": {
+        "video": {
+          "path": "D:\\7thsem\\3DCV_proj\\data\\objectron_subset_pilot\\media\\shoe\\batch-38\\5\\video.MOV",
+          "bytes": 20688475,
+          "sha256": "b156a8bc21fe05610e815f807c130d72b7ae2590da3e17550b3ddbad2d6aee51",
+          "downloaded": true
+        },
+        "annotation": {
+          "path": "D:\\7thsem\\3DCV_proj\\data\\objectron_subset_pilot\\media\\shoe\\batch-38\\5\\annotation.pbdata",
+          "bytes": 272002,
+          "sha256": "8f2f1117212f91e45d7fa65f4f036927f07ec9d1417925e592fb7c8c35d38cab",
+          "downloaded": true
+        },
+        "geometry": {
+          "path": "D:\\7thsem\\3DCV_proj\\data\\objectron_subset_pilot\\media\\shoe\\batch-38\\5\\geometry.pbdata",
+          "bytes": 9392844,
+          "sha256": "083ce4e1070792dd0d5fac7aa19d663e7b7fc1bded18885c8ed31805dfa924ac",
+          "downloaded": true
+        }
+      },
+      "updated_at_utc": "2026-11-18T07:35:54.116756Z",
+      "annotation_validation": {
+        "status": "matched",
+        "expected_class": "shoe",
+        "raw_labels": [
+          "shoe",
+          "shoe"
+        ],
+        "canonical_labels": [
+          "shoe",
+          "shoe"
+        ],
+        "frame_annotations": 275
+      }
+    }
+  ],
+  "failures": [],
+  "updated_at_utc": "2026-11-18T10:26:54.994158Z"
+}

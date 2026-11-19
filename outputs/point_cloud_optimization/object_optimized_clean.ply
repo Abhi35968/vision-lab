@@ -1,0 +1,12 @@
+ply
+format binary_little_endian 1.0
+comment Created by Open3D
+element vertex 10
+property double x
+property double y
+property double z
+property double nx
+property double ny
+property double nz
+end_header
+Ş	Šõ¿çŒ(íÀßO—nÒ@˜n°¸oÍ¿oxüë?şØ¬àTÛ¿ƒÀÊ¡E¶ó¿±áé•²À«ÏÕVì/@îEj°¸oÍ¿d;pxüë?5?©àTÛ¿ï§ÆK7ô¿xz¥,CÀ£¼Ô@œ¼k°¸oÍ¿`ëoxüë?"ªàTÛ¿KÈ=›Uó¿õ¹ÚŠıeÀ“©‚QI@<4o°¸oÍ¿‚ônxüë?6&­àTÛ¿	ù g³êô¿_˜LŒJÀµ¦yÇ)@VÉ“.ø½Î¿²ÕH£î?7ñ"ÑÄ¿&äƒÍªò¿¿œ3¢´Àu“V@æTµ76˜Ì¿”uf?	ë?dÕŸtLß¿î|?5^ºò¿-²ï§FÀ¾0™*Õ@hIk°¸oÍ¿ìoxüë?„>ªàTÛ¿9EGrùõ¿¯%äƒÍÀœ¢#¹ü@øl°¸oÍ¿™¸oxüë?ŞªàTÛ¿&äƒÍªó¿¥N@aCÀÏ÷Sã¥Û@¢Lm°¸oÍ¿Ëhoxüë?8Í«àTÛ¿&äƒÍªô¿mÅş²{rÀrùé·ï@¢Mk°¸oÍ¿LŞoxüë?†uªàTÛ¿

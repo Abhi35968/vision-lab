@@ -1,0 +1,39 @@
+{
+  "model_metadata": {
+    "model_name": "yolo26n.pt",
+    "device": "cpu",
+    "confidence_threshold": 0.05,
+    "iou_threshold": 0.45,
+    "input_resolution": 640
+  },
+  "summary_metrics": {
+    "total_images_processed": 6,
+    "total_detections": 5,
+    "unique_object_classes": [
+      "bench"
+    ],
+    "unique_class_count": 1,
+    "detection_count_per_class": {
+      "bench": 5
+    },
+    "average_confidence_per_class": {
+      "bench": 0.1213
+    },
+    "images_with_no_detections": [
+      "keyframe_0002_orig_00028.png"
+    ],
+    "no_detection_count": 1
+  },
+  "timing_benchmarks": {
+    "total_inference_time_seconds": 0.533,
+    "average_inference_time_ms": 88.82,
+    "inference_time_per_image_ms": {
+      "keyframe_0000_orig_00000.png": 221.06,
+      "keyframe_0001_orig_00010.png": 47.07,
+      "keyframe_0002_orig_00028.png": 33.63,
+      "keyframe_0003_orig_00046.png": 27.65,
+      "keyframe_0004_orig_00064.png": 35.95,
+      "keyframe_0005_orig_00082.png": 34.52
+    }
+  }
+}

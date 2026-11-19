@@ -1,0 +1,26 @@
+{
+  "total_views_processed": 10,
+  "raw_points_fused": 112389,
+  "clean_points_count": 58628,
+  "retention_rate_pct": 52.2,
+  "sparse_points_reference_count": 4623,
+  "density_multiplier": 12.68,
+  "mesh_vertices_count": 62359,
+  "mesh_triangles_count": 123707,
+  "raw_ply_path": "D:\\7thsem\\3DCV_proj\\outputs\\objectron\\06_camera\\dense_object_raw_fused.ply",
+  "clean_ply_path": "D:\\7thsem\\3DCV_proj\\outputs\\objectron\\06_camera\\dense_object_clean_optimized.ply",
+  "mesh_ply_path": "D:\\7thsem\\3DCV_proj\\outputs\\objectron\\06_camera\\dense_object_poisson_mesh.ply",
+  "summary_json_path": "D:\\7thsem\\3DCV_proj\\outputs\\objectron\\06_camera\\dense_object_summary.json",
+  "execution_time_s": 19.78,
+  "mesh_diagnostics": {
+    "is_watertight": false,
+    "is_edge_manifold": false,
+    "is_vertex_manifold": true,
+    "is_self_intersecting": true,
+    "num_vertices": 62359,
+    "num_triangles": 123707
+  },
+  "notes": [
+    "Global object anchor world position: [1.192, 0.358, 3.836]"
+  ]
+}

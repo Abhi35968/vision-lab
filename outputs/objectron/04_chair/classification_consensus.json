@@ -1,0 +1,90 @@
+{
+  "predicted_class": "unknown",
+  "predicted_confidence": 0.0,
+  "is_uncertain": true,
+  "status": "UNCERTAIN_REJECTED",
+  "modality_weights": {
+    "weight_2d": 0.5,
+    "weight_3d": 0.5
+  },
+  "yolo_summary": {
+    "total_valid_frames": 40,
+    "class_counts": {
+      "chair": 37,
+      "couch": 3
+    },
+    "dominant_yolo_class": "chair",
+    "mapped_candidates": [
+      "chair",
+      "stool",
+      "sofa"
+    ]
+  },
+  "pointnet_summary": {
+    "raw_unaligned_class": "plant",
+    "raw_unaligned_confidence": 0.5221436023712158,
+    "canonical_upright_class": "plant",
+    "canonical_upright_confidence": 0.9079232215881348,
+    "input_points": 88029,
+    "domain_gap": "Evaluated on 88029 input points (TTA\u00d710, resampled to 1024). Dense input point cloud provides strong structural coverage."
+  },
+  "top_candidates": [
+    {
+      "class_name": "plant",
+      "fused_confidence": 0.4989,
+      "yolo_confidence": 0.0,
+      "pointnet_confidence": 0.9079,
+      "support_modality": "3D_POINTNET"
+    },
+    {
+      "class_name": "person",
+      "fused_confidence": 0.1094,
+      "yolo_confidence": 0.0,
+      "pointnet_confidence": 0.0437,
+      "support_modality": "3D_POINTNET"
+    },
+    {
+      "class_name": "flower_pot",
+      "fused_confidence": 0.1035,
+      "yolo_confidence": 0.0,
+      "pointnet_confidence": 0.039,
+      "support_modality": "3D_POINTNET"
+    },
+    {
+      "class_name": "monitor",
+      "fused_confidence": 0.0371,
+      "yolo_confidence": 0.0,
+      "pointnet_confidence": 0.005,
+      "support_modality": "3D_POINTNET"
+    },
+    {
+      "class_name": "chair",
+      "fused_confidence": 0.0283,
+      "yolo_confidence": 0.5627,
+      "pointnet_confidence": 0.0001,
+      "support_modality": "2D_YOLO"
+    }
+  ],
+  "decision_rationale": "Dense 3D cloud (88029 points); balanced multimodal voting enabled (50% 2D / 50% 3D). Low confidence, insufficient class margin, or modality disagreement (YOLO='chair'; PointNet='plant'). Flagged as UNCERTAIN rather than outputting misleading class.",
+  "modality_predictions": {
+    "yolo_only": {
+      "class_name": "chair",
+      "evidence_score": 0.5626965246503204,
+      "confidence_calibrated": false,
+      "dominant_detection_class": "chair",
+      "detection_agreement": 1.0,
+      "detection_count": 40,
+      "multiview_consensus": true
+    },
+    "pointnet_only": {
+      "class_name": "plant",
+      "evidence_score": 0.9079232215881348,
+      "confidence_calibrated": false
+    },
+    "fused_diagnostic": {
+      "class_name": "plant",
+      "evidence_score": 0.4988667221014825,
+      "confidence_calibrated": false
+    }
+  }
+}

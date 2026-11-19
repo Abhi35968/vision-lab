@@ -1,0 +1,179 @@
+{
+  "test_shapes": 2468,
+  "num_points": 1024,
+  "overall_accuracy": 0.8464343547821045,
+  "mean_class_accuracy": 0.7923313953488372,
+  "bottle_class_accuracy": 0.94,
+  "lowest_classes": [
+    [
+      "flower_pot",
+      0.05
+    ],
+    [
+      "wardrobe",
+      0.3
+    ],
+    [
+      "curtain",
+      0.5
+    ],
+    [
+      "bench",
+      0.6
+    ],
+    [
+      "stool",
+      0.6
+    ]
+  ],
+  "jitter": {
+    "0.0": 0.8464343547821045,
+    "0.01": 0.8460291624069214,
+    "0.02": 0.8407617211341858,
+    "0.03": 0.807131290435791,
+    "0.05": 0.6600486040115356,
+    "0.075": 0.4294975697994232,
+    "0.1": 0.220016211271286
+  },
+  "point_count": {
+    "1024": 0.8468395471572876,
+    "512": 0.8302268981933594,
+    "256": 0.7601296305656433,
+    "128": 0.5964343547821045,
+    "64": 0.3310372829437256,
+    "32": 0.19489464163780212,
+    "16": 0.09481361508369446
+  },
+  "outlier_ratio": {
+    "0.0": 0.8464343547821045,
+    "0.002": 0.5688816905021667,
+    "0.005": 0.34359803795814514,
+    "0.01": 0.2042139321565628,
+    "0.02": 0.12601296603679657,
+    "0.05": 0.08711507171392441,
+    "0.1": 0.0765802264213562,
+    "0.2": 0.0664505660533905
+  },
+  "real_object": {
+    "sparse_sfm_validated_29": {
+      "description": "29 validated SfM points (measured)",
+      "num_points": 29,
+      "predicted_class": "person",
+      "confidence": 0.4044,
+      "top5": [
+        {
+          "class_id": 24,
+          "class_name": "person",
+          "confidence": 0.4044,
+          "log_prob": -0.9054
+        },
+        {
+          "class_id": 31,
+          "class_name": "stairs",
+          "confidence": 0.3123,
+          "log_prob": -1.1638
+        },
+        {
+          "class_id": 19,
+          "class_name": "lamp",
+          "confidence": 0.1019,
+          "log_prob": -2.2842
+        },
+        {
+          "class_id": 26,
+          "class_name": "plant",
+          "confidence": 0.0734,
+          "log_prob": -2.6122
+        },
+        {
+          "class_id": 0,
+          "class_name": "airplane",
+          "confidence": 0.0507,
+          "log_prob": -2.9818
+        }
+      ],
+      "bottle_in_top5_confidence": null,
+      "correct": false
+    },
+    "sparse_sfm_candidates_47": {
+      "description": "All 47 candidate SfM points (measured)",
+      "num_points": 47,
+      "predicted_class": "lamp",
+      "confidence": 0.8414,
+      "top5": [
+        {
+          "class_id": 19,
+          "class_name": "lamp",
+          "confidence": 0.8414,
+          "log_prob": -0.1727
+        },
+        {
+          "class_id": 24,
+          "class_name": "person",
+          "confidence": 0.0727,
+          "log_prob": -2.6215
+        },
+        {
+          "class_id": 26,
+          "class_name": "plant",
+          "confidence": 0.0483,
+          "log_prob": -3.0309
+        },
+        {
+          "class_id": 32,
+          "class_name": "stool",
+          "confidence": 0.0085,
+          "log_prob": -4.7714
+        },
+        {
+          "class_id": 9,
+          "class_name": "cone",
+          "confidence": 0.0081,
+          "log_prob": -4.8215
+        }
+      ],
+      "bottle_in_top5_confidence": null,
+      "correct": false
+    },
+    "fitted_mesh_surface_2048": {
+      "description": "2,048 points sampled on the fitted bottle mesh (model, not measured)",
+      "num_points": 2048,
+      "predicted_class": "bottle",
+      "confidence": 0.996,
+      "top5": [
+        {
+          "class_id": 5,
+          "class_name": "bottle",
+          "confidence": 0.996,
+          "log_prob": -0.004
+        },
+        {
+          "class_id": 37,
+          "class_name": "vase",
+          "confidence": 0.0038,
+          "log_prob": -5.5826
+        },
+        {
+          "class_id": 38,
+          "class_name": "wardrobe",
+          "confidence": 0.0001,
+          "log_prob": -9.2263
+        },
+        {
+          "class_id": 15,
+          "class_name": "flower_pot",
+          "confidence": 0.0001,
+          "log_prob": -9.5572
+        },
+        {
+          "class_id": 9,
+          "class_name": "cone",
+          "confidence": 0.0,
+          "log_prob": -10.3815
+        }
+      ],
+      "bottle_in_top5_confidence": 0.996,
+      "correct": true
+    }
+  }
+}

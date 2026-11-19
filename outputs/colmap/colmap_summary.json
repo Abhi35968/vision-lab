@@ -1,0 +1,19 @@
+{
+  "status": "SUCCESS",
+  "registered_cameras": 47,
+  "total_images": 47,
+  "registration_rate_pct": 100.0,
+  "points_3d": 4880,
+  "object_sparse_points": 67,
+  "background_sparse_points": 4813,
+  "object_points_pct": 1.4,
+  "background_points_pct": 98.6,
+  "mean_reprojection_error_px": 0.789,
+  "mean_track_length": 5.28,
+  "estimated_focal_px": 1645.5,
+  "timings_s": {
+    "feature_extraction": 0.0,
+    "matching": 0.0,
+    "mapping": 0.0
+  }
+}

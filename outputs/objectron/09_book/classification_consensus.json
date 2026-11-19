@@ -1,0 +1,91 @@
+{
+  "predicted_class": "unknown",
+  "predicted_confidence": 0.0,
+  "is_uncertain": true,
+  "status": "UNCERTAIN_REJECTED",
+  "modality_weights": {
+    "weight_2d": 0.5,
+    "weight_3d": 0.5
+  },
+  "yolo_summary": {
+    "total_valid_frames": 23,
+    "class_counts": {
+      "stop sign": 5,
+      "surfboard": 13,
+      "book": 5
+    },
+    "dominant_yolo_class": "surfboard",
+    "mapped_candidates": [
+      "stop sign",
+      "surfboard",
+      "bookshelf"
+    ]
+  },
+  "pointnet_summary": {
+    "raw_unaligned_class": "monitor",
+    "raw_unaligned_confidence": 0.5102730989456177,
+    "canonical_upright_class": "plant",
+    "canonical_upright_confidence": 0.29363659024238586,
+    "input_points": 81489,
+    "domain_gap": "Evaluated on 81489 input points (TTA\u00d710, resampled to 1024). Dense input point cloud provides strong structural coverage."
+  },
+  "top_candidates": [
+    {
+      "class_name": "bookshelf",
+      "fused_confidence": 0.4178,
+      "yolo_confidence": 0.1749,
+      "pointnet_confidence": 0.2068,
+      "support_modality": "3D_POINTNET"
+    },
+    {
+      "class_name": "plant",
+      "fused_confidence": 0.1595,
+      "yolo_confidence": 0.0,
+      "pointnet_confidence": 0.2936,
+      "support_modality": "3D_POINTNET"
+    },
+    {
+      "class_name": "monitor",
+      "fused_confidence": 0.1551,
+      "yolo_confidence": 0.0,
+      "pointnet_confidence": 0.2779,
+      "support_modality": "3D_POINTNET"
+    },
+    {
+      "class_name": "flower_pot",
+      "fused_confidence": 0.0743,
+      "yolo_confidence": 0.0,
+      "pointnet_confidence": 0.0637,
+      "support_modality": "3D_POINTNET"
+    },
+    {
+      "class_name": "person",
+      "fused_confidence": 0.0643,
+      "yolo_confidence": 0.0,
+      "pointnet_confidence": 0.0478,
+      "support_modality": "3D_POINTNET"
+    }
+  ],
+  "decision_rationale": "Dense 3D cloud (81489 points); balanced multimodal voting enabled (50% 2D / 50% 3D). Low confidence, insufficient class margin, or modality disagreement (YOLO='surfboard'; PointNet='plant'). Flagged as UNCERTAIN rather than outputting misleading class.",
+  "modality_predictions": {
+    "yolo_only": {
+      "class_name": "surfboard",
+      "evidence_score": 0.6757767752792423,
+      "confidence_calibrated": false,
+      "dominant_detection_class": "surfboard",
+      "detection_agreement": 1.0,
+      "detection_count": 23,
+      "multiview_consensus": true
+    },
+    "pointnet_only": {
+      "class_name": "plant",
+      "evidence_score": 0.29363659024238586,
+      "confidence_calibrated": false
+    },
+    "fused_diagnostic": {
+      "class_name": "bookshelf",
+      "evidence_score": 0.41780853778510063,
+      "confidence_calibrated": false
+    }
+  }
+}

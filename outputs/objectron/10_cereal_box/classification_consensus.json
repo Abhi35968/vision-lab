@@ -1,0 +1,87 @@
+{
+  "predicted_class": "unknown",
+  "predicted_confidence": 0.0,
+  "is_uncertain": true,
+  "status": "UNCERTAIN_REJECTED",
+  "modality_weights": {
+    "weight_2d": 0.5,
+    "weight_3d": 0.5
+  },
+  "yolo_summary": {
+    "total_valid_frames": 40,
+    "class_counts": {
+      "cereal_box": 40
+    },
+    "dominant_yolo_class": "cereal_box",
+    "mapped_candidates": [
+      "cereal_box"
+    ]
+  },
+  "pointnet_summary": {
+    "raw_unaligned_class": "monitor",
+    "raw_unaligned_confidence": 0.3084687292575836,
+    "canonical_upright_class": "person",
+    "canonical_upright_confidence": 0.9417819380760193,
+    "input_points": 63502,
+    "domain_gap": "Evaluated on 63502 input points (TTA\u00d710, resampled to 1024). Dense input point cloud provides strong structural coverage."
+  },
+  "top_candidates": [
+    {
+      "class_name": "person",
+      "fused_confidence": 0.5544,
+      "yolo_confidence": 0.0,
+      "pointnet_confidence": 0.9418,
+      "support_modality": "3D_POINTNET"
+    },
+    {
+      "class_name": "plant",
+      "fused_confidence": 0.1139,
+      "yolo_confidence": 0.0,
+      "pointnet_confidence": 0.0397,
+      "support_modality": "3D_POINTNET"
+    },
+    {
+      "class_name": "cereal_box",
+      "fused_confidence": 0.0408,
+      "yolo_confidence": 1.0,
+      "pointnet_confidence": 0.0,
+      "support_modality": "2D_YOLO"
+    },
+    {
+      "class_name": "piano",
+      "fused_confidence": 0.0324,
+      "yolo_confidence": 0.0,
+      "pointnet_confidence": 0.0032,
+      "support_modality": "3D_POINTNET"
+    },
+    {
+      "class_name": "lamp",
+      "fused_confidence": 0.0315,
+      "yolo_confidence": 0.0,
+      "pointnet_confidence": 0.003,
+      "support_modality": "3D_POINTNET"
+    }
+  ],
+  "decision_rationale": "Dense 3D cloud (63502 points); balanced multimodal voting enabled (50% 2D / 50% 3D). Low confidence, insufficient class margin, or modality disagreement (YOLO='cereal_box'; PointNet='person'). Flagged as UNCERTAIN rather than outputting misleading class.",
+  "modality_predictions": {
+    "yolo_only": {
+      "class_name": "cereal_box",
+      "evidence_score": 1.0,
+      "confidence_calibrated": false,
+      "dominant_detection_class": "cereal_box",
+      "detection_agreement": 1.0,
+      "detection_count": 40,
+      "multiview_consensus": true
+    },
+    "pointnet_only": {
+      "class_name": "person",
+      "evidence_score": 0.9417819380760193,
+      "confidence_calibrated": false
+    },
+    "fused_diagnostic": {
+      "class_name": "person",
+      "evidence_score": 0.554360781509339,
+      "confidence_calibrated": false
+    }
+  }
+}

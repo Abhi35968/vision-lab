@@ -1,0 +1,3 @@
+detector,runs,registered_cameras,registered_min,registered_max,points_3d,points_min,points_max,mean_track_length,reproj_median_px,reproj_mean_px,runtime_s
+SIFT,5,13.0,12,21,611.0,539,1350,3.9,0.916,2.909,25.5
+ORB,5,13.0,13,13,741.0,741,741,4.57,1.01,3.736,16.5

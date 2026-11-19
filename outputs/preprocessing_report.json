@@ -1,0 +1,115 @@
+{
+  "session_timestamp": "2026-11-02T00:01:25.047891",
+  "source_video": {
+    "file_path": "D:\\7thsem\\3DCV_proj\\data\\raw_videos\\synthetic_sample_video.mp4",
+    "file_name": "synthetic_sample_video.mp4",
+    "width": 1280,
+    "height": 720,
+    "fps": 30.0,
+    "total_frames": 90,
+    "duration_seconds": 3.0,
+    "fourcc": "FMP4",
+    "is_valid": true
+  },
+  "pipeline_parameters": {
+    "frame_step": 2,
+    "blur_threshold": 100.0,
+    "min_brightness": 30.0,
+    "max_brightness": 230.0,
+    "min_contrast": 15.0,
+    "max_image_dimension": 1920,
+    "export_format": "png"
+  },
+  "summary_metrics": {
+    "total_video_frames": 90,
+    "total_evaluated_frames": 45,
+    "selected_keyframes": 6,
+    "rejected_frames": 39,
+    "selection_rate_percent": 13.33,
+    "mean_blur_score": 192.14,
+    "mean_brightness": 116.0
+  },
+  "rejection_breakdown": {
+    "Temporal delta 0.07s < 0.15s": 6,
+    "Temporal delta 0.13s < 0.15s": 5,
+    "Near-duplicate (Hamming dist 1 <= 3)": 9,
+    "Near-duplicate (Hamming dist 0 <= 3)": 5,
+    "Near-duplicate (Hamming dist 2 <= 3)": 8,
+    "Quality check failed": 4,
+    "Near-duplicate (Hamming dist 3 <= 3)": 2
+  },
+  "visualizations": {
+    "blur_distribution": "D:\\7thsem\\3DCV_proj\\outputs\\visualizations\\blur_distribution.png",
+    "brightness_distribution": "D:\\7thsem\\3DCV_proj\\outputs\\visualizations\\brightness_distribution.png",
+    "selection_summary": "D:\\7thsem\\3DCV_proj\\outputs\\visualizations\\selection_summary.png",
+    "contact_sheet": "D:\\7thsem\\3DCV_proj\\outputs\\visualizations\\keyframes_contact_sheet.png"
+  },
+  "selected_keyframes": [
+    {
+      "keyframe_id": 0,
+      "original_frame_index": 0,
+      "timestamp_seconds": 0.0,
+      "filename": "keyframe_0000_orig_00000.png",
+      "path": "D:\\7thsem\\3DCV_proj\\data\\extracted_frames\\keyframe_0000_orig_00000.png",
+      "width": 1280,
+      "height": 720,
+      "blur_score": 204.656,
+      "brightness_mean": 116.02
+    },
+    {
+      "keyframe_id": 1,
+      "original_frame_index": 10,
+      "timestamp_seconds": 0.333,
+      "filename": "keyframe_0001_orig_00010.png",
+      "path": "D:\\7thsem\\3DCV_proj\\data\\extracted_frames\\keyframe_0001_orig_00010.png",
+      "width": 1280,
+      "height": 720,
+      "blur_score": 207.492,
+      "brightness_mean": 116.0
+    },
+    {
+      "keyframe_id": 2,
+      "original_frame_index": 28,
+      "timestamp_seconds": 0.933,
+      "filename": "keyframe_0002_orig_00028.png",
+      "path": "D:\\7thsem\\3DCV_proj\\data\\extracted_frames\\keyframe_0002_orig_00028.png",
+      "width": 1280,
+      "height": 720,
+      "blur_score": 208.197,
+      "brightness_mean": 116.01
+    },
+    {
+      "keyframe_id": 3,
+      "original_frame_index": 46,
+      "timestamp_seconds": 1.533,
+      "filename": "keyframe_0003_orig_00046.png",
+      "path": "D:\\7thsem\\3DCV_proj\\data\\extracted_frames\\keyframe_0003_orig_00046.png",
+      "width": 1280,
+      "height": 720,
+      "blur_score": 200.722,
+      "brightness_mean": 116.01
+    },
+    {
+      "keyframe_id": 4,
+      "original_frame_index": 64,
+      "timestamp_seconds": 2.133,
+      "filename": "keyframe_0004_orig_00064.png",
+      "path": "D:\\7thsem\\3DCV_proj\\data\\extracted_frames\\keyframe_0004_orig_00064.png",
+      "width": 1280,
+      "height": 720,
+      "blur_score": 207.664,
+      "brightness_mean": 116.01
+    },
+    {
+      "keyframe_id": 5,
+      "original_frame_index": 82,
+      "timestamp_seconds": 2.733,
+      "filename": "keyframe_0005_orig_00082.png",
+      "path": "D:\\7thsem\\3DCV_proj\\data\\extracted_frames\\keyframe_0005_orig_00082.png",
+      "width": 1280,
+      "height": 720,
+      "blur_score": 207.924,
+      "brightness_mean": 116.01
+    }
+  ]
+}

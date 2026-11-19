@@ -1,0 +1,116 @@
+{
+  "gaussian_noise_robustness": [
+    {
+      "sigma": 0.0,
+      "predicted_class": "radio",
+      "confidence": 34.4,
+      "bottle_rank": null
+    },
+    {
+      "sigma": 0.01,
+      "predicted_class": "tent",
+      "confidence": 31.1,
+      "bottle_rank": null
+    },
+    {
+      "sigma": 0.02,
+      "predicted_class": "monitor",
+      "confidence": 24.5,
+      "bottle_rank": null
+    },
+    {
+      "sigma": 0.05,
+      "predicted_class": "monitor",
+      "confidence": 81.7,
+      "bottle_rank": null
+    },
+    {
+      "sigma": 0.1,
+      "predicted_class": "monitor",
+      "confidence": 63.5,
+      "bottle_rank": null
+    }
+  ],
+  "density_subsampling_robustness": [
+    {
+      "points": 1024,
+      "predicted_class": "radio",
+      "confidence": 34.4,
+      "bottle_rank": null
+    },
+    {
+      "points": 512,
+      "predicted_class": "tent",
+      "confidence": 45.5,
+      "bottle_rank": null
+    },
+    {
+      "points": 256,
+      "predicted_class": "tent",
+      "confidence": 27.9,
+      "bottle_rank": null
+    },
+    {
+      "points": 128,
+      "predicted_class": "piano",
+      "confidence": 25.2,
+      "bottle_rank": null
+    },
+    {
+      "points": 64,
+      "predicted_class": "monitor",
+      "confidence": 20.3,
+      "bottle_rank": null
+    },
+    {
+      "points": 32,
+      "predicted_class": "monitor",
+      "confidence": 15.2,
+      "bottle_rank": null
+    }
+  ],
+  "outlier_injection_robustness": [
+    {
+      "outlier_pct": 0.0,
+      "outliers_count": 0,
+      "predicted_class": "radio",
+      "confidence": 34.4,
+      "bottle_rank": null
+    },
+    {
+      "outlier_pct": 0.5,
+      "outliers_count": 5,
+      "predicted_class": "stairs",
+      "confidence": 87.7,
+      "bottle_rank": null
+    },
+    {
+      "outlier_pct": 1.0,
+      "outliers_count": 10,
+      "predicted_class": "stairs",
+      "confidence": 83.1,
+      "bottle_rank": null
+    },
+    {
+      "outlier_pct": 2.0,
+      "outliers_count": 20,
+      "predicted_class": "mantel",
+      "confidence": 27.3,
+      "bottle_rank": null
+    },
+    {
+      "outlier_pct": 5.0,
+      "outliers_count": 51,
+      "predicted_class": "piano",
+      "confidence": 27.1,
+      "bottle_rank": null
+    },
+    {
+      "outlier_pct": 10.0,
+      "outliers_count": 102,
+      "predicted_class": "chair",
+      "confidence": 40.0,
+      "bottle_rank": null
+    }
+  ]
+}

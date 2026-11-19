@@ -1,0 +1,43 @@
+{
+  "status": "uncalibrated",
+  "camera_matrix_k": [
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "fx": 0.0,
+  "fy": 0.0,
+  "cx": 0.0,
+  "cy": 0.0,
+  "distortion_coefficients": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "distortion_model": "radtan",
+  "image_width": 1920,
+  "image_height": 1080,
+  "checkerboard_rows": 6,
+  "checkerboard_cols": 9,
+  "square_size_mm": 25.0,
+  "unit": "mm",
+  "reprojection_error_rmse": 0.0,
+  "total_images_provided": 0,
+  "images_used": 0,
+  "calibrated_at": "2026-11-01T23:59:08.367752",
+  "note": "Calibration pending. Using estimated pinhole placeholder."
+}

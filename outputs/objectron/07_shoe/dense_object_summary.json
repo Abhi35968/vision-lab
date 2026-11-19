@@ -1,0 +1,27 @@
+{
+  "total_views_processed": 12,
+  "raw_points_fused": 133722,
+  "clean_points_count": 103701,
+  "retention_rate_pct": 77.5,
+  "sparse_points_reference_count": 33671,
+  "density_multiplier": 3.08,
+  "mesh_vertices_count": 194841,
+  "mesh_triangles_count": 387928,
+  "raw_ply_path": "D:\\7thsem\\3DCV_proj\\outputs\\objectron\\07_shoe\\dense_object_raw_fused.ply",
+  "clean_ply_path": "D:\\7thsem\\3DCV_proj\\outputs\\objectron\\07_shoe\\dense_object_clean_optimized.ply",
+  "mesh_ply_path": "D:\\7thsem\\3DCV_proj\\outputs\\objectron\\07_shoe\\dense_object_poisson_mesh.ply",
+  "summary_json_path": "D:\\7thsem\\3DCV_proj\\outputs\\objectron\\07_shoe\\dense_object_summary.json",
+  "execution_time_s": 107.88,
+  "mesh_diagnostics": {
+    "is_watertight": false,
+    "is_edge_manifold": false,
+    "is_vertex_manifold": false,
+    "is_self_intersecting": true,
+    "num_vertices": 194841,
+    "num_triangles": 387928
+  },
+  "notes": [
+    "Global object anchor world position: [-0.953, 1.614, 4.934]",
+    "Dense depth is relative and aligned in arbitrary SfM units; it is not metric geometry."
+  ]
+}

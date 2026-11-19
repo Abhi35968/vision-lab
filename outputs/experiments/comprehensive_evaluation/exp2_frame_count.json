@@ -1,0 +1,58 @@
+[
+  {
+    "frames": 8,
+    "colmap_reg": 6,
+    "colmap_pts": 175,
+    "colmap_err": 0.72,
+    "own_reg": 2,
+    "own_pts": 68
+  },
+  {
+    "frames": 12,
+    "colmap_reg": 3,
+    "colmap_pts": 167,
+    "colmap_err": 0.4,
+    "own_reg": 3,
+    "own_pts": 82
+  },
+  {
+    "frames": 16,
+    "colmap_reg": 12,
+    "colmap_pts": 630,
+    "colmap_err": 0.7,
+    "own_reg": 2,
+    "own_pts": 34
+  },
+  {
+    "frames": 24,
+    "colmap_reg": 19,
+    "colmap_pts": 1643,
+    "colmap_err": 0.69,
+    "own_reg": 6,
+    "own_pts": 481
+  },
+  {
+    "frames": 32,
+    "colmap_reg": 24,
+    "colmap_pts": 2589,
+    "colmap_err": 0.71,
+    "own_reg": 10,
+    "own_pts": 702
+  },
+  {
+    "frames": 40,
+    "colmap_reg": 40,
+    "colmap_pts": 3965,
+    "colmap_err": 0.76,
+    "own_reg": 25,
+    "own_pts": 1553
+  },
+  {
+    "frames": 47,
+    "colmap_reg": 47,
+    "colmap_pts": 4880,
+    "colmap_err": 0.79,
+    "own_reg": 32,
+    "own_pts": 2077
+  }
+]

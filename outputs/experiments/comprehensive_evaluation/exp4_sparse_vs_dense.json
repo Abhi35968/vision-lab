@@ -1,0 +1,19 @@
+{
+  "Sparse_SfM_Object": {
+    "object_points": 29,
+    "spatial_coverage": "Cap and strap only (17% vertical height)",
+    "surface_mesh": "Incomplete / non-watertight",
+    "mesh_triangles": 0,
+    "textureless_body_reconstructed": false
+  },
+  "Dense_Depth_Fused": {
+    "object_points": 46926,
+    "spatial_coverage": "Complete 3D object body + cap (100% vertical height)",
+    "surface_mesh": "Watertight Screened Poisson Mesh",
+    "mesh_triangles": 29254,
+    "density_multiplier": "1618.1x denser",
+    "textureless_body_reconstructed": true,
+    "fused_views": 10,
+    "runtime_s": 18.46
+  }
+}

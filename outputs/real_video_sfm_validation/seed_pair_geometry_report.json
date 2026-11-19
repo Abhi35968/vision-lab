@@ -1,0 +1,145 @@
+{
+  "timestamp": "2026-11-02T02:59:03",
+  "evaluated_seed_pairs": [
+    {
+      "pair": [
+        24,
+        25
+      ],
+      "pair_tag": "seed_24_25",
+      "image1_name": "keyframe_0024_orig_00300.png",
+      "image2_name": "keyframe_0025_orig_00312.png",
+      "raw_descriptor_matches": 993,
+      "essential_matrix_inliers": 226,
+      "inlier_ratio": 0.2276,
+      "spatial_coverage_ratio": 0.787,
+      "parallax_angles_deg": {
+        "median": 0.0,
+        "p10": 0.0,
+        "p90": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "cheirality_ratio": 0.0,
+      "initial_triangulation_count": 0,
+      "initial_reprojection_error_px": {
+        "mean": 0.0
+      },
+      "depth_sensitivity_to_focal_length": {},
+      "is_well_conditioned": false,
+      "stability_assessment": "Low median parallax (0.00\u00b0 < 1.5\u00b0): ray triangulation depth uncertainty is elevated. Good spatial dispersion (0.79 >= 0.25)."
+    },
+    {
+      "pair": [
+        41,
+        43
+      ],
+      "pair_tag": "seed_41_43",
+      "image1_name": "keyframe_0041_orig_00504.png",
+      "image2_name": "keyframe_0043_orig_00528.png",
+      "raw_descriptor_matches": 985,
+      "essential_matrix_inliers": 219,
+      "inlier_ratio": 0.2223,
+      "spatial_coverage_ratio": 0.605,
+      "parallax_angles_deg": {
+        "median": 1.99,
+        "p10": 0.45,
+        "p90": 2.8,
+        "min": 0.38,
+        "max": 5.79
+      },
+      "cheirality_ratio": 0.7534,
+      "initial_triangulation_count": 141,
+      "initial_reprojection_error_px": {
+        "mean": 0.502
+      },
+      "depth_sensitivity_to_focal_length": {
+        "focal_935": {
+          "focal_px": 935.0,
+          "points_reconstructed": 170,
+          "mean_reprojection_error_px": 0.629,
+          "median_depth_arbitrary_units": 12.225,
+          "p10_depth": 11.511,
+          "p90_depth": 20.214,
+          "cheirality_ratio": 0.9863
+        },
+        "focal_1300": {
+          "focal_px": 1300.0,
+          "points_reconstructed": 141,
+          "mean_reprojection_error_px": 0.502,
+          "median_depth_arbitrary_units": 15.51,
+          "p10_depth": 14.787,
+          "p90_depth": 17.928,
+          "cheirality_ratio": 0.7534
+        },
+        "focal_1663": {
+          "focal_px": 1662.8,
+          "points_reconstructed": 140,
+          "mean_reprojection_error_px": 1.098,
+          "median_depth_arbitrary_units": 18.565,
+          "p10_depth": 17.133,
+          "p90_depth": 22.129,
+          "cheirality_ratio": 0.7534
+        }
+      },
+      "is_well_conditioned": false,
+      "stability_assessment": "Adequate parallax (1.99\u00b0 >= 1.5\u00b0): stable triangulation geometry. Good spatial dispersion (0.61 >= 0.25)."
+    },
+    {
+      "pair": [
+        22,
+        24
+      ],
+      "pair_tag": "seed_22_24",
+      "image1_name": "keyframe_0022_orig_00276.png",
+      "image2_name": "keyframe_0024_orig_00300.png",
+      "raw_descriptor_matches": 970,
+      "essential_matrix_inliers": 179,
+      "inlier_ratio": 0.1845,
+      "spatial_coverage_ratio": 0.169,
+      "parallax_angles_deg": {
+        "median": 3.17,
+        "p10": 2.39,
+        "p90": 3.47,
+        "min": 1.68,
+        "max": 11.74
+      },
+      "cheirality_ratio": 1.0,
+      "initial_triangulation_count": 21,
+      "initial_reprojection_error_px": {
+        "mean": 2.908
+      },
+      "depth_sensitivity_to_focal_length": {
+        "focal_935": {
+          "focal_px": 935.0,
+          "points_reconstructed": 179,
+          "mean_reprojection_error_px": 0.497,
+          "median_depth_arbitrary_units": 13.301,
+          "p10_depth": 11.048,
+          "p90_depth": 17.937,
+          "cheirality_ratio": 1.0
+        },
+        "focal_1300": {
+          "focal_px": 1300.0,
+          "points_reconstructed": 21,
+          "mean_reprojection_error_px": 2.908,
+          "median_depth_arbitrary_units": 9.003,
+          "p10_depth": 7.236,
+          "p90_depth": 10.368,
+          "cheirality_ratio": 1.0
+        },
+        "focal_1663": {
+          "focal_px": 1662.8,
+          "points_reconstructed": 5,
+          "mean_reprojection_error_px": 3.292,
+          "median_depth_arbitrary_units": 6.594,
+          "p10_depth": 5.931,
+          "p90_depth": 7.076,
+          "cheirality_ratio": 1.0
+        }
+      },
+      "is_well_conditioned": false,
+      "stability_assessment": "Adequate parallax (3.17\u00b0 >= 1.5\u00b0): stable triangulation geometry. Clustered spatial coverage (0.17 < 0.25): keypoints do not span sensor."
+    }
+  ]
+}

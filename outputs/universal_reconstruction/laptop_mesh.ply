@@ -1,0 +1,33 @@
+ply
+format ascii 1.0
+comment Created by 3DCV Project Phase 5.5 Parametric Bottle Reconstruction
+element vertex 8
+property float x
+property float y
+property float z
+property float nx
+property float ny
+property float nz
+element face 12
+property list uchar int vertex_indices
+end_header
+-1.304274 -1.930939 2.973617 0.577350 0.577350 0.577350
+1.985880 -1.930939 2.973617 -0.816497 0.408248 0.408248
+1.985880 1.671751 2.973617 -0.333333 -0.666667 0.666667
+-1.304274 1.671751 2.973617 0.577350 -0.577350 0.577350
+-1.304274 -1.930939 6.611700 0.408248 0.408248 -0.816497
+1.985880 -1.930939 6.611700 -0.408248 0.816497 -0.408248
+1.985880 1.671751 6.611700 -0.666667 -0.333333 -0.666667
+-1.304274 1.671751 6.611700 0.666667 -0.666667 -0.333333
+3 0 1 2
+3 0 2 3
+3 4 6 5
+3 4 7 6
+3 0 4 5
+3 0 5 1
+3 2 6 7
+3 2 7 3
+3 0 3 7
+3 0 7 4
+3 1 5 6
+3 1 6 2

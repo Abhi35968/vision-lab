@@ -1,0 +1,92 @@
+{
+  "predicted_class": "unknown",
+  "predicted_confidence": 0.0,
+  "is_uncertain": true,
+  "status": "UNCERTAIN_REJECTED",
+  "modality_weights": {
+    "weight_2d": 0.5,
+    "weight_3d": 0.5
+  },
+  "yolo_summary": {
+    "total_valid_frames": 40,
+    "class_counts": {
+      "bottle": 13,
+      "vase": 22,
+      "cup": 5
+    },
+    "dominant_yolo_class": "vase",
+    "mapped_candidates": [
+      "bottle",
+      "vase",
+      "cup"
+    ]
+  },
+  "pointnet_summary": {
+    "raw_unaligned_class": "person",
+    "raw_unaligned_confidence": 0.3735746443271637,
+    "canonical_upright_class": "person",
+    "canonical_upright_confidence": 0.40069282054901123,
+    "input_points": 70505,
+    "domain_gap": "Evaluated on 70505 input points (deterministically resampled to 1024). Dense input point cloud provides strong structural coverage."
+  },
+  "top_candidates": [
+    {
+      "class_name": "bottle",
+      "fused_confidence": 0.4281,
+      "yolo_confidence": 0.5108,
+      "pointnet_confidence": 0.2535,
+      "support_modality": "CONSENSUS"
+    },
+    {
+      "class_name": "vase",
+      "fused_confidence": 0.1763,
+      "yolo_confidence": 0.4182,
+      "pointnet_confidence": 0.0521,
+      "support_modality": "2D_YOLO"
+    },
+    {
+      "class_name": "person",
+      "fused_confidence": 0.1045,
+      "yolo_confidence": 0.0,
+      "pointnet_confidence": 0.4007,
+      "support_modality": "3D_POINTNET"
+    },
+    {
+      "class_name": "plant",
+      "fused_confidence": 0.0584,
+      "yolo_confidence": 0.0,
+      "pointnet_confidence": 0.125,
+      "support_modality": "3D_POINTNET"
+    },
+    {
+      "class_name": "flower_pot",
+      "fused_confidence": 0.0457,
+      "yolo_confidence": 0.0,
+      "pointnet_confidence": 0.0765,
+      "support_modality": "3D_POINTNET"
+    }
+  ],
+  "decision_rationale": "Evidence is insufficient or disagrees (YOLO='bottle' 0.51; PointNet='person' 0.40; points=70505). No class was forced; fused score is diagnostic only.",
+  "modality_predictions": {
+    "yolo_only": {
+      "class_name": "bottle",
+      "evidence_score": 0.5108336480362538,
+      "confidence_calibrated": false,
+      "dominant_detection_class": "vase",
+      "detection_agreement": 0.55,
+      "detection_count": 40,
+      "multiview_consensus": false
+    },
+    "pointnet_only": {
+      "class_name": "person",
+      "evidence_score": 0.40069282054901123,
+      "confidence_calibrated": false
+    },
+    "fused_diagnostic": {
+      "class_name": "bottle",
+      "evidence_score": 0.4280907304361917,
+      "confidence_calibrated": false,
+      "warning": "Not used to increase the reported classification confidence."
+    }
+  }
+}

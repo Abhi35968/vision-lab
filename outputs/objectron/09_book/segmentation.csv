@@ -1,0 +1,41 @@
+image,detected,label,confidence,mode,mask_area_pct
+kf_000_f0007.jpg,True,stop sign,0.21239662170410156,most central instance,29.871175130208332
+kf_001_f0017.jpg,True,stop sign,0.18333403766155243,most central instance,29.38330078125
+kf_002_f0025.jpg,True,stop sign,0.27250242233276367,most central instance,29.928629557291668
+kf_003_f0035.jpg,False,none,0.0,none,0.0
+kf_004_f0043.jpg,True,surfboard,0.16031698882579803,most central instance,35.06087239583333
+kf_005_f0052.jpg,True,surfboard,0.3483389914035797,most central instance,39.259521484375
+kf_006_f0060.jpg,False,none,0.0,none,0.0
+kf_007_f0063.jpg,True,stop sign,0.1567368507385254,most central instance,44.774820963541664
+kf_008_f0074.jpg,True,stop sign,0.15398550033569336,most central instance,50.989908854166664
+kf_009_f0081.jpg,True,book,0.17253534495830536,category label,53.030843098958336
+kf_010_f0090.jpg,False,none,0.0,none,0.0
+kf_011_f0099.jpg,False,none,0.0,none,0.0
+kf_012_f0115.jpg,True,book,0.4360957145690918,category label,50.860595703125
+kf_013_f0125.jpg,True,book,0.18288347125053406,category label,54.47867838541667
+kf_014_f0133.jpg,False,none,0.0,none,0.0
+kf_015_f0143.jpg,False,none,0.0,none,0.0
+kf_016_f0152.jpg,False,none,0.0,none,0.0
+kf_017_f0161.jpg,False,none,0.0,none,0.0
+kf_018_f0166.jpg,True,surfboard,0.15989354252815247,most central instance,44.189453125
+kf_019_f0178.jpg,True,surfboard,0.39054280519485474,most central instance,40.67130533854167
+kf_020_f0186.jpg,True,surfboard,0.44691237807273865,most central instance,38.45955403645833
+kf_021_f0197.jpg,True,surfboard,0.2970312833786011,most central instance,36.763590494791664
+kf_022_f0201.jpg,True,surfboard,0.4170561134815216,most central instance,38.1806640625
+kf_023_f0211.jpg,True,surfboard,0.2744884788990021,most central instance,37.806559244791664
+kf_024_f0217.jpg,True,surfboard,0.31797078251838684,most central instance,38.483805338541664
+kf_025_f0233.jpg,True,surfboard,0.5953058004379272,most central instance,44.993408203125
+kf_026_f0240.jpg,True,surfboard,0.5370641350746155,most central instance,46.031087239583336
+kf_027_f0251.jpg,True,surfboard,0.33347415924072266,most central instance,47.0732421875
+kf_028_f0253.jpg,True,surfboard,0.1530407965183258,most central instance,47.2080078125
+kf_029_f0269.jpg,False,none,0.0,none,0.0
+kf_030_f0270.jpg,False,none,0.0,none,0.0
+kf_031_f0283.jpg,False,none,0.0,none,0.0
+kf_032_f0289.jpg,False,none,0.0,none,0.0
+kf_033_f0298.jpg,False,none,0.0,none,0.0
+kf_034_f0307.jpg,False,none,0.0,none,0.0
+kf_035_f0319.jpg,False,none,0.0,none,0.0
+kf_036_f0329.jpg,True,book,0.16571523249149323,category label,44.640869140625
+kf_037_f0341.jpg,True,book,0.1899230182170868,category label,46.08024088541667
+kf_038_f0350.jpg,False,none,0.0,none,0.0
+kf_039_f0358.jpg,False,none,0.0,none,0.0

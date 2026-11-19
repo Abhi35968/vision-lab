@@ -1,0 +1,24 @@
+{
+  "OpenCV_Incremental_SfM": {
+    "registered_cameras": 32,
+    "total_cameras": 47,
+    "registration_rate_pct": 68.1,
+    "reconstructed_3d_points": 2077,
+    "mean_reprojection_error_px": 3.12,
+    "median_reprojection_error_px": 1.03,
+    "focal_length_px": 1300.0,
+    "focal_length_status": "Fixed assumption",
+    "runtime_s": 25.5
+  },
+  "COLMAP_pycolmap_Reference": {
+    "registered_cameras": 47,
+    "total_cameras": 47,
+    "registration_rate_pct": 100.0,
+    "reconstructed_3d_points": 4880,
+    "mean_reprojection_error_px": 0.789,
+    "median_reprojection_error_px": 0.612,
+    "focal_length_px": 1645.5,
+    "focal_length_status": "Self-calibrated",
+    "runtime_s": 57.0
+  }
+}

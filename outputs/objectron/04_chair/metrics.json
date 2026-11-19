@@ -1,0 +1,74 @@
+{
+  "video": "04_chair",
+  "category": "chair",
+  "total_frames": 210,
+  "fps": 29.9,
+  "duration_s": 7.0,
+  "width": 960,
+  "height": 1280,
+  "keyframes": 40,
+  "mean_sharpness": 30.020747367154655,
+  "colmap_time_s": 25.8,
+  "colmap_registered": 40,
+  "colmap_points": 2369,
+  "colmap_reproj_mean_px": 0.9332950966206114,
+  "colmap_track_length": 6.2224567327986495,
+  "colmap_focal_px": 1050.0853769904793,
+  "own_registered": 2,
+  "own_points": 14,
+  "own_reproj_median_px": 1.971,
+  "own_time_s": 10.0,
+  "frames_with_target": 40,
+  "detection_rate_pct": 100.0,
+  "category_in_coco": true,
+  "exact_label_rate_pct": 92.5,
+  "label_counts": {
+    "chair": 37,
+    "couch": 3
+  },
+  "selection_modes": {
+    "category label": 40
+  },
+  "mean_confidence": 0.7554746776819229,
+  "views_with_mask_and_pose": 40,
+  "object_points": 354,
+  "object_points_pct_of_scene": 14.94301392992824,
+  "held_out_views": 20,
+  "object_points_selection": 294,
+  "held_out_in_mask_pct": 82.95918367346938,
+  "held_out_in_mask_min_pct": 3.741496598639456,
+  "baseline_in_mask_pct": 25.960320810468556,
+  "obb_extent": [
+    6.481789647759447,
+    4.760183442677304,
+    3.4422138801143847
+  ],
+  "mask_height_covered_pct": 99.40388479052054,
+  "pointnet_prediction": "person",
+  "pointnet_confidence": 0.6102,
+  "pointnet_top3": [
+    [
+      "person",
+      0.6102
+    ],
+    [
+      "stairs",
+      0.1338
+    ],
+    [
+      "plant",
+      0.1121
+    ]
+  ],
+  "category_in_modelnet": true,
+  "pointnet_correct": false,
+  "status": "ok",
+  "total_time_s": 45.0,
+  "dense_points": 94709,
+  "dense_multiplier": 39.98,
+  "mesh_triangles": 383169,
+  "mesh_vertices": 192269,
+  "consensus_prediction": "plant",
+  "consensus_confidence": 0.4988667221014825,
+  "consensus_status": "UNCERTAIN_REJECTED"
+}

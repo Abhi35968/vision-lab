@@ -1,0 +1,529 @@
+{
+  "schema_version": 1,
+  "created_at_utc": "2026-11-18T19:56:50.321754Z",
+  "status": "EXPERIMENTAL_BASELINE_NO_GENERALIZATION_CLAIM",
+  "device": "cpu",
+  "architecture": "PointNet feature-transform classifier",
+  "initialization": "D:\\7thsem\\3DCV_proj\\models\\weights\\pointnet_modelnet40.pth",
+  "transferred_matching_parameter_tensors": 109,
+  "ignored_pretrained_keys": [],
+  "class_order": [
+    "bicycle",
+    "book",
+    "bottle",
+    "camera",
+    "cereal_box",
+    "chair",
+    "cup",
+    "laptop",
+    "shoe"
+  ],
+  "train_manifest": "D:\\7thsem\\3DCV_proj\\data\\objectron_box_dataset\\manifest.json",
+  "test_manifest": "D:\\7thsem\\3DCV_proj\\data\\objectron_box_test_dataset\\manifest.json",
+  "train_video_groups": 143,
+  "test_video_groups": 74,
+  "train_samples": 114,
+  "validation_samples": 29,
+  "test_samples": 74,
+  "train_per_class": {
+    "bicycle": 16,
+    "book": 14,
+    "bottle": 13,
+    "camera": 15,
+    "cereal_box": 14,
+    "chair": 11,
+    "cup": 10,
+    "laptop": 8,
+    "shoe": 13
+  },
+  "validation_per_class": {
+    "bicycle": 4,
+    "book": 3,
+    "bottle": 3,
+    "camera": 4,
+    "chair": 3,
+    "cup": 3,
+    "laptop": 2,
+    "cereal_box": 4,
+    "shoe": 3
+  },
+  "test_per_class": {
+    "bicycle": 10,
+    "book": 10,
+    "bottle": 10,
+    "camera": 8,
+    "cereal_box": 10,
+    "chair": 7,
+    "cup": 5,
+    "laptop": 6,
+    "shoe": 8
+  },
+  "best_epoch_selected_by_validation_loss": 15,
+  "validation": {
+    "samples": 29,
+    "correct": 8,
+    "accuracy": 0.27586206896551724,
+    "mean_nll": 2.1871246695518494,
+    "mean_max_softmax_uncalibrated": 0.21750746359085216,
+    "per_class": {
+      "bicycle": {
+        "support": 4,
+        "correct": 3,
+        "accuracy": 0.75
+      },
+      "book": {
+        "support": 3,
+        "correct": 1,
+        "accuracy": 0.3333333333333333
+      },
+      "bottle": {
+        "support": 3,
+        "correct": 0,
+        "accuracy": 0.0
+      },
+      "camera": {
+        "support": 4,
+        "correct": 1,
+        "accuracy": 0.25
+      },
+      "cereal_box": {
+        "support": 4,
+        "correct": 0,
+        "accuracy": 0.0
+      },
+      "chair": {
+        "support": 3,
+        "correct": 1,
+        "accuracy": 0.3333333333333333
+      },
+      "cup": {
+        "support": 3,
+        "correct": 1,
+        "accuracy": 0.3333333333333333
+      },
+      "laptop": {
+        "support": 2,
+        "correct": 1,
+        "accuracy": 0.5
+      },
+      "shoe": {
+        "support": 3,
+        "correct": 0,
+        "accuracy": 0.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        2,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        3,
+        0,
+        0
+      ],
+      [
+        3,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        2,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        3,
+        0,
+        0
+      ]
+    ]
+  },
+  "official_test": {
+    "samples": 74,
+    "correct": 14,
+    "accuracy": 0.1891891891891892,
+    "mean_nll": 2.2434730172157287,
+    "mean_max_softmax_uncalibrated": 0.2311966676969786,
+    "per_class": {
+      "bicycle": {
+        "support": 10,
+        "correct": 3,
+        "accuracy": 0.3
+      },
+      "book": {
+        "support": 10,
+        "correct": 1,
+        "accuracy": 0.1
+      },
+      "bottle": {
+        "support": 10,
+        "correct": 0,
+        "accuracy": 0.0
+      },
+      "camera": {
+        "support": 8,
+        "correct": 1,
+        "accuracy": 0.125
+      },
+      "cereal_box": {
+        "support": 10,
+        "correct": 0,
+        "accuracy": 0.0
+      },
+      "chair": {
+        "support": 7,
+        "correct": 5,
+        "accuracy": 0.7142857142857143
+      },
+      "cup": {
+        "support": 5,
+        "correct": 2,
+        "accuracy": 0.4
+      },
+      "laptop": {
+        "support": 6,
+        "correct": 2,
+        "accuracy": 0.3333333333333333
+      },
+      "shoe": {
+        "support": 8,
+        "correct": 0,
+        "accuracy": 0.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        3,
+        1,
+        0,
+        1,
+        0,
+        0,
+        4,
+        1,
+        0
+      ],
+      [
+        3,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        2,
+        2
+      ],
+      [
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        8,
+        0,
+        0
+      ],
+      [
+        3,
+        0,
+        0,
+        1,
+        1,
+        1,
+        2,
+        0,
+        0
+      ],
+      [
+        5,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        3,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        0,
+        5,
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0,
+        2,
+        2,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        2,
+        2,
+        0
+      ],
+      [
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        6,
+        0,
+        0
+      ]
+    ]
+  },
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 2.3060027758280435,
+      "train_accuracy": 0.07894736842105263,
+      "validation_loss": 2.3505223989486694,
+      "validation_accuracy": 0.034482758620689655
+    },
+    {
+      "epoch": 2,
+      "train_loss": 2.3124820550282794,
+      "train_accuracy": 0.09649122807017543,
+      "validation_loss": 2.322051376104355,
+      "validation_accuracy": 0.034482758620689655
+    },
+    {
+      "epoch": 3,
+      "train_loss": 2.2315465927124025,
+      "train_accuracy": 0.10526315789473684,
+      "validation_loss": 2.2668231427669525,
+      "validation_accuracy": 0.06896551724137931
+    },
+    {
+      "epoch": 4,
+      "train_loss": 2.1896969238917032,
+      "train_accuracy": 0.11403508771929824,
+      "validation_loss": 2.281142234802246,
+      "validation_accuracy": 0.10344827586206896
+    },
+    {
+      "epoch": 5,
+      "train_loss": 2.230923549334208,
+      "train_accuracy": 0.17543859649122806,
+      "validation_loss": 2.2936821281909943,
+      "validation_accuracy": 0.10344827586206896
+    },
+    {
+      "epoch": 6,
+      "train_loss": 2.2165503978729246,
+      "train_accuracy": 0.14912280701754385,
+      "validation_loss": 2.2788245677948,
+      "validation_accuracy": 0.10344827586206896
+    },
+    {
+      "epoch": 7,
+      "train_loss": 2.1790643533070884,
+      "train_accuracy": 0.16666666666666666,
+      "validation_loss": 2.2629493474960327,
+      "validation_accuracy": 0.20689655172413793
+    },
+    {
+      "epoch": 8,
+      "train_loss": 2.164559078216553,
+      "train_accuracy": 0.21052631578947367,
+      "validation_loss": 2.258303463459015,
+      "validation_accuracy": 0.1724137931034483
+    },
+    {
+      "epoch": 9,
+      "train_loss": 2.1939624230066936,
+      "train_accuracy": 0.19298245614035087,
+      "validation_loss": 2.4350293278694153,
+      "validation_accuracy": 0.20689655172413793
+    },
+    {
+      "epoch": 10,
+      "train_loss": 2.198836342493693,
+      "train_accuracy": 0.18421052631578946,
+      "validation_loss": 2.3491638898849487,
+      "validation_accuracy": 0.20689655172413793
+    },
+    {
+      "epoch": 11,
+      "train_loss": 2.1138492743174235,
+      "train_accuracy": 0.14912280701754385,
+      "validation_loss": 2.7969680428504944,
+      "validation_accuracy": 0.13793103448275862
+    },
+    {
+      "epoch": 12,
+      "train_loss": 2.1012852430343627,
+      "train_accuracy": 0.14912280701754385,
+      "validation_loss": 2.38457715511322,
+      "validation_accuracy": 0.13793103448275862
+    },
+    {
+      "epoch": 13,
+      "train_loss": 2.17865846157074,
+      "train_accuracy": 0.23684210526315788,
+      "validation_loss": 2.2415507435798645,
+      "validation_accuracy": 0.1724137931034483
+    },
+    {
+      "epoch": 14,
+      "train_loss": 2.148727281888326,
+      "train_accuracy": 0.16666666666666666,
+      "validation_loss": 2.278411626815796,
+      "validation_accuracy": 0.20689655172413793
+    },
+    {
+      "epoch": 15,
+      "train_loss": 2.0770323117574057,
+      "train_accuracy": 0.18421052631578946,
+      "validation_loss": 2.1871246695518494,
+      "validation_accuracy": 0.27586206896551724
+    },
+    {
+      "epoch": 16,
+      "train_loss": 2.1383252223332723,
+      "train_accuracy": 0.21052631578947367,
+      "validation_loss": 2.2041126489639282,
+      "validation_accuracy": 0.20689655172413793
+    },
+    {
+      "epoch": 17,
+      "train_loss": 2.047752292950948,
+      "train_accuracy": 0.14912280701754385,
+      "validation_loss": 2.3265244364738464,
+      "validation_accuracy": 0.1724137931034483
+    },
+    {
+      "epoch": 18,
+      "train_loss": 2.0593525807062787,
+      "train_accuracy": 0.21929824561403508,
+      "validation_loss": 2.297040194272995,
+      "validation_accuracy": 0.20689655172413793
+    },
+    {
+      "epoch": 19,
+      "train_loss": 2.0973487377166746,
+      "train_accuracy": 0.19298245614035087,
+      "validation_loss": 2.1962919533252716,
+      "validation_accuracy": 0.2413793103448276
+    },
+    {
+      "epoch": 20,
+      "train_loss": 2.1175626357396444,
+      "train_accuracy": 0.2543859649122807,
+      "validation_loss": 2.215747147798538,
+      "validation_accuracy": 0.27586206896551724
+    },
+    {
+      "epoch": 21,
+      "train_loss": 2.0538262208302815,
+      "train_accuracy": 0.19298245614035087,
+      "validation_loss": 2.354454219341278,
+      "validation_accuracy": 0.2413793103448276
+    }
+  ],
+  "checkpoint": "D:\\7thsem\\3DCV_proj\\outputs\\objectron_pointnet_pilot20\\pointnet_objectron_pilot.pth",
+  "classes": "D:\\7thsem\\3DCV_proj\\outputs\\objectron_pointnet_pilot20\\classes.json",
+  "limitations": [
+    "Training and validation groups are separated by source-video hash; physical-object identity across recordings is not known.",
+    "Only 143 sparse SfM clouds were accepted for this run (114 fitting, 29 validation), with uneven per-class counts.",
+    "Official test results are one small Objectron benchmark and do not establish performance on the user's phone videos.",
+    "Maximum softmax values are uncalibrated; this baseline does not calibrate confidence or implement unknown detection."
+  ]
+}

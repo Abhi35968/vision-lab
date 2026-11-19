@@ -1,0 +1,75 @@
+{
+  "video": "06_camera",
+  "category": "camera",
+  "total_frames": 293,
+  "fps": 30.0,
+  "duration_s": 9.8,
+  "width": 960,
+  "height": 1280,
+  "keyframes": 40,
+  "mean_sharpness": 29.584092900810077,
+  "colmap_time_s": 37.6,
+  "colmap_registered": 40,
+  "colmap_points": 4623,
+  "colmap_reproj_mean_px": 0.7095826514873432,
+  "colmap_track_length": 5.656067488643738,
+  "colmap_focal_px": 1013.186470391487,
+  "own_registered": 32,
+  "own_points": 2675,
+  "own_reproj_median_px": 1.027,
+  "own_time_s": 19.3,
+  "frames_with_target": 39,
+  "detection_rate_pct": 97.5,
+  "category_in_coco": false,
+  "exact_label_rate_pct": NaN,
+  "label_counts": {
+    "cell phone": 24,
+    "suitcase": 13,
+    "toaster": 2
+  },
+  "selection_modes": {
+    "most central instance": 39
+  },
+  "mean_confidence": 0.43048642040827334,
+  "views_with_mask_and_pose": 39,
+  "object_points": 869,
+  "object_points_pct_of_scene": 18.797317759030932,
+  "held_out_views": 19,
+  "object_points_selection": 660,
+  "held_out_in_mask_pct": 94.24242424242425,
+  "held_out_in_mask_min_pct": 87.42424242424242,
+  "baseline_in_mask_pct": 27.456538816216405,
+  "obb_extent": [
+    3.3353158139718784,
+    2.7090783564261756,
+    1.524339973525327
+  ],
+  "mask_height_covered_pct": 98.30359823961201,
+  "pointnet_prediction": "stairs",
+  "pointnet_confidence": 0.7441,
+  "pointnet_top3": [
+    [
+      "stairs",
+      0.7441
+    ],
+    [
+      "plant",
+      0.1285
+    ],
+    [
+      "person",
+      0.0777
+    ]
+  ],
+  "category_in_modelnet": false,
+  "pointnet_correct": null,
+  "status": "ok",
+  "total_time_s": 70.1,
+  "dense_points": 58628,
+  "dense_multiplier": 12.68,
+  "mesh_triangles": 123707,
+  "mesh_vertices": 62359,
+  "consensus_prediction": "plant",
+  "consensus_confidence": 0.3860586904326092,
+  "consensus_status": "UNCERTAIN_REJECTED"
+}

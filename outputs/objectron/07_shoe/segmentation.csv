@@ -1,0 +1,41 @@
+image,detected,label,confidence,mode,mask_area_pct
+kf_000_f0000.jpg,False,none,0.0,none,0.0
+kf_001_f0009.jpg,True,vase,0.2769249677658081,most central instance,15.145426432291668
+kf_002_f0015.jpg,False,none,0.0,none,0.0
+kf_003_f0025.jpg,True,vase,0.36348623037338257,most central instance,15.637044270833334
+kf_004_f0030.jpg,True,vase,0.4473532438278198,most central instance,15.828450520833334
+kf_005_f0033.jpg,True,vase,0.2376108318567276,most central instance,15.982666015625
+kf_006_f0039.jpg,False,none,0.0,none,0.0
+kf_007_f0048.jpg,False,none,0.0,none,0.0
+kf_008_f0053.jpg,False,none,0.0,none,0.0
+kf_009_f0061.jpg,False,none,0.0,none,0.0
+kf_010_f0067.jpg,False,none,0.0,none,0.0
+kf_011_f0073.jpg,False,none,0.0,none,0.0
+kf_012_f0085.jpg,False,none,0.0,none,0.0
+kf_013_f0087.jpg,False,none,0.0,none,0.0
+kf_014_f0093.jpg,True,backpack,0.17806293070316315,most central instance,11.107666015625
+kf_015_f0105.jpg,True,handbag,0.21877628564834595,most central instance,10.554036458333334
+kf_016_f0112.jpg,True,handbag,0.2203529328107834,most central instance,10.341064453125
+kf_017_f0113.jpg,False,none,0.0,none,0.0
+kf_018_f0119.jpg,False,none,0.0,none,0.0
+kf_019_f0129.jpg,False,none,0.0,none,0.0
+kf_020_f0137.jpg,False,none,0.0,none,0.0
+kf_021_f0141.jpg,False,none,0.0,none,0.0
+kf_022_f0150.jpg,False,none,0.0,none,0.0
+kf_023_f0158.jpg,True,cell phone,0.28471678495407104,most central instance,16.660888671875
+kf_024_f0165.jpg,False,none,0.0,none,0.0
+kf_025_f0171.jpg,True,cell phone,0.3492611050605774,most central instance,21.095621744791668
+kf_026_f0172.jpg,True,cell phone,0.2610022723674774,most central instance,21.326009114583332
+kf_027_f0181.jpg,False,none,0.0,none,0.0
+kf_028_f0191.jpg,True,handbag,0.3038633167743683,most central instance,22.034830729166664
+kf_029_f0192.jpg,True,handbag,0.3892945945262909,most central instance,21.915934244791664
+kf_030_f0204.jpg,True,backpack,0.2214692384004593,most central instance,21.03564453125
+kf_031_f0210.jpg,True,handbag,0.18727102875709534,most central instance,20.092529296875
+kf_032_f0218.jpg,True,handbag,0.3382152318954468,most central instance,19.954182942708336
+kf_033_f0221.jpg,True,handbag,0.32580265402793884,most central instance,19.612548828125
+kf_034_f0226.jpg,True,cell phone,0.22816339135169983,most central instance,18.617431640625
+kf_035_f0233.jpg,False,none,0.0,none,0.0
+kf_036_f0241.jpg,False,none,0.0,none,0.0
+kf_037_f0246.jpg,False,none,0.0,none,0.0
+kf_038_f0253.jpg,False,none,0.0,none,0.0
+kf_039_f0261.jpg,False,none,0.0,none,0.0

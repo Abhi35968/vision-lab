@@ -1,0 +1,41 @@
+image,detected,label,confidence,mode,mask_area_pct
+kf_000_f0001.jpg,True,toaster,0.352855920791626,most central instance,11.878824869791666
+kf_001_f0008.jpg,True,suitcase,0.651991069316864,most central instance,11.599609375
+kf_002_f0017.jpg,True,suitcase,0.38936784863471985,most central instance,10.770263671875
+kf_003_f0025.jpg,True,suitcase,0.503591001033783,most central instance,9.359130859375
+kf_004_f0030.jpg,True,cell phone,0.39429184794425964,most central instance,9.053385416666666
+kf_005_f0041.jpg,True,suitcase,0.7267436981201172,most central instance,8.972737630208332
+kf_006_f0048.jpg,True,suitcase,0.6722762584686279,most central instance,9.236246744791666
+kf_007_f0051.jpg,True,suitcase,0.42499545216560364,most central instance,9.1357421875
+kf_008_f0060.jpg,True,suitcase,0.3170158267021179,most central instance,7.272867838541666
+kf_009_f0070.jpg,True,suitcase,0.3000202775001526,most central instance,5.382568359375
+kf_010_f0076.jpg,True,cell phone,0.210379496216774,most central instance,4.286865234375
+kf_011_f0081.jpg,False,none,0.0,none,0.0
+kf_012_f0094.jpg,True,suitcase,0.30984824895858765,most central instance,5.393717447916667
+kf_013_f0098.jpg,True,suitcase,0.2372605800628662,most central instance,6.196370442708334
+kf_014_f0106.jpg,True,cell phone,0.22217772901058197,most central instance,6.558756510416666
+kf_015_f0110.jpg,True,cell phone,0.20855820178985596,most central instance,6.72802734375
+kf_016_f0120.jpg,True,cell phone,0.35429540276527405,most central instance,8.8193359375
+kf_017_f0128.jpg,True,cell phone,0.6719738245010376,most central instance,9.0927734375
+kf_018_f0138.jpg,True,cell phone,0.7665597796440125,most central instance,8.794514973958334
+kf_019_f0139.jpg,True,cell phone,0.6659165620803833,most central instance,8.272054036458334
+kf_020_f0148.jpg,True,cell phone,0.37596845626831055,most central instance,8.372639973958334
+kf_021_f0160.jpg,True,toaster,0.17026521265506744,most central instance,9.970133463541666
+kf_022_f0162.jpg,True,cell phone,0.2052038013935089,most central instance,9.927734375
+kf_023_f0174.jpg,True,cell phone,0.7072367072105408,most central instance,9.048502604166666
+kf_024_f0180.jpg,True,cell phone,0.33117252588272095,most central instance,8.268147786458334
+kf_025_f0184.jpg,True,cell phone,0.3071095943450928,most central instance,8.40673828125
+kf_026_f0190.jpg,True,cell phone,0.3934692144393921,most central instance,7.985758463541667
+kf_027_f0202.jpg,True,cell phone,0.6070559620857239,most central instance,8.468017578125
+kf_028_f0210.jpg,True,cell phone,0.48787733912467957,most central instance,9.722086588541666
+kf_029_f0212.jpg,True,cell phone,0.5708155035972595,most central instance,9.830403645833332
+kf_030_f0226.jpg,True,cell phone,0.3976306915283203,most central instance,10.111979166666666
+kf_031_f0228.jpg,True,cell phone,0.5308559536933899,most central instance,10.218098958333334
+kf_032_f0240.jpg,True,cell phone,0.7225382924079895,most central instance,10.56201171875
+kf_033_f0246.jpg,True,cell phone,0.5238216519355774,most central instance,10.455240885416666
+kf_034_f0255.jpg,True,suitcase,0.38402044773101807,most central instance,9.553873697916666
+kf_035_f0258.jpg,True,cell phone,0.7040854692459106,most central instance,8.777669270833334
+kf_036_f0270.jpg,True,cell phone,0.3003726601600647,most central instance,6.450927734375
+kf_037_f0276.jpg,True,suitcase,0.27756035327911377,most central instance,6.125813802083333
+kf_038_f0284.jpg,True,suitcase,0.22341857850551605,most central instance,5.5927734375
+kf_039_f0290.jpg,True,cell phone,0.18837295472621918,most central instance,5.309895833333334

@@ -1,0 +1,26 @@
+{
+  "total_views_processed": 10,
+  "raw_points_fused": 120000,
+  "clean_points_count": 96074,
+  "retention_rate_pct": 80.1,
+  "sparse_points_reference_count": 13769,
+  "density_multiplier": 6.98,
+  "mesh_vertices_count": 82372,
+  "mesh_triangles_count": 164116,
+  "raw_ply_path": "D:\\7thsem\\3DCV_proj\\outputs\\objectron\\02_bottle\\dense_object_raw_fused.ply",
+  "clean_ply_path": "D:\\7thsem\\3DCV_proj\\outputs\\objectron\\02_bottle\\dense_object_clean_optimized.ply",
+  "mesh_ply_path": "D:\\7thsem\\3DCV_proj\\outputs\\objectron\\02_bottle\\dense_object_poisson_mesh.ply",
+  "summary_json_path": "D:\\7thsem\\3DCV_proj\\outputs\\objectron\\02_bottle\\dense_object_summary.json",
+  "execution_time_s": 30.37,
+  "mesh_diagnostics": {
+    "is_watertight": false,
+    "is_edge_manifold": false,
+    "is_vertex_manifold": true,
+    "is_self_intersecting": true,
+    "num_vertices": 82372,
+    "num_triangles": 164116
+  },
+  "notes": [
+    "Global object anchor world position: [0.701, 1.226, 8.435]"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "runs": [
+    {
+      "run_id": "20261117T070142Z_03_cup_e2a4b0d4f8_df28a528",
+      "metrics": "outputs\\runs\\20261117T070142Z_03_cup_e2a4b0d4f8_df28a528\\reconstruction\\metrics.json"
+    },
+    {
+      "run_id": "20261117T070339Z_04_chair_ee3b271ce9_adc54015",
+      "metrics": "outputs\\runs\\20261117T070339Z_04_chair_ee3b271ce9_adc54015\\reconstruction\\metrics.json"
+    },
+    {
+      "run_id": "20261117T070738Z_03_cup_e2a4b0d4f8_70d9dc83",
+      "metrics": "outputs\\runs\\20261117T070738Z_03_cup_e2a4b0d4f8_70d9dc83\\reconstruction\\metrics.json"
+    }
+  ],
+  "warning": "Panels are side-by-side only. No point clouds or outputs were merged."
+}

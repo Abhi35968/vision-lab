@@ -1,0 +1,27 @@
+{
+  "total_valid_views": 28,
+  "train_views_count": 14,
+  "val_views_count": 14,
+  "optimization_time_sec": 1.94,
+  "train_mean_iou": 0.5831,
+  "train_median_iou": 0.6022,
+  "train_max_iou": 0.7808,
+  "train_min_iou": 0.3087,
+  "val_mean_iou": 0.5483,
+  "val_median_iou": 0.5631,
+  "val_max_iou": 0.722,
+  "val_min_iou": 0.1642,
+  "overall_mean_iou": 0.5657,
+  "overall_median_iou": 0.5781,
+  "overall_mean_precision": 0.7793,
+  "overall_mean_recall": 0.6773,
+  "estimated_height": 6.9031,
+  "estimated_radius": 1.2959,
+  "estimated_tilt_x_deg": -0.0,
+  "estimated_tilt_z_deg": 0.0,
+  "estimated_cap_center": [
+    -1.48139,
+    -2.60379,
+    6.2176
+  ]
+}

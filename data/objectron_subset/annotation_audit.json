@@ -1,0 +1,3736 @@
+{
+  "created_at_utc": "2026-11-18T17:51:01.884077Z",
+  "source_manifest": "D:\\7thsem\\3DCV_proj\\data\\objectron_subset\\manifest.json",
+  "canonical_label_aliases": {
+    "bike": "bicycle",
+    "motobike": "bicycle",
+    "cerealboxes": "cereal_box",
+    "shoes": "shoe"
+  },
+  "counts": {
+    "bicycle:matched": 20,
+    "book:matched": 20,
+    "bottle:matched": 20,
+    "camera:matched": 20,
+    "cereal_box:matched": 20,
+    "cereal_box:mismatch": 31,
+    "chair:matched": 20,
+    "cup:matched": 20,
+    "cup:mismatch": 44,
+    "laptop:matched": 20,
+    "shoe:matched": 20,
+    "shoe:mismatch": 45
+  },
+  "matched_samples": 180,
+  "total_samples": 300,
+  "samples": [
+    {
+      "source_key": "bike/batch-3/44",
+      "status": "matched",
+      "expected_class": "bicycle",
+      "raw_labels": [
+        "bike",
+        "bike"
+      ],
+      "canonical_labels": [
+        "bicycle",
+        "bicycle"
+      ],
+      "frame_annotations": 346
+    },
+    {
+      "source_key": "bike/batch-1/5",
+      "status": "matched",
+      "expected_class": "bicycle",
+      "raw_labels": [
+        "motobike",
+        "motobike"
+      ],
+      "canonical_labels": [
+        "bicycle",
+        "bicycle"
+      ],
+      "frame_annotations": 358
+    },
+    {
+      "source_key": "bike/batch-0/4",
+      "status": "matched",
+      "expected_class": "bicycle",
+      "raw_labels": [
+        "motobike"
+      ],
+      "canonical_labels": [
+        "bicycle"
+      ],
+      "frame_annotations": 260
+    },
+    {
+      "source_key": "bike/batch-5/41",
+      "status": "matched",
+      "expected_class": "bicycle",
+      "raw_labels": [
+        "motobike"
+      ],
+      "canonical_labels": [
+        "bicycle"
+      ],
+      "frame_annotations": 325
+    },
+    {
+      "source_key": "bike/batch-2/22",
+      "status": "matched",
+      "expected_class": "bicycle",
+      "raw_labels": [
+        "motobike"
+      ],
+      "canonical_labels": [
+        "bicycle"
+      ],
+      "frame_annotations": 352
+    },
+    {
+      "source_key": "book/batch-33/31",
+      "status": "matched",
+      "expected_class": "book",
+      "raw_labels": [
+        "book"
+      ],
+      "canonical_labels": [
+        "book"
+      ],
+      "frame_annotations": 173
+    },
+    {
+      "source_key": "book/batch-25/47",
+      "status": "matched",
+      "expected_class": "book",
+      "raw_labels": [
+        "book"
+      ],
+      "canonical_labels": [
+        "book"
+      ],
+      "frame_annotations": 313
+    },
+    {
+      "source_key": "book/batch-14/6",
+      "status": "matched",
+      "expected_class": "book",
+      "raw_labels": [
+        "book"
+      ],
+      "canonical_labels": [
+        "book"
+      ],
+      "frame_annotations": 279
+    },
+    {
+      "source_key": "book/batch-41/32",
+      "status": "matched",
+      "expected_class": "book",
+      "raw_labels": [
+        "book"
+      ],
+      "canonical_labels": [
+        "book"
+      ],
+      "frame_annotations": 224
+    },
+    {
+      "source_key": "book/batch-40/42",
+      "status": "matched",
+      "expected_class": "book",
+      "raw_labels": [
+        "book"
+      ],
+      "canonical_labels": [
+        "book"
+      ],
+      "frame_annotations": 321
+    },
+    {
+      "source_key": "bottle/batch-36/8",
+      "status": "matched",
+      "expected_class": "bottle",
+      "raw_labels": [
+        "bottle"
+      ],
+      "canonical_labels": [
+        "bottle"
+      ],
+      "frame_annotations": 259
+    },
+    {
+      "source_key": "bottle/batch-15/47",
+      "status": "matched",
+      "expected_class": "bottle",
+      "raw_labels": [
+        "bottle"
+      ],
+      "canonical_labels": [
+        "bottle"
+      ],
+      "frame_annotations": 161
+    },
+    {
+      "source_key": "bottle/batch-31/25",
+      "status": "matched",
+      "expected_class": "bottle",
+      "raw_labels": [
+        "bottle"
+      ],
+      "canonical_labels": [
+        "bottle"
+      ],
+      "frame_annotations": 202
+    },
+    {
+      "source_key": "bottle/batch-11/7",
+      "status": "matched",
+      "expected_class": "bottle",
+      "raw_labels": [
+        "bottle"
+      ],
+      "canonical_labels": [
+        "bottle"
+      ],
+      "frame_annotations": 353
+    },
+    {
+      "source_key": "bottle/batch-29/35",
+      "status": "matched",
+      "expected_class": "bottle",
+      "raw_labels": [
+        "bottle"
+      ],
+      "canonical_labels": [
+        "bottle"
+      ],
+      "frame_annotations": 259
+    },
+    {
+      "source_key": "camera/batch-6/37",
+      "status": "matched",
+      "expected_class": "camera",
+      "raw_labels": [
+        "camera"
+      ],
+      "canonical_labels": [
+        "camera"
+      ],
+      "frame_annotations": 206
+    },
+    {
+      "source_key": "camera/batch-17/24",
+      "status": "matched",
+      "expected_class": "camera",
+      "raw_labels": [
+        "camera"
+      ],
+      "canonical_labels": [
+        "camera"
+      ],
+      "frame_annotations": 268
+    },
+    {
+      "source_key": "camera/batch-1/47",
+      "status": "matched",
+      "expected_class": "camera",
+      "raw_labels": [
+        "camera"
+      ],
+      "canonical_labels": [
+        "camera"
+      ],
+      "frame_annotations": 212
+    },
+    {
+      "source_key": "camera/batch-17/30",
+      "status": "matched",
+      "expected_class": "camera",
+      "raw_labels": [
+        "camera"
+      ],
+      "canonical_labels": [
+        "camera"
+      ],
+      "frame_annotations": 238
+    },
+    {
+      "source_key": "camera/batch-5/2",
+      "status": "matched",
+      "expected_class": "camera",
+      "raw_labels": [
+        "camera"
+      ],
+      "canonical_labels": [
+        "camera"
+      ],
+      "frame_annotations": 256
+    },
+    {
+      "source_key": "cereal_box/batch-5/37",
+      "status": "mismatch",
+      "expected_class": "cereal_box",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 279
+    },
+    {
+      "source_key": "cereal_box/batch-6/2",
+      "status": "mismatch",
+      "expected_class": "cereal_box",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 250
+    },
+    {
+      "source_key": "cereal_box/batch-6/46",
+      "status": "mismatch",
+      "expected_class": "cereal_box",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 277
+    },
+    {
+      "source_key": "cereal_box/batch-14/46",
+      "status": "mismatch",
+      "expected_class": "cereal_box",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 234
+    },
+    {
+      "source_key": "cereal_box/batch-33/28",
+      "status": "matched",
+      "expected_class": "cereal_box",
+      "raw_labels": [
+        "cerealboxes"
+      ],
+      "canonical_labels": [
+        "cereal_box"
+      ],
+      "frame_annotations": 257
+    },
+    {
+      "source_key": "chair/batch-45/7",
+      "status": "matched",
+      "expected_class": "chair",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 275
+    },
+    {
+      "source_key": "chair/batch-44/10",
+      "status": "matched",
+      "expected_class": "chair",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 258
+    },
+    {
+      "source_key": "chair/batch-14/5",
+      "status": "matched",
+      "expected_class": "chair",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 260
+    },
+    {
+      "source_key": "chair/batch-10/37",
+      "status": "matched",
+      "expected_class": "chair",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 240
+    },
+    {
+      "source_key": "chair/batch-40/11",
+      "status": "matched",
+      "expected_class": "chair",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 275
+    },
+    {
+      "source_key": "cup/batch-26/34",
+      "status": "mismatch",
+      "expected_class": "cup",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 210
+    },
+    {
+      "source_key": "cup/batch-40/41",
+      "status": "matched",
+      "expected_class": "cup",
+      "raw_labels": [
+        "cup"
+      ],
+      "canonical_labels": [
+        "cup"
+      ],
+      "frame_annotations": 293
+    },
+    {
+      "source_key": "cup/batch-12/14",
+      "status": "mismatch",
+      "expected_class": "cup",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 215
+    },
+    {
+      "source_key": "cup/batch-33/40",
+      "status": "matched",
+      "expected_class": "cup",
+      "raw_labels": [
+        "cup"
+      ],
+      "canonical_labels": [
+        "cup"
+      ],
+      "frame_annotations": 265
+    },
+    {
+      "source_key": "cup/batch-33/17",
+      "status": "matched",
+      "expected_class": "cup",
+      "raw_labels": [
+        "cup"
+      ],
+      "canonical_labels": [
+        "cup"
+      ],
+      "frame_annotations": 380
+    },
+    {
+      "source_key": "laptop/batch-19/29",
+      "status": "matched",
+      "expected_class": "laptop",
+      "raw_labels": [
+        "laptop"
+      ],
+      "canonical_labels": [
+        "laptop"
+      ],
+      "frame_annotations": 357
+    },
+    {
+      "source_key": "laptop/batch-33/8",
+      "status": "matched",
+      "expected_class": "laptop",
+      "raw_labels": [
+        "laptop"
+      ],
+      "canonical_labels": [
+        "laptop"
+      ],
+      "frame_annotations": 376
+    },
+    {
+      "source_key": "laptop/batch-38/48",
+      "status": "matched",
+      "expected_class": "laptop",
+      "raw_labels": [
+        "laptop"
+      ],
+      "canonical_labels": [
+        "laptop"
+      ],
+      "frame_annotations": 333
+    },
+    {
+      "source_key": "laptop/batch-26/45",
+      "status": "matched",
+      "expected_class": "laptop",
+      "raw_labels": [
+        "laptop"
+      ],
+      "canonical_labels": [
+        "laptop"
+      ],
+      "frame_annotations": 399
+    },
+    {
+      "source_key": "laptop/batch-6/2",
+      "status": "matched",
+      "expected_class": "laptop",
+      "raw_labels": [
+        "laptop"
+      ],
+      "canonical_labels": [
+        "laptop"
+      ],
+      "frame_annotations": 313
+    },
+    {
+      "source_key": "shoe/batch-28/24",
+      "status": "mismatch",
+      "expected_class": "shoe",
+      "raw_labels": [
+        "chair",
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair",
+        "chair"
+      ],
+      "frame_annotations": 283
+    },
+    {
+      "source_key": "shoe/batch-2/32",
+      "status": "mismatch",
+      "expected_class": "shoe",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 258
+    },
+    {
+      "source_key": "shoe/batch-25/40",
+      "status": "mismatch",
+      "expected_class": "shoe",
+      "raw_labels": [
+        "chair",
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair",
+        "chair"
+      ],
+      "frame_annotations": 119
+    },
+    {
+      "source_key": "shoe/batch-43/12",
+      "status": "matched",
+      "expected_class": "shoe",
+      "raw_labels": [
+        "shoes",
+        "shoes"
+      ],
+      "canonical_labels": [
+        "shoe",
+        "shoe"
+      ],
+      "frame_annotations": 186
+    },
+    {
+      "source_key": "shoe/batch-16/30",
+      "status": "mismatch",
+      "expected_class": "shoe",
+      "raw_labels": [
+        "chair",
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair",
+        "chair"
+      ],
+      "frame_annotations": 263
+    },
+    {
+      "source_key": "cereal_box/batch-4/48",
+      "status": "mismatch",
+      "expected_class": "cereal_box",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 283
+    },
+    {
+      "source_key": "cereal_box/batch-4/45",
+      "status": "mismatch",
+      "expected_class": "cereal_box",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 235
+    },
+    {
+      "source_key": "cereal_box/batch-4/29",
+      "status": "mismatch",
+      "expected_class": "cereal_box",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 216
+    },
+    {
+      "source_key": "cereal_box/batch-13/37",
+      "status": "mismatch",
+      "expected_class": "cereal_box",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 251
+    },
+    {
+      "source_key": "cereal_box/batch-16/37",
+      "status": "mismatch",
+      "expected_class": "cereal_box",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 274
+    },
+    {
+      "source_key": "cereal_box/batch-28/37",
+      "status": "matched",
+      "expected_class": "cereal_box",
+      "raw_labels": [
+        "cerealboxes"
+      ],
+      "canonical_labels": [
+        "cereal_box"
+      ],
+      "frame_annotations": 205
+    },
+    {
+      "source_key": "cereal_box/batch-17/37",
+      "status": "matched",
+      "expected_class": "cereal_box",
+      "raw_labels": [
+        "cerealboxes"
+      ],
+      "canonical_labels": [
+        "cereal_box"
+      ],
+      "frame_annotations": 328
+    },
+    {
+      "source_key": "cereal_box/batch-34/32",
+      "status": "mismatch",
+      "expected_class": "cereal_box",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 262
+    },
+    {
+      "source_key": "cereal_box/batch-18/37",
+      "status": "mismatch",
+      "expected_class": "cereal_box",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 266
+    },
+    {
+      "source_key": "cereal_box/batch-24/4",
+      "status": "matched",
+      "expected_class": "cereal_box",
+      "raw_labels": [
+        "cerealboxes"
+      ],
+      "canonical_labels": [
+        "cereal_box"
+      ],
+      "frame_annotations": 222
+    },
+    {
+      "source_key": "cereal_box/batch-34/43",
+      "status": "matched",
+      "expected_class": "cereal_box",
+      "raw_labels": [
+        "cerealboxes"
+      ],
+      "canonical_labels": [
+        "cereal_box"
+      ],
+      "frame_annotations": 243
+    },
+    {
+      "source_key": "cup/batch-29/13",
+      "status": "mismatch",
+      "expected_class": "cup",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 363
+    },
+    {
+      "source_key": "cup/batch-34/1",
+      "status": "mismatch",
+      "expected_class": "cup",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 267
+    },
+    {
+      "source_key": "cup/batch-41/31",
+      "status": "matched",
+      "expected_class": "cup",
+      "raw_labels": [
+        "cup"
+      ],
+      "canonical_labels": [
+        "cup"
+      ],
+      "frame_annotations": 288
+    },
+    {
+      "source_key": "cup/batch-15/17",
+      "status": "mismatch",
+      "expected_class": "cup",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 304
+    },
+    {
+      "source_key": "cup/batch-38/49",
+      "status": "matched",
+      "expected_class": "cup",
+      "raw_labels": [
+        "cup"
+      ],
+      "canonical_labels": [
+        "cup"
+      ],
+      "frame_annotations": 200
+    },
+    {
+      "source_key": "shoe/batch-36/10",
+      "status": "mismatch",
+      "expected_class": "shoe",
+      "raw_labels": [
+        "chair",
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair",
+        "chair"
+      ],
+      "frame_annotations": 243
+    },
+    {
+      "source_key": "shoe/batch-37/1",
+      "status": "mismatch",
+      "expected_class": "shoe",
+      "raw_labels": [
+        "chair",
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair",
+        "chair"
+      ],
+      "frame_annotations": 204
+    },
+    {
+      "source_key": "shoe/batch-29/32",
+      "status": "mismatch",
+      "expected_class": "shoe",
+      "raw_labels": [
+        "chair",
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair",
+        "chair"
+      ],
+      "frame_annotations": 254
+    },
+    {
+      "source_key": "shoe/batch-36/37",
+      "status": "mismatch",
+      "expected_class": "shoe",
+      "raw_labels": [
+        "chair",
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair",
+        "chair"
+      ],
+      "frame_annotations": 313
+    },
+    {
+      "source_key": "shoe/batch-36/20",
+      "status": "mismatch",
+      "expected_class": "shoe",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 274
+    },
+    {
+      "source_key": "shoe/batch-13/6",
+      "status": "mismatch",
+      "expected_class": "shoe",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 248
+    },
+    {
+      "source_key": "shoe/batch-29/48",
+      "status": "mismatch",
+      "expected_class": "shoe",
+      "raw_labels": [
+        "chair",
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair",
+        "chair"
+      ],
+      "frame_annotations": 166
+    },
+    {
+      "source_key": "shoe/batch-14/19",
+      "status": "mismatch",
+      "expected_class": "shoe",
+      "raw_labels": [
+        "chair",
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair",
+        "chair"
+      ],
+      "frame_annotations": 286
+    },
+    {
+      "source_key": "shoe/batch-19/45",
+      "status": "mismatch",
+      "expected_class": "shoe",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 173
+    },
+    {
+      "source_key": "shoe/batch-14/4",
+      "status": "mismatch",
+      "expected_class": "shoe",
+      "raw_labels": [
+        "chair",
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair",
+        "chair"
+      ],
+      "frame_annotations": 286
+    },
+    {
+      "source_key": "shoe/batch-14/0",
+      "status": "mismatch",
+      "expected_class": "shoe",
+      "raw_labels": [
+        "chair",
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair",
+        "chair"
+      ],
+      "frame_annotations": 286
+    },
+    {
+      "source_key": "shoe/batch-25/49",
+      "status": "mismatch",
+      "expected_class": "shoe",
+      "raw_labels": [
+        "chair",
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair",
+        "chair"
+      ],
+      "frame_annotations": 112
+    },
+    {
+      "source_key": "shoe/batch-39/17",
+      "status": "matched",
+      "expected_class": "shoe",
+      "raw_labels": [
+        "shoes",
+        "shoes"
+      ],
+      "canonical_labels": [
+        "shoe",
+        "shoe"
+      ],
+      "frame_annotations": 295
+    },
+    {
+      "source_key": "shoe/batch-41/17",
+      "status": "matched",
+      "expected_class": "shoe",
+      "raw_labels": [
+        "shoe",
+        "shoe"
+      ],
+      "canonical_labels": [
+        "shoe",
+        "shoe"
+      ],
+      "frame_annotations": 329
+    },
+    {
+      "source_key": "shoe/batch-38/31",
+      "status": "matched",
+      "expected_class": "shoe",
+      "raw_labels": [
+        "shoe"
+      ],
+      "canonical_labels": [
+        "shoe"
+      ],
+      "frame_annotations": 157
+    },
+    {
+      "source_key": "shoe/batch-4/17",
+      "status": "mismatch",
+      "expected_class": "shoe",
+      "raw_labels": [
+        "chair",
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair",
+        "chair"
+      ],
+      "frame_annotations": 252
+    },
+    {
+      "source_key": "shoe/batch-33/36",
+      "status": "mismatch",
+      "expected_class": "shoe",
+      "raw_labels": [
+        "chair",
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair",
+        "chair"
+      ],
+      "frame_annotations": 250
+    },
+    {
+      "source_key": "shoe/batch-36/40",
+      "status": "mismatch",
+      "expected_class": "shoe",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 195
+    },
+    {
+      "source_key": "shoe/batch-47/19",
+      "status": "matched",
+      "expected_class": "shoe",
+      "raw_labels": [
+        "shoes",
+        "shoes"
+      ],
+      "canonical_labels": [
+        "shoe",
+        "shoe"
+      ],
+      "frame_annotations": 343
+    },
+    {
+      "source_key": "chair/batch-9/45",
+      "status": "matched",
+      "expected_class": "chair",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 206
+    },
+    {
+      "source_key": "chair/batch-45/22",
+      "status": "matched",
+      "expected_class": "chair",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 283
+    },
+    {
+      "source_key": "chair/batch-4/6",
+      "status": "matched",
+      "expected_class": "chair",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 305
+    },
+    {
+      "source_key": "chair/batch-17/25",
+      "status": "matched",
+      "expected_class": "chair",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 278
+    },
+    {
+      "source_key": "chair/batch-14/25",
+      "status": "matched",
+      "expected_class": "chair",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 222
+    },
+    {
+      "source_key": "bike/batch-10/28",
+      "status": "matched",
+      "expected_class": "bicycle",
+      "raw_labels": [
+        "bike"
+      ],
+      "canonical_labels": [
+        "bicycle"
+      ],
+      "frame_annotations": 261
+    },
+    {
+      "source_key": "bike/batch-3/25",
+      "status": "matched",
+      "expected_class": "bicycle",
+      "raw_labels": [
+        "motobike"
+      ],
+      "canonical_labels": [
+        "bicycle"
+      ],
+      "frame_annotations": 300
+    },
+    {
+      "source_key": "bike/batch-4/23",
+      "status": "matched",
+      "expected_class": "bicycle",
+      "raw_labels": [
+        "motobike"
+      ],
+      "canonical_labels": [
+        "bicycle"
+      ],
+      "frame_annotations": 375
+    },
+    {
+      "source_key": "bike/batch-9/22",
+      "status": "matched",
+      "expected_class": "bicycle",
+      "raw_labels": [
+        "motobike"
+      ],
+      "canonical_labels": [
+        "bicycle"
+      ],
+      "frame_annotations": 322
+    },
+    {
+      "source_key": "bike/batch-8/27",
+      "status": "matched",
+      "expected_class": "bicycle",
+      "raw_labels": [
+        "bike"
+      ],
+      "canonical_labels": [
+        "bicycle"
+      ],
+      "frame_annotations": 324
+    },
+    {
+      "source_key": "book/batch-2/20",
+      "status": "matched",
+      "expected_class": "book",
+      "raw_labels": [
+        "book"
+      ],
+      "canonical_labels": [
+        "book"
+      ],
+      "frame_annotations": 354
+    },
+    {
+      "source_key": "book/batch-31/21",
+      "status": "matched",
+      "expected_class": "book",
+      "raw_labels": [
+        "book"
+      ],
+      "canonical_labels": [
+        "book"
+      ],
+      "frame_annotations": 231
+    },
+    {
+      "source_key": "book/batch-29/19",
+      "status": "matched",
+      "expected_class": "book",
+      "raw_labels": [
+        "book"
+      ],
+      "canonical_labels": [
+        "book"
+      ],
+      "frame_annotations": 222
+    },
+    {
+      "source_key": "book/batch-14/8",
+      "status": "matched",
+      "expected_class": "book",
+      "raw_labels": [
+        "book"
+      ],
+      "canonical_labels": [
+        "book"
+      ],
+      "frame_annotations": 303
+    },
+    {
+      "source_key": "book/batch-41/18",
+      "status": "matched",
+      "expected_class": "book",
+      "raw_labels": [
+        "book"
+      ],
+      "canonical_labels": [
+        "book"
+      ],
+      "frame_annotations": 234
+    },
+    {
+      "source_key": "bottle/batch-19/38",
+      "status": "matched",
+      "expected_class": "bottle",
+      "raw_labels": [
+        "bottle"
+      ],
+      "canonical_labels": [
+        "bottle"
+      ],
+      "frame_annotations": 231
+    },
+    {
+      "source_key": "bottle/batch-42/10",
+      "status": "matched",
+      "expected_class": "bottle",
+      "raw_labels": [
+        "bottle"
+      ],
+      "canonical_labels": [
+        "bottle"
+      ],
+      "frame_annotations": 218
+    },
+    {
+      "source_key": "bottle/batch-38/14",
+      "status": "matched",
+      "expected_class": "bottle",
+      "raw_labels": [
+        "bottle"
+      ],
+      "canonical_labels": [
+        "bottle"
+      ],
+      "frame_annotations": 343
+    },
+    {
+      "source_key": "bottle/batch-38/16",
+      "status": "matched",
+      "expected_class": "bottle",
+      "raw_labels": [
+        "bottle"
+      ],
+      "canonical_labels": [
+        "bottle"
+      ],
+      "frame_annotations": 343
+    },
+    {
+      "source_key": "bottle/batch-25/14",
+      "status": "matched",
+      "expected_class": "bottle",
+      "raw_labels": [
+        "bottle"
+      ],
+      "canonical_labels": [
+        "bottle"
+      ],
+      "frame_annotations": 236
+    },
+    {
+      "source_key": "camera/batch-17/41",
+      "status": "matched",
+      "expected_class": "camera",
+      "raw_labels": [
+        "camera"
+      ],
+      "canonical_labels": [
+        "camera"
+      ],
+      "frame_annotations": 331
+    },
+    {
+      "source_key": "camera/batch-7/26",
+      "status": "matched",
+      "expected_class": "camera",
+      "raw_labels": [
+        "camera"
+      ],
+      "canonical_labels": [
+        "camera"
+      ],
+      "frame_annotations": 250
+    },
+    {
+      "source_key": "camera/batch-16/47",
+      "status": "matched",
+      "expected_class": "camera",
+      "raw_labels": [
+        "camera"
+      ],
+      "canonical_labels": [
+        "camera"
+      ],
+      "frame_annotations": 304
+    },
+    {
+      "source_key": "camera/batch-17/36",
+      "status": "matched",
+      "expected_class": "camera",
+      "raw_labels": [
+        "camera"
+      ],
+      "canonical_labels": [
+        "camera"
+      ],
+      "frame_annotations": 354
+    },
+    {
+      "source_key": "camera/batch-11/7",
+      "status": "matched",
+      "expected_class": "camera",
+      "raw_labels": [
+        "camera"
+      ],
+      "canonical_labels": [
+        "camera"
+      ],
+      "frame_annotations": 299
+    },
+    {
+      "source_key": "cereal_box/batch-35/49",
+      "status": "matched",
+      "expected_class": "cereal_box",
+      "raw_labels": [
+        "cerealboxes"
+      ],
+      "canonical_labels": [
+        "cereal_box"
+      ],
+      "frame_annotations": 231
+    },
+    {
+      "source_key": "cereal_box/batch-15/2",
+      "status": "matched",
+      "expected_class": "cereal_box",
+      "raw_labels": [
+        "cerealboxes"
+      ],
+      "canonical_labels": [
+        "cereal_box"
+      ],
+      "frame_annotations": 232
+    },
+    {
+      "source_key": "cereal_box/batch-38/46",
+      "status": "matched",
+      "expected_class": "cereal_box",
+      "raw_labels": [
+        "cerealboxes"
+      ],
+      "canonical_labels": [
+        "cereal_box"
+      ],
+      "frame_annotations": 289
+    },
+    {
+      "source_key": "cereal_box/batch-3/26",
+      "status": "mismatch",
+      "expected_class": "cereal_box",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 258
+    },
+    {
+      "source_key": "cereal_box/batch-10/30",
+      "status": "mismatch",
+      "expected_class": "cereal_box",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 254
+    },
+    {
+      "source_key": "cereal_box/batch-22/12",
+      "status": "mismatch",
+      "expected_class": "cereal_box",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 226
+    },
+    {
+      "source_key": "cereal_box/batch-26/8",
+      "status": "matched",
+      "expected_class": "cereal_box",
+      "raw_labels": [
+        "cerealboxes"
+      ],
+      "canonical_labels": [
+        "cereal_box"
+      ],
+      "frame_annotations": 245
+    },
+    {
+      "source_key": "cereal_box/batch-22/20",
+      "status": "mismatch",
+      "expected_class": "cereal_box",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 197
+    },
+    {
+      "source_key": "cereal_box/batch-21/7",
+      "status": "mismatch",
+      "expected_class": "cereal_box",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 239
+    },
+    {
+      "source_key": "cereal_box/batch-12/32",
+      "status": "mismatch",
+      "expected_class": "cereal_box",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 259
+    },
+    {
+      "source_key": "cereal_box/batch-21/9",
+      "status": "mismatch",
+      "expected_class": "cereal_box",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 264
+    },
+    {
+      "source_key": "cereal_box/batch-5/49",
+      "status": "mismatch",
+      "expected_class": "cereal_box",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 277
+    },
+    {
+      "source_key": "cereal_box/batch-6/41",
+      "status": "mismatch",
+      "expected_class": "cereal_box",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 310
+    },
+    {
+      "source_key": "cereal_box/batch-36/47",
+      "status": "matched",
+      "expected_class": "cereal_box",
+      "raw_labels": [
+        "cerealboxes"
+      ],
+      "canonical_labels": [
+        "cereal_box"
+      ],
+      "frame_annotations": 268
+    },
+    {
+      "source_key": "cup/batch-20/48",
+      "status": "mismatch",
+      "expected_class": "cup",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 253
+    },
+    {
+      "source_key": "cup/batch-49/35",
+      "status": "matched",
+      "expected_class": "cup",
+      "raw_labels": [
+        "cup"
+      ],
+      "canonical_labels": [
+        "cup"
+      ],
+      "frame_annotations": 242
+    },
+    {
+      "source_key": "cup/batch-31/6",
+      "status": "mismatch",
+      "expected_class": "cup",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 259
+    },
+    {
+      "source_key": "cup/batch-10/13",
+      "status": "mismatch",
+      "expected_class": "cup",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 171
+    },
+    {
+      "source_key": "cup/batch-22/1",
+      "status": "mismatch",
+      "expected_class": "cup",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 209
+    },
+    {
+      "source_key": "cup/batch-26/22",
+      "status": "mismatch",
+      "expected_class": "cup",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 275
+    },
+    {
+      "source_key": "cup/batch-14/21",
+      "status": "mismatch",
+      "expected_class": "cup",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 237
+    },
+    {
+      "source_key": "cup/batch-14/18",
+      "status": "mismatch",
+      "expected_class": "cup",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 264
+    },
+    {
+      "source_key": "cup/batch-38/10",
+      "status": "matched",
+      "expected_class": "cup",
+      "raw_labels": [
+        "cup"
+      ],
+      "canonical_labels": [
+        "cup"
+      ],
+      "frame_annotations": 238
+    },
+    {
+      "source_key": "cup/batch-22/10",
+      "status": "mismatch",
+      "expected_class": "cup",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 286
+    },
+    {
+      "source_key": "cup/batch-2/4",
+      "status": "mismatch",
+      "expected_class": "cup",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 125
+    },
+    {
+      "source_key": "cup/batch-48/14",
+      "status": "matched",
+      "expected_class": "cup",
+      "raw_labels": [
+        "cup"
+      ],
+      "canonical_labels": [
+        "cup"
+      ],
+      "frame_annotations": 313
+    },
+    {
+      "source_key": "cup/batch-24/11",
+      "status": "mismatch",
+      "expected_class": "cup",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 188
+    },
+    {
+      "source_key": "cup/batch-28/39",
+      "status": "mismatch",
+      "expected_class": "cup",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 269
+    },
+    {
+      "source_key": "cup/batch-6/38",
+      "status": "mismatch",
+      "expected_class": "cup",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 211
+    },
+    {
+      "source_key": "cup/batch-33/1",
+      "status": "matched",
+      "expected_class": "cup",
+      "raw_labels": [
+        "cup"
+      ],
+      "canonical_labels": [
+        "cup"
+      ],
+      "frame_annotations": 332
+    },
+    {
+      "source_key": "cup/batch-6/48",
+      "status": "mismatch",
+      "expected_class": "cup",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 374
+    },
+    {
+      "source_key": "cup/batch-29/40",
+      "status": "mismatch",
+      "expected_class": "cup",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 182
+    },
+    {
+      "source_key": "cup/batch-5/27",
+      "status": "mismatch",
+      "expected_class": "cup",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 294
+    },
+    {
+      "source_key": "cup/batch-47/5",
+      "status": "matched",
+      "expected_class": "cup",
+      "raw_labels": [
+        "cup"
+      ],
+      "canonical_labels": [
+        "cup"
+      ],
+      "frame_annotations": 255
+    },
+    {
+      "source_key": "laptop/batch-5/35",
+      "status": "matched",
+      "expected_class": "laptop",
+      "raw_labels": [
+        "laptop"
+      ],
+      "canonical_labels": [
+        "laptop"
+      ],
+      "frame_annotations": 353
+    },
+    {
+      "source_key": "laptop/batch-19/39",
+      "status": "matched",
+      "expected_class": "laptop",
+      "raw_labels": [
+        "laptop"
+      ],
+      "canonical_labels": [
+        "laptop"
+      ],
+      "frame_annotations": 405
+    },
+    {
+      "source_key": "laptop/batch-16/6",
+      "status": "matched",
+      "expected_class": "laptop",
+      "raw_labels": [
+        "laptop"
+      ],
+      "canonical_labels": [
+        "laptop"
+      ],
+      "frame_annotations": 389
+    },
+    {
+      "source_key": "laptop/batch-7/45",
+      "status": "matched",
+      "expected_class": "laptop",
+      "raw_labels": [
+        "laptop"
+      ],
+      "canonical_labels": [
+        "laptop"
+      ],
+      "frame_annotations": 88
+    },
+    {
+      "source_key": "laptop/batch-25/48",
+      "status": "matched",
+      "expected_class": "laptop",
+      "raw_labels": [
+        "laptop"
+      ],
+      "canonical_labels": [
+        "laptop"
+      ],
+      "frame_annotations": 387
+    },
+    {
+      "source_key": "shoe/batch-13/40",
+      "status": "mismatch",
+      "expected_class": "shoe",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 254
+    },
+    {
+      "source_key": "shoe/batch-18/18",
+      "status": "mismatch",
+      "expected_class": "shoe",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 302
+    },
+    {
+      "source_key": "shoe/batch-45/11",
+      "status": "matched",
+      "expected_class": "shoe",
+      "raw_labels": [
+        "shoe"
+      ],
+      "canonical_labels": [
+        "shoe"
+      ],
+      "frame_annotations": 267
+    },
+    {
+      "source_key": "shoe/batch-31/10",
+      "status": "mismatch",
+      "expected_class": "shoe",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 251
+    },
+    {
+      "source_key": "shoe/batch-39/38",
+      "status": "matched",
+      "expected_class": "shoe",
+      "raw_labels": [
+        "shoes"
+      ],
+      "canonical_labels": [
+        "shoe"
+      ],
+      "frame_annotations": 278
+    },
+    {
+      "source_key": "shoe/batch-33/14",
+      "status": "mismatch",
+      "expected_class": "shoe",
+      "raw_labels": [
+        "chair",
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair",
+        "chair"
+      ],
+      "frame_annotations": 234
+    },
+    {
+      "source_key": "shoe/batch-17/40",
+      "status": "mismatch",
+      "expected_class": "shoe",
+      "raw_labels": [
+        "chair",
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair",
+        "chair"
+      ],
+      "frame_annotations": 268
+    },
+    {
+      "source_key": "shoe/batch-5/32",
+      "status": "mismatch",
+      "expected_class": "shoe",
+      "raw_labels": [
+        "chair",
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair",
+        "chair"
+      ],
+      "frame_annotations": 240
+    },
+    {
+      "source_key": "shoe/batch-30/25",
+      "status": "mismatch",
+      "expected_class": "shoe",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 276
+    },
+    {
+      "source_key": "shoe/batch-18/49",
+      "status": "mismatch",
+      "expected_class": "shoe",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 293
+    },
+    {
+      "source_key": "shoe/batch-45/44",
+      "status": "matched",
+      "expected_class": "shoe",
+      "raw_labels": [
+        "shoes",
+        "shoes"
+      ],
+      "canonical_labels": [
+        "shoe",
+        "shoe"
+      ],
+      "frame_annotations": 206
+    },
+    {
+      "source_key": "shoe/batch-49/34",
+      "status": "matched",
+      "expected_class": "shoe",
+      "raw_labels": [
+        "shoe",
+        "shoe"
+      ],
+      "canonical_labels": [
+        "shoe",
+        "shoe"
+      ],
+      "frame_annotations": 405
+    },
+    {
+      "source_key": "shoe/batch-43/19",
+      "status": "matched",
+      "expected_class": "shoe",
+      "raw_labels": [
+        "shoes"
+      ],
+      "canonical_labels": [
+        "shoe"
+      ],
+      "frame_annotations": 180
+    },
+    {
+      "source_key": "bike/batch-1/38",
+      "status": "matched",
+      "expected_class": "bicycle",
+      "raw_labels": [
+        "motobike"
+      ],
+      "canonical_labels": [
+        "bicycle"
+      ],
+      "frame_annotations": 385
+    },
+    {
+      "source_key": "bike/batch-8/1",
+      "status": "matched",
+      "expected_class": "bicycle",
+      "raw_labels": [
+        "bike"
+      ],
+      "canonical_labels": [
+        "bicycle"
+      ],
+      "frame_annotations": 322
+    },
+    {
+      "source_key": "bike/batch-10/25",
+      "status": "matched",
+      "expected_class": "bicycle",
+      "raw_labels": [
+        "bike"
+      ],
+      "canonical_labels": [
+        "bicycle"
+      ],
+      "frame_annotations": 456
+    },
+    {
+      "source_key": "bike/batch-7/24",
+      "status": "matched",
+      "expected_class": "bicycle",
+      "raw_labels": [
+        "motobike"
+      ],
+      "canonical_labels": [
+        "bicycle"
+      ],
+      "frame_annotations": 255
+    },
+    {
+      "source_key": "bike/batch-12/9",
+      "status": "matched",
+      "expected_class": "bicycle",
+      "raw_labels": [
+        "bike"
+      ],
+      "canonical_labels": [
+        "bicycle"
+      ],
+      "frame_annotations": 346
+    },
+    {
+      "source_key": "bike/batch-4/16",
+      "status": "matched",
+      "expected_class": "bicycle",
+      "raw_labels": [
+        "motobike"
+      ],
+      "canonical_labels": [
+        "bicycle"
+      ],
+      "frame_annotations": 325
+    },
+    {
+      "source_key": "bike/batch-10/35",
+      "status": "matched",
+      "expected_class": "bicycle",
+      "raw_labels": [
+        "bike"
+      ],
+      "canonical_labels": [
+        "bicycle"
+      ],
+      "frame_annotations": 440
+    },
+    {
+      "source_key": "bike/batch-6/41",
+      "status": "matched",
+      "expected_class": "bicycle",
+      "raw_labels": [
+        "motobike"
+      ],
+      "canonical_labels": [
+        "bicycle"
+      ],
+      "frame_annotations": 348
+    },
+    {
+      "source_key": "bike/batch-10/42",
+      "status": "matched",
+      "expected_class": "bicycle",
+      "raw_labels": [
+        "bike"
+      ],
+      "canonical_labels": [
+        "bicycle"
+      ],
+      "frame_annotations": 268
+    },
+    {
+      "source_key": "bike/batch-10/10",
+      "status": "matched",
+      "expected_class": "bicycle",
+      "raw_labels": [
+        "bike"
+      ],
+      "canonical_labels": [
+        "bicycle"
+      ],
+      "frame_annotations": 328
+    },
+    {
+      "source_key": "book/batch-8/26",
+      "status": "matched",
+      "expected_class": "book",
+      "raw_labels": [
+        "book"
+      ],
+      "canonical_labels": [
+        "book"
+      ],
+      "frame_annotations": 267
+    },
+    {
+      "source_key": "book/batch-44/41",
+      "status": "matched",
+      "expected_class": "book",
+      "raw_labels": [
+        "book"
+      ],
+      "canonical_labels": [
+        "book"
+      ],
+      "frame_annotations": 250
+    },
+    {
+      "source_key": "book/batch-15/22",
+      "status": "matched",
+      "expected_class": "book",
+      "raw_labels": [
+        "book"
+      ],
+      "canonical_labels": [
+        "book"
+      ],
+      "frame_annotations": 314
+    },
+    {
+      "source_key": "book/batch-13/10",
+      "status": "matched",
+      "expected_class": "book",
+      "raw_labels": [
+        "book"
+      ],
+      "canonical_labels": [
+        "book"
+      ],
+      "frame_annotations": 205
+    },
+    {
+      "source_key": "book/batch-34/45",
+      "status": "matched",
+      "expected_class": "book",
+      "raw_labels": [
+        "book"
+      ],
+      "canonical_labels": [
+        "book"
+      ],
+      "frame_annotations": 232
+    },
+    {
+      "source_key": "book/batch-13/28",
+      "status": "matched",
+      "expected_class": "book",
+      "raw_labels": [
+        "book"
+      ],
+      "canonical_labels": [
+        "book"
+      ],
+      "frame_annotations": 259
+    },
+    {
+      "source_key": "book/batch-13/3",
+      "status": "matched",
+      "expected_class": "book",
+      "raw_labels": [
+        "book"
+      ],
+      "canonical_labels": [
+        "book"
+      ],
+      "frame_annotations": 302
+    },
+    {
+      "source_key": "book/batch-6/6",
+      "status": "matched",
+      "expected_class": "book",
+      "raw_labels": [
+        "book"
+      ],
+      "canonical_labels": [
+        "book"
+      ],
+      "frame_annotations": 330
+    },
+    {
+      "source_key": "book/batch-5/9",
+      "status": "matched",
+      "expected_class": "book",
+      "raw_labels": [
+        "book"
+      ],
+      "canonical_labels": [
+        "book"
+      ],
+      "frame_annotations": 603
+    },
+    {
+      "source_key": "book/batch-17/22",
+      "status": "matched",
+      "expected_class": "book",
+      "raw_labels": [
+        "book"
+      ],
+      "canonical_labels": [
+        "book"
+      ],
+      "frame_annotations": 240
+    },
+    {
+      "source_key": "bottle/batch-10/30",
+      "status": "matched",
+      "expected_class": "bottle",
+      "raw_labels": [
+        "bottle"
+      ],
+      "canonical_labels": [
+        "bottle"
+      ],
+      "frame_annotations": 262
+    },
+    {
+      "source_key": "bottle/batch-38/46",
+      "status": "matched",
+      "expected_class": "bottle",
+      "raw_labels": [
+        "bottle"
+      ],
+      "canonical_labels": [
+        "bottle"
+      ],
+      "frame_annotations": 395
+    },
+    {
+      "source_key": "bottle/batch-3/13",
+      "status": "matched",
+      "expected_class": "bottle",
+      "raw_labels": [
+        "bottle",
+        "bottle"
+      ],
+      "canonical_labels": [
+        "bottle",
+        "bottle"
+      ],
+      "frame_annotations": 223
+    },
+    {
+      "source_key": "bottle/batch-42/36",
+      "status": "matched",
+      "expected_class": "bottle",
+      "raw_labels": [
+        "bottle",
+        "bottle",
+        "bottle",
+        "bottle"
+      ],
+      "canonical_labels": [
+        "bottle",
+        "bottle",
+        "bottle",
+        "bottle"
+      ],
+      "frame_annotations": 225
+    },
+    {
+      "source_key": "bottle/batch-34/19",
+      "status": "matched",
+      "expected_class": "bottle",
+      "raw_labels": [
+        "bottle"
+      ],
+      "canonical_labels": [
+        "bottle"
+      ],
+      "frame_annotations": 256
+    },
+    {
+      "source_key": "bottle/batch-46/16",
+      "status": "matched",
+      "expected_class": "bottle",
+      "raw_labels": [
+        "bottle"
+      ],
+      "canonical_labels": [
+        "bottle"
+      ],
+      "frame_annotations": 169
+    },
+    {
+      "source_key": "bottle/batch-27/31",
+      "status": "matched",
+      "expected_class": "bottle",
+      "raw_labels": [
+        "bottle"
+      ],
+      "canonical_labels": [
+        "bottle"
+      ],
+      "frame_annotations": 293
+    },
+    {
+      "source_key": "bottle/batch-18/42",
+      "status": "matched",
+      "expected_class": "bottle",
+      "raw_labels": [
+        "bottle"
+      ],
+      "canonical_labels": [
+        "bottle"
+      ],
+      "frame_annotations": 265
+    },
+    {
+      "source_key": "bottle/batch-24/32",
+      "status": "matched",
+      "expected_class": "bottle",
+      "raw_labels": [
+        "bottle"
+      ],
+      "canonical_labels": [
+        "bottle"
+      ],
+      "frame_annotations": 220
+    },
+    {
+      "source_key": "bottle/batch-44/11",
+      "status": "matched",
+      "expected_class": "bottle",
+      "raw_labels": [
+        "bottle",
+        "bottle",
+        "bottle"
+      ],
+      "canonical_labels": [
+        "bottle",
+        "bottle",
+        "bottle"
+      ],
+      "frame_annotations": 211
+    },
+    {
+      "source_key": "camera/batch-10/4",
+      "status": "matched",
+      "expected_class": "camera",
+      "raw_labels": [
+        "camera"
+      ],
+      "canonical_labels": [
+        "camera"
+      ],
+      "frame_annotations": 176
+    },
+    {
+      "source_key": "camera/batch-5/9",
+      "status": "matched",
+      "expected_class": "camera",
+      "raw_labels": [
+        "camera"
+      ],
+      "canonical_labels": [
+        "camera"
+      ],
+      "frame_annotations": 325
+    },
+    {
+      "source_key": "camera/batch-7/14",
+      "status": "matched",
+      "expected_class": "camera",
+      "raw_labels": [
+        "camera"
+      ],
+      "canonical_labels": [
+        "camera"
+      ],
+      "frame_annotations": 254
+    },
+    {
+      "source_key": "camera/batch-5/49",
+      "status": "matched",
+      "expected_class": "camera",
+      "raw_labels": [
+        "camera"
+      ],
+      "canonical_labels": [
+        "camera"
+      ],
+      "frame_annotations": 266
+    },
+    {
+      "source_key": "camera/batch-15/6",
+      "status": "matched",
+      "expected_class": "camera",
+      "raw_labels": [
+        "camera"
+      ],
+      "canonical_labels": [
+        "camera"
+      ],
+      "frame_annotations": 299
+    },
+    {
+      "source_key": "camera/batch-12/30",
+      "status": "matched",
+      "expected_class": "camera",
+      "raw_labels": [
+        "camera"
+      ],
+      "canonical_labels": [
+        "camera"
+      ],
+      "frame_annotations": 189
+    },
+    {
+      "source_key": "camera/batch-10/16",
+      "status": "matched",
+      "expected_class": "camera",
+      "raw_labels": [
+        "camera"
+      ],
+      "canonical_labels": [
+        "camera"
+      ],
+      "frame_annotations": 156
+    },
+    {
+      "source_key": "camera/batch-12/41",
+      "status": "matched",
+      "expected_class": "camera",
+      "raw_labels": [
+        "camera"
+      ],
+      "canonical_labels": [
+        "camera"
+      ],
+      "frame_annotations": 265
+    },
+    {
+      "source_key": "camera/batch-16/43",
+      "status": "matched",
+      "expected_class": "camera",
+      "raw_labels": [
+        "camera"
+      ],
+      "canonical_labels": [
+        "camera"
+      ],
+      "frame_annotations": 358
+    },
+    {
+      "source_key": "camera/batch-3/39",
+      "status": "matched",
+      "expected_class": "camera",
+      "raw_labels": [
+        "camera"
+      ],
+      "canonical_labels": [
+        "camera"
+      ],
+      "frame_annotations": 201
+    },
+    {
+      "source_key": "cereal_box/batch-20/26",
+      "status": "mismatch",
+      "expected_class": "cereal_box",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 289
+    },
+    {
+      "source_key": "cereal_box/batch-2/12",
+      "status": "mismatch",
+      "expected_class": "cereal_box",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 171
+    },
+    {
+      "source_key": "cereal_box/batch-2/0",
+      "status": "mismatch",
+      "expected_class": "cereal_box",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 330
+    },
+    {
+      "source_key": "cereal_box/batch-20/1",
+      "status": "mismatch",
+      "expected_class": "cereal_box",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 235
+    },
+    {
+      "source_key": "cereal_box/batch-10/36",
+      "status": "mismatch",
+      "expected_class": "cereal_box",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 228
+    },
+    {
+      "source_key": "cereal_box/batch-4/32",
+      "status": "mismatch",
+      "expected_class": "cereal_box",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 264
+    },
+    {
+      "source_key": "cereal_box/batch-33/22",
+      "status": "matched",
+      "expected_class": "cereal_box",
+      "raw_labels": [
+        "cerealboxes"
+      ],
+      "canonical_labels": [
+        "cereal_box"
+      ],
+      "frame_annotations": 390
+    },
+    {
+      "source_key": "cereal_box/batch-20/28",
+      "status": "mismatch",
+      "expected_class": "cereal_box",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 246
+    },
+    {
+      "source_key": "cereal_box/batch-35/20",
+      "status": "matched",
+      "expected_class": "cereal_box",
+      "raw_labels": [
+        "cerealboxes"
+      ],
+      "canonical_labels": [
+        "cereal_box"
+      ],
+      "frame_annotations": 225
+    },
+    {
+      "source_key": "cereal_box/batch-26/10",
+      "status": "matched",
+      "expected_class": "cereal_box",
+      "raw_labels": [
+        "cerealboxes"
+      ],
+      "canonical_labels": [
+        "cereal_box"
+      ],
+      "frame_annotations": 258
+    },
+    {
+      "source_key": "cereal_box/batch-14/29",
+      "status": "mismatch",
+      "expected_class": "cereal_box",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 256
+    },
+    {
+      "source_key": "cereal_box/batch-16/19",
+      "status": "mismatch",
+      "expected_class": "cereal_box",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 290
+    },
+    {
+      "source_key": "cereal_box/batch-32/11",
+      "status": "matched",
+      "expected_class": "cereal_box",
+      "raw_labels": [
+        "cerealboxes"
+      ],
+      "canonical_labels": [
+        "cereal_box"
+      ],
+      "frame_annotations": 222
+    },
+    {
+      "source_key": "cereal_box/batch-26/3",
+      "status": "matched",
+      "expected_class": "cereal_box",
+      "raw_labels": [
+        "cerealboxes"
+      ],
+      "canonical_labels": [
+        "cereal_box"
+      ],
+      "frame_annotations": 247
+    },
+    {
+      "source_key": "cereal_box/batch-34/22",
+      "status": "matched",
+      "expected_class": "cereal_box",
+      "raw_labels": [
+        "cerealboxes"
+      ],
+      "canonical_labels": [
+        "cereal_box"
+      ],
+      "frame_annotations": 204
+    },
+    {
+      "source_key": "cereal_box/batch-25/25",
+      "status": "matched",
+      "expected_class": "cereal_box",
+      "raw_labels": [
+        "cerealboxes"
+      ],
+      "canonical_labels": [
+        "cereal_box"
+      ],
+      "frame_annotations": 216
+    },
+    {
+      "source_key": "cereal_box/batch-30/8",
+      "status": "matched",
+      "expected_class": "cereal_box",
+      "raw_labels": [
+        "cerealboxes"
+      ],
+      "canonical_labels": [
+        "cereal_box"
+      ],
+      "frame_annotations": 209
+    },
+    {
+      "source_key": "cereal_box/batch-29/0",
+      "status": "matched",
+      "expected_class": "cereal_box",
+      "raw_labels": [
+        "cerealboxes"
+      ],
+      "canonical_labels": [
+        "cereal_box"
+      ],
+      "frame_annotations": 242
+    },
+    {
+      "source_key": "cereal_box/batch-12/22",
+      "status": "mismatch",
+      "expected_class": "cereal_box",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 331
+    },
+    {
+      "source_key": "cereal_box/batch-8/29",
+      "status": "mismatch",
+      "expected_class": "cereal_box",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 224
+    },
+    {
+      "source_key": "cereal_box/batch-26/33",
+      "status": "matched",
+      "expected_class": "cereal_box",
+      "raw_labels": [
+        "cerealboxes"
+      ],
+      "canonical_labels": [
+        "cereal_box"
+      ],
+      "frame_annotations": 227
+    },
+    {
+      "source_key": "chair/batch-8/47",
+      "status": "matched",
+      "expected_class": "chair",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 177
+    },
+    {
+      "source_key": "chair/batch-28/22",
+      "status": "matched",
+      "expected_class": "chair",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 202
+    },
+    {
+      "source_key": "chair/batch-21/40",
+      "status": "matched",
+      "expected_class": "chair",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 277
+    },
+    {
+      "source_key": "chair/batch-35/36",
+      "status": "matched",
+      "expected_class": "chair",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 261
+    },
+    {
+      "source_key": "chair/batch-33/18",
+      "status": "matched",
+      "expected_class": "chair",
+      "raw_labels": [
+        "chair",
+        "chair",
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair",
+        "chair",
+        "chair"
+      ],
+      "frame_annotations": 279
+    },
+    {
+      "source_key": "chair/batch-16/31",
+      "status": "matched",
+      "expected_class": "chair",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 272
+    },
+    {
+      "source_key": "chair/batch-14/46",
+      "status": "matched",
+      "expected_class": "chair",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 235
+    },
+    {
+      "source_key": "chair/batch-46/43",
+      "status": "matched",
+      "expected_class": "chair",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 171
+    },
+    {
+      "source_key": "chair/batch-12/3",
+      "status": "matched",
+      "expected_class": "chair",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 243
+    },
+    {
+      "source_key": "chair/batch-15/44",
+      "status": "matched",
+      "expected_class": "chair",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 267
+    },
+    {
+      "source_key": "cup/batch-28/10",
+      "status": "mismatch",
+      "expected_class": "cup",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 185
+    },
+    {
+      "source_key": "cup/batch-27/1",
+      "status": "mismatch",
+      "expected_class": "cup",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 293
+    },
+    {
+      "source_key": "cup/batch-24/14",
+      "status": "mismatch",
+      "expected_class": "cup",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 212
+    },
+    {
+      "source_key": "cup/batch-40/30",
+      "status": "matched",
+      "expected_class": "cup",
+      "raw_labels": [
+        "cup"
+      ],
+      "canonical_labels": [
+        "cup"
+      ],
+      "frame_annotations": 217
+    },
+    {
+      "source_key": "cup/batch-32/45",
+      "status": "matched",
+      "expected_class": "cup",
+      "raw_labels": [
+        "cup"
+      ],
+      "canonical_labels": [
+        "cup"
+      ],
+      "frame_annotations": 274
+    },
+    {
+      "source_key": "cup/batch-18/32",
+      "status": "mismatch",
+      "expected_class": "cup",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 272
+    },
+    {
+      "source_key": "cup/batch-36/44",
+      "status": "matched",
+      "expected_class": "cup",
+      "raw_labels": [
+        "cup"
+      ],
+      "canonical_labels": [
+        "cup"
+      ],
+      "frame_annotations": 301
+    },
+    {
+      "source_key": "cup/batch-44/32",
+      "status": "matched",
+      "expected_class": "cup",
+      "raw_labels": [
+        "cup"
+      ],
+      "canonical_labels": [
+        "cup"
+      ],
+      "frame_annotations": 261
+    },
+    {
+      "source_key": "cup/batch-3/39",
+      "status": "mismatch",
+      "expected_class": "cup",
+      "raw_labels": [
+        "chair",
+        "chair",
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair",
+        "chair",
+        "chair"
+      ],
+      "frame_annotations": 218
+    },
+    {
+      "source_key": "cup/batch-27/32",
+      "status": "mismatch",
+      "expected_class": "cup",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 272
+    },
+    {
+      "source_key": "cup/batch-29/45",
+      "status": "mismatch",
+      "expected_class": "cup",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 327
+    },
+    {
+      "source_key": "cup/batch-25/25",
+      "status": "mismatch",
+      "expected_class": "cup",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 172
+    },
+    {
+      "source_key": "cup/batch-44/49",
+      "status": "matched",
+      "expected_class": "cup",
+      "raw_labels": [
+        "cup"
+      ],
+      "canonical_labels": [
+        "cup"
+      ],
+      "frame_annotations": 309
+    },
+    {
+      "source_key": "cup/batch-40/26",
+      "status": "matched",
+      "expected_class": "cup",
+      "raw_labels": [
+        "cup"
+      ],
+      "canonical_labels": [
+        "cup"
+      ],
+      "frame_annotations": 308
+    },
+    {
+      "source_key": "cup/batch-42/36",
+      "status": "matched",
+      "expected_class": "cup",
+      "raw_labels": [
+        "cup"
+      ],
+      "canonical_labels": [
+        "cup"
+      ],
+      "frame_annotations": 199
+    },
+    {
+      "source_key": "cup/batch-33/8",
+      "status": "matched",
+      "expected_class": "cup",
+      "raw_labels": [
+        "cup"
+      ],
+      "canonical_labels": [
+        "cup"
+      ],
+      "frame_annotations": 330
+    },
+    {
+      "source_key": "cup/batch-27/29",
+      "status": "mismatch",
+      "expected_class": "cup",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 194
+    },
+    {
+      "source_key": "cup/batch-8/32",
+      "status": "mismatch",
+      "expected_class": "cup",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 334
+    },
+    {
+      "source_key": "cup/batch-12/10",
+      "status": "mismatch",
+      "expected_class": "cup",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 211
+    },
+    {
+      "source_key": "cup/batch-31/46",
+      "status": "mismatch",
+      "expected_class": "cup",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 273
+    },
+    {
+      "source_key": "cup/batch-13/16",
+      "status": "mismatch",
+      "expected_class": "cup",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 197
+    },
+    {
+      "source_key": "cup/batch-27/6",
+      "status": "mismatch",
+      "expected_class": "cup",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 192
+    },
+    {
+      "source_key": "cup/batch-7/9",
+      "status": "mismatch",
+      "expected_class": "cup",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 344
+    },
+    {
+      "source_key": "cup/batch-34/24",
+      "status": "mismatch",
+      "expected_class": "cup",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 235
+    },
+    {
+      "source_key": "cup/batch-22/25",
+      "status": "mismatch",
+      "expected_class": "cup",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 193
+    },
+    {
+      "source_key": "cup/batch-31/24",
+      "status": "mismatch",
+      "expected_class": "cup",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 220
+    },
+    {
+      "source_key": "cup/batch-34/8",
+      "status": "mismatch",
+      "expected_class": "cup",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 220
+    },
+    {
+      "source_key": "cup/batch-13/9",
+      "status": "mismatch",
+      "expected_class": "cup",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 317
+    },
+    {
+      "source_key": "cup/batch-4/40",
+      "status": "mismatch",
+      "expected_class": "cup",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 441
+    },
+    {
+      "source_key": "cup/batch-8/7",
+      "status": "mismatch",
+      "expected_class": "cup",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 209
+    },
+    {
+      "source_key": "cup/batch-8/21",
+      "status": "mismatch",
+      "expected_class": "cup",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 328
+    },
+    {
+      "source_key": "cup/batch-43/31",
+      "status": "matched",
+      "expected_class": "cup",
+      "raw_labels": [
+        "cup"
+      ],
+      "canonical_labels": [
+        "cup"
+      ],
+      "frame_annotations": 203
+    },
+    {
+      "source_key": "cup/batch-7/11",
+      "status": "mismatch",
+      "expected_class": "cup",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 214
+    },
+    {
+      "source_key": "cup/batch-42/27",
+      "status": "matched",
+      "expected_class": "cup",
+      "raw_labels": [
+        "cup"
+      ],
+      "canonical_labels": [
+        "cup"
+      ],
+      "frame_annotations": 285
+    },
+    {
+      "source_key": "laptop/batch-36/12",
+      "status": "matched",
+      "expected_class": "laptop",
+      "raw_labels": [
+        "laptop"
+      ],
+      "canonical_labels": [
+        "laptop"
+      ],
+      "frame_annotations": 312
+    },
+    {
+      "source_key": "laptop/batch-2/17",
+      "status": "matched",
+      "expected_class": "laptop",
+      "raw_labels": [
+        "laptop"
+      ],
+      "canonical_labels": [
+        "laptop"
+      ],
+      "frame_annotations": 357
+    },
+    {
+      "source_key": "laptop/batch-25/21",
+      "status": "matched",
+      "expected_class": "laptop",
+      "raw_labels": [
+        "laptop"
+      ],
+      "canonical_labels": [
+        "laptop"
+      ],
+      "frame_annotations": 300
+    },
+    {
+      "source_key": "laptop/batch-4/36",
+      "status": "matched",
+      "expected_class": "laptop",
+      "raw_labels": [
+        "laptop",
+        "laptop",
+        "laptop",
+        "laptop"
+      ],
+      "canonical_labels": [
+        "laptop",
+        "laptop",
+        "laptop",
+        "laptop"
+      ],
+      "frame_annotations": 375
+    },
+    {
+      "source_key": "laptop/batch-28/34",
+      "status": "matched",
+      "expected_class": "laptop",
+      "raw_labels": [
+        "laptop"
+      ],
+      "canonical_labels": [
+        "laptop"
+      ],
+      "frame_annotations": 286
+    },
+    {
+      "source_key": "laptop/batch-35/45",
+      "status": "matched",
+      "expected_class": "laptop",
+      "raw_labels": [
+        "laptop"
+      ],
+      "canonical_labels": [
+        "laptop"
+      ],
+      "frame_annotations": 322
+    },
+    {
+      "source_key": "laptop/batch-29/39",
+      "status": "matched",
+      "expected_class": "laptop",
+      "raw_labels": [
+        "laptop"
+      ],
+      "canonical_labels": [
+        "laptop"
+      ],
+      "frame_annotations": 432
+    },
+    {
+      "source_key": "laptop/batch-25/19",
+      "status": "matched",
+      "expected_class": "laptop",
+      "raw_labels": [
+        "laptop"
+      ],
+      "canonical_labels": [
+        "laptop"
+      ],
+      "frame_annotations": 358
+    },
+    {
+      "source_key": "laptop/batch-36/41",
+      "status": "matched",
+      "expected_class": "laptop",
+      "raw_labels": [
+        "laptop"
+      ],
+      "canonical_labels": [
+        "laptop"
+      ],
+      "frame_annotations": 360
+    },
+    {
+      "source_key": "laptop/batch-22/28",
+      "status": "matched",
+      "expected_class": "laptop",
+      "raw_labels": [
+        "laptop"
+      ],
+      "canonical_labels": [
+        "laptop"
+      ],
+      "frame_annotations": 355
+    },
+    {
+      "source_key": "shoe/batch-39/47",
+      "status": "matched",
+      "expected_class": "shoe",
+      "raw_labels": [
+        "shoes",
+        "shoes"
+      ],
+      "canonical_labels": [
+        "shoe",
+        "shoe"
+      ],
+      "frame_annotations": 412
+    },
+    {
+      "source_key": "shoe/batch-42/19",
+      "status": "matched",
+      "expected_class": "shoe",
+      "raw_labels": [
+        "shoes",
+        "shoes"
+      ],
+      "canonical_labels": [
+        "shoe",
+        "shoe"
+      ],
+      "frame_annotations": 310
+    },
+    {
+      "source_key": "shoe/batch-40/17",
+      "status": "matched",
+      "expected_class": "shoe",
+      "raw_labels": [
+        "shoe"
+      ],
+      "canonical_labels": [
+        "shoe"
+      ],
+      "frame_annotations": 266
+    },
+    {
+      "source_key": "shoe/batch-43/25",
+      "status": "matched",
+      "expected_class": "shoe",
+      "raw_labels": [
+        "shoes",
+        "shoes"
+      ],
+      "canonical_labels": [
+        "shoe",
+        "shoe"
+      ],
+      "frame_annotations": 247
+    },
+    {
+      "source_key": "shoe/batch-1/48",
+      "status": "mismatch",
+      "expected_class": "shoe",
+      "raw_labels": [
+        "chair",
+        "chair",
+        "chair",
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair",
+        "chair",
+        "chair",
+        "chair"
+      ],
+      "frame_annotations": 105
+    },
+    {
+      "source_key": "shoe/batch-7/15",
+      "status": "mismatch",
+      "expected_class": "shoe",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 230
+    },
+    {
+      "source_key": "shoe/batch-36/45",
+      "status": "mismatch",
+      "expected_class": "shoe",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 256
+    },
+    {
+      "source_key": "shoe/batch-5/7",
+      "status": "mismatch",
+      "expected_class": "shoe",
+      "raw_labels": [
+        "chair",
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair",
+        "chair"
+      ],
+      "frame_annotations": 187
+    },
+    {
+      "source_key": "shoe/batch-45/39",
+      "status": "matched",
+      "expected_class": "shoe",
+      "raw_labels": [
+        "shoes"
+      ],
+      "canonical_labels": [
+        "shoe"
+      ],
+      "frame_annotations": 351
+    },
+    {
+      "source_key": "shoe/batch-15/31",
+      "status": "mismatch",
+      "expected_class": "shoe",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 240
+    },
+    {
+      "source_key": "shoe/batch-16/3",
+      "status": "mismatch",
+      "expected_class": "shoe",
+      "raw_labels": [
+        "chair",
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair",
+        "chair"
+      ],
+      "frame_annotations": 344
+    },
+    {
+      "source_key": "shoe/batch-39/20",
+      "status": "matched",
+      "expected_class": "shoe",
+      "raw_labels": [
+        "shoes",
+        "shoes"
+      ],
+      "canonical_labels": [
+        "shoe",
+        "shoe"
+      ],
+      "frame_annotations": 334
+    },
+    {
+      "source_key": "shoe/batch-16/37",
+      "status": "mismatch",
+      "expected_class": "shoe",
+      "raw_labels": [
+        "chair",
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair",
+        "chair"
+      ],
+      "frame_annotations": 238
+    },
+    {
+      "source_key": "shoe/batch-46/22",
+      "status": "matched",
+      "expected_class": "shoe",
+      "raw_labels": [
+        "shoe"
+      ],
+      "canonical_labels": [
+        "shoe"
+      ],
+      "frame_annotations": 256
+    },
+    {
+      "source_key": "shoe/batch-36/35",
+      "status": "mismatch",
+      "expected_class": "shoe",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 200
+    },
+    {
+      "source_key": "shoe/batch-31/33",
+      "status": "mismatch",
+      "expected_class": "shoe",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 231
+    },
+    {
+      "source_key": "shoe/batch-24/11",
+      "status": "mismatch",
+      "expected_class": "shoe",
+      "raw_labels": [
+        "chair",
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair",
+        "chair"
+      ],
+      "frame_annotations": 189
+    },
+    {
+      "source_key": "shoe/batch-8/26",
+      "status": "mismatch",
+      "expected_class": "shoe",
+      "raw_labels": [
+        "chair",
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair",
+        "chair"
+      ],
+      "frame_annotations": 321
+    },
+    {
+      "source_key": "shoe/batch-35/27",
+      "status": "mismatch",
+      "expected_class": "shoe",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 221
+    },
+    {
+      "source_key": "shoe/batch-38/6",
+      "status": "matched",
+      "expected_class": "shoe",
+      "raw_labels": [
+        "shoes"
+      ],
+      "canonical_labels": [
+        "shoe"
+      ],
+      "frame_annotations": 245
+    },
+    {
+      "source_key": "shoe/batch-18/9",
+      "status": "mismatch",
+      "expected_class": "shoe",
+      "raw_labels": [
+        "chair",
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair",
+        "chair"
+      ],
+      "frame_annotations": 278
+    },
+    {
+      "source_key": "shoe/batch-23/13",
+      "status": "mismatch",
+      "expected_class": "shoe",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 202
+    },
+    {
+      "source_key": "shoe/batch-11/32",
+      "status": "mismatch",
+      "expected_class": "shoe",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 233
+    },
+    {
+      "source_key": "shoe/batch-18/14",
+      "status": "mismatch",
+      "expected_class": "shoe",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 188
+    },
+    {
+      "source_key": "shoe/batch-14/28",
+      "status": "mismatch",
+      "expected_class": "shoe",
+      "raw_labels": [
+        "chair",
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair",
+        "chair"
+      ],
+      "frame_annotations": 251
+    },
+    {
+      "source_key": "shoe/batch-4/34",
+      "status": "mismatch",
+      "expected_class": "shoe",
+      "raw_labels": [
+        "chair"
+      ],
+      "canonical_labels": [
+        "chair"
+      ],
+      "frame_annotations": 177
+    },
+    {
+      "source_key": "shoe/batch-44/17",
+      "status": "matched",
+      "expected_class": "shoe",
+      "raw_labels": [
+        "shoe",
+        "shoe"
+      ],
+      "canonical_labels": [
+        "shoe",
+        "shoe"
+      ],
+      "frame_annotations": 208
+    },
+    {
+      "source_key": "shoe/batch-40/1",
+      "status": "matched",
+      "expected_class": "shoe",
+      "raw_labels": [
+        "shoe",
+        "shoe"
+      ],
+      "canonical_labels": [
+        "shoe",
+        "shoe"
+      ],
+      "frame_annotations": 235
+    }
+  ]
+}

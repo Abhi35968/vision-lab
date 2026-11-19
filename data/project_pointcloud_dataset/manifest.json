@@ -1,0 +1,928 @@
+{
+  "schema_version": 1,
+  "target_classes": [
+    "bottle",
+    "cup",
+    "chair",
+    "laptop",
+    "camera",
+    "shoe",
+    "bicycle",
+    "book",
+    "cereal_box"
+  ],
+  "samples": [
+    {
+      "run_id": "20261118T110710Z_video_0087915f8d_affa1e5a",
+      "label": "book",
+      "group_id": "0087915f8dd01d4170074e30ecd909e8e903ac4352f179cbdac8bdf4442acc40",
+      "point_cloud": "D:\\7thsem\\3DCV_proj\\outputs\\runs\\20261118T110710Z_video_0087915f8d_affa1e5a\\reconstruction\\object_points.ply",
+      "session": "video.MOV",
+      "object_points": 1718,
+      "detection_rate_pct": 70.0,
+      "exact_label_rate_pct": 92.85714285714286,
+      "split": "train"
+    },
+    {
+      "run_id": "20261118T115609Z_video_353fbcc78e_e6d69a1b",
+      "label": "chair",
+      "group_id": "353fbcc78e2601e95b095ef1131bcf67269741215ae5f5e3483254707ac6823b",
+      "point_cloud": "D:\\7thsem\\3DCV_proj\\outputs\\runs\\20261118T115609Z_video_353fbcc78e_e6d69a1b\\reconstruction\\object_points.ply",
+      "session": "video.MOV",
+      "object_points": 387,
+      "detection_rate_pct": 75.0,
+      "exact_label_rate_pct": 80.0,
+      "split": "train"
+    },
+    {
+      "run_id": "20261118T104014Z_video_41e3cb8647_105fb1e4",
+      "label": "cup",
+      "group_id": "41e3cb8647532c936e979f638e17da38cb54f53e1beb42b9415b4b8395626b53",
+      "point_cloud": "D:\\7thsem\\3DCV_proj\\outputs\\runs\\20261118T104014Z_video_41e3cb8647_105fb1e4\\reconstruction\\object_points.ply",
+      "session": "video.MOV",
+      "object_points": 239,
+      "detection_rate_pct": 100.0,
+      "exact_label_rate_pct": 100.0,
+      "split": "train"
+    },
+    {
+      "run_id": "20261118T111318Z_video_4c8e361aff_ed9bdcfa",
+      "label": "bottle",
+      "group_id": "4c8e361affeb461b8cec73656d0125c5e73649ce8a84db09f0ad27ecb8049dcf",
+      "point_cloud": "D:\\7thsem\\3DCV_proj\\outputs\\runs\\20261118T111318Z_video_4c8e361aff_ed9bdcfa\\reconstruction\\object_points.ply",
+      "session": "video.MOV",
+      "object_points": 1897,
+      "detection_rate_pct": 95.0,
+      "exact_label_rate_pct": 100.0,
+      "split": "train"
+    },
+    {
+      "run_id": "20261118T113844Z_video_64fb790356_51f7b855",
+      "label": "cup",
+      "group_id": "64fb790356c754523e86db32a9996c55fef76e325fe43f904b6f0de5a6298a01",
+      "point_cloud": "D:\\7thsem\\3DCV_proj\\outputs\\runs\\20261118T113844Z_video_64fb790356_51f7b855\\reconstruction\\object_points.ply",
+      "session": "video.MOV",
+      "object_points": 448,
+      "detection_rate_pct": 100.0,
+      "exact_label_rate_pct": 100.0,
+      "split": "train"
+    },
+    {
+      "run_id": "20261118T105737Z_video_758c627916_69dd0110",
+      "label": "bicycle",
+      "group_id": "758c627916be7154fb8bb595cb148943051d9ded8a6e3bdaa152fd794634eb66",
+      "point_cloud": "D:\\7thsem\\3DCV_proj\\outputs\\runs\\20261118T105737Z_video_758c627916_69dd0110\\reconstruction\\object_points.ply",
+      "session": "video.MOV",
+      "object_points": 502,
+      "detection_rate_pct": 100.0,
+      "exact_label_rate_pct": 95.0,
+      "split": "validation"
+    },
+    {
+      "run_id": "20261118T110957Z_video_8409f08c1e_728366c4",
+      "label": "bottle",
+      "group_id": "8409f08c1e8246b14089eea86b5c4aca7e272038f96abfd687e802fb4649cb89",
+      "point_cloud": "D:\\7thsem\\3DCV_proj\\outputs\\runs\\20261118T110957Z_video_8409f08c1e_728366c4\\reconstruction\\object_points.ply",
+      "session": "video.MOV",
+      "object_points": 4267,
+      "detection_rate_pct": 100.0,
+      "exact_label_rate_pct": 100.0,
+      "split": "train"
+    },
+    {
+      "run_id": "20261118T112946Z_video_a06ee8c172_e623ab66",
+      "label": "laptop",
+      "group_id": "a06ee8c172276e4d00f92ad828e9d91ac2c5e207754965cb9ea07dafebae5383",
+      "point_cloud": "D:\\7thsem\\3DCV_proj\\outputs\\runs\\20261118T112946Z_video_a06ee8c172_e623ab66\\reconstruction\\object_points.ply",
+      "session": "video.MOV",
+      "object_points": 3428,
+      "detection_rate_pct": 100.0,
+      "exact_label_rate_pct": 100.0,
+      "split": "train"
+    },
+    {
+      "run_id": "20261118T113051Z_video_a9dd9cfbfe_602d740b",
+      "label": "laptop",
+      "group_id": "a9dd9cfbfe985747192367bcf6391d20679aca2d5ea784cdcc8c7cd80085127c",
+      "point_cloud": "D:\\7thsem\\3DCV_proj\\outputs\\runs\\20261118T113051Z_video_a9dd9cfbfe_602d740b\\reconstruction\\object_points.ply",
+      "session": "video.MOV",
+      "object_points": 877,
+      "detection_rate_pct": 100.0,
+      "exact_label_rate_pct": 100.0,
+      "split": "train"
+    },
+    {
+      "run_id": "20261118T103301Z_video_b58f689e00_75dc9210",
+      "label": "chair",
+      "group_id": "b58f689e007312f7f99c8c4df1ddf34310b2c05344f9549c3d3f0b772acdb18c",
+      "point_cloud": "D:\\7thsem\\3DCV_proj\\outputs\\runs\\20261118T103301Z_video_b58f689e00_75dc9210\\reconstruction\\object_points.ply",
+      "session": "video.MOV",
+      "object_points": 2500,
+      "detection_rate_pct": 100.0,
+      "exact_label_rate_pct": 100.0,
+      "split": "train"
+    },
+    {
+      "run_id": "20261118T115302Z_video_baabac59da_12eeaa6c",
+      "label": "chair",
+      "group_id": "baabac59da57a408284ae016cb998d83c9d9648a72280a075850751b63307931",
+      "point_cloud": "D:\\7thsem\\3DCV_proj\\outputs\\runs\\20261118T115302Z_video_baabac59da_12eeaa6c\\reconstruction\\object_points.ply",
+      "session": "video.MOV",
+      "object_points": 270,
+      "detection_rate_pct": 100.0,
+      "exact_label_rate_pct": 100.0,
+      "split": "train"
+    },
+    {
+      "run_id": "20261118T115416Z_video_d7c3f87d49_839220f6",
+      "label": "chair",
+      "group_id": "d7c3f87d49c58759802ee51e99a217e1a230805fdd39b1232c8a96c3d248840d",
+      "point_cloud": "D:\\7thsem\\3DCV_proj\\outputs\\runs\\20261118T115416Z_video_d7c3f87d49_839220f6\\reconstruction\\object_points.ply",
+      "session": "video.MOV",
+      "object_points": 6365,
+      "detection_rate_pct": 95.0,
+      "exact_label_rate_pct": 100.0,
+      "split": "train"
+    },
+    {
+      "run_id": "20261118T110757Z_video_da883c681b_b9ffc0cb",
+      "label": "book",
+      "group_id": "da883c681bf28c6e0df531361c516281c41e188b8a28e77fb922266fbe03fa3a",
+      "point_cloud": "D:\\7thsem\\3DCV_proj\\outputs\\runs\\20261118T110757Z_video_da883c681b_b9ffc0cb\\reconstruction\\object_points.ply",
+      "session": "video.MOV",
+      "object_points": 838,
+      "detection_rate_pct": 75.0,
+      "exact_label_rate_pct": 93.33333333333333,
+      "split": "train"
+    },
+    {
+      "run_id": "20261118T074500Z_video_dd9dc59e77_83954ec9",
+      "label": "bicycle",
+      "group_id": "dd9dc59e771a1f14c2701b6838b30215f81ea7a82dba99b9ba7259bc8a839342",
+      "point_cloud": "D:\\7thsem\\3DCV_proj\\outputs\\runs\\20261118T074500Z_video_dd9dc59e77_83954ec9\\reconstruction\\object_points.ply",
+      "session": "video.MOV",
+      "object_points": 392,
+      "detection_rate_pct": 100.0,
+      "exact_label_rate_pct": 100.0,
+      "split": "train"
+    },
+    {
+      "run_id": "20261118T110631Z_video_e57018ba1c_b7b34dce",
+      "label": "book",
+      "group_id": "e57018ba1c51ea091393a6730b50c378f4b2a7192ad07609b1633c23bd47e67f",
+      "point_cloud": "D:\\7thsem\\3DCV_proj\\outputs\\runs\\20261118T110631Z_video_e57018ba1c_b7b34dce\\reconstruction\\object_points.ply",
+      "session": "video.MOV",
+      "object_points": 1807,
+      "detection_rate_pct": 95.0,
+      "exact_label_rate_pct": 94.73684210526315,
+      "split": "train"
+    },
+    {
+      "run_id": "20261117T070339Z_04_chair_ee3b271ce9_adc54015",
+      "label": "chair",
+      "group_id": "ee3b271ce9119367262e27a2cff4195611c7df3bd2cc60f441e529cce2fbb805",
+      "point_cloud": "D:\\7thsem\\3DCV_proj\\outputs\\runs\\20261117T070339Z_04_chair_ee3b271ce9_adc54015\\reconstruction\\object_points.ply",
+      "session": "04_chair.MOV",
+      "object_points": 342,
+      "detection_rate_pct": 100.0,
+      "exact_label_rate_pct": 92.5,
+      "split": "train"
+    },
+    {
+      "run_id": "20261118T113219Z_video_f9e7b1ce8f_e8ffd046",
+      "label": "laptop",
+      "group_id": "f9e7b1ce8fb6256bb16cb3d7c7b118948e8c4e94e5b6bf1f21776d1e4f73fef2",
+      "point_cloud": "D:\\7thsem\\3DCV_proj\\outputs\\runs\\20261118T113219Z_video_f9e7b1ce8f_e8ffd046\\reconstruction\\object_points.ply",
+      "session": "video.MOV",
+      "object_points": 400,
+      "detection_rate_pct": 100.0,
+      "exact_label_rate_pct": 100.0,
+      "split": "train"
+    },
+    {
+      "run_id": "20261118T094812Z_video_ff091a57bd_f51259ab",
+      "label": "laptop",
+      "group_id": "ff091a57bd2dd087ff3a18606d9a9965fac96e49571363d8f2ad9a842cdc88e7",
+      "point_cloud": "D:\\7thsem\\3DCV_proj\\outputs\\runs\\20261118T094812Z_video_ff091a57bd_f51259ab\\reconstruction\\object_points.ply",
+      "session": "video.MOV",
+      "object_points": 3027,
+      "detection_rate_pct": 100.0,
+      "exact_label_rate_pct": 100.0,
+      "split": "train"
+    }
+  ],
+  "rejected_samples": [
+    {
+      "run_id": "20261117T070142Z_03_cup_e2a4b0d4f8_df28a528",
+      "label": "cup",
+      "metrics": {
+        "detection_rate_pct": 100.0,
+        "exact_label_rate_pct": 100.0,
+        "object_points": 71,
+        "label_counts": {
+          "cup": 40
+        }
+      },
+      "reasons": [
+        "selected object cloud has fewer than 100 points"
+      ]
+    },
+    {
+      "run_id": "20261117T070738Z_03_cup_e2a4b0d4f8_70d9dc83",
+      "label": "cup",
+      "metrics": {
+        "detection_rate_pct": 100.0,
+        "exact_label_rate_pct": 100.0,
+        "object_points": 70,
+        "label_counts": {
+          "cup": 40
+        }
+      },
+      "reasons": [
+        "selected object cloud has fewer than 100 points"
+      ]
+    },
+    {
+      "run_id": "20261118T074717Z_video_fae670be21_98c5b1c5",
+      "label": "book",
+      "metrics": {
+        "detection_rate_pct": 15.0,
+        "exact_label_rate_pct": 0.0,
+        "object_points": 156,
+        "label_counts": {
+          "oven": 3
+        }
+      },
+      "reasons": [
+        "target detections cover less than 70% of keyframes",
+        "exact target label agreement is below 80%"
+      ]
+    },
+    {
+      "run_id": "20261118T074822Z_video_ecac760ef4_a390f0ba",
+      "label": "bottle",
+      "metrics": {
+        "detection_rate_pct": 95.0,
+        "exact_label_rate_pct": 68.42105263157895,
+        "object_points": 180,
+        "label_counts": {
+          "bottle": 13,
+          "fire hydrant": 5,
+          "toilet": 1
+        }
+      },
+      "reasons": [
+        "exact target label agreement is below 80%"
+      ]
+    },
+    {
+      "run_id": "20261118T075029Z_video_10f90e6e69_ef593e20",
+      "label": "camera",
+      "metrics": {
+        "detection_rate_pct": 50.0,
+        "exact_label_rate_pct": NaN,
+        "object_points": 862,
+        "label_counts": {
+          "truck": 9,
+          "suitcase": 1
+        }
+      },
+      "reasons": [
+        "target category has no supported exact YOLO mask mapping; use Objectron annotation geometry",
+        "target detections cover less than 70% of keyframes"
+      ]
+    },
+    {
+      "run_id": "20261118T075141Z_video_ece92753ff_686208ba",
+      "label": "cereal_box",
+      "metrics": {
+        "detection_rate_pct": 100.0,
+        "exact_label_rate_pct": NaN,
+        "object_points": 7204,
+        "label_counts": {
+          "book": 18,
+          "refrigerator": 2
+        }
+      },
+      "reasons": [
+        "target category has no supported exact YOLO mask mapping; use Objectron annotation geometry"
+      ]
+    },
+    {
+      "run_id": "20261118T080735Z_video_19390207ba_5f46d9a0",
+      "label": "cup",
+      "metrics": {
+        "detection_rate_pct": 100.0,
+        "exact_label_rate_pct": 100.0,
+        "object_points": 985,
+        "label_counts": {
+          "cup": 20
+        }
+      },
+      "reasons": [
+        "Objectron source annotation is not label-matched (mismatch: ['chair'])"
+      ]
+    },
+    {
+      "run_id": "20261118T100503Z_video_b156a8bc21_9376affa",
+      "label": "shoe",
+      "metrics": {
+        "detection_rate_pct": 75.0,
+        "exact_label_rate_pct": NaN,
+        "object_points": 1169,
+        "label_counts": {
+          "snowboard": 12,
+          "skateboard": 1,
+          "motorcycle": 1,
+          "chair": 1
+        }
+      },
+      "reasons": [
+        "target category has no supported exact YOLO mask mapping; use Objectron annotation geometry"
+      ]
+    },
+    {
+      "run_id": "20261118T103409Z_video_1d3504bd6b_21837f0a",
+      "label": "laptop",
+      "metrics": {
+        "detection_rate_pct": 100.0,
+        "exact_label_rate_pct": 100.0,
+        "object_points": 40,
+        "label_counts": {
+          "laptop": 20
+        }
+      },
+      "reasons": [
+        "selected object cloud has fewer than 100 points"
+      ]
+    },
+    {
+      "run_id": "20261118T103447Z_video_f40468e7b9_a8d27d30",
+      "label": "shoe",
+      "metrics": {
+        "detection_rate_pct": 70.0,
+        "exact_label_rate_pct": NaN,
+        "object_points": 119,
+        "label_counts": {
+          "suitcase": 8,
+          "mouse": 4,
+          "vase": 2
+        }
+      },
+      "reasons": [
+        "target category has no supported exact YOLO mask mapping; use Objectron annotation geometry"
+      ]
+    },
+    {
+      "run_id": "20261118T105848Z_video_e53e8faf1c_0e2c3094",
+      "label": "bicycle",
+      "metrics": {
+        "detection_rate_pct": 100.0,
+        "exact_label_rate_pct": 0.0,
+        "object_points": 608,
+        "label_counts": {
+          "motorcycle": 17,
+          "fire hydrant": 2,
+          "backpack": 1
+        }
+      },
+      "reasons": [
+        "exact target label agreement is below 80%"
+      ]
+    },
+    {
+      "run_id": "20261118T105952Z_video_89c3c728f9_0b5096f2",
+      "label": "bicycle",
+      "metrics": {
+        "detection_rate_pct": 100.0,
+        "exact_label_rate_pct": 0.0,
+        "object_points": 2158,
+        "label_counts": {
+          "motorcycle": 20
+        }
+      },
+      "reasons": [
+        "exact target label agreement is below 80%"
+      ]
+    },
+    {
+      "run_id": "20261118T110120Z_video_bc9f3482c0_92588a8d",
+      "label": "bicycle",
+      "metrics": {
+        "detection_rate_pct": 70.0,
+        "exact_label_rate_pct": 0.0,
+        "object_points": 1231,
+        "label_counts": {
+          "motorcycle": 14
+        }
+      },
+      "reasons": [
+        "exact target label agreement is below 80%"
+      ]
+    },
+    {
+      "run_id": "20261118T110227Z_video_9fc9a2982b_fca730b7",
+      "label": "bicycle",
+      "metrics": {
+        "detection_rate_pct": 75.0,
+        "exact_label_rate_pct": 0.0,
+        "object_points": 1049,
+        "label_counts": {
+          "motorcycle": 15
+        }
+      },
+      "reasons": [
+        "exact target label agreement is below 80%"
+      ]
+    },
+    {
+      "run_id": "20261118T110406Z_video_b958e90b8b_3f82e77c",
+      "label": "book",
+      "metrics": {
+        "detection_rate_pct": 50.0,
+        "exact_label_rate_pct": 40.0,
+        "object_points": 88,
+        "label_counts": {
+          "book": 4,
+          "chair": 2,
+          "remote": 1,
+          "toothbrush": 1,
+          "knife": 1,
+          "suitcase": 1
+        }
+      },
+      "reasons": [
+        "target detections cover less than 70% of keyframes",
+        "exact target label agreement is below 80%",
+        "selected object cloud has fewer than 100 points"
+      ]
+    },
+    {
+      "run_id": "20261118T110841Z_video_20c82bc60b_6dba0cbf",
+      "label": "bottle",
+      "metrics": {
+        "detection_rate_pct": 75.0,
+        "exact_label_rate_pct": 66.66666666666666,
+        "object_points": 303,
+        "label_counts": {
+          "bottle": 10,
+          "motorcycle": 2,
+          "bicycle": 1,
+          "cup": 1,
+          "truck": 1
+        }
+      },
+      "reasons": [
+        "exact target label agreement is below 80%"
+      ]
+    },
+    {
+      "run_id": "20261118T111129Z_video_5be180be05_634cd1a9",
+      "label": "bottle",
+      "metrics": {
+        "detection_rate_pct": 95.0,
+        "exact_label_rate_pct": 94.73684210526315,
+        "object_points": 12,
+        "label_counts": {
+          "bottle": 18,
+          "parking meter": 1
+        }
+      },
+      "reasons": [
+        "selected object cloud has fewer than 100 points"
+      ]
+    },
+    {
+      "run_id": "20261118T111411Z_video_b2918c62dd_32e3c36c",
+      "label": "bottle",
+      "metrics": {
+        "detection_rate_pct": 95.0,
+        "exact_label_rate_pct": 15.789473684210526,
+        "object_points": 1044,
+        "label_counts": {
+          "cup": 16,
+          "bottle": 3
+        }
+      },
+      "reasons": [
+        "exact target label agreement is below 80%"
+      ]
+    },
+    {
+      "run_id": "20261118T111455Z_video_6dad3e0983_7a0e88ff",
+      "label": "camera",
+      "metrics": {
+        "detection_rate_pct": 30.0,
+        "exact_label_rate_pct": NaN,
+        "object_points": 69,
+        "label_counts": {
+          "traffic light": 4,
+          "toothbrush": 2
+        }
+      },
+      "reasons": [
+        "target category has no supported exact YOLO mask mapping; use Objectron annotation geometry",
+        "target detections cover less than 70% of keyframes",
+        "selected object cloud has fewer than 100 points"
+      ]
+    },
+    {
+      "run_id": "20261118T111543Z_video_12b967ceb9_c43e77fb",
+      "label": "camera",
+      "metrics": {
+        "detection_rate_pct": 30.0,
+        "exact_label_rate_pct": NaN,
+        "object_points": 21,
+        "label_counts": {
+          "motorcycle": 3,
+          "toilet": 2,
+          "suitcase": 1
+        }
+      },
+      "reasons": [
+        "target category has no supported exact YOLO mask mapping; use Objectron annotation geometry",
+        "target detections cover less than 70% of keyframes",
+        "selected object cloud has fewer than 100 points"
+      ]
+    },
+    {
+      "run_id": "20261118T111846Z_video_43accf568e_8ee558de",
+      "label": "camera",
+      "metrics": {
+        "detection_rate_pct": 80.0,
+        "exact_label_rate_pct": NaN,
+        "object_points": 311,
+        "label_counts": {
+          "cell phone": 6,
+          "cup": 5,
+          "laptop": 4,
+          "mouse": 1
+        }
+      },
+      "reasons": [
+        "target category has no supported exact YOLO mask mapping; use Objectron annotation geometry"
+      ]
+    },
+    {
+      "run_id": "20261118T112028Z_video_2b8d0bbe4d_4bf2a31b",
+      "label": "camera",
+      "metrics": {
+        "detection_rate_pct": 60.0,
+        "exact_label_rate_pct": NaN,
+        "object_points": 882,
+        "label_counts": {
+          "cell phone": 6,
+          "suitcase": 5,
+          "motorcycle": 1
+        }
+      },
+      "reasons": [
+        "target category has no supported exact YOLO mask mapping; use Objectron annotation geometry",
+        "target detections cover less than 70% of keyframes"
+      ]
+    },
+    {
+      "run_id": "20261118T112122Z_video_ed8b386c6a_4159fdf8",
+      "label": "camera",
+      "metrics": {
+        "detection_rate_pct": 40.0,
+        "exact_label_rate_pct": NaN,
+        "object_points": 429,
+        "label_counts": {
+          "suitcase": 6,
+          "motorcycle": 2
+        }
+      },
+      "reasons": [
+        "target category has no supported exact YOLO mask mapping; use Objectron annotation geometry",
+        "target detections cover less than 70% of keyframes"
+      ]
+    },
+    {
+      "run_id": "20261118T112202Z_video_73172d8246_f48df5f4",
+      "label": "cereal_box",
+      "metrics": {
+        "detection_rate_pct": 95.0,
+        "exact_label_rate_pct": NaN,
+        "object_points": 3773,
+        "label_counts": {
+          "book": 19
+        }
+      },
+      "reasons": [
+        "target category has no supported exact YOLO mask mapping; use Objectron annotation geometry"
+      ]
+    },
+    {
+      "run_id": "20261118T112328Z_video_3c966ca930_44eaeaf5",
+      "label": "chair",
+      "metrics": {
+        "detection_rate_pct": 100.0,
+        "exact_label_rate_pct": 100.0,
+        "object_points": 85,
+        "label_counts": {
+          "chair": 20
+        }
+      },
+      "reasons": [
+        "selected object cloud has fewer than 100 points"
+      ]
+    },
+    {
+      "run_id": "20261118T112451Z_video_6084b3c0cc_cf6de27a",
+      "label": "chair",
+      "metrics": {
+        "detection_rate_pct": 100.0,
+        "exact_label_rate_pct": 100.0,
+        "object_points": 91,
+        "label_counts": {
+          "chair": 20
+        }
+      },
+      "reasons": [
+        "selected object cloud has fewer than 100 points"
+      ]
+    },
+    {
+      "run_id": "20261118T112524Z_video_2f1e0e7003_d67b41ec",
+      "label": "chair",
+      "metrics": {
+        "detection_rate_pct": 100.0,
+        "exact_label_rate_pct": 100.0,
+        "object_points": 56,
+        "label_counts": {
+          "chair": 20
+        }
+      },
+      "reasons": [
+        "selected object cloud has fewer than 100 points"
+      ]
+    },
+    {
+      "run_id": "20261118T112622Z_video_c2953208f8_b237574b",
+      "label": "chair",
+      "metrics": {
+        "detection_rate_pct": 100.0,
+        "exact_label_rate_pct": 95.0,
+        "object_points": 31,
+        "label_counts": {
+          "chair": 19,
+          "knife": 1
+        }
+      },
+      "reasons": [
+        "selected object cloud has fewer than 100 points"
+      ]
+    },
+    {
+      "run_id": "20261118T112656Z_video_e90f649b9d_abe20983",
+      "label": "cup",
+      "metrics": {
+        "detection_rate_pct": 95.0,
+        "exact_label_rate_pct": 0.0,
+        "object_points": 109,
+        "label_counts": {
+          "wine glass": 19
+        }
+      },
+      "reasons": [
+        "exact target label agreement is below 80%"
+      ]
+    },
+    {
+      "run_id": "20261118T112729Z_video_5e4009d440_e7fef7df",
+      "label": "cup",
+      "metrics": {
+        "detection_rate_pct": 100.0,
+        "exact_label_rate_pct": 75.0,
+        "object_points": 57,
+        "label_counts": {
+          "cup": 15,
+          "vase": 5
+        }
+      },
+      "reasons": [
+        "exact target label agreement is below 80%",
+        "selected object cloud has fewer than 100 points"
+      ]
+    },
+    {
+      "run_id": "20261118T112817Z_video_748c608d11_c4147166",
+      "label": "laptop",
+      "metrics": {
+        "detection_rate_pct": 65.0,
+        "exact_label_rate_pct": 23.076923076923077,
+        "object_points": 834,
+        "label_counts": {
+          "suitcase": 5,
+          "laptop": 3,
+          "oven": 2,
+          "train": 2,
+          "clock": 1
+        }
+      },
+      "reasons": [
+        "target detections cover less than 70% of keyframes",
+        "exact target label agreement is below 80%"
+      ]
+    },
+    {
+      "run_id": "20261118T113253Z_video_13ae478d38_d5f3105a",
+      "label": "cereal_box",
+      "metrics": {
+        "detection_rate_pct": 95.0,
+        "exact_label_rate_pct": NaN,
+        "object_points": 5812,
+        "label_counts": {
+          "book": 11,
+          "refrigerator": 5,
+          "bowl": 3
+        }
+      },
+      "reasons": [
+        "target category has no supported exact YOLO mask mapping; use Objectron annotation geometry"
+      ]
+    },
+    {
+      "run_id": "20261118T113418Z_video_a4b19a0b0e_c8c90adb",
+      "label": "cereal_box",
+      "metrics": {
+        "detection_rate_pct": 50.0,
+        "exact_label_rate_pct": NaN,
+        "object_points": 343,
+        "label_counts": {
+          "book": 6,
+          "toothbrush": 4
+        }
+      },
+      "reasons": [
+        "target category has no supported exact YOLO mask mapping; use Objectron annotation geometry",
+        "target detections cover less than 70% of keyframes"
+      ]
+    },
+    {
+      "run_id": "20261118T113540Z_video_4383bf44c6_3baba8b4",
+      "label": "cereal_box",
+      "metrics": {
+        "detection_rate_pct": 50.0,
+        "exact_label_rate_pct": NaN,
+        "object_points": 2387,
+        "label_counts": {
+          "refrigerator": 6,
+          "donut": 2,
+          "cup": 2
+        }
+      },
+      "reasons": [
+        "target category has no supported exact YOLO mask mapping; use Objectron annotation geometry",
+        "target detections cover less than 70% of keyframes"
+      ]
+    },
+    {
+      "run_id": "20261118T113654Z_video_c41dc9ff8e_9d518bd8",
+      "label": "cereal_box",
+      "metrics": {
+        "detection_rate_pct": 20.0,
+        "exact_label_rate_pct": NaN,
+        "object_points": 114,
+        "label_counts": {
+          "truck": 3,
+          "bicycle": 1
+        }
+      },
+      "reasons": [
+        "target category has no supported exact YOLO mask mapping; use Objectron annotation geometry",
+        "target detections cover less than 70% of keyframes"
+      ]
+    },
+    {
+      "run_id": "20261118T113948Z_video_6758605f01_213ff29f",
+      "label": "shoe",
+      "metrics": {
+        "detection_rate_pct": 95.0,
+        "exact_label_rate_pct": NaN,
+        "object_points": 197,
+        "label_counts": {
+          "vase": 19
+        }
+      },
+      "reasons": [
+        "target category has no supported exact YOLO mask mapping; use Objectron annotation geometry"
+      ]
+    },
+    {
+      "run_id": "20261118T114132Z_video_4d6440855e_65376d0c",
+      "label": "shoe",
+      "metrics": {
+        "detection_rate_pct": 90.0,
+        "exact_label_rate_pct": NaN,
+        "object_points": 1425,
+        "label_counts": {
+          "skateboard": 8,
+          "motorcycle": 8,
+          "vase": 2
+        }
+      },
+      "reasons": [
+        "target category has no supported exact YOLO mask mapping; use Objectron annotation geometry"
+      ]
+    },
+    {
+      "run_id": "20261118T114251Z_video_58a6244f31_932c5f5a",
+      "label": "shoe",
+      "metrics": {
+        "detection_rate_pct": 20.0,
+        "exact_label_rate_pct": NaN,
+        "object_points": 199,
+        "label_counts": {
+          "cell phone": 2,
+          "bottle": 2
+        }
+      },
+      "reasons": [
+        "target category has no supported exact YOLO mask mapping; use Objectron annotation geometry",
+        "target detections cover less than 70% of keyframes"
+      ]
+    },
+    {
+      "run_id": "20261118T114326Z_video_3121ae3371_3bf16b5e",
+      "label": "shoe",
+      "metrics": {
+        "detection_rate_pct": 35.0,
+        "exact_label_rate_pct": NaN,
+        "object_points": 45,
+        "label_counts": {
+          "vase": 2,
+          "bottle": 2,
+          "handbag": 1,
+          "backpack": 1,
+          "skateboard": 1
+        }
+      },
+      "reasons": [
+        "target category has no supported exact YOLO mask mapping; use Objectron annotation geometry",
+        "target detections cover less than 70% of keyframes",
+        "selected object cloud has fewer than 100 points"
+      ]
+    },
+    {
+      "run_id": "20261118T115230Z_video_656ecfc6b4_adf99f45",
+      "label": "chair",
+      "metrics": {
+        "detection_rate_pct": 80.0,
+        "exact_label_rate_pct": 6.25,
+        "object_points": 92,
+        "label_counts": {
+          "toilet": 15,
+          "chair": 1
+        }
+      },
+      "reasons": [
+        "exact target label agreement is below 80%",
+        "selected object cloud has fewer than 100 points"
+      ]
+    },
+    {
+      "run_id": "20261118T115535Z_video_a2dca06556_ca443356",
+      "label": "chair",
+      "metrics": {
+        "detection_rate_pct": 100.0,
+        "exact_label_rate_pct": 65.0,
+        "object_points": 300,
+        "label_counts": {
+          "chair": 13,
+          "toilet": 7
+        }
+      },
+      "reasons": [
+        "exact target label agreement is below 80%"
+      ]
+    }
+  ],
+  "rejected_count": 41,
+  "samples_per_class": {
+    "book": 3,
+    "chair": 5,
+    "cup": 2,
+    "bottle": 2,
+    "bicycle": 2,
+    "laptop": 4
+  },
+  "recording_sessions_per_class": {
+    "book": 3,
+    "chair": 5,
+    "cup": 2,
+    "bottle": 2,
+    "bicycle": 2,
+    "laptop": 4
+  },
+  "split_rule": "hash-grouped by original video; individual frames never cross splits",
+  "acceptance_gates": {
+    "minimum_target_detection_rate": 0.7,
+    "minimum_exact_label_rate": 0.8,
+    "minimum_object_points": 100,
+    "reason": "Prevent wrong or unsupported masks from becoming training labels."
+  },
+  "training_ready": false,
+  "limitation": "Insufficient independent recording sessions for one or more classes; do not train or claim real-world generalization yet."
+}

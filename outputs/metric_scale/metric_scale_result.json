@@ -1,0 +1,31 @@
+{
+  "scale_factor": 1.0,
+  "marker_size_cm": 5.0,
+  "num_marker_observations": 0,
+  "marker_id_used": -1,
+  "marker_observations": [],
+  "object_dimensions": {
+    "width_x_cm": 3.87,
+    "height_y_cm": 6.97,
+    "depth_z_cm": 5.0,
+    "bounding_box_min_cm": [
+      -2.79,
+      -3.45,
+      4.44
+    ],
+    "bounding_box_max_cm": [
+      1.08,
+      3.52,
+      9.44
+    ],
+    "estimated_volume_cm3": 94.33,
+    "estimated_volume_litres": 0.094
+  },
+  "confidence_score": 0.1,
+  "confidence_tier": "UNVERIFIED",
+  "calibration_status": "APPROXIMATED",
+  "limitations": [
+    "Camera intrinsics approximated based on image resolution; precise metric scale requires checkerboard calibration.",
+    "No ArUco marker detected in video keyframes. Defaulting to nominal tabletop baseline scale (1.0)."
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "status": "calibrated",
+  "calibration_source": "COLMAP Bundle Adjustment Self-Calibration",
+  "camera_matrix_k": [
+    [
+      1645.4985304845286,
+      0.0,
+      540.0
+    ],
+    [
+      0.0,
+      1645.4985304845286,
+      960.0
+    ],
+    [
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "fx": 1645.4985304845286,
+  "fy": 1645.4985304845286,
+  "cx": 540.0,
+  "cy": 960.0,
+  "distortion_coefficients": [
+    -0.015839525753371837,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "distortion_model": "radtan",
+  "image_width": 1080,
+  "image_height": 1920,
+  "calibrated_at": "2026-11-19T02:56:48",
+  "note": "COLMAP bundle adjustment self-calibrated pinhole model on video keyframes."
+}

@@ -1,0 +1,22 @@
+{
+  "Sparse_Point_Cloud": {
+    "num_points": 47,
+    "pointnet_alone_prediction": "plant",
+    "pointnet_alone_confidence": 56.04,
+    "pointnet_alone_is_correct": false,
+    "fused_prediction": "bottle",
+    "fused_confidence": 49.25,
+    "fused_is_correct": true,
+    "status": "FUSED_HYBRID"
+  },
+  "Dense_Fused_Point_Cloud": {
+    "num_points": 46926,
+    "pointnet_alone_prediction": "person",
+    "pointnet_alone_confidence": 88.51,
+    "pointnet_alone_is_correct": false,
+    "fused_prediction": "bottle",
+    "fused_confidence": 43.52,
+    "fused_is_correct": true,
+    "status": "FUSED_HYBRID"
+  }
+}
