@@ -227,6 +227,105 @@ def pct(v, digits=0):
     return "n/a" if v is None or (isinstance(v, float) and np.isnan(v)) else f"{v:.{digits}f}%"
 
 
+def render_feature_matching_interactive(kfs, focal_px=1300, key_prefix="fm"):
+    """Self-contained, pure OpenCV pairwise feature matching with epipolar RANSAC."""
+    if not kfs or len(kfs) < 2:
+        st.info("Feature matching requires at least two keyframes.")
+        return
+    st.markdown("##### 🔍 Interactive Pairwise Feature Matching & Epipolar Verification")
+    st.caption("Inspect Root-SIFT vs ORB descriptor correspondences and RANSAC epipolar inlier geometry across viewpoints:")
+    c = st.columns(4)
+    i = c[0].slider("Keyframe A", 0, len(kfs) - 2, 0, key=f"{key_prefix}_i")
+    max_gap = min(15, len(kfs) - 1 - i)
+    gap = c[1].slider("Frame Step", 1, max(1, max_gap), min(2, max_gap), key=f"{key_prefix}_gap")
+    nfeat = c[2].slider("Max Features", 500, 3000, 1000, step=500, key=f"{key_prefix}_n")
+    det_choice = c[3].selectbox("Detector", ["Both (SIFT & ORB)", "SIFT", "ORB"], index=0, key=f"{key_prefix}_det")
+    j = min(i + gap, len(kfs) - 1)
+
+    img1 = cv2.imread(kfs[i])
+    img2 = cv2.imread(kfs[j])
+    if img1 is None or img2 is None:
+        st.warning("Could not read keyframe images.")
+        return
+
+    # Resize down to max 640px for instant response and ultra-low RAM usage
+    h1, w1 = img1.shape[:2]
+    scale = min(1.0, 640.0 / max(h1, w1))
+    if scale < 1.0:
+        img1 = cv2.resize(img1, (int(w1 * scale), int(h1 * scale)), interpolation=cv2.INTER_AREA)
+        img2 = cv2.resize(img2, (int(img2.shape[1] * scale), int(img2.shape[0] * scale)), interpolation=cv2.INTER_AREA)
+
+    h, w = img1.shape[:2]
+    f = (focal_px * scale) if focal_px else 1.2 * max(h, w)
+    k_mat = np.array([[f, 0, w / 2], [0, f, h / 2], [0, 0, 1.0]])
+
+    detectors = ("SIFT", "ORB") if "Both" in det_choice else (det_choice,)
+    cols = st.columns(len(detectors))
+    rows = []
+    for col, det in zip(cols, detectors):
+        t0 = time.perf_counter()
+        if det == "SIFT":
+            detector = cv2.SIFT_create(nfeatures=nfeat)
+            kp1, desc1 = detector.detectAndCompute(img1, None)
+            kp2, desc2 = detector.detectAndCompute(img2, None)
+            if desc1 is not None and len(desc1):
+                desc1 = desc1.astype(np.float32)
+                desc1 /= (np.linalg.norm(desc1, axis=1, ord=1, keepdims=True) + 1e-7)
+                desc1 = np.sqrt(desc1)
+            if desc2 is not None and len(desc2):
+                desc2 = desc2.astype(np.float32)
+                desc2 /= (np.linalg.norm(desc2, axis=1, ord=1, keepdims=True) + 1e-7)
+                desc2 = np.sqrt(desc2)
+            matcher = cv2.FlannBasedMatcher(dict(algorithm=1, trees=5), dict(checks=50))
+        else:
+            detector = cv2.ORB_create(nfeatures=nfeat)
+            kp1, desc1 = detector.detectAndCompute(img1, None)
+            kp2, desc2 = detector.detectAndCompute(img2, None)
+            matcher = cv2.BFMatcher(cv2.NORM_HAMMING, crossCheck=False)
+        t_ext = (time.perf_counter() - t0) * 1000
+
+        t1 = time.perf_counter()
+        good_matches = []
+        if desc1 is not None and desc2 is not None and len(desc1) >= 2 and len(desc2) >= 2:
+            try:
+                raw_matches = matcher.knnMatch(desc1, desc2, k=2)
+                for m_n in raw_matches:
+                    if len(m_n) == 2 and m_n[0].distance < 0.75 * m_n[1].distance:
+                        good_matches.append(m_n[0])
+            except Exception:
+                pass
+        t_match = (time.perf_counter() - t1) * 1000
+
+        inl = 0
+        inlier_matches = []
+        if len(good_matches) >= 8:
+            pts1 = np.float32([kp1[m.queryIdx].pt for m in good_matches])
+            pts2 = np.float32([kp2[m.trainIdx].pt for m in good_matches])
+            try:
+                _, mask = cv2.findEssentialMat(pts1, pts2, k_mat, method=cv2.RANSAC, prob=0.999, threshold=1.0)
+                if mask is not None:
+                    inlier_matches = [m for m, keep in zip(good_matches, mask.ravel()) if keep]
+                    inl = len(inlier_matches)
+            except Exception:
+                pass
+
+        vis = cv2.drawMatches(img1, kp1, img2, kp2, inlier_matches[:: max(1, len(inlier_matches) // 80)], None,
+                              matchColor=(61, 118, 109), flags=cv2.DrawMatchesFlags_NOT_DRAW_SINGLE_POINTS)
+        col.image(cv2.cvtColor(vis, cv2.COLOR_BGR2RGB), width="stretch",
+                  caption=f"{det}: {inl} verified inliers ({len(kp1)} & {len(kp2)} kps)")
+        rows.append({
+            "Detector": det,
+            "Keypoints (A)": len(kp1),
+            "Keypoints (B)": len(kp2),
+            "Ratio Matches": len(good_matches),
+            "RANSAC Inliers": inl,
+            "Inlier Ratio": f"{100 * inl / max(len(good_matches), 1):.0f}%",
+            "Extraction Time": f"{t_ext:.1f} ms",
+            "Matching Time": f"{t_match:.1f} ms"
+        })
+    st.dataframe(pd.DataFrame(rows), hide_index=True, width="stretch")
+
+
 # ============================================================================ pages
 def page_overview():
     render_client_header(
@@ -280,13 +379,38 @@ def page_overview():
 
 
 def page_walkthrough():
-    st.title("Pipeline walkthrough")
     dirs = result_dirs()
     if not dirs:
         st.error("No results found in outputs/objectron. Run: python -m experiments.objectron_batch")
         return
-    label = st.sidebar.selectbox("Video", list(dirs.keys()))
-    render_walkthrough(Path(dirs[label]))
+
+    options = ["⭐ Real Tabletop Bottle (VID_20261102_015654418.mp4)"] + list(dirs.keys())
+
+    c_sel, c_stat = st.columns([3, 1])
+    with c_sel:
+        label = st.selectbox(
+            "🎯 Select Video / Object Category to Inspect:",
+            options,
+            format_func=lambda x: x if x.startswith("⭐") else f"📦 {x.title()}",
+            key="walkthrough_cat_sel",
+            help="Switch between the real deployment bottle and the 10 benchmark Objectron objects."
+        )
+    with c_stat:
+        disp_title = "Real Bottle (VID)" if label.startswith("⭐") else label.title()
+        st.markdown(
+            f"""
+            <div style="background:#FFFFFF; border:1px solid #D6D9DF; border-radius:10px; padding:8px 14px; margin-top:24px; text-align:center;">
+                <span style="font-size:0.72rem; color:#8F9192; text-transform:uppercase; font-weight:700; letter-spacing:0.04em;">Selected Model</span><br>
+                <span style="font-size:0.92rem; font-weight:700; color:#3D766D;">{disp_title}</span>
+            </div>
+            """,
+            unsafe_allow_html=True,
+        )
+
+    if label.startswith("⭐"):
+        page_dev_video()
+    else:
+        render_walkthrough(Path(dirs[label]))
 
 
 def render_walkthrough(rdir: Path):
@@ -348,6 +472,8 @@ def render_walkthrough(rdir: Path):
         cm = o3.toggle("Show camera path", value=True, key="sfm_cm")
         st.plotly_chart(scene_figure(scene, cols_, obj, cams, hl, bx, cm), width="stretch", key="sfm_fig")
         st.caption("Drag to rotate, scroll to zoom. Reconstruction by COLMAP; units are arbitrary (no metric scale).")
+        with st.expander("🔍 Interactive Feature Matching & Epipolar Verification (Root-SIFT vs ORB)", expanded=False):
+            render_feature_matching_interactive(kfs, focal_px=m.get("colmap_focal_px", 1300), key_prefix=f"walk_{rdir.name}")
 
     with t3:
         c = st.columns(4)
@@ -440,7 +566,7 @@ def render_walkthrough(rdir: Path):
                     scene=dict(aspectmode="data", xaxis=dict(visible=False), yaxis=dict(visible=False), zaxis=dict(visible=False)),
                     height=520, margin=dict(l=0, r=0, t=30, b=0),
                 )
-                st.plotly_chart(fig_dense, use_container_width=True)
+                st.plotly_chart(fig_dense, width="stretch")
             with d_tab2:
                 if mesh_ply.exists():
                     import trimesh
@@ -467,7 +593,7 @@ def render_walkthrough(rdir: Path):
                         scene=dict(aspectmode="data", xaxis=dict(visible=False), yaxis=dict(visible=False), zaxis=dict(visible=False)),
                         height=520, margin=dict(l=0, r=0, t=30, b=0),
                     )
-                    st.plotly_chart(fig_m, use_container_width=True)
+                    st.plotly_chart(fig_m, width="stretch")
 
     with t5:
         if not m.get("pointnet_prediction"):
@@ -785,12 +911,26 @@ def page_dev_video():
     c[1].metric("Object 3D Anchor", "[1.11, 0.45, 5.68] m")
     c[2].metric("Clean Dense Points", f"{clean_pts_cnt:,} points ({density_mult:.1f}x)")
     c[3].metric("Consensus Classification", f"{cand_name} ({cand_conf:.1f}%)")
+    with st.expander("📹 Original Deployment Video Recording (VID_20261102_015654418.mp4)", expanded=False):
+        vid = ROOT / "VID_20261102_015654418.mp4"
+        if vid.exists():
+            st.video(str(vid))
+        real_kfs = sorted(str(p) for p in (OUT / "real_video_validation" / "keyframes").glob("*.png"))
+        if real_kfs:
+            st.caption(f"47 Keyframes extracted across the 9.6s recording:")
+            kf_idx = st.slider("Keyframe Scrubber", 0, len(real_kfs) - 1, 0, key="dev_kf_scrub")
+            st.image(real_kfs[kf_idx], caption=f"Keyframe {kf_idx+1} of {len(real_kfs)}", width="stretch")
+
     t1, t2, t3, t4 = st.tabs(["Interactive 3D scene", "Dense 3D & Fusion (Audited & Repaired)", "Object localisation", "Fitted bottle model"])
     with t1:
         f = OUT / "objects_3d" / "scene_interactive.html"
         if f.exists():
             st.components.v1.html(f.read_text(encoding="utf-8"), height=680)
         st.caption("Own-SfM reconstruction with the object points, the 3D boxes and the fitted bottle model.")
+        real_kfs = sorted(str(p) for p in (OUT / "real_video_validation" / "keyframes").glob("*.png"))
+        if real_kfs:
+            with st.expander("🔍 Interactive Feature Matching on Real Bottle Keyframes (Root-SIFT vs ORB)", expanded=False):
+                render_feature_matching_interactive(real_kfs, focal_px=1300, key_prefix="dev_bottle_fm")
     with t2:
         st.subheader("Dense Monocular Depth Fusion & Multimodal AI Classification (Audited & Repaired)")
         st.markdown(
@@ -804,19 +944,19 @@ def page_dev_video():
         with col_d1:
             audit_fig = OUT / "final_audit" / "comparison_old_vs_new.png"
             if audit_fig.exists():
-                st.image(str(audit_fig), caption="Forensic Comparison: Corrupted 14.5m Baseline vs. Repaired 2.35m Geometry", use_container_width=True)
+                st.image(str(audit_fig), caption="Forensic Comparison: Corrupted 14.5m Baseline vs. Repaired 2.35m Geometry", width="stretch")
             else:
                 comp_fig = OUT / "experiments" / "comprehensive_evaluation" / "density_and_classification_comparison.png"
                 if comp_fig.exists():
-                    st.image(str(comp_fig), caption="Point Density & Multimodal Decision Fusion Benchmark", use_container_width=True)
+                    st.image(str(comp_fig), caption="Point Density & Multimodal Decision Fusion Benchmark", width="stretch")
         with col_d2:
             repaired_fig = OUT / "final_audit" / "repaired_pipeline_views.png"
             if repaired_fig.exists():
-                st.image(str(repaired_fig), caption="Repaired Pipeline Orthographic Projections (Front, Side, Top)", use_container_width=True)
+                st.image(str(repaired_fig), caption="Repaired Pipeline Orthographic Projections (Front, Side, Top)", width="stretch")
             else:
                 robust_fig = OUT / "experiments" / "comprehensive_evaluation" / "pointnet_noise_and_outlier_sensitivity.png"
                 if robust_fig.exists():
-                    st.image(str(robust_fig), caption="PointNet Noise & Outlier Sensitivity Degradation", use_container_width=True)
+                    st.image(str(robust_fig), caption="PointNet Noise & Outlier Sensitivity Degradation", width="stretch")
 
         class_json = OUT / "classification_3d" / "classification_result.json"
         if class_json.exists():
@@ -864,7 +1004,7 @@ def page_dev_video():
                     height=560,
                     margin=dict(l=0, r=0, t=30, b=0),
                 )
-                st.plotly_chart(fig_dense, use_container_width=True)
+                st.plotly_chart(fig_dense, width="stretch")
                 st.caption("Drag to rotate, scroll to zoom. Solid, gap-free dense object surface reconstructed via multi-view monocular inverse depth unprojection.")
             else:
                 st.warning(f"Point cloud file not found at {dense_ply_path}")
@@ -896,7 +1036,7 @@ def page_dev_video():
                     height=560,
                     margin=dict(l=0, r=0, t=30, b=0),
                 )
-                st.plotly_chart(fig_m, use_container_width=True)
+                st.plotly_chart(fig_m, width="stretch")
                 st.caption("Watertight screened Poisson reconstruction fitted to oriented dense surface normals.")
             else:
                 st.warning(f"Poisson mesh not found at {poisson_ply}")
@@ -992,12 +1132,10 @@ def page_upload():
 
 PAGES = {
     "Overview": page_overview,
-    "Pipeline walkthrough": page_walkthrough,
-    "Try your own video": page_upload,
-    "Live demos": page_live,
-    "Experiments": page_experiments,
-    "All ten videos": page_all_videos,
-    "Development video": page_dev_video,
+    "3D Reconstruction Studio": page_walkthrough,
+    "Benchmark Telemetry (10/10)": page_all_videos,
+    "Scientific Experiments": page_experiments,
+    "Upload Custom Video": page_upload,
 }
 
 render_sidebar_brand()
