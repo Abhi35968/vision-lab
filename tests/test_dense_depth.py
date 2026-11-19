@@ -76,11 +76,44 @@ class TestDepthAnythingEstimator:
             if 0 <= v < 240 and 0 <= u < 320:
                 rel_depth[v, u] = (p_cam[2] - 1.0) / 4.0
 
-        s, b, rmse, aligned = estimator.align_depth_with_sfm(rel_depth, pts_3d, R, t, K)
+        s, b, rmse, aligned = estimator.align_depth_with_sfm(rel_depth, pts_3d, R, t, K, mode="linear")
         assert pytest.approx(s, abs=0.1) == 4.0
         assert pytest.approx(b, abs=0.1) == 1.0
         assert rmse < 0.1
         assert aligned.min() >= 0.0
+
+    def test_align_depth_with_sfm_inverse(self, estimator):
+        """Verifies robust inverse-depth alignment: 1/z = s * d + b."""
+        K = np.array([[300.0, 0, 160], [0, 300.0, 120], [0, 0, 1]], dtype=np.float64)
+        R = np.eye(3)
+        t = np.zeros(3)
+
+        pts_3d = np.array([
+            [0.0, 0.0, 2.0],
+            [0.2, 0.1, 2.5],
+            [-0.1, 0.3, 3.3333],
+            [0.4, -0.2, 5.0],
+        ], dtype=np.float64)
+
+        # 1/z values: 0.5, 0.4, 0.3, 0.2
+        # Let d = (1/z - 0.1) / 0.5 => 1/z = 0.5 * d + 0.1
+        rel_depth = np.zeros((240, 320), dtype=np.float32)
+        for pt in pts_3d:
+            p_cam = pt
+            u = int(round(K[0, 0] * p_cam[0] / p_cam[2] + K[0, 2]))
+            v = int(round(K[1, 1] * p_cam[1] / p_cam[2] + K[1, 2]))
+            if 0 <= v < 240 and 0 <= u < 320:
+                inv_z = 1.0 / p_cam[2]
+                rel_depth[v, u] = (inv_z - 0.1) / 0.5
+
+        s, b, rmse, aligned, meta = estimator.align_depth_with_sfm(
+            rel_depth, pts_3d, R, t, K, mode="inverse", return_metadata=True
+        )
+        assert pytest.approx(s, abs=0.05) == 0.5
+        assert pytest.approx(b, abs=0.05) == 0.1
+        assert rmse < 0.1
+        assert meta["status"] == "success"
+        assert aligned.min() > 0.0
 
     def test_unproject_dense_cloud(self, estimator):
         """Verifies unprojection produces valid (M, 3) 3D coordinate array."""

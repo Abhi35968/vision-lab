@@ -20,8 +20,10 @@ class InstanceTrackerConfig:
     min_confidence: float = 0.15
     min_height_px: float = 400.0
     min_aspect_ratio: float = 1.3  # height / width >= 1.3
-    min_area_pct: float = 1.5      # At least 1.5% of total frame area
-    max_area_pct: float = 60.0     # Reject full-frame misdetections
+    min_area_pct: float = 0.5      # At least 0.5% of total frame area
+    max_area_pct: float = 80.0     # Reject full-frame misdetections (>80%)
+    allow_large_object: bool = False  # Override to permit valid large objects >80%
+    support_surfaces: Tuple[str, ...] = ("dining table", "table", "desk", "countertop", "bench")
     max_centroid_shift_pct: float = 0.40  # Max jump relative to max(H, W)
     spatial_iou_duplicate_thresh: float = 0.65  # Merge overlapping dual-class predictions
     ambiguity_score_margin: float = 0.12        # Margin between top two competing candidates
@@ -67,6 +69,10 @@ class InstanceTracker:
 
         # Step 1: Geometric and semantic filtering
         for inst in instances:
+            # Exclude support surfaces (tables, desks, benches)
+            if any(s in inst.class_name.lower() for s in self.config.support_surfaces):
+                continue
+
             # Check class
             if inst.class_name.lower() not in self.config.primary_classes:
                 continue
@@ -83,8 +89,10 @@ class InstanceTracker:
             if inst.aspect_ratio < self.config.min_aspect_ratio:
                 continue
 
-            # Check area percentage
-            if inst.mask_area_pct < self.config.min_area_pct or inst.mask_area_pct > self.config.max_area_pct:
+            # Check area percentage (>= 0.5% and <= 80%, with override for valid large objects)
+            if inst.mask_area_pct < self.config.min_area_pct:
+                continue
+            if inst.mask_area_pct > self.config.max_area_pct and not self.config.allow_large_object:
                 continue
 
             valid_cands.append(inst)

@@ -69,7 +69,7 @@ class Triangulator:
 
     def __init__(
         self,
-        max_reprojection_error_px: float = 4.0,
+        max_reprojection_error_px: float = 3.0,
         min_parallax_angle_deg: float = 1.0,
         min_points_threshold: int = 10,
     ):

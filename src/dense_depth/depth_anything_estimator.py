@@ -169,10 +169,17 @@ class DepthAnythingEstimator:
         camera_R: np.ndarray,              # (3, 3)
         camera_t: np.ndarray,              # (3, 1)
         camera_K: np.ndarray,              # (3, 3)
-    ) -> Tuple[float, float, float, np.ndarray]:
+        mode: str = "inverse",              # "inverse" (for Depth Anything disparity) or "linear"
+        return_metadata: bool = False,
+    ) -> Union[Tuple[float, float, float, np.ndarray], Tuple[float, float, float, np.ndarray, dict]]:
         """
-        Solves affine alignment: Z_metric = s * d_relative + b
-        using RANSAC / Huber fit between monocular depth and sparse SfM points.
+        Solves alignment between monocular depth and sparse SfM points.
+
+        For Depth Anything V2 (relative disparity / inverse depth):
+            1 / Z_sfm = s * d_relative + b
+            Z_metric = 1.0 / max(s * depth_map + b, 1e-4)
+        Uses robust Huber regression to reject sparse triangulation outliers,
+        rejects non-positive depths (Z <= 0.05), and guards against degenerate scale (s <= 0).
         """
         h, w = depth_map.shape[:2]
         pts = np.asarray(sparse_points_3d, dtype=np.float64)
@@ -195,35 +202,85 @@ class DepthAnythingEstimator:
             & (v >= 0) & (v < h)
         )
 
-        if inside.sum() < 4:
-            # Not enough points for regression; use default nominal scale
-            mean_z = float(np.mean(depths_true[valid])) if valid.sum() > 0 else 5.0
-            return 1.0, mean_z, 0.50, (depth_map * 1.0 + mean_z)
+        meta = {
+            "num_candidates": int(len(pts)),
+            "num_in_view": int(inside.sum()),
+            "mode": mode,
+            "is_degenerate": False,
+            "status": "success",
+        }
 
-        u_in = np.clip(u[inside].astype(int), 0, w - 1)
-        v_in = np.clip(v[inside].astype(int), 0, h - 1)
+        if inside.sum() < 4:
+            # Not enough points for regression; use robust median fallback
+            mean_z = float(np.median(depths_true[valid])) if valid.sum() > 0 else 2.5
+            mean_z = max(0.2, mean_z)
+            meta["is_degenerate"] = True
+            meta["status"] = "insufficient_points_fallback"
+            if mode == "inverse":
+                aligned_depth = np.full_like(depth_map, mean_z, dtype=np.float32)
+                res = (1.0, round(float(1.0 / mean_z), 4), 0.50, aligned_depth)
+            else:
+                aligned_depth = np.full_like(depth_map, mean_z, dtype=np.float32)
+                res = (1.0, round(mean_z, 4), 0.50, aligned_depth)
+            self.last_alignment_metadata = meta
+            return (*res, meta) if return_metadata else res
+
+        u_in = np.clip(np.round(u[inside]).astype(int), 0, w - 1)
+        v_in = np.clip(np.round(v[inside]).astype(int), 0, h - 1)
         d_rel = depth_map[v_in, u_in].astype(np.float64)
         z_sfm = depths_true[inside]
 
-        # 2. Linear fit: z_sfm = s * d_rel + b
-        A = np.column_stack([d_rel, np.ones_like(d_rel)])
-        try:
-            # Least squares solution
-            sol, residuals, _, _ = np.linalg.lstsq(A, z_sfm, rcond=None)
-            s, b = float(sol[0]), float(sol[1])
-            # Enforce positive scale
-            if s <= 0.01:
+        if mode == "inverse":
+            # Depth Anything disparity: larger values = closer (1/Z)
+            inv_z = 1.0 / np.clip(z_sfm, 0.05, 50.0)
+            try:
+                from sklearn.linear_model import HuberRegressor
+                huber = HuberRegressor(epsilon=1.35, max_iter=200)
+                huber.fit(d_rel[:, np.newaxis], inv_z)
+                s = float(huber.coef_[0])
+                b = float(huber.intercept_)
+            except Exception:
+                A = np.column_stack([d_rel, np.ones_like(d_rel)])
+                sol, _, _, _ = np.linalg.lstsq(A, inv_z, rcond=None)
+                s, b = float(sol[0]), float(sol[1])
+
+            # Degenerate alignment detection: disparity must correlate positively with 1/Z
+            if s <= 1e-4:
+                meta["is_degenerate"] = True
+                meta["status"] = "degenerate_scale_fallback"
+                s = 0.05
+                b = float(np.median(inv_z))
+
+            pred_inv_z = np.maximum(s * d_rel + b, 1e-4)
+            pred_z = 1.0 / pred_inv_z
+            rmse = float(np.sqrt(np.mean((pred_z - z_sfm) ** 2)))
+
+            inv_aligned = np.maximum(s * depth_map.astype(np.float64) + b, 1e-4)
+            aligned_depth = np.clip(1.0 / inv_aligned, 0.05, 50.0).astype(np.float32)
+        else:
+            # Linear depth fit: Z = s * d + b
+            A = np.column_stack([d_rel, np.ones_like(d_rel)])
+            try:
+                sol, _, _, _ = np.linalg.lstsq(A, z_sfm, rcond=None)
+                s, b = float(sol[0]), float(sol[1])
+                if s <= 0.01:
+                    s = 1.0
+                    b = float(np.median(z_sfm))
+                pred = s * d_rel + b
+                rmse = float(np.sqrt(np.mean((pred - z_sfm) ** 2)))
+            except Exception:
                 s = 1.0
                 b = float(np.median(z_sfm))
-            pred = s * d_rel + b
-            rmse = float(np.sqrt(np.mean((pred - z_sfm) ** 2)))
-        except Exception:
-            s = 1.0
-            b = float(np.median(z_sfm))
-            rmse = 0.50
+                rmse = 0.50
+            aligned_depth = np.clip(s * depth_map + b, 0.1, 50.0).astype(np.float32)
 
-        aligned_depth = np.clip(s * depth_map + b, 0.1, 50.0).astype(np.float32)
-        return round(s, 4), round(b, 4), round(rmse, 4), aligned_depth
+        meta["scale_s"] = round(s, 6)
+        meta["offset_b"] = round(b, 6)
+        meta["rmse_px"] = round(rmse, 4)
+        self.last_alignment_metadata = meta
+
+        result = (round(s, 4), round(b, 4), round(rmse, 4), aligned_depth)
+        return (*result, meta) if return_metadata else result
 
     def unproject_dense_cloud(
         self,

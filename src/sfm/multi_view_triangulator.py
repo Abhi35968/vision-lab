@@ -66,11 +66,13 @@ class MultiViewTriangulator:
 
     def __init__(
         self,
-        max_reprojection_error_px: float = 4.0,
+        max_reprojection_error_px: float = 3.0,
         min_parallax_angle_deg: float = 1.5,
+        min_observations: int = 2,
     ):
         self.max_reprojection_error = max_reprojection_error_px
         self.min_parallax_deg = min_parallax_angle_deg
+        self.min_observations = min_observations
 
     @staticmethod
     def linear_dlt_triangulate_nviews(

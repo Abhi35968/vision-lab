@@ -71,7 +71,7 @@ class GeometricVerifier:
 
     def __init__(
         self,
-        ransac_reproj_threshold: float = 2.0,   # Pixel threshold for RANSAC inlier classification
+        ransac_reproj_threshold: float = 1.0,   # Pixel threshold for RANSAC inlier classification
         ransac_confidence: float = 0.999,        # RANSAC probability confidence
         min_inliers: int = 15,                   # Minimum required inliers for valid geometry
         min_inlier_ratio: float = 0.25,          # Minimum inlier percentage

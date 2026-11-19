@@ -150,6 +150,11 @@ class YOLOSegmenter:
                 num_comp, largest_ratio = MaskProcessor.analyze_connected_components(bin_mask)
                 centroid = MaskProcessor.compute_mask_centroid(bin_mask)
 
+                # Boundary erosion for 2D-to-3D association robustness
+                eroded_m, erode_meta = MaskProcessor.erode_mask(
+                    bin_mask, kernel_size=3, shape="ellipse", frame_id=frame_idx, object_id=i
+                )
+
                 inst = InstanceMask(
                     instance_id=i,
                     camera_id=camera_id,
@@ -166,9 +171,12 @@ class YOLOSegmenter:
                     largest_component_ratio=largest_ratio,
                     is_target=False,
                     is_ambiguous=False,
+                    erosion_kernel=erode_meta["erosion_kernel"],
+                    eroded_mask_area_px=erode_meta["eroded_area_px"],
+                    mask_metadata=erode_meta,
                 )
                 all_instances.append(inst)
-                instance_masks_raw.append(bin_mask)
+                instance_masks_raw.append(eroded_m)
 
         # Spatiotemporal target tracking
         target_inst, status, updated_instances = self.tracker.track_frame(

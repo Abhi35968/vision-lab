@@ -30,6 +30,9 @@ class InstanceMask:
     is_ambiguous: bool = False
     ambiguity_reason: Optional[str] = None
     tracking_score: float = 0.0
+    erosion_kernel: Optional[str] = None
+    eroded_mask_area_px: Optional[int] = None
+    mask_metadata: Dict[str, Any] = field(default_factory=dict)
 
     @property
     def width(self) -> float:
@@ -68,6 +71,9 @@ class InstanceMask:
             "ambiguity_reason": self.ambiguity_reason,
             "tracking_score": round(float(self.tracking_score), 4),
             "aspect_ratio": self.aspect_ratio,
+            "erosion_kernel": self.erosion_kernel,
+            "eroded_mask_area_px": self.eroded_mask_area_px,
+            "mask_metadata": self.mask_metadata,
         }
 
 
@@ -131,6 +137,8 @@ class FrameSegmentation:
             "largest_comp_ratio": round(inst.largest_component_ratio, 3) if inst else 0.0,
             "aspect_ratio": inst.aspect_ratio if inst else 0.0,
             "tracking_score": round(inst.tracking_score, 3) if inst else 0.0,
+            "erosion_kernel": inst.erosion_kernel if inst and inst.erosion_kernel else "none",
+            "eroded_mask_area_px": inst.eroded_mask_area_px if inst and inst.eroded_mask_area_px is not None else (inst.mask_area_px if inst else 0),
             "mask_path": self.mask_path or "",
         }
 

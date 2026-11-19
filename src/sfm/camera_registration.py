@@ -75,7 +75,7 @@ class CameraRegistrar:
     def __init__(
         self,
         min_pnp_inliers: int = 15,
-        max_reprojection_error_px: float = 4.0,
+        max_reprojection_error_px: float = 3.0,
         ransac_confidence: float = 0.999,
         ransac_iterations: int = 2000,
     ):

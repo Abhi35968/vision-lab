@@ -36,10 +36,10 @@ class IncrementalSfMConfig:
     max_features: int = 2000
     matching_window: int = 2
     min_inliers_pair: int = 20
-    min_track_length: int = 2
+    min_track_length: int = 3
     min_pnp_inliers: int = 15
     min_triangulation_angle_deg: float = 1.5
-    max_reprojection_error_px: float = 4.0
+    max_reprojection_error_px: float = 3.0
     enable_bundle_adjustment: bool = True
     ba_max_iterations: int = 50
     forced_seed_pair: Optional[Tuple[int, int]] = None

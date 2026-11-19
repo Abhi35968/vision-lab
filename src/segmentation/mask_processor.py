@@ -189,6 +189,89 @@ class MaskProcessor:
         return closed
 
     @staticmethod
+    def erode_mask(
+        mask: np.ndarray,
+        kernel_size: int = 3,
+        shape: str = "ellipse",
+        iterations: int = 1,
+        frame_id: Optional[Union[int, str]] = None,
+        object_id: Optional[Union[int, str]] = None,
+    ) -> Tuple[np.ndarray, dict]:
+        """
+        Applies morphological boundary erosion using OpenCV to eliminate background bleeding.
+
+        Supports 3x3 and 5x5 structuring elements (cv2.MORPH_ELLIPSE or cv2.MORPH_RECT).
+        Returns a tuple of (eroded_mask, metadata_dict).
+        Preserves original mask untouched while generating eroded mask.
+        Guards against over-erosion destroying thin object structures.
+
+        Args:
+            mask: Input binary mask (H, W).
+            kernel_size: Structuring element diameter (3 or 5 recommended).
+            shape: Kernel geometry: "ellipse" (cv2.MORPH_ELLIPSE) or "rect".
+            iterations: Number of erosion passes.
+            frame_id: Optional frame identifier for metadata export.
+            object_id: Optional object / track identifier for metadata export.
+
+        Returns:
+            Tuple of:
+              - eroded_mask: np.ndarray of shape (H, W) uint8 in {0, 255}.
+              - metadata: dict containing frame ID, object ID, mask area, erosion kernel, resolution, retention.
+        """
+        if mask is None:
+            return np.zeros((1, 1), dtype=np.uint8), {
+                "frame_id": frame_id,
+                "object_id": object_id,
+                "original_area_px": 0,
+                "eroded_area_px": 0,
+                "erosion_kernel": f"{kernel_size}x{kernel_size}_{shape}",
+                "resolution": (0, 0),
+                "area_retention_ratio": 0.0,
+            }
+
+        h, w = mask.shape[:2]
+        bin_mask = (mask > 0).astype(np.uint8) * 255
+        orig_area = int(np.sum(bin_mask > 0))
+
+        if kernel_size <= 1 or orig_area == 0:
+            meta = {
+                "frame_id": frame_id,
+                "object_id": object_id,
+                "original_area_px": orig_area,
+                "eroded_area_px": orig_area,
+                "erosion_kernel": f"none",
+                "resolution": (w, h),
+                "area_retention_ratio": 1.0,
+            }
+            return bin_mask.copy(), meta
+
+        morph_shape = cv2.MORPH_ELLIPSE if shape.lower() == "ellipse" else cv2.MORPH_RECT
+        kernel = cv2.getStructuringElement(morph_shape, (kernel_size, kernel_size))
+        eroded = cv2.erode(bin_mask, kernel, iterations=iterations)
+        eroded_area = int(np.sum(eroded > 0))
+
+        # Thin-structure protection guard: if erosion completely wipes out the mask, fall back to milder erosion or original
+        if eroded_area == 0 and orig_area > 0:
+            if kernel_size > 3:
+                k3 = cv2.getStructuringElement(morph_shape, (3, 3))
+                eroded = cv2.erode(bin_mask, k3, iterations=1)
+                eroded_area = int(np.sum(eroded > 0))
+            if eroded_area == 0:
+                eroded = bin_mask.copy()
+                eroded_area = orig_area
+
+        metadata = {
+            "frame_id": frame_id,
+            "object_id": object_id,
+            "original_area_px": orig_area,
+            "eroded_area_px": eroded_area,
+            "erosion_kernel": f"{kernel_size}x{kernel_size}_{shape}",
+            "resolution": (w, h),
+            "area_retention_ratio": round(float(eroded_area / max(1, orig_area)), 4),
+        }
+        return eroded, metadata
+
+    @staticmethod
     def compute_mask_iou(
         mask_a: np.ndarray,
         mask_b: np.ndarray,

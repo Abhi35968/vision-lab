@@ -54,7 +54,7 @@ class FeatureMatcher:
     def __init__(
         self,
         matcher_type: str = "FLANN",        # "FLANN" or "BF"
-        lowe_ratio: float = 0.72,           # Lowe's distance ratio threshold (tighter = fewer but higher-quality matches)
+        lowe_ratio: float = 0.75,           # Lowe's distance ratio threshold (tighter = fewer but higher-quality matches)
         cross_check: bool = True,           # Enforce mutual consistency (reduces false matches)
     ):
         self.matcher_type = matcher_type.upper()

@@ -247,10 +247,19 @@ def segment(paths, category, model):
                 if central:
                     best = max(central, key=lambda c: c[2] - 2.0 * c[4]) + ("most central instance",)
         if best is not None:
-            out[p.name] = {"mask": best[0], "label": best[1], "conf": best[2], "mode": best[5]}
+            raw_mask = (best[0].astype(np.uint8) * 255)
+            # Elliptical erosion with 3x3 kernel to strip silhouette bleeding
+            k3 = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (3, 3))
+            eroded = cv2.erode(raw_mask, k3, iterations=1)
+            if eroded.sum() == 0:  # protect thin structures
+                eroded = raw_mask
+            out[p.name] = {"mask": (eroded > 127), "raw_mask": (raw_mask > 127),
+                           "label": best[1], "conf": best[2], "mode": best[5],
+                           "erosion_kernel": "3x3_ellipse"}
         rows.append({"image": p.name, "detected": best is not None, "label": best[1] if best else "none",
                      "confidence": best[2] if best else 0.0, "mode": best[5] if best else "none",
-                     "mask_area_pct": 100 * best[3] if best else 0.0})
+                     "mask_area_pct": 100 * best[3] if best else 0.0,
+                     "erosion_kernel": "3x3_ellipse" if best else "none"})
     return out, pd.DataFrame(rows)
 
 

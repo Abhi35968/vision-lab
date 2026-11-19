@@ -118,16 +118,42 @@ def reliable_point_ids(
     *,
     max_reprojection_px: float = 3.0,
     min_track_length: int = 3,
+    check_positive_depth: bool = True,
 ) -> set[int]:
     """Return only points with explicit COLMAP quality evidence.
 
     A point's triangulation angle is handled by COLMAP during mapping; this
     gate avoids promoting short, high-error tracks into object geometry.
+    Filters:
+    1. >= min_track_length (>= 3) independent observations.
+    2. Reprojection error <= max_reprojection_px (<= 3.0 px).
+    3. Positive depth (Z > 0) in all observing registered cameras.
     """
-    return {
-        int(point_id)
-        for point_id, point in reconstruction.points3D.items()
-        if len(point.track.elements) >= min_track_length
-        and np.isfinite(float(getattr(point, "error", np.inf)))
-        and float(point.error) <= max_reprojection_px
-    }
+    reliable = set()
+    for point_id, point in reconstruction.points3D.items():
+        if len(point.track.elements) < min_track_length:
+            continue
+        err = float(getattr(point, "error", np.inf))
+        if not np.isfinite(err) or err > max_reprojection_px:
+            continue
+        if check_positive_depth:
+            all_pos = True
+            X = np.asarray(point.xyz, dtype=np.float64)
+            for el in point.track.elements:
+                img = reconstruction.images.get(el.image_id)
+                if img is None or not img.has_pose:
+                    continue
+                try:
+                    cfw = img.cam_from_world
+                    cfw = cfw() if callable(cfw) else cfw
+                    M = np.asarray(cfw.matrix())
+                    z = float(M[2, :3] @ X + M[2, 3])
+                    if z <= 0.05:
+                        all_pos = False
+                        break
+                except Exception:
+                    pass
+            if not all_pos:
+                continue
+        reliable.add(int(point_id))
+    return reliable

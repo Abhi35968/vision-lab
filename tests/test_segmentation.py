@@ -189,6 +189,24 @@ class TestMaskProcessor(unittest.TestCase):
         b2 = (5.0, 0.0, 15.0, 10.0)  # Area = 100, Inter = 50, Union = 150 -> 0.333
         self.assertAlmostEqual(MaskProcessor.compute_bbox_iou(b1, b2), 50.0 / 150.0, places=3)
 
+    def test_erode_mask(self):
+        mask = np.zeros((100, 100), dtype=np.uint8)
+        mask[20:80, 20:80] = 255  # 60x60 = 3600 px
+        eroded_3, meta_3 = MaskProcessor.erode_mask(mask, kernel_size=3, shape="ellipse")
+        self.assertLess(meta_3["eroded_area_px"], meta_3["original_area_px"])
+        self.assertGreater(meta_3["eroded_area_px"], 0)
+        self.assertEqual(meta_3["erosion_kernel"], "3x3_ellipse")
+
+        eroded_5, meta_5 = MaskProcessor.erode_mask(mask, kernel_size=5, shape="ellipse")
+        self.assertLess(meta_5["eroded_area_px"], meta_3["eroded_area_px"])
+        self.assertEqual(meta_5["erosion_kernel"], "5x5_ellipse")
+
+        # Thin structure protection
+        thin_mask = np.zeros((100, 100), dtype=np.uint8)
+        thin_mask[50, :] = 255  # 1px line
+        eroded_thin, meta_thin = MaskProcessor.erode_mask(thin_mask, kernel_size=5, shape="ellipse")
+        self.assertGreater(meta_thin["eroded_area_px"], 0)
+
 
 class TestInstanceTracker(unittest.TestCase):
     """Tests target instance tracking, class aliasing resolution, and ambiguity detection."""
