@@ -140,8 +140,10 @@ def reliable_point_ids(
             all_pos = True
             X = np.asarray(point.xyz, dtype=np.float64)
             for el in point.track.elements:
-                img = reconstruction.images.get(el.image_id)
-                if img is None or not img.has_pose:
+                if el.image_id not in reconstruction.images:
+                    continue
+                img = reconstruction.images[el.image_id]
+                if not getattr(img, "has_pose", True):
                     continue
                 try:
                     cfw = img.cam_from_world

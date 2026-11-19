@@ -78,6 +78,10 @@ models/weights/*
 
 # Intermediate depth numpy caches
 outputs/objectron/*/depth_cache/*.npy
+outputs/dense_depth/*.npy
+outputs/deployment_live_validation/colmap/
+outputs/deployment_live_validation/keyframes/
+outputs/deployment_live_validation/dense_fusion/
 
 # Loose root files and unused YOLO models
 yolov8*.pt
