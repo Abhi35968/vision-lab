@@ -1,0 +1,381 @@
+{
+  "mesh_and_pcd_stats": {
+    "pcd_points": 114206,
+    "pcd_min": [
+      -2.9047599102959882,
+      -4.022606107720079,
+      6.406047486765314
+    ],
+    "pcd_max": [
+      -0.23661465138059834,
+      3.336556104402411,
+      9.091544025774324
+    ],
+    "pcd_extent": [
+      2.66814525891539,
+      7.35916221212249,
+      2.6854965390090095
+    ],
+    "pcd_aspect_ratio_h_to_d": 2.7492,
+    "pcd_circularity_xz": 1.0065,
+    "mesh_vertices": 145294,
+    "mesh_faces": 289576,
+    "mesh_min": [
+      -2.94614029,
+      -4.04272842,
+      6.42383528
+    ],
+    "mesh_max": [
+      -0.17934561,
+      3.35667896,
+      9.10851574
+    ],
+    "mesh_extent": [
+      2.7667946800000003,
+      7.39940738,
+      2.68468046
+    ],
+    "mesh_aspect_ratio_h_to_d": 2.7146,
+    "mesh_circularity_xz": 0.9703,
+    "is_watertight": false,
+    "euler_number": -294,
+    "num_connected_components": 34,
+    "num_boundary_edges": 1976,
+    "is_winding_consistent": true,
+    "degenerate_faces": 2481,
+    "is_edge_manifold": false,
+    "is_vertex_manifold": true,
+    "is_orientable": false,
+    "is_self_intersecting": true
+  },
+  "keyframe_registration_audit": {
+    "total_keyframes": 36,
+    "registered_count": 28,
+    "unregistered_count": 8,
+    "unregistered_files": [
+      "kf_028_orig00458.jpg",
+      "kf_029_orig00475.jpg",
+      "kf_030_orig00476.jpg",
+      "kf_031_orig00507.jpg",
+      "kf_032_orig00523.jpg",
+      "kf_033_orig00529.jpg",
+      "kf_034_orig00540.jpg",
+      "kf_035_orig00566.jpg"
+    ],
+    "mean_laplacian_registered": 89.89,
+    "mean_laplacian_unregistered": 113.02,
+    "mean_sift_kps_registered": 339.79,
+    "mean_sift_kps_unregistered": 544.25,
+    "keyframe_details": [
+      {
+        "name": "kf_000_orig00000.jpg",
+        "registered": true,
+        "laplacian_var": 115.63,
+        "brightness": 94.03,
+        "contrast": 52.32,
+        "sift_keypoints": 406
+      },
+      {
+        "name": "kf_001_orig00017.jpg",
+        "registered": true,
+        "laplacian_var": 85.21,
+        "brightness": 95.18,
+        "contrast": 52.19,
+        "sift_keypoints": 306
+      },
+      {
+        "name": "kf_002_orig00043.jpg",
+        "registered": true,
+        "laplacian_var": 60.45,
+        "brightness": 101.54,
+        "contrast": 54.0,
+        "sift_keypoints": 272
+      },
+      {
+        "name": "kf_003_orig00056.jpg",
+        "registered": true,
+        "laplacian_var": 61.85,
+        "brightness": 97.2,
+        "contrast": 54.13,
+        "sift_keypoints": 233
+      },
+      {
+        "name": "kf_004_orig00065.jpg",
+        "registered": true,
+        "laplacian_var": 58.55,
+        "brightness": 94.62,
+        "contrast": 53.82,
+        "sift_keypoints": 260
+      },
+      {
+        "name": "kf_005_orig00094.jpg",
+        "registered": true,
+        "laplacian_var": 86.42,
+        "brightness": 89.6,
+        "contrast": 51.5,
+        "sift_keypoints": 295
+      },
+      {
+        "name": "kf_006_orig00101.jpg",
+        "registered": true,
+        "laplacian_var": 95.01,
+        "brightness": 91.02,
+        "contrast": 51.58,
+        "sift_keypoints": 294
+      },
+      {
+        "name": "kf_007_orig00113.jpg",
+        "registered": true,
+        "laplacian_var": 84.61,
+        "brightness": 92.17,
+        "contrast": 51.94,
+        "sift_keypoints": 306
+      },
+      {
+        "name": "kf_008_orig00127.jpg",
+        "registered": true,
+        "laplacian_var": 78.38,
+        "brightness": 95.15,
+        "contrast": 53.15,
+        "sift_keypoints": 267
+      },
+      {
+        "name": "kf_009_orig00155.jpg",
+        "registered": true,
+        "laplacian_var": 83.26,
+        "brightness": 102.24,
+        "contrast": 58.14,
+        "sift_keypoints": 307
+      },
+      {
+        "name": "kf_010_orig00173.jpg",
+        "registered": true,
+        "laplacian_var": 82.84,
+        "brightness": 100.24,
+        "contrast": 56.31,
+        "sift_keypoints": 276
+      },
+      {
+        "name": "kf_011_orig00174.jpg",
+        "registered": true,
+        "laplacian_var": 81.57,
+        "brightness": 100.21,
+        "contrast": 56.34,
+        "sift_keypoints": 286
+      },
+      {
+        "name": "kf_012_orig00200.jpg",
+        "registered": true,
+        "laplacian_var": 72.01,
+        "brightness": 101.23,
+        "contrast": 55.6,
+        "sift_keypoints": 261
+      },
+      {
+        "name": "kf_013_orig00206.jpg",
+        "registered": true,
+        "laplacian_var": 43.66,
+        "brightness": 98.8,
+        "contrast": 55.25,
+        "sift_keypoints": 225
+      },
+      {
+        "name": "kf_014_orig00236.jpg",
+        "registered": true,
+        "laplacian_var": 60.38,
+        "brightness": 93.16,
+        "contrast": 51.33,
+        "sift_keypoints": 233
+      },
+      {
+        "name": "kf_015_orig00253.jpg",
+        "registered": true,
+        "laplacian_var": 101.96,
+        "brightness": 91.47,
+        "contrast": 48.29,
+        "sift_keypoints": 455
+      },
+      {
+        "name": "kf_016_orig00257.jpg",
+        "registered": true,
+        "laplacian_var": 116.91,
+        "brightness": 91.62,
+        "contrast": 48.6,
+        "sift_keypoints": 476
+      },
+      {
+        "name": "kf_017_orig00270.jpg",
+        "registered": true,
+        "laplacian_var": 97.07,
+        "brightness": 99.46,
+        "contrast": 51.6,
+        "sift_keypoints": 427
+      },
+      {
+        "name": "kf_018_orig00294.jpg",
+        "registered": true,
+        "laplacian_var": 119.18,
+        "brightness": 88.3,
+        "contrast": 48.14,
+        "sift_keypoints": 392
+      },
+      {
+        "name": "kf_019_orig00307.jpg",
+        "registered": true,
+        "laplacian_var": 118.51,
+        "brightness": 86.28,
+        "contrast": 47.36,
+        "sift_keypoints": 399
+      },
+      {
+        "name": "kf_020_orig00319.jpg",
+        "registered": true,
+        "laplacian_var": 100.11,
+        "brightness": 81.68,
+        "contrast": 45.5,
+        "sift_keypoints": 429
+      },
+      {
+        "name": "kf_021_orig00348.jpg",
+        "registered": true,
+        "laplacian_var": 75.58,
+        "brightness": 84.79,
+        "contrast": 46.25,
+        "sift_keypoints": 318
+      },
+      {
+        "name": "kf_022_orig00364.jpg",
+        "registered": true,
+        "laplacian_var": 104.93,
+        "brightness": 87.79,
+        "contrast": 46.74,
+        "sift_keypoints": 318
+      },
+      {
+        "name": "kf_023_orig00367.jpg",
+        "registered": true,
+        "laplacian_var": 108.87,
+        "brightness": 87.36,
+        "contrast": 46.66,
+        "sift_keypoints": 332
+      },
+      {
+        "name": "kf_024_orig00386.jpg",
+        "registered": true,
+        "laplacian_var": 113.45,
+        "brightness": 83.55,
+        "contrast": 45.52,
+        "sift_keypoints": 382
+      },
+      {
+        "name": "kf_025_orig00400.jpg",
+        "registered": true,
+        "laplacian_var": 99.27,
+        "brightness": 82.6,
+        "contrast": 45.08,
+        "sift_keypoints": 451
+      },
+      {
+        "name": "kf_026_orig00417.jpg",
+        "registered": true,
+        "laplacian_var": 110.35,
+        "brightness": 84.5,
+        "contrast": 45.51,
+        "sift_keypoints": 471
+      },
+      {
+        "name": "kf_027_orig00429.jpg",
+        "registered": true,
+        "laplacian_var": 100.83,
+        "brightness": 87.48,
+        "contrast": 45.68,
+        "sift_keypoints": 437
+      },
+      {
+        "name": "kf_028_orig00458.jpg",
+        "registered": false,
+        "laplacian_var": 80.31,
+        "brightness": 89.44,
+        "contrast": 41.24,
+        "sift_keypoints": 365
+      },
+      {
+        "name": "kf_029_orig00475.jpg",
+        "registered": false,
+        "laplacian_var": 92.06,
+        "brightness": 91.39,
+        "contrast": 40.72,
+        "sift_keypoints": 401
+      },
+      {
+        "name": "kf_030_orig00476.jpg",
+        "registered": false,
+        "laplacian_var": 73.46,
+        "brightness": 91.47,
+        "contrast": 40.63,
+        "sift_keypoints": 379
+      },
+      {
+        "name": "kf_031_orig00507.jpg",
+        "registered": false,
+        "laplacian_var": 124.85,
+        "brightness": 95.35,
+        "contrast": 46.42,
+        "sift_keypoints": 591
+      },
+      {
+        "name": "kf_032_orig00523.jpg",
+        "registered": false,
+        "laplacian_var": 129.78,
+        "brightness": 94.52,
+        "contrast": 47.59,
+        "sift_keypoints": 703
+      },
+      {
+        "name": "kf_033_orig00529.jpg",
+        "registered": false,
+        "laplacian_var": 146.55,
+        "brightness": 94.2,
+        "contrast": 47.84,
+        "sift_keypoints": 707
+      },
+      {
+        "name": "kf_034_orig00540.jpg",
+        "registered": false,
+        "laplacian_var": 138.78,
+        "brightness": 94.72,
+        "contrast": 46.24,
+        "sift_keypoints": 637
+      },
+      {
+        "name": "kf_035_orig00566.jpg",
+        "registered": false,
+        "laplacian_var": 118.36,
+        "brightness": 94.57,
+        "contrast": 44.54,
+        "sift_keypoints": 571
+      }
+    ]
+  },
+  "reprojection_alignment_stats": [
+    {
+      "image": "kf_001_orig00017.jpg",
+      "visible_points": 5000,
+      "coverage_pct": 100.0
+    },
+    {
+      "image": "kf_007_orig00113.jpg",
+      "visible_points": 4786,
+      "coverage_pct": 95.72
+    },
+    {
+      "image": "kf_010_orig00173.jpg",
+      "visible_points": 5000,
+      "coverage_pct": 100.0
+    }
+  ],
+  "video_2d_aspect_ratio": {
+    "mean_2d_aspect_ratio": 3.24,
+    "median_2d_aspect_ratio": 3.39
+  }
+}
