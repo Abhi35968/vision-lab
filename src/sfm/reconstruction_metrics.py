@@ -9,7 +9,10 @@ import json
 from pathlib import Path
 from typing import Dict, List, Optional, Tuple, Union
 import numpy as np
-import open3d as o3d
+try:
+    import open3d as o3d
+except (ImportError, Exception):
+    o3d = None
 
 from src.sfm.camera_registration import CameraPose
 from src.sfm.feature_tracks import FeatureTrack, FeatureTrackSystem
@@ -262,10 +265,18 @@ class ReconstructionMetrics:
             pts_array = np.array([t.point_3d for t in tri_tracks], dtype=np.float64)
             colors_array = np.tile([0.3, 0.6, 0.9], (len(pts_array), 1))
 
-            pcd = o3d.geometry.PointCloud()
-            pcd.points = o3d.utility.Vector3dVector(pts_array)
-            pcd.colors = o3d.utility.Vector3dVector(colors_array)
-            o3d.io.write_point_cloud(str(out_path / "sparse_points.ply"), pcd)
+            if o3d is not None:
+                pcd = o3d.geometry.PointCloud()
+                pcd.points = o3d.utility.Vector3dVector(pts_array)
+                pcd.colors = o3d.utility.Vector3dVector(colors_array)
+                o3d.io.write_point_cloud(str(out_path / "sparse_points.ply"), pcd)
+            else:
+                try:
+                    import trimesh
+                    pc = trimesh.PointCloud(vertices=pts_array, colors=colors_array)
+                    pc.export(str(out_path / "sparse_points.ply"))
+                except Exception:
+                    pass
 
             np.save(str(out_path / "sparse_points.npy"), pts_array)
         else:

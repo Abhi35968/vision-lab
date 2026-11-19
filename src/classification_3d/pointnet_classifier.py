@@ -160,7 +160,10 @@ class PointNetInferenceEngine:
         5. Samples or upsamples to target point count (e.g. 1024).
         6. Test-time augmentation: runs tta_rotations Y-axis rotations, votes on majority class.
         """
-        import open3d as o3d
+        try:
+            import open3d as o3d
+        except (ImportError, Exception):
+            o3d = None
 
         pts = np.asarray(points, dtype=np.float32)
         n_orig = len(pts)
@@ -169,7 +172,7 @@ class PointNetInferenceEngine:
             raise ValueError("Input point cloud is empty (0 points).")
 
         # --- Step 0: Statistical Outlier Removal ---
-        if n_orig >= 20:
+        if n_orig >= 20 and o3d is not None:
             try:
                 pcd = o3d.geometry.PointCloud()
                 pcd.points = o3d.utility.Vector3dVector(pts.astype(np.float64))

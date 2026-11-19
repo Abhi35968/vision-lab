@@ -13,7 +13,10 @@ if str(ROOT) not in sys.path:
 
 import cv2
 import numpy as np
-import open3d as o3d
+try:
+    import open3d as o3d
+except (ImportError, Exception):
+    o3d = None
 import pycolmap
 import pandas as pd
 

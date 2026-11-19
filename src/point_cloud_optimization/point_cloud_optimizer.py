@@ -15,7 +15,10 @@ from pathlib import Path
 import time
 from typing import Dict, List, Optional, Tuple, Union
 import numpy as np
-import open3d as o3d
+try:
+    import open3d as o3d
+except (ImportError, Exception):
+    o3d = None
 
 logger = logging.getLogger("PointCloudOptimizer")
 

@@ -1190,7 +1190,10 @@ def run_classification_3d(args):
     import numpy as np
     import pandas as pd
     import json
-    import open3d as o3d
+    try:
+        import open3d as o3d
+    except (ImportError, Exception):
+        o3d = None
     from src.classification_3d import (
         PointNetInferenceEngine,
         YOLOPointNetFusionEngine,
@@ -1594,7 +1597,10 @@ def run_sfm_colmap(args):
     import shutil
     import time
     from pathlib import Path
-    import open3d as o3d
+    try:
+        import open3d as o3d
+    except (ImportError, Exception):
+        o3d = None
     import cv2
     import json
     import numpy as np
@@ -1853,7 +1859,10 @@ def run_dense_depth(args):
     """Executes Phase 6 Multi-View Depth Anything V2 Dense 3D Reconstruction."""
     print("[INFO] Initializing Multi-View Depth Anything V2 Dense 3D Reconstruction...")
     from src.dense_depth.multi_view_dense_fuser import MultiViewDenseFuser, DenseFusionConfig
-    import open3d as o3d
+    try:
+        import open3d as o3d
+    except (ImportError, Exception):
+        o3d = None
     import pandas as pd
     import pycolmap
 

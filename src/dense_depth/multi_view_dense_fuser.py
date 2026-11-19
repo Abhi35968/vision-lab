@@ -18,7 +18,10 @@ import time
 from typing import Dict, List, Optional, Tuple, Union, Any
 import cv2
 import numpy as np
-import open3d as o3d
+try:
+    import open3d as o3d
+except (ImportError, Exception):
+    o3d = None
 
 from src.dense_depth.depth_anything_estimator import DepthAnythingEstimator
 from src.point_cloud_optimization.point_cloud_optimizer import (

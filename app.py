@@ -1058,9 +1058,20 @@ with tab_opt:
             dense_ply_path = Path("outputs/dense_depth/fused_dense_object_raw_fused.ply")
 
         if dense_ply_path.exists():
-            import open3d as o3d
-            pcd_dense = o3d.io.read_point_cloud(str(dense_ply_path))
-            d_pts = np.asarray(pcd_dense.points)
+            d_pts = None
+            try:
+                import open3d as o3d
+                pcd_dense = o3d.io.read_point_cloud(str(dense_ply_path))
+                d_pts = np.asarray(pcd_dense.points)
+            except Exception:
+                pass
+            if d_pts is None:
+                try:
+                    import trimesh
+                    m = trimesh.load(str(dense_ply_path), process=False)
+                    d_pts = np.asarray(m.vertices)
+                except Exception:
+                    d_pts = np.empty((0, 3))
 
             c_d1, c_d2, c_d3, c_d4 = st.columns(4)
             c_d1.metric("Dense Surface Points", f"{len(d_pts):,}", "Solid Object Reconstruction")
@@ -1376,9 +1387,21 @@ with tab6:
 
     dense_cloud_file = Path("outputs/dense_depth/fused_dense_object_clean_optimized.ply")
     if dense_cloud_file.exists():
-        import open3d as o3d
-        pcd_cls = o3d.io.read_point_cloud(str(dense_cloud_file))
-        obj_pts_raw = np.asarray(pcd_cls.points)
+        d_pts = None
+        try:
+            import open3d as o3d
+            pcd_cls = o3d.io.read_point_cloud(str(dense_cloud_file))
+            d_pts = np.asarray(pcd_cls.points)
+        except Exception:
+            pass
+        if d_pts is None:
+            try:
+                import trimesh
+                m = trimesh.load(str(dense_cloud_file), process=False)
+                d_pts = np.asarray(m.vertices)
+            except Exception:
+                d_pts = np.empty((0, 3))
+        obj_pts_raw = d_pts
         source_label = "Dense Depth Surface Cloud"
     else:
         pts_df = load_association_data()

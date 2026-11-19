@@ -8,7 +8,10 @@ from pathlib import Path
 from typing import Dict, List, Tuple, Any
 import numpy as np
 import pandas as pd
-import open3d as o3d
+try:
+    import open3d as o3d
+except (ImportError, Exception):
+    o3d = None
 
 
 @dataclass

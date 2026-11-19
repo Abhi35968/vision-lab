@@ -18,7 +18,10 @@ import re
 import sys
 
 import numpy as np
-import open3d as o3d
+try:
+    import open3d as o3d
+except (ImportError, Exception):
+    o3d = None
 import pycolmap
 import matplotlib
 matplotlib.use("Agg")
