@@ -1,0 +1,398 @@
+[
+  {
+    "seed_pair": [
+      24,
+      25
+    ],
+    "seed_pair_tag": "seed_24_25",
+    "focal_length_hypothesis": "focal_935",
+    "focal_length_px": 935.0,
+    "fov_description": "60\u00b0 HFOV (Short Edge)",
+    "is_success": false,
+    "error_message": "Initialization failed: Forced seed pair (24, 25) was not found or failed geometric verification/triangulation.",
+    "registered_cameras": 0,
+    "total_candidate_keyframes": 47,
+    "registration_rate_percent": 0.0,
+    "reconstructed_3d_points": 0,
+    "total_observations": 0,
+    "reprojection_errors_px": {
+      "rmse": 0.0,
+      "mean": 0.0,
+      "median": 0.0,
+      "p90": 0.0,
+      "p95": 0.0,
+      "max": 0.0
+    },
+    "accuracy_percentages": {
+      "below_1px": 0.0,
+      "below_2px": 0.0,
+      "below_4px": 0.0,
+      "below_10px": 0.0
+    },
+    "outlier_counts": {
+      "gt_4px": 0,
+      "gt_10px": 0
+    },
+    "bundle_adjustment": {
+      "initial_mean_px": 0.0,
+      "final_mean_px": 0.0,
+      "seed_baseline_before": 0.0,
+      "seed_baseline_after": 0.0,
+      "seed_baseline_preserved": false
+    },
+    "runtime_seconds": 19.02,
+    "output_dir": "D:\\7thsem\\3DCV_proj\\outputs\\real_video_sfm_validation\\seed_24_25\\focal_935"
+  },
+  {
+    "seed_pair": [
+      24,
+      25
+    ],
+    "seed_pair_tag": "seed_24_25",
+    "focal_length_hypothesis": "focal_1300",
+    "focal_length_px": 1300.0,
+    "fov_description": "45.1\u00b0 HFOV / 72.9\u00b0 VFOV (Intermediate)",
+    "is_success": true,
+    "error_message": null,
+    "registered_cameras": 18,
+    "total_candidate_keyframes": 47,
+    "registration_rate_percent": 38.3,
+    "reconstructed_3d_points": 1448,
+    "total_observations": 4637,
+    "reprojection_errors_px": {
+      "rmse": 12.958,
+      "mean": 2.558,
+      "median": 0.814,
+      "p90": 3.868,
+      "p95": 8.159,
+      "max": 622.65
+    },
+    "accuracy_percentages": {
+      "below_1px": 57.52,
+      "below_2px": 76.97,
+      "below_4px": 90.4,
+      "below_10px": 96.03
+    },
+    "outlier_counts": {
+      "gt_4px": 445,
+      "gt_10px": 184
+    },
+    "bundle_adjustment": {
+      "initial_mean_px": 2.589,
+      "final_mean_px": 2.558,
+      "seed_baseline_before": 1.0,
+      "seed_baseline_after": 1.0,
+      "seed_baseline_preserved": true
+    },
+    "runtime_seconds": 0.05,
+    "output_dir": "D:\\7thsem\\3DCV_proj\\outputs\\real_video_sfm_validation\\seed_24_25\\focal_1300"
+  },
+  {
+    "seed_pair": [
+      24,
+      25
+    ],
+    "seed_pair_tag": "seed_24_25",
+    "focal_length_hypothesis": "focal_1663",
+    "focal_length_px": 1662.8,
+    "fov_description": "60\u00b0 VFOV (Long Edge)",
+    "is_success": true,
+    "error_message": null,
+    "registered_cameras": 17,
+    "total_candidate_keyframes": 47,
+    "registration_rate_percent": 36.17,
+    "reconstructed_3d_points": 1205,
+    "total_observations": 3994,
+    "reprojection_errors_px": {
+      "rmse": 15.543,
+      "mean": 4.14,
+      "median": 2.027,
+      "p90": 6.108,
+      "p95": 10.191,
+      "max": 402.912
+    },
+    "accuracy_percentages": {
+      "below_1px": 25.51,
+      "below_2px": 49.55,
+      "below_4px": 79.99,
+      "below_10px": 94.89
+    },
+    "outlier_counts": {
+      "gt_4px": 799,
+      "gt_10px": 204
+    },
+    "bundle_adjustment": {
+      "initial_mean_px": 4.14,
+      "final_mean_px": 4.14,
+      "seed_baseline_before": 1.0,
+      "seed_baseline_after": 1.0,
+      "seed_baseline_preserved": true
+    },
+    "runtime_seconds": 0.05,
+    "output_dir": "D:\\7thsem\\3DCV_proj\\outputs\\real_video_sfm_validation\\seed_24_25\\focal_1663"
+  },
+  {
+    "seed_pair": [
+      41,
+      43
+    ],
+    "seed_pair_tag": "seed_41_43",
+    "focal_length_hypothesis": "focal_935",
+    "focal_length_px": 935.0,
+    "fov_description": "60\u00b0 HFOV (Short Edge)",
+    "is_success": true,
+    "error_message": null,
+    "registered_cameras": 15,
+    "total_candidate_keyframes": 47,
+    "registration_rate_percent": 31.91,
+    "reconstructed_3d_points": 879,
+    "total_observations": 3050,
+    "reprojection_errors_px": {
+      "rmse": 55.68,
+      "mean": 7.282,
+      "median": 1.294,
+      "p90": 5.116,
+      "p95": 15.326,
+      "max": 1075.322
+    },
+    "accuracy_percentages": {
+      "below_1px": 39.51,
+      "below_2px": 67.21,
+      "below_4px": 86.0,
+      "below_10px": 93.87
+    },
+    "outlier_counts": {
+      "gt_4px": 427,
+      "gt_10px": 187
+    },
+    "bundle_adjustment": {
+      "initial_mean_px": 7.302,
+      "final_mean_px": 7.282,
+      "seed_baseline_before": 1.0,
+      "seed_baseline_after": 1.0,
+      "seed_baseline_preserved": true
+    },
+    "runtime_seconds": 0.05,
+    "output_dir": "D:\\7thsem\\3DCV_proj\\outputs\\real_video_sfm_validation\\seed_41_43\\focal_935"
+  },
+  {
+    "seed_pair": [
+      41,
+      43
+    ],
+    "seed_pair_tag": "seed_41_43",
+    "focal_length_hypothesis": "focal_1300",
+    "focal_length_px": 1300.0,
+    "fov_description": "45.1\u00b0 HFOV / 72.9\u00b0 VFOV (Intermediate)",
+    "is_success": true,
+    "error_message": null,
+    "registered_cameras": 13,
+    "total_candidate_keyframes": 47,
+    "registration_rate_percent": 27.66,
+    "reconstructed_3d_points": 623,
+    "total_observations": 2381,
+    "reprojection_errors_px": {
+      "rmse": 23.384,
+      "mean": 2.852,
+      "median": 0.993,
+      "p90": 3.277,
+      "p95": 5.873,
+      "max": 899.591
+    },
+    "accuracy_percentages": {
+      "below_1px": 50.4,
+      "below_2px": 76.1,
+      "below_4px": 93.15,
+      "below_10px": 97.19
+    },
+    "outlier_counts": {
+      "gt_4px": 163,
+      "gt_10px": 67
+    },
+    "bundle_adjustment": {
+      "initial_mean_px": 2.897,
+      "final_mean_px": 2.852,
+      "seed_baseline_before": 1.0,
+      "seed_baseline_after": 1.0,
+      "seed_baseline_preserved": true
+    },
+    "runtime_seconds": 0.05,
+    "output_dir": "D:\\7thsem\\3DCV_proj\\outputs\\real_video_sfm_validation\\seed_41_43\\focal_1300"
+  },
+  {
+    "seed_pair": [
+      41,
+      43
+    ],
+    "seed_pair_tag": "seed_41_43",
+    "focal_length_hypothesis": "focal_1663",
+    "focal_length_px": 1662.8,
+    "fov_description": "60\u00b0 VFOV (Long Edge)",
+    "is_success": true,
+    "error_message": null,
+    "registered_cameras": 12,
+    "total_candidate_keyframes": 47,
+    "registration_rate_percent": 25.53,
+    "reconstructed_3d_points": 377,
+    "total_observations": 1694,
+    "reprojection_errors_px": {
+      "rmse": 4.451,
+      "mean": 1.817,
+      "median": 1.049,
+      "p90": 3.165,
+      "p95": 4.686,
+      "max": 76.845
+    },
+    "accuracy_percentages": {
+      "below_1px": 48.76,
+      "below_2px": 77.1,
+      "below_4px": 93.62,
+      "below_10px": 98.41
+    },
+    "outlier_counts": {
+      "gt_4px": 108,
+      "gt_10px": 27
+    },
+    "bundle_adjustment": {
+      "initial_mean_px": 1.908,
+      "final_mean_px": 1.817,
+      "seed_baseline_before": 1.0,
+      "seed_baseline_after": 1.0,
+      "seed_baseline_preserved": true
+    },
+    "runtime_seconds": 0.05,
+    "output_dir": "D:\\7thsem\\3DCV_proj\\outputs\\real_video_sfm_validation\\seed_41_43\\focal_1663"
+  },
+  {
+    "seed_pair": [
+      22,
+      24
+    ],
+    "seed_pair_tag": "seed_22_24",
+    "focal_length_hypothesis": "focal_935",
+    "focal_length_px": 935.0,
+    "fov_description": "60\u00b0 HFOV (Short Edge)",
+    "is_success": false,
+    "error_message": "Initialization failed: Forced seed pair (22, 24) was not found or failed geometric verification/triangulation.",
+    "registered_cameras": 0,
+    "total_candidate_keyframes": 47,
+    "registration_rate_percent": 0.0,
+    "reconstructed_3d_points": 0,
+    "total_observations": 0,
+    "reprojection_errors_px": {
+      "rmse": 0.0,
+      "mean": 0.0,
+      "median": 0.0,
+      "p90": 0.0,
+      "p95": 0.0,
+      "max": 0.0
+    },
+    "accuracy_percentages": {
+      "below_1px": 0.0,
+      "below_2px": 0.0,
+      "below_4px": 0.0,
+      "below_10px": 0.0
+    },
+    "outlier_counts": {
+      "gt_4px": 0,
+      "gt_10px": 0
+    },
+    "bundle_adjustment": {
+      "initial_mean_px": 0.0,
+      "final_mean_px": 0.0,
+      "seed_baseline_before": 0.0,
+      "seed_baseline_after": 0.0,
+      "seed_baseline_preserved": false
+    },
+    "runtime_seconds": 19.04,
+    "output_dir": "D:\\7thsem\\3DCV_proj\\outputs\\real_video_sfm_validation\\seed_22_24\\focal_935"
+  },
+  {
+    "seed_pair": [
+      22,
+      24
+    ],
+    "seed_pair_tag": "seed_22_24",
+    "focal_length_hypothesis": "focal_1300",
+    "focal_length_px": 1300.0,
+    "fov_description": "45.1\u00b0 HFOV / 72.9\u00b0 VFOV (Intermediate)",
+    "is_success": false,
+    "error_message": "Initialization failed: Forced seed pair (22, 24) was not found or failed geometric verification/triangulation.",
+    "registered_cameras": 0,
+    "total_candidate_keyframes": 47,
+    "registration_rate_percent": 0.0,
+    "reconstructed_3d_points": 0,
+    "total_observations": 0,
+    "reprojection_errors_px": {
+      "rmse": 0.0,
+      "mean": 0.0,
+      "median": 0.0,
+      "p90": 0.0,
+      "p95": 0.0,
+      "max": 0.0
+    },
+    "accuracy_percentages": {
+      "below_1px": 0.0,
+      "below_2px": 0.0,
+      "below_4px": 0.0,
+      "below_10px": 0.0
+    },
+    "outlier_counts": {
+      "gt_4px": 0,
+      "gt_10px": 0
+    },
+    "bundle_adjustment": {
+      "initial_mean_px": 0.0,
+      "final_mean_px": 0.0,
+      "seed_baseline_before": 0.0,
+      "seed_baseline_after": 0.0,
+      "seed_baseline_preserved": false
+    },
+    "runtime_seconds": 18.66,
+    "output_dir": "D:\\7thsem\\3DCV_proj\\outputs\\real_video_sfm_validation\\seed_22_24\\focal_1300"
+  },
+  {
+    "seed_pair": [
+      22,
+      24
+    ],
+    "seed_pair_tag": "seed_22_24",
+    "focal_length_hypothesis": "focal_1663",
+    "focal_length_px": 1662.8,
+    "fov_description": "60\u00b0 VFOV (Long Edge)",
+    "is_success": false,
+    "error_message": "Initialization failed: Forced seed pair (22, 24) was not found or failed geometric verification/triangulation.",
+    "registered_cameras": 0,
+    "total_candidate_keyframes": 47,
+    "registration_rate_percent": 0.0,
+    "reconstructed_3d_points": 0,
+    "total_observations": 0,
+    "reprojection_errors_px": {
+      "rmse": 0.0,
+      "mean": 0.0,
+      "median": 0.0,
+      "p90": 0.0,
+      "p95": 0.0,
+      "max": 0.0
+    },
+    "accuracy_percentages": {
+      "below_1px": 0.0,
+      "below_2px": 0.0,
+      "below_4px": 0.0,
+      "below_10px": 0.0
+    },
+    "outlier_counts": {
+      "gt_4px": 0,
+      "gt_10px": 0
+    },
+    "bundle_adjustment": {
+      "initial_mean_px": 0.0,
+      "final_mean_px": 0.0,
+      "seed_baseline_before": 0.0,
+      "seed_baseline_after": 0.0,
+      "seed_baseline_preserved": false
+    },
+    "runtime_seconds": 18.78,
+    "output_dir": "D:\\7thsem\\3DCV_proj\\outputs\\real_video_sfm_validation\\seed_22_24\\focal_1663"
+  }
+]

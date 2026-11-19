@@ -1,0 +1,3049 @@
+{
+  "total_candidates_evaluated": 47,
+  "refined_classification_counts": {
+    "HIGH_GEOMETRIC_CONFIDENCE": 14,
+    "MODERATE_GEOMETRIC_CONFIDENCE": 15,
+    "LOW_GEOMETRIC_CONFIDENCE": 13,
+    "GEOMETRIC_OUTLIER": 5,
+    "INSUFFICIENT_GEOMETRIC_EVIDENCE": 0
+  },
+  "reprojection_statistics": {
+    "high_conf_mean_err_px": 1.037,
+    "high_conf_median_err_px": 0.935,
+    "mod_conf_mean_err_px": 1.409,
+    "outlier_mean_err_px": 70.789
+  },
+  "triangulation_statistics": {
+    "high_conf_mean_max_angle_deg": 4.74,
+    "mod_conf_mean_max_angle_deg": 3.81
+  },
+  "points": [
+    {
+      "point_id": 35,
+      "track_id": 128,
+      "point_3d": [
+        -1.114,
+        3.522,
+        6.2345
+      ],
+      "original_classification": "WEAK_OBJECT_CANDIDATE",
+      "original_mask_support_ratio": 1.0,
+      "total_observations": 2,
+      "masked_observations": 2,
+      "inside_mask_observations": 2,
+      "num_distinct_cameras": 2,
+      "observed_camera_ids": [
+        0,
+        1
+      ],
+      "supporting_camera_ids": [
+        0,
+        1
+      ],
+      "reprojection_statistics": {
+        "mean_px": 2.923,
+        "median_px": 2.923,
+        "std_px": 0.019,
+        "p90_px": 2.938,
+        "p95_px": 2.94,
+        "max_px": 2.942,
+        "count_gt_2px": 2,
+        "count_gt_4px": 0,
+        "count_gt_10px": 0,
+        "num_outlier_observations": 0,
+        "filtered_mean_px": 2.923,
+        "filtered_median_px": 2.923
+      },
+      "depth_and_distance": {
+        "min_camera_distance": 7.6281,
+        "max_camera_distance": 7.694,
+        "mean_camera_distance": 7.661,
+        "relative_distance_std": 0.0043,
+        "has_positive_depth_all_views": true
+      },
+      "triangulation_geometry": {
+        "max_angle_deg": 2.43,
+        "median_angle_deg": 2.43,
+        "min_angle_deg": 2.43,
+        "max_camera_baseline": 0.3315,
+        "baseline_to_depth_ratio": 0.0433,
+        "is_triangulation_degenerate": false
+      },
+      "spatial_clustering": {
+        "nn_distance_1": 2.3324,
+        "nn_distance_3": 5.2361,
+        "is_spatial_outlier": true,
+        "cluster_id": -1
+      },
+      "refinement": {
+        "refined_status": "GEOMETRIC_OUTLIER",
+        "rationale": "Spatial outlier: located far from main object cluster and lacks strong multi-view anchoring (cams=2, med_err=2.92px)."
+      }
+    },
+    {
+      "point_id": 187,
+      "track_id": 420,
+      "point_3d": [
+        -1.9595,
+        -1.9426,
+        4.6132
+      ],
+      "original_classification": "STRONG_OBJECT_CANDIDATE",
+      "original_mask_support_ratio": 1.0,
+      "total_observations": 3,
+      "masked_observations": 3,
+      "inside_mask_observations": 3,
+      "num_distinct_cameras": 3,
+      "observed_camera_ids": [
+        2,
+        3,
+        4
+      ],
+      "supporting_camera_ids": [
+        2,
+        3,
+        4
+      ],
+      "reprojection_statistics": {
+        "mean_px": 1.193,
+        "median_px": 1.337,
+        "std_px": 0.24,
+        "p90_px": 1.376,
+        "p95_px": 1.381,
+        "max_px": 1.386,
+        "count_gt_2px": 0,
+        "count_gt_4px": 0,
+        "count_gt_10px": 0,
+        "num_outlier_observations": 0,
+        "filtered_mean_px": 1.193,
+        "filtered_median_px": 1.337
+      },
+      "depth_and_distance": {
+        "min_camera_distance": 6.5077,
+        "max_camera_distance": 6.8729,
+        "mean_camera_distance": 6.6859,
+        "relative_distance_std": 0.0223,
+        "has_positive_depth_all_views": true
+      },
+      "triangulation_geometry": {
+        "max_angle_deg": 10.23,
+        "median_angle_deg": 6.53,
+        "min_angle_deg": 3.69,
+        "max_camera_baseline": 1.2467,
+        "baseline_to_depth_ratio": 0.1865,
+        "is_triangulation_degenerate": false
+      },
+      "spatial_clustering": {
+        "nn_distance_1": 0.2218,
+        "nn_distance_3": 0.8033,
+        "is_spatial_outlier": false,
+        "cluster_id": 0
+      },
+      "refinement": {
+        "refined_status": "HIGH_GEOMETRIC_CONFIDENCE",
+        "rationale": "High confidence: 3/3 views inside mask (ratio=1.00), strong parallax (10.2\u00b0), tightly bounded reprojection (med=1.34px, p90=1.38px)."
+      }
+    },
+    {
+      "point_id": 255,
+      "track_id": 504,
+      "point_3d": [
+        -2.076,
+        -1.8679,
+        4.4399
+      ],
+      "original_classification": "WEAK_OBJECT_CANDIDATE",
+      "original_mask_support_ratio": 1.0,
+      "total_observations": 2,
+      "masked_observations": 2,
+      "inside_mask_observations": 2,
+      "num_distinct_cameras": 2,
+      "observed_camera_ids": [
+        3,
+        5
+      ],
+      "supporting_camera_ids": [
+        3,
+        5
+      ],
+      "reprojection_statistics": {
+        "mean_px": 3.691,
+        "median_px": 3.691,
+        "std_px": 0.02,
+        "p90_px": 3.708,
+        "p95_px": 3.71,
+        "max_px": 3.712,
+        "count_gt_2px": 2,
+        "count_gt_4px": 0,
+        "count_gt_10px": 0,
+        "num_outlier_observations": 0,
+        "filtered_mean_px": 3.691,
+        "filtered_median_px": 3.691
+      },
+      "depth_and_distance": {
+        "min_camera_distance": 6.5593,
+        "max_camera_distance": 6.8558,
+        "mean_camera_distance": 6.7075,
+        "relative_distance_std": 0.0221,
+        "has_positive_depth_all_views": true
+      },
+      "triangulation_geometry": {
+        "max_angle_deg": 10.17,
+        "median_angle_deg": 10.17,
+        "min_angle_deg": 10.17,
+        "max_camera_baseline": 1.225,
+        "baseline_to_depth_ratio": 0.1826,
+        "is_triangulation_degenerate": false
+      },
+      "spatial_clustering": {
+        "nn_distance_1": 0.2218,
+        "nn_distance_3": 0.8848,
+        "is_spatial_outlier": false,
+        "cluster_id": 0
+      },
+      "refinement": {
+        "refined_status": "LOW_GEOMETRIC_CONFIDENCE",
+        "rationale": "Low confidence: elevated reprojection error (3.69px)."
+      }
+    },
+    {
+      "point_id": 256,
+      "track_id": 506,
+      "point_3d": [
+        -1.0212,
+        -2.3019,
+        4.8786
+      ],
+      "original_classification": "WEAK_OBJECT_CANDIDATE",
+      "original_mask_support_ratio": 1.0,
+      "total_observations": 2,
+      "masked_observations": 2,
+      "inside_mask_observations": 2,
+      "num_distinct_cameras": 2,
+      "observed_camera_ids": [
+        3,
+        5
+      ],
+      "supporting_camera_ids": [
+        3,
+        5
+      ],
+      "reprojection_statistics": {
+        "mean_px": 2.05,
+        "median_px": 2.05,
+        "std_px": 0.058,
+        "p90_px": 2.097,
+        "p95_px": 2.102,
+        "max_px": 2.108,
+        "count_gt_2px": 1,
+        "count_gt_4px": 0,
+        "count_gt_10px": 0,
+        "num_outlier_observations": 0,
+        "filtered_mean_px": 2.05,
+        "filtered_median_px": 2.05
+      },
+      "depth_and_distance": {
+        "min_camera_distance": 6.725,
+        "max_camera_distance": 6.8032,
+        "mean_camera_distance": 6.7641,
+        "relative_distance_std": 0.0058,
+        "has_positive_depth_all_views": true
+      },
+      "triangulation_geometry": {
+        "max_angle_deg": 10.37,
+        "median_angle_deg": 10.37,
+        "min_angle_deg": 10.37,
+        "max_camera_baseline": 1.225,
+        "baseline_to_depth_ratio": 0.1811,
+        "is_triangulation_degenerate": false
+      },
+      "spatial_clustering": {
+        "nn_distance_1": 0.5774,
+        "nn_distance_3": 0.8542,
+        "is_spatial_outlier": false,
+        "cluster_id": 1
+      },
+      "refinement": {
+        "refined_status": "MODERATE_GEOMETRIC_CONFIDENCE",
+        "rationale": "Moderate confidence: 2/2 views inside mask (ratio=1.00), parallax 10.4\u00b0, acceptable reprojection (med=2.05px, p90=2.10px)."
+      }
+    },
+    {
+      "point_id": 294,
+      "track_id": 561,
+      "point_3d": [
+        -0.7299,
+        -1.5019,
+        4.8099
+      ],
+      "original_classification": "WEAK_OBJECT_CANDIDATE",
+      "original_mask_support_ratio": 1.0,
+      "total_observations": 2,
+      "masked_observations": 2,
+      "inside_mask_observations": 2,
+      "num_distinct_cameras": 2,
+      "observed_camera_ids": [
+        4,
+        5
+      ],
+      "supporting_camera_ids": [
+        4,
+        5
+      ],
+      "reprojection_statistics": {
+        "mean_px": 1.677,
+        "median_px": 1.677,
+        "std_px": 0.012,
+        "p90_px": 1.687,
+        "p95_px": 1.688,
+        "max_px": 1.689,
+        "count_gt_2px": 0,
+        "count_gt_4px": 0,
+        "count_gt_10px": 0,
+        "num_outlier_observations": 0,
+        "filtered_mean_px": 1.677,
+        "filtered_median_px": 1.677
+      },
+      "depth_and_distance": {
+        "min_camera_distance": 6.2949,
+        "max_camera_distance": 6.2992,
+        "mean_camera_distance": 6.297,
+        "relative_distance_std": 0.0003,
+        "has_positive_depth_all_views": true
+      },
+      "triangulation_geometry": {
+        "max_angle_deg": 3.96,
+        "median_angle_deg": 3.96,
+        "min_angle_deg": 3.96,
+        "max_camera_baseline": 0.4347,
+        "baseline_to_depth_ratio": 0.069,
+        "is_triangulation_degenerate": false
+      },
+      "spatial_clustering": {
+        "nn_distance_1": 0.0,
+        "nn_distance_3": 0.8542,
+        "is_spatial_outlier": false,
+        "cluster_id": 1
+      },
+      "refinement": {
+        "refined_status": "MODERATE_GEOMETRIC_CONFIDENCE",
+        "rationale": "Moderate confidence: 2/2 views inside mask (ratio=1.00), parallax 4.0\u00b0, acceptable reprojection (med=1.68px, p90=1.69px)."
+      }
+    },
+    {
+      "point_id": 295,
+      "track_id": 562,
+      "point_3d": [
+        -0.7299,
+        -1.5019,
+        4.8099
+      ],
+      "original_classification": "WEAK_OBJECT_CANDIDATE",
+      "original_mask_support_ratio": 1.0,
+      "total_observations": 2,
+      "masked_observations": 2,
+      "inside_mask_observations": 2,
+      "num_distinct_cameras": 2,
+      "observed_camera_ids": [
+        4,
+        5
+      ],
+      "supporting_camera_ids": [
+        4,
+        5
+      ],
+      "reprojection_statistics": {
+        "mean_px": 1.677,
+        "median_px": 1.677,
+        "std_px": 0.012,
+        "p90_px": 1.687,
+        "p95_px": 1.688,
+        "max_px": 1.689,
+        "count_gt_2px": 0,
+        "count_gt_4px": 0,
+        "count_gt_10px": 0,
+        "num_outlier_observations": 0,
+        "filtered_mean_px": 1.677,
+        "filtered_median_px": 1.677
+      },
+      "depth_and_distance": {
+        "min_camera_distance": 6.2949,
+        "max_camera_distance": 6.2992,
+        "mean_camera_distance": 6.297,
+        "relative_distance_std": 0.0003,
+        "has_positive_depth_all_views": true
+      },
+      "triangulation_geometry": {
+        "max_angle_deg": 3.96,
+        "median_angle_deg": 3.96,
+        "min_angle_deg": 3.96,
+        "max_camera_baseline": 0.4347,
+        "baseline_to_depth_ratio": 0.069,
+        "is_triangulation_degenerate": false
+      },
+      "spatial_clustering": {
+        "nn_distance_1": 0.0,
+        "nn_distance_3": 0.8542,
+        "is_spatial_outlier": false,
+        "cluster_id": 1
+      },
+      "refinement": {
+        "refined_status": "MODERATE_GEOMETRIC_CONFIDENCE",
+        "rationale": "Moderate confidence: 2/2 views inside mask (ratio=1.00), parallax 4.0\u00b0, acceptable reprojection (med=1.68px, p90=1.69px)."
+      }
+    },
+    {
+      "point_id": 296,
+      "track_id": 563,
+      "point_3d": [
+        -0.7656,
+        -2.1069,
+        5.3582
+      ],
+      "original_classification": "WEAK_OBJECT_CANDIDATE",
+      "original_mask_support_ratio": 1.0,
+      "total_observations": 2,
+      "masked_observations": 2,
+      "inside_mask_observations": 2,
+      "num_distinct_cameras": 2,
+      "observed_camera_ids": [
+        4,
+        5
+      ],
+      "supporting_camera_ids": [
+        4,
+        5
+      ],
+      "reprojection_statistics": {
+        "mean_px": 0.678,
+        "median_px": 0.678,
+        "std_px": 0.009,
+        "p90_px": 0.686,
+        "p95_px": 0.687,
+        "max_px": 0.687,
+        "count_gt_2px": 0,
+        "count_gt_4px": 0,
+        "count_gt_10px": 0,
+        "num_outlier_observations": 0,
+        "filtered_mean_px": 0.678,
+        "filtered_median_px": 0.678
+      },
+      "depth_and_distance": {
+        "min_camera_distance": 6.9924,
+        "max_camera_distance": 7.014,
+        "mean_camera_distance": 7.0032,
+        "relative_distance_std": 0.0015,
+        "has_positive_depth_all_views": true
+      },
+      "triangulation_geometry": {
+        "max_angle_deg": 3.55,
+        "median_angle_deg": 3.55,
+        "min_angle_deg": 3.55,
+        "max_camera_baseline": 0.4347,
+        "baseline_to_depth_ratio": 0.0621,
+        "is_triangulation_degenerate": false
+      },
+      "spatial_clustering": {
+        "nn_distance_1": 0.5774,
+        "nn_distance_3": 0.8173,
+        "is_spatial_outlier": false,
+        "cluster_id": 1
+      },
+      "refinement": {
+        "refined_status": "MODERATE_GEOMETRIC_CONFIDENCE",
+        "rationale": "Moderate confidence: 2/2 views inside mask (ratio=1.00), parallax 3.5\u00b0, acceptable reprojection (med=0.68px, p90=0.69px)."
+      }
+    },
+    {
+      "point_id": 526,
+      "track_id": 833,
+      "point_3d": [
+        -2.4738,
+        -2.1577,
+        4.9355
+      ],
+      "original_classification": "AMBIGUOUS",
+      "original_mask_support_ratio": 0.333,
+      "total_observations": 3,
+      "masked_observations": 3,
+      "inside_mask_observations": 1,
+      "num_distinct_cameras": 3,
+      "observed_camera_ids": [
+        6,
+        8,
+        7
+      ],
+      "supporting_camera_ids": [
+        6
+      ],
+      "reprojection_statistics": {
+        "mean_px": 3.568,
+        "median_px": 2.894,
+        "std_px": 1.295,
+        "p90_px": 4.882,
+        "p95_px": 5.131,
+        "max_px": 5.379,
+        "count_gt_2px": 3,
+        "count_gt_4px": 1,
+        "count_gt_10px": 0,
+        "num_outlier_observations": 0,
+        "filtered_mean_px": 3.568,
+        "filtered_median_px": 2.894
+      },
+      "depth_and_distance": {
+        "min_camera_distance": 7.6665,
+        "max_camera_distance": 7.865,
+        "mean_camera_distance": 7.7698,
+        "relative_distance_std": 0.0105,
+        "has_positive_depth_all_views": true
+      },
+      "triangulation_geometry": {
+        "max_angle_deg": 5.84,
+        "median_angle_deg": 4.08,
+        "min_angle_deg": 1.94,
+        "max_camera_baseline": 0.7946,
+        "baseline_to_depth_ratio": 0.1023,
+        "is_triangulation_degenerate": false
+      },
+      "spatial_clustering": {
+        "nn_distance_1": 0.2146,
+        "nn_distance_3": 0.308,
+        "is_spatial_outlier": false,
+        "cluster_id": 0
+      },
+      "refinement": {
+        "refined_status": "LOW_GEOMETRIC_CONFIDENCE",
+        "rationale": "Low confidence: low mask support (0.33)."
+      }
+    },
+    {
+      "point_id": 528,
+      "track_id": 835,
+      "point_3d": [
+        -2.7863,
+        -2.4086,
+        5.2269
+      ],
+      "original_classification": "AMBIGUOUS",
+      "original_mask_support_ratio": 0.333,
+      "total_observations": 3,
+      "masked_observations": 3,
+      "inside_mask_observations": 1,
+      "num_distinct_cameras": 3,
+      "observed_camera_ids": [
+        6,
+        8,
+        7
+      ],
+      "supporting_camera_ids": [
+        6
+      ],
+      "reprojection_statistics": {
+        "mean_px": 5.343,
+        "median_px": 3.826,
+        "std_px": 2.173,
+        "p90_px": 7.498,
+        "p95_px": 7.957,
+        "max_px": 8.416,
+        "count_gt_2px": 3,
+        "count_gt_4px": 1,
+        "count_gt_10px": 0,
+        "num_outlier_observations": 0,
+        "filtered_mean_px": 5.343,
+        "filtered_median_px": 3.826
+      },
+      "depth_and_distance": {
+        "min_camera_distance": 8.1581,
+        "max_camera_distance": 8.3562,
+        "mean_camera_distance": 8.2605,
+        "relative_distance_std": 0.0098,
+        "has_positive_depth_all_views": true
+      },
+      "triangulation_geometry": {
+        "max_angle_deg": 5.49,
+        "median_angle_deg": 3.84,
+        "min_angle_deg": 1.82,
+        "max_camera_baseline": 0.7946,
+        "baseline_to_depth_ratio": 0.0962,
+        "is_triangulation_degenerate": false
+      },
+      "spatial_clustering": {
+        "nn_distance_1": 0.2524,
+        "nn_distance_3": 0.3377,
+        "is_spatial_outlier": false,
+        "cluster_id": 0
+      },
+      "refinement": {
+        "refined_status": "LOW_GEOMETRIC_CONFIDENCE",
+        "rationale": "Low confidence: low mask support (0.33), elevated reprojection error (3.83px)."
+      }
+    },
+    {
+      "point_id": 582,
+      "track_id": 924,
+      "point_3d": [
+        -1.5222,
+        -2.8508,
+        6.4725
+      ],
+      "original_classification": "WEAK_OBJECT_CANDIDATE",
+      "original_mask_support_ratio": 0.5,
+      "total_observations": 2,
+      "masked_observations": 2,
+      "inside_mask_observations": 1,
+      "num_distinct_cameras": 2,
+      "observed_camera_ids": [
+        7,
+        8
+      ],
+      "supporting_camera_ids": [
+        8
+      ],
+      "reprojection_statistics": {
+        "mean_px": 3.43,
+        "median_px": 3.43,
+        "std_px": 0.018,
+        "p90_px": 3.445,
+        "p95_px": 3.447,
+        "max_px": 3.449,
+        "count_gt_2px": 2,
+        "count_gt_4px": 0,
+        "count_gt_10px": 0,
+        "num_outlier_observations": 0,
+        "filtered_mean_px": 3.43,
+        "filtered_median_px": 3.43
+      },
+      "depth_and_distance": {
+        "min_camera_distance": 8.4493,
+        "max_camera_distance": 8.59,
+        "mean_camera_distance": 8.5197,
+        "relative_distance_std": 0.0083,
+        "has_positive_depth_all_views": true
+      },
+      "triangulation_geometry": {
+        "max_angle_deg": 1.62,
+        "median_angle_deg": 1.62,
+        "min_angle_deg": 1.62,
+        "max_camera_baseline": 0.2792,
+        "baseline_to_depth_ratio": 0.0328,
+        "is_triangulation_degenerate": false
+      },
+      "spatial_clustering": {
+        "nn_distance_1": 0.1425,
+        "nn_distance_3": 0.1832,
+        "is_spatial_outlier": false,
+        "cluster_id": 2
+      },
+      "refinement": {
+        "refined_status": "LOW_GEOMETRIC_CONFIDENCE",
+        "rationale": "Low confidence: weak parallax (1.6\u00b0), elevated reprojection error (3.43px)."
+      }
+    },
+    {
+      "point_id": 584,
+      "track_id": 926,
+      "point_3d": [
+        -1.4507,
+        -2.7447,
+        6.7616
+      ],
+      "original_classification": "STRONG_OBJECT_CANDIDATE",
+      "original_mask_support_ratio": 1.0,
+      "total_observations": 3,
+      "masked_observations": 3,
+      "inside_mask_observations": 3,
+      "num_distinct_cameras": 3,
+      "observed_camera_ids": [
+        7,
+        8,
+        9
+      ],
+      "supporting_camera_ids": [
+        7,
+        8,
+        9
+      ],
+      "reprojection_statistics": {
+        "mean_px": 3.337,
+        "median_px": 4.078,
+        "std_px": 1.853,
+        "p90_px": 4.93,
+        "p95_px": 5.036,
+        "max_px": 5.142,
+        "count_gt_2px": 2,
+        "count_gt_4px": 2,
+        "count_gt_10px": 0,
+        "num_outlier_observations": 0,
+        "filtered_mean_px": 3.337,
+        "filtered_median_px": 4.078
+      },
+      "depth_and_distance": {
+        "min_camera_distance": 8.3739,
+        "max_camera_distance": 8.7201,
+        "mean_camera_distance": 8.5568,
+        "relative_distance_std": 0.0166,
+        "has_positive_depth_all_views": true
+      },
+      "triangulation_geometry": {
+        "max_angle_deg": 2.67,
+        "median_angle_deg": 1.59,
+        "min_angle_deg": 1.11,
+        "max_camera_baseline": 0.5277,
+        "baseline_to_depth_ratio": 0.0617,
+        "is_triangulation_degenerate": false
+      },
+      "spatial_clustering": {
+        "nn_distance_1": 0.1357,
+        "nn_distance_3": 0.1735,
+        "is_spatial_outlier": false,
+        "cluster_id": 2
+      },
+      "refinement": {
+        "refined_status": "LOW_GEOMETRIC_CONFIDENCE",
+        "rationale": "Low confidence: elevated reprojection error (4.08px)."
+      }
+    },
+    {
+      "point_id": 585,
+      "track_id": 927,
+      "point_3d": [
+        -1.3202,
+        -2.6318,
+        6.7055
+      ],
+      "original_classification": "WEAK_OBJECT_CANDIDATE",
+      "original_mask_support_ratio": 0.667,
+      "total_observations": 3,
+      "masked_observations": 3,
+      "inside_mask_observations": 2,
+      "num_distinct_cameras": 3,
+      "observed_camera_ids": [
+        7,
+        8,
+        9
+      ],
+      "supporting_camera_ids": [
+        7,
+        9
+      ],
+      "reprojection_statistics": {
+        "mean_px": 2.879,
+        "median_px": 2.371,
+        "std_px": 1.164,
+        "p90_px": 4.065,
+        "p95_px": 4.277,
+        "max_px": 4.489,
+        "count_gt_2px": 2,
+        "count_gt_4px": 1,
+        "count_gt_10px": 0,
+        "num_outlier_observations": 0,
+        "filtered_mean_px": 2.879,
+        "filtered_median_px": 2.371
+      },
+      "depth_and_distance": {
+        "min_camera_distance": 8.2167,
+        "max_camera_distance": 8.5641,
+        "mean_camera_distance": 8.4001,
+        "relative_distance_std": 0.017,
+        "has_positive_depth_all_views": true
+      },
+      "triangulation_geometry": {
+        "max_angle_deg": 2.71,
+        "median_angle_deg": 1.61,
+        "min_angle_deg": 1.13,
+        "max_camera_baseline": 0.5277,
+        "baseline_to_depth_ratio": 0.0628,
+        "is_triangulation_degenerate": false
+      },
+      "spatial_clustering": {
+        "nn_distance_1": 0.0572,
+        "nn_distance_3": 0.0912,
+        "is_spatial_outlier": false,
+        "cluster_id": 2
+      },
+      "refinement": {
+        "refined_status": "MODERATE_GEOMETRIC_CONFIDENCE",
+        "rationale": "Moderate confidence: 2/3 views inside mask (ratio=0.67), parallax 2.7\u00b0, acceptable reprojection (med=2.37px, p90=4.07px)."
+      }
+    },
+    {
+      "point_id": 737,
+      "track_id": 1236,
+      "point_3d": [
+        -1.4668,
+        -2.5225,
+        6.4007
+      ],
+      "original_classification": "STRONG_OBJECT_CANDIDATE",
+      "original_mask_support_ratio": 1.0,
+      "total_observations": 3,
+      "masked_observations": 3,
+      "inside_mask_observations": 3,
+      "num_distinct_cameras": 3,
+      "observed_camera_ids": [
+        9,
+        10,
+        11
+      ],
+      "supporting_camera_ids": [
+        9,
+        10,
+        11
+      ],
+      "reprojection_statistics": {
+        "mean_px": 12.976,
+        "median_px": 3.523,
+        "std_px": 13.764,
+        "p90_px": 26.655,
+        "p95_px": 29.547,
+        "max_px": 32.438,
+        "count_gt_2px": 3,
+        "count_gt_4px": 1,
+        "count_gt_10px": 1,
+        "num_outlier_observations": 1,
+        "filtered_mean_px": 3.245,
+        "filtered_median_px": 3.245
+      },
+      "depth_and_distance": {
+        "min_camera_distance": 7.9835,
+        "max_camera_distance": 8.0519,
+        "mean_camera_distance": 8.0231,
+        "relative_distance_std": 0.0036,
+        "has_positive_depth_all_views": true
+      },
+      "triangulation_geometry": {
+        "max_angle_deg": 7.71,
+        "median_angle_deg": 4.55,
+        "min_angle_deg": 3.77,
+        "max_camera_baseline": 1.082,
+        "baseline_to_depth_ratio": 0.1349,
+        "is_triangulation_degenerate": false
+      },
+      "spatial_clustering": {
+        "nn_distance_1": 0.0851,
+        "nn_distance_3": 0.2258,
+        "is_spatial_outlier": false,
+        "cluster_id": 2
+      },
+      "refinement": {
+        "refined_status": "GEOMETRIC_OUTLIER",
+        "rationale": "Reprojection outlier: residual error exceeds acceptable tolerance (med_err=3.52px, max_err=32.44px)."
+      }
+    },
+    {
+      "point_id": 766,
+      "track_id": 1273,
+      "point_3d": [
+        -2.4029,
+        -2.3128,
+        5.2811
+      ],
+      "original_classification": "STRONG_OBJECT_CANDIDATE",
+      "original_mask_support_ratio": 1.0,
+      "total_observations": 8,
+      "masked_observations": 8,
+      "inside_mask_observations": 8,
+      "num_distinct_cameras": 8,
+      "observed_camera_ids": [
+        10,
+        11,
+        13,
+        12,
+        14,
+        15,
+        16,
+        17
+      ],
+      "supporting_camera_ids": [
+        10,
+        11,
+        13,
+        12,
+        14,
+        15,
+        16,
+        17
+      ],
+      "reprojection_statistics": {
+        "mean_px": 2.185,
+        "median_px": 2.499,
+        "std_px": 0.878,
+        "p90_px": 3.039,
+        "p95_px": 3.119,
+        "max_px": 3.199,
+        "count_gt_2px": 6,
+        "count_gt_4px": 0,
+        "count_gt_10px": 0,
+        "num_outlier_observations": 0,
+        "filtered_mean_px": 2.185,
+        "filtered_median_px": 2.499
+      },
+      "depth_and_distance": {
+        "min_camera_distance": 7.7363,
+        "max_camera_distance": 8.1341,
+        "mean_camera_distance": 7.9387,
+        "relative_distance_std": 0.018,
+        "has_positive_depth_all_views": true
+      },
+      "triangulation_geometry": {
+        "max_angle_deg": 7.27,
+        "median_angle_deg": 4.1,
+        "min_angle_deg": 0.19,
+        "max_camera_baseline": 0.9964,
+        "baseline_to_depth_ratio": 0.1255,
+        "is_triangulation_degenerate": false
+      },
+      "spatial_clustering": {
+        "nn_distance_1": 0.2176,
+        "nn_distance_3": 0.2354,
+        "is_spatial_outlier": false,
+        "cluster_id": 0
+      },
+      "refinement": {
+        "refined_status": "MODERATE_GEOMETRIC_CONFIDENCE",
+        "rationale": "Moderate confidence: 8/8 views inside mask (ratio=1.00), parallax 7.3\u00b0, acceptable reprojection (med=2.50px, p90=3.04px)."
+      }
+    },
+    {
+      "point_id": 806,
+      "track_id": 1326,
+      "point_3d": [
+        -0.2418,
+        -1.5505,
+        9.4395
+      ],
+      "original_classification": "AMBIGUOUS",
+      "original_mask_support_ratio": 0.333,
+      "total_observations": 6,
+      "masked_observations": 6,
+      "inside_mask_observations": 2,
+      "num_distinct_cameras": 6,
+      "observed_camera_ids": [
+        11,
+        12,
+        13,
+        15,
+        14,
+        17
+      ],
+      "supporting_camera_ids": [
+        11,
+        12
+      ],
+      "reprojection_statistics": {
+        "mean_px": 132.398,
+        "median_px": 6.296,
+        "std_px": 182.602,
+        "p90_px": 390.57,
+        "p95_px": 392.078,
+        "max_px": 393.586,
+        "count_gt_2px": 3,
+        "count_gt_4px": 3,
+        "count_gt_10px": 3,
+        "num_outlier_observations": 2,
+        "filtered_mean_px": 3.312,
+        "filtered_median_px": 0.879
+      },
+      "depth_and_distance": {
+        "min_camera_distance": 9.1784,
+        "max_camera_distance": 9.7516,
+        "mean_camera_distance": 9.5215,
+        "relative_distance_std": 0.0247,
+        "has_positive_depth_all_views": true
+      },
+      "triangulation_geometry": {
+        "max_angle_deg": 3.21,
+        "median_angle_deg": 1.74,
+        "min_angle_deg": 0.33,
+        "max_camera_baseline": 0.753,
+        "baseline_to_depth_ratio": 0.0791,
+        "is_triangulation_degenerate": false
+      },
+      "spatial_clustering": {
+        "nn_distance_1": 2.8052,
+        "nn_distance_3": 3.022,
+        "is_spatial_outlier": true,
+        "cluster_id": -1
+      },
+      "refinement": {
+        "refined_status": "GEOMETRIC_OUTLIER",
+        "rationale": "Spatial outlier: located far from main object cluster and lacks strong multi-view anchoring (cams=6, med_err=6.30px)."
+      }
+    },
+    {
+      "point_id": 816,
+      "track_id": 1347,
+      "point_3d": [
+        -1.87,
+        -2.8615,
+        4.6815
+      ],
+      "original_classification": "STRONG_OBJECT_CANDIDATE",
+      "original_mask_support_ratio": 1.0,
+      "total_observations": 6,
+      "masked_observations": 6,
+      "inside_mask_observations": 6,
+      "num_distinct_cameras": 6,
+      "observed_camera_ids": [
+        11,
+        13,
+        12,
+        14,
+        16,
+        17
+      ],
+      "supporting_camera_ids": [
+        11,
+        13,
+        12,
+        14,
+        16,
+        17
+      ],
+      "reprojection_statistics": {
+        "mean_px": 2.602,
+        "median_px": 2.792,
+        "std_px": 1.146,
+        "p90_px": 3.718,
+        "p95_px": 3.775,
+        "max_px": 3.833,
+        "count_gt_2px": 4,
+        "count_gt_4px": 0,
+        "count_gt_10px": 0,
+        "num_outlier_observations": 0,
+        "filtered_mean_px": 2.602,
+        "filtered_median_px": 2.792
+      },
+      "depth_and_distance": {
+        "min_camera_distance": 7.1831,
+        "max_camera_distance": 7.5518,
+        "mean_camera_distance": 7.4057,
+        "relative_distance_std": 0.0178,
+        "has_positive_depth_all_views": true
+      },
+      "triangulation_geometry": {
+        "max_angle_deg": 5.94,
+        "median_angle_deg": 2.77,
+        "min_angle_deg": 0.34,
+        "max_camera_baseline": 0.8063,
+        "baseline_to_depth_ratio": 0.1089,
+        "is_triangulation_degenerate": false
+      },
+      "spatial_clustering": {
+        "nn_distance_1": 0.893,
+        "nn_distance_3": 0.9258,
+        "is_spatial_outlier": true,
+        "cluster_id": -1
+      },
+      "refinement": {
+        "refined_status": "LOW_GEOMETRIC_CONFIDENCE",
+        "rationale": "Low confidence: marginal spatial isolation."
+      }
+    },
+    {
+      "point_id": 818,
+      "track_id": 1349,
+      "point_3d": [
+        -1.3943,
+        -2.7994,
+        6.5088
+      ],
+      "original_classification": "STRONG_OBJECT_CANDIDATE",
+      "original_mask_support_ratio": 1.0,
+      "total_observations": 7,
+      "masked_observations": 6,
+      "inside_mask_observations": 6,
+      "num_distinct_cameras": 7,
+      "observed_camera_ids": [
+        11,
+        13,
+        12,
+        14,
+        16,
+        17,
+        18
+      ],
+      "supporting_camera_ids": [
+        11,
+        13,
+        12,
+        14,
+        16,
+        17
+      ],
+      "reprojection_statistics": {
+        "mean_px": 2.142,
+        "median_px": 2.565,
+        "std_px": 1.371,
+        "p90_px": 3.45,
+        "p95_px": 3.846,
+        "max_px": 4.241,
+        "count_gt_2px": 5,
+        "count_gt_4px": 1,
+        "count_gt_10px": 0,
+        "num_outlier_observations": 0,
+        "filtered_mean_px": 2.142,
+        "filtered_median_px": 2.565
+      },
+      "depth_and_distance": {
+        "min_camera_distance": 7.8016,
+        "max_camera_distance": 8.2974,
+        "mean_camera_distance": 8.0803,
+        "relative_distance_std": 0.0226,
+        "has_positive_depth_all_views": true
+      },
+      "triangulation_geometry": {
+        "max_angle_deg": 4.86,
+        "median_angle_deg": 2.32,
+        "min_angle_deg": 0.19,
+        "max_camera_baseline": 0.8063,
+        "baseline_to_depth_ratio": 0.0998,
+        "is_triangulation_degenerate": false
+      },
+      "spatial_clustering": {
+        "nn_distance_1": 0.0851,
+        "nn_distance_3": 0.2483,
+        "is_spatial_outlier": false,
+        "cluster_id": 2
+      },
+      "refinement": {
+        "refined_status": "MODERATE_GEOMETRIC_CONFIDENCE",
+        "rationale": "Moderate confidence: 6/6 views inside mask (ratio=1.00), parallax 4.9\u00b0, acceptable reprojection (med=2.56px, p90=3.45px)."
+      }
+    },
+    {
+      "point_id": 819,
+      "track_id": 1350,
+      "point_3d": [
+        -1.0831,
+        -2.6461,
+        6.1819
+      ],
+      "original_classification": "STRONG_OBJECT_CANDIDATE",
+      "original_mask_support_ratio": 1.0,
+      "total_observations": 3,
+      "masked_observations": 3,
+      "inside_mask_observations": 3,
+      "num_distinct_cameras": 3,
+      "observed_camera_ids": [
+        11,
+        13,
+        12
+      ],
+      "supporting_camera_ids": [
+        11,
+        13,
+        12
+      ],
+      "reprojection_statistics": {
+        "mean_px": 1.933,
+        "median_px": 1.99,
+        "std_px": 0.367,
+        "p90_px": 2.279,
+        "p95_px": 2.316,
+        "max_px": 2.352,
+        "count_gt_2px": 1,
+        "count_gt_4px": 0,
+        "count_gt_10px": 0,
+        "num_outlier_observations": 0,
+        "filtered_mean_px": 1.933,
+        "filtered_median_px": 1.99
+      },
+      "depth_and_distance": {
+        "min_camera_distance": 7.6857,
+        "max_camera_distance": 7.8209,
+        "mean_camera_distance": 7.7552,
+        "relative_distance_std": 0.0071,
+        "has_positive_depth_all_views": true
+      },
+      "triangulation_geometry": {
+        "max_angle_deg": 2.05,
+        "median_angle_deg": 1.5,
+        "min_angle_deg": 1.15,
+        "max_camera_baseline": 0.2863,
+        "baseline_to_depth_ratio": 0.0369,
+        "is_triangulation_degenerate": false
+      },
+      "spatial_clustering": {
+        "nn_distance_1": 0.2996,
+        "nn_distance_3": 0.3399,
+        "is_spatial_outlier": false,
+        "cluster_id": 2
+      },
+      "refinement": {
+        "refined_status": "MODERATE_GEOMETRIC_CONFIDENCE",
+        "rationale": "Moderate confidence: 3/3 views inside mask (ratio=1.00), parallax 2.0\u00b0, acceptable reprojection (med=1.99px, p90=2.28px)."
+      }
+    },
+    {
+      "point_id": 820,
+      "track_id": 1351,
+      "point_3d": [
+        -1.232,
+        -2.6312,
+        6.7968
+      ],
+      "original_classification": "STRONG_OBJECT_CANDIDATE",
+      "original_mask_support_ratio": 1.0,
+      "total_observations": 6,
+      "masked_observations": 6,
+      "inside_mask_observations": 6,
+      "num_distinct_cameras": 6,
+      "observed_camera_ids": [
+        11,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "supporting_camera_ids": [
+        11,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "reprojection_statistics": {
+        "mean_px": 1.449,
+        "median_px": 1.257,
+        "std_px": 0.742,
+        "p90_px": 2.216,
+        "p95_px": 2.599,
+        "max_px": 2.983,
+        "count_gt_2px": 1,
+        "count_gt_4px": 0,
+        "count_gt_10px": 0,
+        "num_outlier_observations": 0,
+        "filtered_mean_px": 1.449,
+        "filtered_median_px": 1.257
+      },
+      "depth_and_distance": {
+        "min_camera_distance": 7.8285,
+        "max_camera_distance": 8.3465,
+        "mean_camera_distance": 8.0829,
+        "relative_distance_std": 0.0248,
+        "has_positive_depth_all_views": true
+      },
+      "triangulation_geometry": {
+        "max_angle_deg": 3.99,
+        "median_angle_deg": 1.76,
+        "min_angle_deg": 0.19,
+        "max_camera_baseline": 0.7079,
+        "baseline_to_depth_ratio": 0.0876,
+        "is_triangulation_degenerate": false
+      },
+      "spatial_clustering": {
+        "nn_distance_1": 0.0814,
+        "nn_distance_3": 0.0954,
+        "is_spatial_outlier": false,
+        "cluster_id": 2
+      },
+      "refinement": {
+        "refined_status": "HIGH_GEOMETRIC_CONFIDENCE",
+        "rationale": "High confidence: 6/6 views inside mask (ratio=1.00), strong parallax (4.0\u00b0), tightly bounded reprojection (med=1.26px, p90=2.22px)."
+      }
+    },
+    {
+      "point_id": 848,
+      "track_id": 1389,
+      "point_3d": [
+        -2.6506,
+        -1.2652,
+        5.3641
+      ],
+      "original_classification": "STRONG_OBJECT_CANDIDATE",
+      "original_mask_support_ratio": 1.0,
+      "total_observations": 6,
+      "masked_observations": 6,
+      "inside_mask_observations": 6,
+      "num_distinct_cameras": 6,
+      "observed_camera_ids": [
+        12,
+        13,
+        15,
+        14,
+        16,
+        17
+      ],
+      "supporting_camera_ids": [
+        12,
+        13,
+        15,
+        14,
+        16,
+        17
+      ],
+      "reprojection_statistics": {
+        "mean_px": 1.332,
+        "median_px": 1.082,
+        "std_px": 1.125,
+        "p90_px": 2.612,
+        "p95_px": 3.12,
+        "max_px": 3.628,
+        "count_gt_2px": 1,
+        "count_gt_4px": 0,
+        "count_gt_10px": 0,
+        "num_outlier_observations": 0,
+        "filtered_mean_px": 1.332,
+        "filtered_median_px": 1.082
+      },
+      "depth_and_distance": {
+        "min_camera_distance": 7.7862,
+        "max_camera_distance": 8.1894,
+        "mean_camera_distance": 7.9992,
+        "relative_distance_std": 0.0208,
+        "has_positive_depth_all_views": true
+      },
+      "triangulation_geometry": {
+        "max_angle_deg": 5.25,
+        "median_angle_deg": 2.41,
+        "min_angle_deg": 0.21,
+        "max_camera_baseline": 0.8063,
+        "baseline_to_depth_ratio": 0.1008,
+        "is_triangulation_degenerate": false
+      },
+      "spatial_clustering": {
+        "nn_distance_1": 1.0057,
+        "nn_distance_3": 1.1106,
+        "is_spatial_outlier": true,
+        "cluster_id": -1
+      },
+      "refinement": {
+        "refined_status": "LOW_GEOMETRIC_CONFIDENCE",
+        "rationale": "Low confidence: marginal spatial isolation."
+      }
+    },
+    {
+      "point_id": 849,
+      "track_id": 1390,
+      "point_3d": [
+        -2.5007,
+        -2.3249,
+        5.0673
+      ],
+      "original_classification": "STRONG_OBJECT_CANDIDATE",
+      "original_mask_support_ratio": 0.8,
+      "total_observations": 5,
+      "masked_observations": 5,
+      "inside_mask_observations": 4,
+      "num_distinct_cameras": 5,
+      "observed_camera_ids": [
+        12,
+        13,
+        14,
+        16,
+        17
+      ],
+      "supporting_camera_ids": [
+        12,
+        13,
+        14,
+        16
+      ],
+      "reprojection_statistics": {
+        "mean_px": 0.815,
+        "median_px": 0.632,
+        "std_px": 0.29,
+        "p90_px": 1.178,
+        "p95_px": 1.204,
+        "max_px": 1.231,
+        "count_gt_2px": 0,
+        "count_gt_4px": 0,
+        "count_gt_10px": 0,
+        "num_outlier_observations": 0,
+        "filtered_mean_px": 0.815,
+        "filtered_median_px": 0.632
+      },
+      "depth_and_distance": {
+        "min_camera_distance": 7.7199,
+        "max_camera_distance": 8.1003,
+        "mean_camera_distance": 7.9512,
+        "relative_distance_std": 0.019,
+        "has_positive_depth_all_views": true
+      },
+      "triangulation_geometry": {
+        "max_angle_deg": 5.46,
+        "median_angle_deg": 2.77,
+        "min_angle_deg": 0.36,
+        "max_camera_baseline": 0.8063,
+        "baseline_to_depth_ratio": 0.1014,
+        "is_triangulation_degenerate": false
+      },
+      "spatial_clustering": {
+        "nn_distance_1": 0.0762,
+        "nn_distance_3": 0.2146,
+        "is_spatial_outlier": false,
+        "cluster_id": 0
+      },
+      "refinement": {
+        "refined_status": "HIGH_GEOMETRIC_CONFIDENCE",
+        "rationale": "High confidence: 4/5 views inside mask (ratio=0.80), strong parallax (5.5\u00b0), tightly bounded reprojection (med=0.63px, p90=1.18px)."
+      }
+    },
+    {
+      "point_id": 850,
+      "track_id": 1391,
+      "point_3d": [
+        -2.5013,
+        -2.3918,
+        5.1038
+      ],
+      "original_classification": "STRONG_OBJECT_CANDIDATE",
+      "original_mask_support_ratio": 1.0,
+      "total_observations": 5,
+      "masked_observations": 5,
+      "inside_mask_observations": 5,
+      "num_distinct_cameras": 5,
+      "observed_camera_ids": [
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "supporting_camera_ids": [
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "reprojection_statistics": {
+        "mean_px": 1.064,
+        "median_px": 1.076,
+        "std_px": 0.214,
+        "p90_px": 1.271,
+        "p95_px": 1.334,
+        "max_px": 1.397,
+        "count_gt_2px": 0,
+        "count_gt_4px": 0,
+        "count_gt_10px": 0,
+        "num_outlier_observations": 0,
+        "filtered_mean_px": 1.064,
+        "filtered_median_px": 1.076
+      },
+      "depth_and_distance": {
+        "min_camera_distance": 7.7551,
+        "max_camera_distance": 8.1371,
+        "mean_camera_distance": 7.9747,
+        "relative_distance_std": 0.0204,
+        "has_positive_depth_all_views": true
+      },
+      "triangulation_geometry": {
+        "max_angle_deg": 5.43,
+        "median_angle_deg": 2.75,
+        "min_angle_deg": 0.48,
+        "max_camera_baseline": 0.8063,
+        "baseline_to_depth_ratio": 0.1011,
+        "is_triangulation_degenerate": false
+      },
+      "spatial_clustering": {
+        "nn_distance_1": 0.0608,
+        "nn_distance_3": 0.2176,
+        "is_spatial_outlier": false,
+        "cluster_id": 0
+      },
+      "refinement": {
+        "refined_status": "HIGH_GEOMETRIC_CONFIDENCE",
+        "rationale": "High confidence: 5/5 views inside mask (ratio=1.00), strong parallax (5.4\u00b0), tightly bounded reprojection (med=1.08px, p90=1.27px)."
+      }
+    },
+    {
+      "point_id": 851,
+      "track_id": 1396,
+      "point_3d": [
+        -1.3334,
+        -2.9005,
+        6.2903
+      ],
+      "original_classification": "STRONG_OBJECT_CANDIDATE",
+      "original_mask_support_ratio": 0.833,
+      "total_observations": 6,
+      "masked_observations": 6,
+      "inside_mask_observations": 5,
+      "num_distinct_cameras": 6,
+      "observed_camera_ids": [
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "supporting_camera_ids": [
+        12,
+        13,
+        14,
+        15,
+        17
+      ],
+      "reprojection_statistics": {
+        "mean_px": 1.777,
+        "median_px": 1.279,
+        "std_px": 1.037,
+        "p90_px": 3.204,
+        "p95_px": 3.311,
+        "max_px": 3.418,
+        "count_gt_2px": 2,
+        "count_gt_4px": 0,
+        "count_gt_10px": 0,
+        "num_outlier_observations": 0,
+        "filtered_mean_px": 1.777,
+        "filtered_median_px": 1.279
+      },
+      "depth_and_distance": {
+        "min_camera_distance": 7.6537,
+        "max_camera_distance": 8.1394,
+        "mean_camera_distance": 7.9053,
+        "relative_distance_std": 0.0248,
+        "has_positive_depth_all_views": true
+      },
+      "triangulation_geometry": {
+        "max_angle_deg": 5.02,
+        "median_angle_deg": 1.99,
+        "min_angle_deg": 0.19,
+        "max_camera_baseline": 0.8063,
+        "baseline_to_depth_ratio": 0.102,
+        "is_triangulation_degenerate": false
+      },
+      "spatial_clustering": {
+        "nn_distance_1": 0.1906,
+        "nn_distance_3": 0.1975,
+        "is_spatial_outlier": false,
+        "cluster_id": 2
+      },
+      "refinement": {
+        "refined_status": "HIGH_GEOMETRIC_CONFIDENCE",
+        "rationale": "High confidence: 5/6 views inside mask (ratio=0.83), strong parallax (5.0\u00b0), tightly bounded reprojection (med=1.28px, p90=3.20px)."
+      }
+    },
+    {
+      "point_id": 852,
+      "track_id": 1397,
+      "point_3d": [
+        -1.2635,
+        -2.6388,
+        6.7071
+      ],
+      "original_classification": "STRONG_OBJECT_CANDIDATE",
+      "original_mask_support_ratio": 1.0,
+      "total_observations": 5,
+      "masked_observations": 5,
+      "inside_mask_observations": 5,
+      "num_distinct_cameras": 5,
+      "observed_camera_ids": [
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "supporting_camera_ids": [
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "reprojection_statistics": {
+        "mean_px": 0.838,
+        "median_px": 0.992,
+        "std_px": 0.346,
+        "p90_px": 1.174,
+        "p95_px": 1.225,
+        "max_px": 1.276,
+        "count_gt_2px": 0,
+        "count_gt_4px": 0,
+        "count_gt_10px": 0,
+        "num_outlier_observations": 0,
+        "filtered_mean_px": 0.838,
+        "filtered_median_px": 0.992
+      },
+      "depth_and_distance": {
+        "min_camera_distance": 7.7918,
+        "max_camera_distance": 8.3045,
+        "mean_camera_distance": 8.0865,
+        "relative_distance_std": 0.0269,
+        "has_positive_depth_all_views": true
+      },
+      "triangulation_geometry": {
+        "max_angle_deg": 4.75,
+        "median_angle_deg": 2.38,
+        "min_angle_deg": 0.37,
+        "max_camera_baseline": 0.8063,
+        "baseline_to_depth_ratio": 0.0997,
+        "is_triangulation_degenerate": false
+      },
+      "spatial_clustering": {
+        "nn_distance_1": 0.04,
+        "nn_distance_3": 0.0574,
+        "is_spatial_outlier": false,
+        "cluster_id": 2
+      },
+      "refinement": {
+        "refined_status": "HIGH_GEOMETRIC_CONFIDENCE",
+        "rationale": "High confidence: 5/5 views inside mask (ratio=1.00), strong parallax (4.8\u00b0), tightly bounded reprojection (med=0.99px, p90=1.17px)."
+      }
+    },
+    {
+      "point_id": 853,
+      "track_id": 1398,
+      "point_3d": [
+        -1.2084,
+        -2.6748,
+        6.6536
+      ],
+      "original_classification": "STRONG_OBJECT_CANDIDATE",
+      "original_mask_support_ratio": 1.0,
+      "total_observations": 3,
+      "masked_observations": 3,
+      "inside_mask_observations": 3,
+      "num_distinct_cameras": 3,
+      "observed_camera_ids": [
+        12,
+        13,
+        14
+      ],
+      "supporting_camera_ids": [
+        12,
+        13,
+        14
+      ],
+      "reprojection_statistics": {
+        "mean_px": 1.093,
+        "median_px": 0.672,
+        "std_px": 0.642,
+        "p90_px": 1.735,
+        "p95_px": 1.868,
+        "max_px": 2.001,
+        "count_gt_2px": 1,
+        "count_gt_4px": 0,
+        "count_gt_10px": 0,
+        "num_outlier_observations": 0,
+        "filtered_mean_px": 1.093,
+        "filtered_median_px": 0.672
+      },
+      "depth_and_distance": {
+        "min_camera_distance": 8.1697,
+        "max_camera_distance": 8.2413,
+        "mean_camera_distance": 8.1986,
+        "relative_distance_std": 0.0038,
+        "has_positive_depth_all_views": true
+      },
+      "triangulation_geometry": {
+        "max_angle_deg": 3.01,
+        "median_angle_deg": 1.71,
+        "min_angle_deg": 1.44,
+        "max_camera_baseline": 0.4292,
+        "baseline_to_depth_ratio": 0.0523,
+        "is_triangulation_degenerate": false
+      },
+      "spatial_clustering": {
+        "nn_distance_1": 0.0585,
+        "nn_distance_3": 0.0681,
+        "is_spatial_outlier": false,
+        "cluster_id": 2
+      },
+      "refinement": {
+        "refined_status": "HIGH_GEOMETRIC_CONFIDENCE",
+        "rationale": "High confidence: 3/3 views inside mask (ratio=1.00), strong parallax (3.0\u00b0), tightly bounded reprojection (med=0.67px, p90=1.74px)."
+      }
+    },
+    {
+      "point_id": 854,
+      "track_id": 1399,
+      "point_3d": [
+        -1.3073,
+        -2.6614,
+        6.7908
+      ],
+      "original_classification": "STRONG_OBJECT_CANDIDATE",
+      "original_mask_support_ratio": 1.0,
+      "total_observations": 5,
+      "masked_observations": 5,
+      "inside_mask_observations": 5,
+      "num_distinct_cameras": 5,
+      "observed_camera_ids": [
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "supporting_camera_ids": [
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "reprojection_statistics": {
+        "mean_px": 1.213,
+        "median_px": 1.22,
+        "std_px": 0.465,
+        "p90_px": 1.727,
+        "p95_px": 1.882,
+        "max_px": 2.037,
+        "count_gt_2px": 1,
+        "count_gt_4px": 0,
+        "count_gt_10px": 0,
+        "num_outlier_observations": 0,
+        "filtered_mean_px": 1.213,
+        "filtered_median_px": 1.22
+      },
+      "depth_and_distance": {
+        "min_camera_distance": 7.8844,
+        "max_camera_distance": 8.3987,
+        "mean_camera_distance": 8.18,
+        "relative_distance_std": 0.0266,
+        "has_positive_depth_all_views": true
+      },
+      "triangulation_geometry": {
+        "max_angle_deg": 4.68,
+        "median_angle_deg": 2.35,
+        "min_angle_deg": 0.37,
+        "max_camera_baseline": 0.8063,
+        "baseline_to_depth_ratio": 0.0986,
+        "is_triangulation_degenerate": false
+      },
+      "spatial_clustering": {
+        "nn_distance_1": 0.062,
+        "nn_distance_3": 0.0814,
+        "is_spatial_outlier": false,
+        "cluster_id": 2
+      },
+      "refinement": {
+        "refined_status": "HIGH_GEOMETRIC_CONFIDENCE",
+        "rationale": "High confidence: 5/5 views inside mask (ratio=1.00), strong parallax (4.7\u00b0), tightly bounded reprojection (med=1.22px, p90=1.73px)."
+      }
+    },
+    {
+      "point_id": 855,
+      "track_id": 1400,
+      "point_3d": [
+        -1.1214,
+        -2.3657,
+        6.8648
+      ],
+      "original_classification": "STRONG_OBJECT_CANDIDATE",
+      "original_mask_support_ratio": 0.75,
+      "total_observations": 4,
+      "masked_observations": 4,
+      "inside_mask_observations": 3,
+      "num_distinct_cameras": 4,
+      "observed_camera_ids": [
+        12,
+        13,
+        14,
+        15
+      ],
+      "supporting_camera_ids": [
+        12,
+        13,
+        14
+      ],
+      "reprojection_statistics": {
+        "mean_px": 0.94,
+        "median_px": 0.879,
+        "std_px": 0.177,
+        "p90_px": 1.139,
+        "p95_px": 1.185,
+        "max_px": 1.23,
+        "count_gt_2px": 0,
+        "count_gt_4px": 0,
+        "count_gt_10px": 0,
+        "num_outlier_observations": 0,
+        "filtered_mean_px": 0.94,
+        "filtered_median_px": 0.879
+      },
+      "depth_and_distance": {
+        "min_camera_distance": 7.7893,
+        "max_camera_distance": 8.2557,
+        "mean_camera_distance": 8.1074,
+        "relative_distance_std": 0.0229,
+        "has_positive_depth_all_views": true
+      },
+      "triangulation_geometry": {
+        "max_angle_deg": 4.42,
+        "median_angle_deg": 2.34,
+        "min_angle_deg": 1.43,
+        "max_camera_baseline": 0.746,
+        "baseline_to_depth_ratio": 0.092,
+        "is_triangulation_degenerate": false
+      },
+      "spatial_clustering": {
+        "nn_distance_1": 0.1949,
+        "nn_distance_3": 0.3366,
+        "is_spatial_outlier": false,
+        "cluster_id": 2
+      },
+      "refinement": {
+        "refined_status": "HIGH_GEOMETRIC_CONFIDENCE",
+        "rationale": "High confidence: 3/4 views inside mask (ratio=0.75), strong parallax (4.4\u00b0), tightly bounded reprojection (med=0.88px, p90=1.14px)."
+      }
+    },
+    {
+      "point_id": 900,
+      "track_id": 1480,
+      "point_3d": [
+        -1.1667,
+        -2.7132,
+        6.639
+      ],
+      "original_classification": "AMBIGUOUS",
+      "original_mask_support_ratio": 0.333,
+      "total_observations": 3,
+      "masked_observations": 3,
+      "inside_mask_observations": 1,
+      "num_distinct_cameras": 3,
+      "observed_camera_ids": [
+        12,
+        14,
+        13
+      ],
+      "supporting_camera_ids": [
+        13
+      ],
+      "reprojection_statistics": {
+        "mean_px": 1.803,
+        "median_px": 0.683,
+        "std_px": 1.617,
+        "p90_px": 3.409,
+        "p95_px": 3.749,
+        "max_px": 4.09,
+        "count_gt_2px": 1,
+        "count_gt_4px": 1,
+        "count_gt_10px": 0,
+        "num_outlier_observations": 1,
+        "filtered_mean_px": 0.66,
+        "filtered_median_px": 0.66
+      },
+      "depth_and_distance": {
+        "min_camera_distance": 8.1436,
+        "max_camera_distance": 8.2154,
+        "mean_camera_distance": 8.1725,
+        "relative_distance_std": 0.0038,
+        "has_positive_depth_all_views": true
+      },
+      "triangulation_geometry": {
+        "max_angle_deg": 3.02,
+        "median_angle_deg": 1.72,
+        "min_angle_deg": 1.44,
+        "max_camera_baseline": 0.4292,
+        "baseline_to_depth_ratio": 0.0525,
+        "is_triangulation_degenerate": false
+      },
+      "spatial_clustering": {
+        "nn_distance_1": 0.0585,
+        "nn_distance_3": 0.1125,
+        "is_spatial_outlier": false,
+        "cluster_id": 2
+      },
+      "refinement": {
+        "refined_status": "LOW_GEOMETRIC_CONFIDENCE",
+        "rationale": "Low confidence: low mask support (0.33)."
+      }
+    },
+    {
+      "point_id": 901,
+      "track_id": 1481,
+      "point_3d": [
+        -1.1705,
+        -2.6595,
+        6.7081
+      ],
+      "original_classification": "STRONG_OBJECT_CANDIDATE",
+      "original_mask_support_ratio": 1.0,
+      "total_observations": 3,
+      "masked_observations": 3,
+      "inside_mask_observations": 3,
+      "num_distinct_cameras": 3,
+      "observed_camera_ids": [
+        12,
+        14,
+        15
+      ],
+      "supporting_camera_ids": [
+        12,
+        14,
+        15
+      ],
+      "reprojection_statistics": {
+        "mean_px": 0.646,
+        "median_px": 0.342,
+        "std_px": 0.655,
+        "p90_px": 1.313,
+        "p95_px": 1.434,
+        "max_px": 1.556,
+        "count_gt_2px": 0,
+        "count_gt_4px": 0,
+        "count_gt_10px": 0,
+        "num_outlier_observations": 0,
+        "filtered_mean_px": 0.646,
+        "filtered_median_px": 0.342
+      },
+      "depth_and_distance": {
+        "min_camera_distance": 7.7989,
+        "max_camera_distance": 8.1967,
+        "mean_camera_distance": 8.0579,
+        "relative_distance_std": 0.0227,
+        "has_positive_depth_all_views": true
+      },
+      "triangulation_geometry": {
+        "max_angle_deg": 4.52,
+        "median_angle_deg": 3.0,
+        "min_angle_deg": 1.52,
+        "max_camera_baseline": 0.746,
+        "baseline_to_depth_ratio": 0.0926,
+        "is_triangulation_degenerate": false
+      },
+      "spatial_clustering": {
+        "nn_distance_1": 0.0591,
+        "nn_distance_3": 0.0876,
+        "is_spatial_outlier": false,
+        "cluster_id": 2
+      },
+      "refinement": {
+        "refined_status": "HIGH_GEOMETRIC_CONFIDENCE",
+        "rationale": "High confidence: 3/3 views inside mask (ratio=1.00), strong parallax (4.5\u00b0), tightly bounded reprojection (med=0.34px, p90=1.31px)."
+      }
+    },
+    {
+      "point_id": 902,
+      "track_id": 1482,
+      "point_3d": [
+        -1.2245,
+        -2.4818,
+        6.9826
+      ],
+      "original_classification": "WEAK_OBJECT_CANDIDATE",
+      "original_mask_support_ratio": 0.5,
+      "total_observations": 2,
+      "masked_observations": 2,
+      "inside_mask_observations": 1,
+      "num_distinct_cameras": 2,
+      "observed_camera_ids": [
+        12,
+        14
+      ],
+      "supporting_camera_ids": [
+        12
+      ],
+      "reprojection_statistics": {
+        "mean_px": 0.444,
+        "median_px": 0.444,
+        "std_px": 0.113,
+        "p90_px": 0.534,
+        "p95_px": 0.546,
+        "max_px": 0.557,
+        "count_gt_2px": 0,
+        "count_gt_4px": 0,
+        "count_gt_10px": 0,
+        "num_outlier_observations": 0,
+        "filtered_mean_px": 0.444,
+        "filtered_median_px": 0.444
+      },
+      "depth_and_distance": {
+        "min_camera_distance": 8.357,
+        "max_camera_distance": 8.3884,
+        "mean_camera_distance": 8.3727,
+        "relative_distance_std": 0.0019,
+        "has_positive_depth_all_views": true
+      },
+      "triangulation_geometry": {
+        "max_angle_deg": 2.93,
+        "median_angle_deg": 2.93,
+        "min_angle_deg": 2.93,
+        "max_camera_baseline": 0.4292,
+        "baseline_to_depth_ratio": 0.0513,
+        "is_triangulation_degenerate": false
+      },
+      "spatial_clustering": {
+        "nn_distance_1": 0.1949,
+        "nn_distance_3": 0.2755,
+        "is_spatial_outlier": false,
+        "cluster_id": 2
+      },
+      "refinement": {
+        "refined_status": "LOW_GEOMETRIC_CONFIDENCE",
+        "rationale": "Low confidence: marginal geometric evidence."
+      }
+    },
+    {
+      "point_id": 951,
+      "track_id": 1551,
+      "point_3d": [
+        -1.6281,
+        -2.9548,
+        6.4306
+      ],
+      "original_classification": "WEAK_OBJECT_CANDIDATE",
+      "original_mask_support_ratio": 1.0,
+      "total_observations": 2,
+      "masked_observations": 2,
+      "inside_mask_observations": 2,
+      "num_distinct_cameras": 2,
+      "observed_camera_ids": [
+        13,
+        14
+      ],
+      "supporting_camera_ids": [
+        13,
+        14
+      ],
+      "reprojection_statistics": {
+        "mean_px": 0.533,
+        "median_px": 0.533,
+        "std_px": 0.018,
+        "p90_px": 0.547,
+        "p95_px": 0.549,
+        "max_px": 0.551,
+        "count_gt_2px": 0,
+        "count_gt_4px": 0,
+        "count_gt_10px": 0,
+        "num_outlier_observations": 0,
+        "filtered_mean_px": 0.533,
+        "filtered_median_px": 0.533
+      },
+      "depth_and_distance": {
+        "min_camera_distance": 8.3914,
+        "max_camera_distance": 8.4482,
+        "mean_camera_distance": 8.4198,
+        "relative_distance_std": 0.0034,
+        "has_positive_depth_all_views": true
+      },
+      "triangulation_geometry": {
+        "max_angle_deg": 1.69,
+        "median_angle_deg": 1.69,
+        "min_angle_deg": 1.69,
+        "max_camera_baseline": 0.2553,
+        "baseline_to_depth_ratio": 0.0303,
+        "is_triangulation_degenerate": false
+      },
+      "spatial_clustering": {
+        "nn_distance_1": 0.1542,
+        "nn_distance_3": 0.2914,
+        "is_spatial_outlier": false,
+        "cluster_id": 2
+      },
+      "refinement": {
+        "refined_status": "LOW_GEOMETRIC_CONFIDENCE",
+        "rationale": "Low confidence: weak parallax (1.7\u00b0)."
+      }
+    },
+    {
+      "point_id": 953,
+      "track_id": 1553,
+      "point_3d": [
+        -1.3164,
+        -2.7254,
+        6.7578
+      ],
+      "original_classification": "STRONG_OBJECT_CANDIDATE",
+      "original_mask_support_ratio": 1.0,
+      "total_observations": 3,
+      "masked_observations": 3,
+      "inside_mask_observations": 3,
+      "num_distinct_cameras": 3,
+      "observed_camera_ids": [
+        13,
+        14,
+        16
+      ],
+      "supporting_camera_ids": [
+        13,
+        14,
+        16
+      ],
+      "reprojection_statistics": {
+        "mean_px": 0.675,
+        "median_px": 0.822,
+        "std_px": 0.218,
+        "p90_px": 0.834,
+        "p95_px": 0.835,
+        "max_px": 0.837,
+        "count_gt_2px": 0,
+        "count_gt_4px": 0,
+        "count_gt_10px": 0,
+        "num_outlier_observations": 0,
+        "filtered_mean_px": 0.675,
+        "filtered_median_px": 0.822
+      },
+      "depth_and_distance": {
+        "min_camera_distance": 7.8879,
+        "max_camera_distance": 8.3992,
+        "mean_camera_distance": 8.205,
+        "relative_distance_std": 0.0276,
+        "has_positive_depth_all_views": true
+      },
+      "triangulation_geometry": {
+        "max_angle_deg": 3.45,
+        "median_angle_deg": 1.77,
+        "min_angle_deg": 1.68,
+        "max_camera_baseline": 0.7079,
+        "baseline_to_depth_ratio": 0.0863,
+        "is_triangulation_degenerate": false
+      },
+      "spatial_clustering": {
+        "nn_distance_1": 0.0561,
+        "nn_distance_3": 0.1073,
+        "is_spatial_outlier": false,
+        "cluster_id": 2
+      },
+      "refinement": {
+        "refined_status": "HIGH_GEOMETRIC_CONFIDENCE",
+        "rationale": "High confidence: 3/3 views inside mask (ratio=1.00), strong parallax (3.5\u00b0), tightly bounded reprojection (med=0.82px, p90=0.83px)."
+      }
+    },
+    {
+      "point_id": 954,
+      "track_id": 1554,
+      "point_3d": [
+        -1.2292,
+        -2.6579,
+        6.7145
+      ],
+      "original_classification": "STRONG_OBJECT_CANDIDATE",
+      "original_mask_support_ratio": 1.0,
+      "total_observations": 4,
+      "masked_observations": 4,
+      "inside_mask_observations": 4,
+      "num_distinct_cameras": 4,
+      "observed_camera_ids": [
+        13,
+        14,
+        15,
+        16
+      ],
+      "supporting_camera_ids": [
+        13,
+        14,
+        15,
+        16
+      ],
+      "reprojection_statistics": {
+        "mean_px": 0.623,
+        "median_px": 0.645,
+        "std_px": 0.137,
+        "p90_px": 0.757,
+        "p95_px": 0.759,
+        "max_px": 0.76,
+        "count_gt_2px": 0,
+        "count_gt_4px": 0,
+        "count_gt_10px": 0,
+        "num_outlier_observations": 0,
+        "filtered_mean_px": 0.623,
+        "filtered_median_px": 0.645
+      },
+      "depth_and_distance": {
+        "min_camera_distance": 7.7792,
+        "max_camera_distance": 8.2932,
+        "mean_camera_distance": 8.0338,
+        "relative_distance_std": 0.0281,
+        "has_positive_depth_all_views": true
+      },
+      "triangulation_geometry": {
+        "max_angle_deg": 3.47,
+        "median_angle_deg": 1.74,
+        "min_angle_deg": 0.37,
+        "max_camera_baseline": 0.7079,
+        "baseline_to_depth_ratio": 0.0881,
+        "is_triangulation_degenerate": false
+      },
+      "spatial_clustering": {
+        "nn_distance_1": 0.04,
+        "nn_distance_3": 0.0665,
+        "is_spatial_outlier": false,
+        "cluster_id": 2
+      },
+      "refinement": {
+        "refined_status": "HIGH_GEOMETRIC_CONFIDENCE",
+        "rationale": "High confidence: 4/4 views inside mask (ratio=1.00), strong parallax (3.5\u00b0), tightly bounded reprojection (med=0.65px, p90=0.76px)."
+      }
+    },
+    {
+      "point_id": 967,
+      "track_id": 1599,
+      "point_3d": [
+        -1.2294,
+        -3.4202,
+        5.657
+      ],
+      "original_classification": "STRONG_OBJECT_CANDIDATE",
+      "original_mask_support_ratio": 1.0,
+      "total_observations": 4,
+      "masked_observations": 4,
+      "inside_mask_observations": 4,
+      "num_distinct_cameras": 4,
+      "observed_camera_ids": [
+        13,
+        15,
+        14,
+        16
+      ],
+      "supporting_camera_ids": [
+        13,
+        15,
+        14,
+        16
+      ],
+      "reprojection_statistics": {
+        "mean_px": 0.979,
+        "median_px": 0.879,
+        "std_px": 0.571,
+        "p90_px": 1.579,
+        "p95_px": 1.726,
+        "max_px": 1.874,
+        "count_gt_2px": 0,
+        "count_gt_4px": 0,
+        "count_gt_10px": 0,
+        "num_outlier_observations": 0,
+        "filtered_mean_px": 0.979,
+        "filtered_median_px": 0.879
+      },
+      "depth_and_distance": {
+        "min_camera_distance": 7.4009,
+        "max_camera_distance": 7.8449,
+        "mean_camera_distance": 7.6273,
+        "relative_distance_std": 0.026,
+        "has_positive_depth_all_views": true
+      },
+      "triangulation_geometry": {
+        "max_angle_deg": 4.15,
+        "median_angle_deg": 2.17,
+        "min_angle_deg": 0.42,
+        "max_camera_baseline": 0.7079,
+        "baseline_to_depth_ratio": 0.0928,
+        "is_triangulation_degenerate": false
+      },
+      "spatial_clustering": {
+        "nn_distance_1": 0.0481,
+        "nn_distance_3": 0.8258,
+        "is_spatial_outlier": false,
+        "cluster_id": 3
+      },
+      "refinement": {
+        "refined_status": "HIGH_GEOMETRIC_CONFIDENCE",
+        "rationale": "High confidence: 4/4 views inside mask (ratio=1.00), strong parallax (4.2\u00b0), tightly bounded reprojection (med=0.88px, p90=1.58px)."
+      }
+    },
+    {
+      "point_id": 968,
+      "track_id": 1600,
+      "point_3d": [
+        -1.3694,
+        -2.4565,
+        6.3213
+      ],
+      "original_classification": "STRONG_OBJECT_CANDIDATE",
+      "original_mask_support_ratio": 1.0,
+      "total_observations": 4,
+      "masked_observations": 4,
+      "inside_mask_observations": 4,
+      "num_distinct_cameras": 4,
+      "observed_camera_ids": [
+        13,
+        15,
+        14,
+        16
+      ],
+      "supporting_camera_ids": [
+        13,
+        15,
+        14,
+        16
+      ],
+      "reprojection_statistics": {
+        "mean_px": 1.215,
+        "median_px": 1.085,
+        "std_px": 0.399,
+        "p90_px": 1.646,
+        "p95_px": 1.762,
+        "max_px": 1.879,
+        "count_gt_2px": 0,
+        "count_gt_4px": 0,
+        "count_gt_10px": 0,
+        "num_outlier_observations": 0,
+        "filtered_mean_px": 1.215,
+        "filtered_median_px": 1.085
+      },
+      "depth_and_distance": {
+        "min_camera_distance": 7.5602,
+        "max_camera_distance": 8.0542,
+        "mean_camera_distance": 7.8065,
+        "relative_distance_std": 0.028,
+        "has_positive_depth_all_views": true
+      },
+      "triangulation_geometry": {
+        "max_angle_deg": 3.72,
+        "median_angle_deg": 1.86,
+        "min_angle_deg": 0.41,
+        "max_camera_baseline": 0.7079,
+        "baseline_to_depth_ratio": 0.0907,
+        "is_triangulation_degenerate": false
+      },
+      "spatial_clustering": {
+        "nn_distance_1": 0.1419,
+        "nn_distance_3": 0.2854,
+        "is_spatial_outlier": false,
+        "cluster_id": 2
+      },
+      "refinement": {
+        "refined_status": "HIGH_GEOMETRIC_CONFIDENCE",
+        "rationale": "High confidence: 4/4 views inside mask (ratio=1.00), strong parallax (3.7\u00b0), tightly bounded reprojection (med=1.09px, p90=1.65px)."
+      }
+    },
+    {
+      "point_id": 969,
+      "track_id": 1601,
+      "point_3d": [
+        -1.1907,
+        -2.4961,
+        6.5403
+      ],
+      "original_classification": "WEAK_OBJECT_CANDIDATE",
+      "original_mask_support_ratio": 1.0,
+      "total_observations": 2,
+      "masked_observations": 2,
+      "inside_mask_observations": 2,
+      "num_distinct_cameras": 2,
+      "observed_camera_ids": [
+        13,
+        15
+      ],
+      "supporting_camera_ids": [
+        13,
+        15
+      ],
+      "reprojection_statistics": {
+        "mean_px": 1.034,
+        "median_px": 1.034,
+        "std_px": 0.083,
+        "p90_px": 1.1,
+        "p95_px": 1.108,
+        "max_px": 1.117,
+        "count_gt_2px": 0,
+        "count_gt_4px": 0,
+        "count_gt_10px": 0,
+        "num_outlier_observations": 0,
+        "filtered_mean_px": 1.034,
+        "filtered_median_px": 1.034
+      },
+      "depth_and_distance": {
+        "min_camera_distance": 7.6508,
+        "max_camera_distance": 8.0994,
+        "mean_camera_distance": 7.8751,
+        "relative_distance_std": 0.0285,
+        "has_positive_depth_all_views": true
+      },
+      "triangulation_geometry": {
+        "max_angle_deg": 3.29,
+        "median_angle_deg": 3.29,
+        "min_angle_deg": 3.29,
+        "max_camera_baseline": 0.6368,
+        "baseline_to_depth_ratio": 0.0809,
+        "is_triangulation_degenerate": false
+      },
+      "spatial_clustering": {
+        "nn_distance_1": 0.2123,
+        "nn_distance_3": 0.2351,
+        "is_spatial_outlier": false,
+        "cluster_id": 2
+      },
+      "refinement": {
+        "refined_status": "MODERATE_GEOMETRIC_CONFIDENCE",
+        "rationale": "Moderate confidence: 2/2 views inside mask (ratio=1.00), parallax 3.3\u00b0, acceptable reprojection (med=1.03px, p90=1.10px)."
+      }
+    },
+    {
+      "point_id": 973,
+      "track_id": 1638,
+      "point_3d": [
+        -2.5541,
+        -2.381,
+        5.1319
+      ],
+      "original_classification": "WEAK_OBJECT_CANDIDATE",
+      "original_mask_support_ratio": 1.0,
+      "total_observations": 2,
+      "masked_observations": 2,
+      "inside_mask_observations": 2,
+      "num_distinct_cameras": 2,
+      "observed_camera_ids": [
+        14,
+        15
+      ],
+      "supporting_camera_ids": [
+        14,
+        15
+      ],
+      "reprojection_statistics": {
+        "mean_px": 0.172,
+        "median_px": 0.172,
+        "std_px": 0.117,
+        "p90_px": 0.266,
+        "p95_px": 0.277,
+        "max_px": 0.289,
+        "count_gt_2px": 0,
+        "count_gt_4px": 0,
+        "count_gt_10px": 0,
+        "num_outlier_observations": 0,
+        "filtered_mean_px": 0.172,
+        "filtered_median_px": 0.172
+      },
+      "depth_and_distance": {
+        "min_camera_distance": 7.8576,
+        "max_camera_distance": 8.1789,
+        "mean_camera_distance": 8.0183,
+        "relative_distance_std": 0.02,
+        "has_positive_depth_all_views": true
+      },
+      "triangulation_geometry": {
+        "max_angle_deg": 2.09,
+        "median_angle_deg": 2.09,
+        "min_angle_deg": 2.09,
+        "max_camera_baseline": 0.4344,
+        "baseline_to_depth_ratio": 0.0542,
+        "is_triangulation_degenerate": false
+      },
+      "spatial_clustering": {
+        "nn_distance_1": 0.0608,
+        "nn_distance_3": 0.2231,
+        "is_spatial_outlier": false,
+        "cluster_id": 0
+      },
+      "refinement": {
+        "refined_status": "MODERATE_GEOMETRIC_CONFIDENCE",
+        "rationale": "Moderate confidence: 2/2 views inside mask (ratio=1.00), parallax 2.1\u00b0, acceptable reprojection (med=0.17px, p90=0.27px)."
+      }
+    },
+    {
+      "point_id": 974,
+      "track_id": 1639,
+      "point_3d": [
+        -1.1213,
+        -3.4448,
+        5.4789
+      ],
+      "original_classification": "AMBIGUOUS",
+      "original_mask_support_ratio": 0.25,
+      "total_observations": 4,
+      "masked_observations": 4,
+      "inside_mask_observations": 1,
+      "num_distinct_cameras": 4,
+      "observed_camera_ids": [
+        14,
+        15,
+        16,
+        17
+      ],
+      "supporting_camera_ids": [
+        14
+      ],
+      "reprojection_statistics": {
+        "mean_px": 3.487,
+        "median_px": 3.593,
+        "std_px": 1.407,
+        "p90_px": 4.904,
+        "p95_px": 5.124,
+        "max_px": 5.344,
+        "count_gt_2px": 3,
+        "count_gt_4px": 1,
+        "count_gt_10px": 0,
+        "num_outlier_observations": 0,
+        "filtered_mean_px": 3.487,
+        "filtered_median_px": 3.593
+      },
+      "depth_and_distance": {
+        "min_camera_distance": 7.2353,
+        "max_camera_distance": 7.6328,
+        "mean_camera_distance": 7.379,
+        "relative_distance_std": 0.0206,
+        "has_positive_depth_all_views": true
+      },
+      "triangulation_geometry": {
+        "max_angle_deg": 2.42,
+        "median_angle_deg": 1.26,
+        "min_angle_deg": 0.19,
+        "max_camera_baseline": 0.5064,
+        "baseline_to_depth_ratio": 0.0686,
+        "is_triangulation_degenerate": false
+      },
+      "spatial_clustering": {
+        "nn_distance_1": 0.2098,
+        "nn_distance_3": 0.9998,
+        "is_spatial_outlier": false,
+        "cluster_id": 3
+      },
+      "refinement": {
+        "refined_status": "LOW_GEOMETRIC_CONFIDENCE",
+        "rationale": "Low confidence: low mask support (0.25), elevated reprojection error (3.59px)."
+      }
+    },
+    {
+      "point_id": 975,
+      "track_id": 1640,
+      "point_3d": [
+        -1.367,
+        -2.7325,
+        6.141
+      ],
+      "original_classification": "WEAK_OBJECT_CANDIDATE",
+      "original_mask_support_ratio": 1.0,
+      "total_observations": 2,
+      "masked_observations": 2,
+      "inside_mask_observations": 2,
+      "num_distinct_cameras": 2,
+      "observed_camera_ids": [
+        14,
+        15
+      ],
+      "supporting_camera_ids": [
+        14,
+        15
+      ],
+      "reprojection_statistics": {
+        "mean_px": 0.293,
+        "median_px": 0.293,
+        "std_px": 0.19,
+        "p90_px": 0.446,
+        "p95_px": 0.465,
+        "max_px": 0.484,
+        "count_gt_2px": 0,
+        "count_gt_4px": 0,
+        "count_gt_10px": 0,
+        "num_outlier_observations": 0,
+        "filtered_mean_px": 0.293,
+        "filtered_median_px": 0.293
+      },
+      "depth_and_distance": {
+        "min_camera_distance": 7.5892,
+        "max_camera_distance": 7.9526,
+        "mean_camera_distance": 7.7709,
+        "relative_distance_std": 0.0234,
+        "has_positive_depth_all_views": true
+      },
+      "triangulation_geometry": {
+        "max_angle_deg": 1.76,
+        "median_angle_deg": 1.76,
+        "min_angle_deg": 1.76,
+        "max_camera_baseline": 0.4344,
+        "baseline_to_depth_ratio": 0.0559,
+        "is_triangulation_degenerate": false
+      },
+      "spatial_clustering": {
+        "nn_distance_1": 0.0601,
+        "nn_distance_3": 0.2273,
+        "is_spatial_outlier": false,
+        "cluster_id": 2
+      },
+      "refinement": {
+        "refined_status": "LOW_GEOMETRIC_CONFIDENCE",
+        "rationale": "Low confidence: weak parallax (1.8\u00b0)."
+      }
+    },
+    {
+      "point_id": 976,
+      "track_id": 1641,
+      "point_3d": [
+        -1.5304,
+        -2.9135,
+        6.2965
+      ],
+      "original_classification": "STRONG_OBJECT_CANDIDATE",
+      "original_mask_support_ratio": 1.0,
+      "total_observations": 3,
+      "masked_observations": 3,
+      "inside_mask_observations": 3,
+      "num_distinct_cameras": 3,
+      "observed_camera_ids": [
+        14,
+        15,
+        16
+      ],
+      "supporting_camera_ids": [
+        14,
+        15,
+        16
+      ],
+      "reprojection_statistics": {
+        "mean_px": 1.065,
+        "median_px": 0.315,
+        "std_px": 1.201,
+        "p90_px": 2.271,
+        "p95_px": 2.515,
+        "max_px": 2.76,
+        "count_gt_2px": 1,
+        "count_gt_4px": 0,
+        "count_gt_10px": 0,
+        "num_outlier_observations": 0,
+        "filtered_mean_px": 1.065,
+        "filtered_median_px": 0.315
+      },
+      "depth_and_distance": {
+        "min_camera_distance": 7.8014,
+        "max_camera_distance": 8.2239,
+        "mean_camera_distance": 7.9624,
+        "relative_distance_std": 0.0234,
+        "has_positive_depth_all_views": true
+      },
+      "triangulation_geometry": {
+        "max_angle_deg": 2.0,
+        "median_angle_deg": 1.71,
+        "min_angle_deg": 0.39,
+        "max_camera_baseline": 0.5064,
+        "baseline_to_depth_ratio": 0.0636,
+        "is_triangulation_degenerate": false
+      },
+      "spatial_clustering": {
+        "nn_distance_1": 0.171,
+        "nn_distance_3": 0.1975,
+        "is_spatial_outlier": false,
+        "cluster_id": 2
+      },
+      "refinement": {
+        "refined_status": "MODERATE_GEOMETRIC_CONFIDENCE",
+        "rationale": "Moderate confidence: 3/3 views inside mask (ratio=1.00), parallax 2.0\u00b0, acceptable reprojection (med=0.31px, p90=2.27px)."
+      }
+    },
+    {
+      "point_id": 977,
+      "track_id": 1643,
+      "point_3d": [
+        1.0811,
+        2.8068,
+        5.903
+      ],
+      "original_classification": "WEAK_OBJECT_CANDIDATE",
+      "original_mask_support_ratio": 1.0,
+      "total_observations": 2,
+      "masked_observations": 2,
+      "inside_mask_observations": 2,
+      "num_distinct_cameras": 2,
+      "observed_camera_ids": [
+        14,
+        15
+      ],
+      "supporting_camera_ids": [
+        14,
+        15
+      ],
+      "reprojection_statistics": {
+        "mean_px": 0.457,
+        "median_px": 0.457,
+        "std_px": 0.086,
+        "p90_px": 0.526,
+        "p95_px": 0.534,
+        "max_px": 0.543,
+        "count_gt_2px": 0,
+        "count_gt_4px": 0,
+        "count_gt_10px": 0,
+        "num_outlier_observations": 0,
+        "filtered_mean_px": 0.457,
+        "filtered_median_px": 0.457
+      },
+      "depth_and_distance": {
+        "min_camera_distance": 6.1866,
+        "max_camera_distance": 6.5515,
+        "mean_camera_distance": 6.3691,
+        "relative_distance_std": 0.0286,
+        "has_positive_depth_all_views": true
+      },
+      "triangulation_geometry": {
+        "max_angle_deg": 2.12,
+        "median_angle_deg": 2.12,
+        "min_angle_deg": 2.12,
+        "max_camera_baseline": 0.4344,
+        "baseline_to_depth_ratio": 0.0682,
+        "is_triangulation_degenerate": false
+      },
+      "spatial_clustering": {
+        "nn_distance_1": 2.3324,
+        "nn_distance_3": 4.7999,
+        "is_spatial_outlier": true,
+        "cluster_id": -1
+      },
+      "refinement": {
+        "refined_status": "GEOMETRIC_OUTLIER",
+        "rationale": "Spatial outlier: located far from main object cluster and lacks strong multi-view anchoring (cams=2, med_err=0.46px)."
+      }
+    },
+    {
+      "point_id": 978,
+      "track_id": 1644,
+      "point_3d": [
+        -1.2917,
+        -2.6809,
+        6.7341
+      ],
+      "original_classification": "WEAK_OBJECT_CANDIDATE",
+      "original_mask_support_ratio": 1.0,
+      "total_observations": 2,
+      "masked_observations": 2,
+      "inside_mask_observations": 2,
+      "num_distinct_cameras": 2,
+      "observed_camera_ids": [
+        14,
+        15
+      ],
+      "supporting_camera_ids": [
+        14,
+        15
+      ],
+      "reprojection_statistics": {
+        "mean_px": 0.651,
+        "median_px": 0.651,
+        "std_px": 0.201,
+        "p90_px": 0.812,
+        "p95_px": 0.832,
+        "max_px": 0.852,
+        "count_gt_2px": 0,
+        "count_gt_4px": 0,
+        "count_gt_10px": 0,
+        "num_outlier_observations": 0,
+        "filtered_mean_px": 0.651,
+        "filtered_median_px": 0.651
+      },
+      "depth_and_distance": {
+        "min_camera_distance": 7.9044,
+        "max_camera_distance": 8.2821,
+        "mean_camera_distance": 8.0933,
+        "relative_distance_std": 0.0233,
+        "has_positive_depth_all_views": true
+      },
+      "triangulation_geometry": {
+        "max_angle_deg": 1.52,
+        "median_angle_deg": 1.52,
+        "min_angle_deg": 1.52,
+        "max_camera_baseline": 0.4344,
+        "baseline_to_depth_ratio": 0.0537,
+        "is_triangulation_degenerate": false
+      },
+      "spatial_clustering": {
+        "nn_distance_1": 0.0561,
+        "nn_distance_3": 0.062,
+        "is_spatial_outlier": false,
+        "cluster_id": 2
+      },
+      "refinement": {
+        "refined_status": "LOW_GEOMETRIC_CONFIDENCE",
+        "rationale": "Low confidence: weak parallax (1.5\u00b0)."
+      }
+    },
+    {
+      "point_id": 980,
+      "track_id": 1687,
+      "point_3d": [
+        -1.4019,
+        -2.7152,
+        6.4989
+      ],
+      "original_classification": "WEAK_OBJECT_CANDIDATE",
+      "original_mask_support_ratio": 1.0,
+      "total_observations": 2,
+      "masked_observations": 2,
+      "inside_mask_observations": 2,
+      "num_distinct_cameras": 2,
+      "observed_camera_ids": [
+        14,
+        16
+      ],
+      "supporting_camera_ids": [
+        14,
+        16
+      ],
+      "reprojection_statistics": {
+        "mean_px": 0.284,
+        "median_px": 0.284,
+        "std_px": 0.083,
+        "p90_px": 0.35,
+        "p95_px": 0.358,
+        "max_px": 0.366,
+        "count_gt_2px": 0,
+        "count_gt_4px": 0,
+        "count_gt_10px": 0,
+        "num_outlier_observations": 0,
+        "filtered_mean_px": 0.284,
+        "filtered_median_px": 0.284
+      },
+      "depth_and_distance": {
+        "min_camera_distance": 7.774,
+        "max_camera_distance": 8.2064,
+        "mean_camera_distance": 7.9902,
+        "relative_distance_std": 0.0271,
+        "has_positive_depth_all_views": true
+      },
+      "triangulation_geometry": {
+        "max_angle_deg": 1.89,
+        "median_angle_deg": 1.89,
+        "min_angle_deg": 1.89,
+        "max_camera_baseline": 0.5064,
+        "baseline_to_depth_ratio": 0.0634,
+        "is_triangulation_degenerate": false
+      },
+      "spatial_clustering": {
+        "nn_distance_1": 0.0851,
+        "nn_distance_3": 0.2235,
+        "is_spatial_outlier": false,
+        "cluster_id": 2
+      },
+      "refinement": {
+        "refined_status": "MODERATE_GEOMETRIC_CONFIDENCE",
+        "rationale": "Moderate confidence: 2/2 views inside mask (ratio=1.00), parallax 1.9\u00b0, acceptable reprojection (med=0.28px, p90=0.35px)."
+      }
+    },
+    {
+      "point_id": 981,
+      "track_id": 1738,
+      "point_3d": [
+        -1.5262,
+        -2.5335,
+        6.4606
+      ],
+      "original_classification": "WEAK_OBJECT_CANDIDATE",
+      "original_mask_support_ratio": 0.5,
+      "total_observations": 3,
+      "masked_observations": 2,
+      "inside_mask_observations": 1,
+      "num_distinct_cameras": 3,
+      "observed_camera_ids": [
+        15,
+        17,
+        18
+      ],
+      "supporting_camera_ids": [
+        17
+      ],
+      "reprojection_statistics": {
+        "mean_px": 205.193,
+        "median_px": 0.666,
+        "std_px": 289.271,
+        "p90_px": 491.56,
+        "p95_px": 552.922,
+        "max_px": 614.284,
+        "count_gt_2px": 1,
+        "count_gt_4px": 1,
+        "count_gt_10px": 1,
+        "num_outlier_observations": 1,
+        "filtered_mean_px": 0.648,
+        "filtered_median_px": 0.648
+      },
+      "depth_and_distance": {
+        "min_camera_distance": 7.8434,
+        "max_camera_distance": 7.8996,
+        "mean_camera_distance": 7.8777,
+        "relative_distance_std": 0.0031,
+        "has_positive_depth_all_views": true
+      },
+      "triangulation_geometry": {
+        "max_angle_deg": 2.83,
+        "median_angle_deg": 2.57,
+        "min_angle_deg": 0.26,
+        "max_camera_baseline": 0.3907,
+        "baseline_to_depth_ratio": 0.0496,
+        "is_triangulation_degenerate": false
+      },
+      "spatial_clustering": {
+        "nn_distance_1": 0.0851,
+        "nn_distance_3": 0.2235,
+        "is_spatial_outlier": false,
+        "cluster_id": 2
+      },
+      "refinement": {
+        "refined_status": "GEOMETRIC_OUTLIER",
+        "rationale": "Reprojection outlier: residual error exceeds acceptable tolerance (med_err=0.67px, max_err=614.28px)."
+      }
+    },
+    {
+      "point_id": 983,
+      "track_id": 1755,
+      "point_3d": [
+        -1.2618,
+        -3.4473,
+        5.6801
+      ],
+      "original_classification": "WEAK_OBJECT_CANDIDATE",
+      "original_mask_support_ratio": 1.0,
+      "total_observations": 3,
+      "masked_observations": 2,
+      "inside_mask_observations": 2,
+      "num_distinct_cameras": 3,
+      "observed_camera_ids": [
+        16,
+        17,
+        18
+      ],
+      "supporting_camera_ids": [
+        16,
+        17
+      ],
+      "reprojection_statistics": {
+        "mean_px": 1.501,
+        "median_px": 1.246,
+        "std_px": 0.421,
+        "p90_px": 1.925,
+        "p95_px": 2.009,
+        "max_px": 2.094,
+        "count_gt_2px": 1,
+        "count_gt_4px": 0,
+        "count_gt_10px": 0,
+        "num_outlier_observations": 0,
+        "filtered_mean_px": 1.501,
+        "filtered_median_px": 1.246
+      },
+      "depth_and_distance": {
+        "min_camera_distance": 7.4483,
+        "max_camera_distance": 7.5664,
+        "mean_camera_distance": 7.5136,
+        "relative_distance_std": 0.0065,
+        "has_positive_depth_all_views": true
+      },
+      "triangulation_geometry": {
+        "max_angle_deg": 3.1,
+        "median_angle_deg": 2.95,
+        "min_angle_deg": 0.18,
+        "max_camera_baseline": 0.4125,
+        "baseline_to_depth_ratio": 0.0549,
+        "is_triangulation_degenerate": false
+      },
+      "spatial_clustering": {
+        "nn_distance_1": 0.0481,
+        "nn_distance_3": 0.8225,
+        "is_spatial_outlier": false,
+        "cluster_id": 3
+      },
+      "refinement": {
+        "refined_status": "MODERATE_GEOMETRIC_CONFIDENCE",
+        "rationale": "Moderate confidence: 2/2 views inside mask (ratio=1.00), parallax 3.1\u00b0, acceptable reprojection (med=1.25px, p90=1.92px)."
+      }
+    },
+    {
+      "point_id": 984,
+      "track_id": 1756,
+      "point_3d": [
+        -1.4027,
+        -2.7618,
+        6.1795
+      ],
+      "original_classification": "WEAK_OBJECT_CANDIDATE",
+      "original_mask_support_ratio": 1.0,
+      "total_observations": 3,
+      "masked_observations": 2,
+      "inside_mask_observations": 2,
+      "num_distinct_cameras": 3,
+      "observed_camera_ids": [
+        16,
+        17,
+        18
+      ],
+      "supporting_camera_ids": [
+        16,
+        17
+      ],
+      "reprojection_statistics": {
+        "mean_px": 0.929,
+        "median_px": 0.264,
+        "std_px": 0.95,
+        "p90_px": 1.871,
+        "p95_px": 2.072,
+        "max_px": 2.273,
+        "count_gt_2px": 1,
+        "count_gt_4px": 0,
+        "count_gt_10px": 0,
+        "num_outlier_observations": 0,
+        "filtered_mean_px": 0.929,
+        "filtered_median_px": 0.264
+      },
+      "depth_and_distance": {
+        "min_camera_distance": 7.588,
+        "max_camera_distance": 7.7051,
+        "mean_camera_distance": 7.6599,
+        "relative_distance_std": 0.0067,
+        "has_positive_depth_all_views": true
+      },
+      "triangulation_geometry": {
+        "max_angle_deg": 3.01,
+        "median_angle_deg": 2.91,
+        "min_angle_deg": 0.21,
+        "max_camera_baseline": 0.4125,
+        "baseline_to_depth_ratio": 0.0539,
+        "is_triangulation_degenerate": false
+      },
+      "spatial_clustering": {
+        "nn_distance_1": 0.0,
+        "nn_distance_3": 0.1906,
+        "is_spatial_outlier": false,
+        "cluster_id": 2
+      },
+      "refinement": {
+        "refined_status": "MODERATE_GEOMETRIC_CONFIDENCE",
+        "rationale": "Moderate confidence: 2/2 views inside mask (ratio=1.00), parallax 3.0\u00b0, acceptable reprojection (med=0.26px, p90=1.87px)."
+      }
+    },
+    {
+      "point_id": 985,
+      "track_id": 1757,
+      "point_3d": [
+        -1.4027,
+        -2.7618,
+        6.1795
+      ],
+      "original_classification": "WEAK_OBJECT_CANDIDATE",
+      "original_mask_support_ratio": 1.0,
+      "total_observations": 3,
+      "masked_observations": 2,
+      "inside_mask_observations": 2,
+      "num_distinct_cameras": 3,
+      "observed_camera_ids": [
+        16,
+        17,
+        18
+      ],
+      "supporting_camera_ids": [
+        16,
+        17
+      ],
+      "reprojection_statistics": {
+        "mean_px": 0.929,
+        "median_px": 0.264,
+        "std_px": 0.95,
+        "p90_px": 1.871,
+        "p95_px": 2.072,
+        "max_px": 2.273,
+        "count_gt_2px": 1,
+        "count_gt_4px": 0,
+        "count_gt_10px": 0,
+        "num_outlier_observations": 0,
+        "filtered_mean_px": 0.929,
+        "filtered_median_px": 0.264
+      },
+      "depth_and_distance": {
+        "min_camera_distance": 7.588,
+        "max_camera_distance": 7.7051,
+        "mean_camera_distance": 7.6599,
+        "relative_distance_std": 0.0067,
+        "has_positive_depth_all_views": true
+      },
+      "triangulation_geometry": {
+        "max_angle_deg": 3.01,
+        "median_angle_deg": 2.91,
+        "min_angle_deg": 0.21,
+        "max_camera_baseline": 0.4125,
+        "baseline_to_depth_ratio": 0.0539,
+        "is_triangulation_degenerate": false
+      },
+      "spatial_clustering": {
+        "nn_distance_1": 0.0,
+        "nn_distance_3": 0.1906,
+        "is_spatial_outlier": false,
+        "cluster_id": 2
+      },
+      "refinement": {
+        "refined_status": "MODERATE_GEOMETRIC_CONFIDENCE",
+        "rationale": "Moderate confidence: 2/2 views inside mask (ratio=1.00), parallax 3.0\u00b0, acceptable reprojection (med=0.26px, p90=1.87px)."
+      }
+    }
+  ]
+}

@@ -76,39 +76,3 @@ models/weights/*
 *.db-shm
 *.db-wal
 
-# Intermediate Objectron Reconstruction Caches (.npy depth arrays, per-frame clouds, raw fused clouds)
-outputs/objectron/*/depth_cache/*.npy
-outputs/objectron/*/per_frame/
-outputs/objectron/*/colmap/
-outputs/objectron/*/*raw_fused.ply
-outputs/objectron/*/*untrimmed.ply
-
-# Obsolete / experimental development outputs
-outputs/dense_depth/
-outputs/object_segmentation/
-outputs/real_video_validation/
-outputs/real_video_sfm_validation/
-outputs/final_audit/
-outputs/real_video_sfm/
-outputs/objectron_pointnet_pilot20/
-outputs/objectron_pointnet_pilot/
-outputs/sfm_real_test/
-outputs/object_association/
-outputs/real_world_validation/
-outputs/textured_mesh/
-outputs/universal_reconstruction/
-outputs/dense_reconstruction_investigation/
-outputs/validation_comparison/
-outputs/object_refinement/
-outputs/detection/
-outputs/mesh_reconstruction/
-outputs/exported_models/
-
-# Root videos and unused YOLO models
-VID_*.mp4
-yolov8*.pt
-yolo11n.pt
-yolo26n.pt
-*.docx
-
-

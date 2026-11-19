@@ -1,0 +1,118 @@
+{
+  "total_candidate_images": 47,
+  "registered_cameras_count": 12,
+  "registration_success_rate_percent": 25.53,
+  "points_count": {
+    "total_reconstructed": 377,
+    "valid_points": 377
+  },
+  "num_sparse_3d_points": 377,
+  "num_total_observations": 1694,
+  "scale_metadata": {
+    "scale_status": "unscaled_arbitrary_units",
+    "distance_unit": "arbitrary_units",
+    "seed_pair_baseline_length": 1.0,
+    "is_metric": false,
+    "metric_reference_note": "Monocular Structure from Motion recovers geometry up to an arbitrary scale factor defined by ||t_seed|| = 1.0. All coordinate distances and depths are in arbitrary units. Absolute metric dimensions require ground truth physical reference."
+  },
+  "track_statistics": {
+    "mean_track_length": 4.61,
+    "median_track_length": 4.0,
+    "max_track_length": 15,
+    "distribution": {
+      "2": 48,
+      "3": 106,
+      "4": 56,
+      "5": 58,
+      "6+": 109
+    }
+  },
+  "track_integrity": {
+    "total_triangulated_tracks": 377,
+    "valid_tracks_count": 377,
+    "total_observations_count": 1739,
+    "all_tracks_valid": true,
+    "anomalies_detected": [],
+    "track_length_stats": {
+      "min_length": 2,
+      "max_length": 15,
+      "mean_length": 4.61,
+      "median_length": 4.0
+    }
+  },
+  "reprojection_error_percentiles_px": {
+    "rmse": 4.451,
+    "mean": 1.817,
+    "median": 1.049,
+    "p90": 3.165,
+    "p95": 4.686,
+    "max": 76.845,
+    "unit": "pixels"
+  },
+  "observation_error_distribution": {
+    "percentages_below_thresholds": {
+      "pct_below_1px": 48.76,
+      "pct_below_2px": 77.1,
+      "pct_below_4px": 93.62,
+      "pct_below_10px": 98.41
+    },
+    "high_error_counts": {
+      "count_gt_4px": 108,
+      "count_gt_10px": 27
+    }
+  },
+  "scene_depth_bounds": {
+    "unit": "arbitrary_units",
+    "min_depth": 3.294,
+    "max_depth": 26.89,
+    "median_depth": 17.468,
+    "note": "Depth is expressed in arbitrary units defined by the initial seed baseline. Do not interpret as physical meters."
+  },
+  "bundle_adjustment": {
+    "reprojection_rmse_px": {
+      "initial": 4.499,
+      "final": 4.451,
+      "reduction_percent": 1.07
+    },
+    "reprojection_mean_px": {
+      "initial": 1.908,
+      "final": 1.817,
+      "reduction_percent": 4.73
+    },
+    "reprojection_percentiles_px": {
+      "initial_median": 1.072,
+      "final_median": 1.049,
+      "initial_p90": 3.264,
+      "final_p90": 3.165,
+      "initial_max": 76.893,
+      "final_max": 76.845
+    },
+    "observations": {
+      "num_cameras": 12,
+      "num_points": 377,
+      "num_observations_before": 1694,
+      "num_observations_after": 1694
+    },
+    "gauge_and_scale_constraints": {
+      "anchor_camera_id": 41,
+      "scale_camera_id": 43,
+      "seed_baseline_before": 1.0,
+      "seed_baseline_after": 1.0,
+      "seed_baseline_difference": 0.0,
+      "seed_baseline_preserved": true,
+      "scale_constraint_enforced": true,
+      "unit": "arbitrary_units"
+    },
+    "solver_diagnostics": {
+      "num_iterations": 2,
+      "optimization_status": 3,
+      "termination_message": "`xtol` termination condition is satisfied.",
+      "cost_initial": 17146.08,
+      "cost_final": 16782.22,
+      "cost_reduction": 363.86,
+      "optimization_time_ms": 226.07,
+      "is_success": true
+    },
+    "mathematical_note": "RMSE (Root Mean Square Error) weights large pixel deviations quadratically, making it sensitive to outliers. Mean Euclidean Error computes the arithmetic average distance in pixels (always <= RMSE by Jensen's inequality). A Huber robust loss was used during optimization to dampen outlier influence."
+  }
+}

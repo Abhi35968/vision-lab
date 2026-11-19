@@ -274,11 +274,13 @@ def page_overview():
     show_image(OBJ / "overlay_gallery.jpg",
                "White outline: YOLO mask. Dots: the object's 3D points re-projected into frames that were not "
                "used to select them. Blue wireframe: the 3D bounding box.")
-    st.info("Select **3D Reconstruction Studio** in the sidebar to inspect interactive 3D point clouds, watertight Poisson surface meshes, and telemetry for all 10 objects, or **Benchmark Telemetry** for dataset-wide metrics.")
+    st.info("Use the menu on the left: **Pipeline walkthrough** shows every stage on one video, "
+            "**Live demos** run parts of the pipeline on the spot, **Experiments** holds the four report experiments, "
+            "and **Try your own video** runs the whole pipeline on a video you upload.")
 
 
 def page_walkthrough():
-    st.title("3D Reconstruction Studio")
+    st.title("Pipeline walkthrough")
     dirs = result_dirs()
     if not dirs:
         st.error("No results found in outputs/objectron. Run: python -m experiments.objectron_batch")
@@ -989,10 +991,13 @@ def page_upload():
 
 
 PAGES = {
-    "Overview & Architecture": page_overview,
-    "3D Reconstruction Studio": page_walkthrough,
-    "Benchmark Telemetry (10/10)": page_all_videos,
-    "Upload Custom Video": page_upload,
+    "Overview": page_overview,
+    "Pipeline walkthrough": page_walkthrough,
+    "Try your own video": page_upload,
+    "Live demos": page_live,
+    "Experiments": page_experiments,
+    "All ten videos": page_all_videos,
+    "Development video": page_dev_video,
 }
 
 render_sidebar_brand()

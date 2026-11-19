@@ -1,0 +1,47 @@
+{
+  "reprojection_rmse_px": {
+    "initial": 4.499,
+    "final": 4.451,
+    "reduction_percent": 1.07
+  },
+  "reprojection_mean_px": {
+    "initial": 1.908,
+    "final": 1.817,
+    "reduction_percent": 4.73
+  },
+  "reprojection_percentiles_px": {
+    "initial_median": 1.072,
+    "final_median": 1.049,
+    "initial_p90": 3.264,
+    "final_p90": 3.165,
+    "initial_max": 76.893,
+    "final_max": 76.845
+  },
+  "observations": {
+    "num_cameras": 12,
+    "num_points": 377,
+    "num_observations_before": 1694,
+    "num_observations_after": 1694
+  },
+  "gauge_and_scale_constraints": {
+    "anchor_camera_id": 41,
+    "scale_camera_id": 43,
+    "seed_baseline_before": 1.0,
+    "seed_baseline_after": 1.0,
+    "seed_baseline_difference": 0.0,
+    "seed_baseline_preserved": true,
+    "scale_constraint_enforced": true,
+    "unit": "arbitrary_units"
+  },
+  "solver_diagnostics": {
+    "num_iterations": 2,
+    "optimization_status": 3,
+    "termination_message": "`xtol` termination condition is satisfied.",
+    "cost_initial": 17146.08,
+    "cost_final": 16782.22,
+    "cost_reduction": 363.86,
+    "optimization_time_ms": 226.07,
+    "is_success": true
+  },
+  "mathematical_note": "RMSE (Root Mean Square Error) weights large pixel deviations quadratically, making it sensitive to outliers. Mean Euclidean Error computes the arithmetic average distance in pixels (always <= RMSE by Jensen's inequality). A Huber robust loss was used during optimization to dampen outlier influence."
+}

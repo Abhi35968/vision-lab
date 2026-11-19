@@ -1,0 +1,27 @@
+{
+  "total_views_processed": 10,
+  "raw_points_fused": 120000,
+  "clean_points_count": 75515,
+  "retention_rate_pct": 62.9,
+  "sparse_points_reference_count": 4880,
+  "density_multiplier": 15.47,
+  "mesh_vertices_count": 117599,
+  "mesh_triangles_count": 234297,
+  "raw_ply_path": "outputs\\dense_depth\\fused_dense_object_raw_fused.ply",
+  "clean_ply_path": "outputs\\dense_depth\\fused_dense_object_clean_optimized.ply",
+  "mesh_ply_path": "outputs\\dense_depth\\fused_dense_object_poisson_mesh.ply",
+  "summary_json_path": "outputs\\dense_depth\\fused_dense_object_summary.json",
+  "execution_time_s": 30.12,
+  "mesh_diagnostics": {
+    "is_watertight": false,
+    "is_edge_manifold": false,
+    "is_vertex_manifold": false,
+    "is_self_intersecting": true,
+    "num_vertices": 117599,
+    "num_triangles": 234297
+  },
+  "notes": [
+    "Global object anchor world position: [1.111, 0.445, 5.682]",
+    "Dense depth is relative and aligned in arbitrary SfM units; it is not metric geometry."
+  ]
+}
