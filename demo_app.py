@@ -280,12 +280,32 @@ def page_overview():
 
 
 def page_walkthrough():
-    st.title("Pipeline walkthrough")
     dirs = result_dirs()
     if not dirs:
         st.error("No results found in outputs/objectron. Run: python -m experiments.objectron_batch")
         return
-    label = st.sidebar.selectbox("Video", list(dirs.keys()))
+
+    # Prominent Category Selector at the top of the main page
+    c_sel, c_stat = st.columns([3, 1])
+    with c_sel:
+        label = st.selectbox(
+            "🎯 Select Object Category to Inspect (10 Benchmark Objects):",
+            list(dirs.keys()),
+            format_func=lambda x: f"📦 {x.title()}",
+            key="walkthrough_category_selector",
+            help="Switch between any of the 10 reconstructed Objectron objects."
+        )
+    with c_stat:
+        st.markdown(
+            f"""
+            <div style="background:#FFFFFF; border:1px solid #D6D9DF; border-radius:10px; padding:8px 14px; margin-top:24px; text-align:center;">
+                <span style="font-size:0.72rem; color:#8F9192; text-transform:uppercase; font-weight:700; letter-spacing:0.04em;">Selected Model</span><br>
+                <span style="font-size:0.92rem; font-weight:700; color:#3D766D;">{label.title()}</span>
+            </div>
+            """,
+            unsafe_allow_html=True,
+        )
+
     render_walkthrough(Path(dirs[label]))
 
 
