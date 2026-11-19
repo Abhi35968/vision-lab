@@ -69,6 +69,7 @@ outputs/uploads/
 # Deep Learning Model Weights (Large binary files)
 models/weights/*
 !models/weights/.gitkeep
+!models/weights/pointnet_modelnet40.pth
 
 # COLMAP intermediate databases
 *.db

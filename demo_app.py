@@ -57,11 +57,33 @@ def source_video(rdir: Path, m: dict):
 
 @st.cache_data
 def read_ply_xyzrgb(path: str):
-    import open3d as o3d
-    pc = o3d.io.read_point_cloud(path)
-    pts = np.asarray(pc.points)
-    cols = np.asarray(pc.colors) if pc.has_colors() else np.full_like(pts, 0.55)
-    return pts, cols
+    p = Path(path)
+    if not p.exists():
+        return np.empty((0, 3)), np.empty((0, 3))
+    # Try open3d first if available
+    try:
+        import open3d as o3d
+        pc = o3d.io.read_point_cloud(str(p))
+        pts = np.asarray(pc.points)
+        cols = np.asarray(pc.colors) if pc.has_colors() else np.full_like(pts, 0.55)
+        if len(pts) > 0:
+            return pts, cols
+    except Exception:
+        pass
+    # Fallback to trimesh for headless environments
+    try:
+        import trimesh
+        mesh_or_pc = trimesh.load(str(p), process=False)
+        if hasattr(mesh_or_pc, "vertices") and len(mesh_or_pc.vertices) > 0:
+            pts = np.asarray(mesh_or_pc.vertices, dtype=np.float32)
+            if hasattr(mesh_or_pc, "visual") and hasattr(mesh_or_pc.visual, "vertex_colors") and len(mesh_or_pc.visual.vertex_colors):
+                cols = np.asarray(mesh_or_pc.visual.vertex_colors[:, :3], dtype=np.float32) / 255.0
+            else:
+                cols = np.full_like(pts, 0.55)
+            return pts, cols
+    except Exception:
+        pass
+    return np.empty((0, 3)), np.empty((0, 3))
 
 
 @st.cache_data
@@ -113,7 +135,15 @@ def pointnet():
     from src.classification_3d.pointnet import PointNetClassifier
     classes = json.loads((ROOT / "config" / "pointnet_classes.json").read_text())
     model = PointNetClassifier(num_classes=len(classes), feature_transform=True)
-    model.load_state_dict(torch.load(ROOT / "models" / "weights" / "pointnet_modelnet40.pth", map_location="cpu"))
+    weights_path = ROOT / "models" / "weights" / "pointnet_modelnet40.pth"
+    if weights_path.exists():
+        try:
+            model.load_state_dict(torch.load(weights_path, map_location="cpu", weights_only=True))
+        except Exception:
+            try:
+                model.load_state_dict(torch.load(weights_path, map_location="cpu"))
+            except Exception:
+                pass
     model.eval()
     return model, classes
 
@@ -389,9 +419,7 @@ def render_walkthrough(rdir: Path):
 
             d_tab1, d_tab2 = st.tabs(["Dense Point Cloud (Subsampled for WebGL)", "Watertight Poisson Surface Mesh"])
             with d_tab1:
-                import open3d as o3d
-                pcd_dense = o3d.io.read_point_cloud(str(dense_ply))
-                d_pts = np.asarray(pcd_dense.points)
+                d_pts, _ = read_ply_xyzrgb(str(dense_ply))
                 step = max(1, len(d_pts) // 15000)
                 render_pts = d_pts[::step]
                 fig_dense = go.Figure()
@@ -814,9 +842,7 @@ def page_dev_video():
         with sub_tab1:
             dense_ply_path = OUT / "dense_depth" / "fused_dense_object_clean_optimized.ply"
             if dense_ply_path.exists():
-                import open3d as o3d
-                pcd_dense = o3d.io.read_point_cloud(str(dense_ply_path))
-                d_pts = np.asarray(pcd_dense.points)
+                d_pts, _ = read_ply_xyzrgb(str(dense_ply_path))
                 step = max(1, len(d_pts) // 15000)
                 render_pts = d_pts[::step]
                 fig_dense = go.Figure()

@@ -127,7 +127,6 @@ def load_existing_sfm_data(sfm_dir: Optional[str] = None):
 @st.cache_data
 def load_sparse_points_ply():
     """Loads sparse scene and object points from PLY files."""
-    import open3d as o3d
     scene_ply = Path("outputs/colmap/colmap_sparse_points.ply")
     if not scene_ply.exists():
         scene_ply = Path("outputs/sfm/sparse_points.ply")
@@ -136,22 +135,22 @@ def load_sparse_points_ply():
     if not obj_ply.exists():
         obj_ply = Path("outputs/sfm/object_sparse_points.ply")
 
-    pts_scene, pts_obj = None, None
-    if scene_ply.exists():
+    def _read_pts(p):
+        if not p.exists():
+            return None
         try:
-            pcd = o3d.io.read_point_cloud(str(scene_ply))
-            pts_scene = np.asarray(pcd.points)
+            import open3d as o3d
+            return np.asarray(o3d.io.read_point_cloud(str(p)).points)
         except Exception:
-            pts_scene = None
-
-    if obj_ply.exists():
+            pass
         try:
-            pcd_o = o3d.io.read_point_cloud(str(obj_ply))
-            pts_obj = np.asarray(pcd_o.points)
+            import trimesh
+            m = trimesh.load(str(p), process=False)
+            return np.asarray(m.vertices)
         except Exception:
-            pts_obj = None
+            return None
 
-    return pts_scene, pts_obj
+    return _read_pts(scene_ply), _read_pts(obj_ply)
 
 
 @st.cache_data
