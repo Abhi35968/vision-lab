@@ -227,6 +227,64 @@ def pct(v, digits=0):
     return "n/a" if v is None or (isinstance(v, float) and np.isnan(v)) else f"{v:.{digits}f}%"
 
 
+def render_feature_matching_interactive(kfs, focal_px=1300, key_prefix="fm"):
+    """Interactive pairwise keyframe feature matching & epipolar geometry verification."""
+    if not kfs or len(kfs) < 2:
+        st.info("Feature matching requires at least two keyframes.")
+        return
+    st.markdown("##### 🔍 Interactive Pairwise Feature Matching & Epipolar Verification")
+    st.caption("Inspect Root-SIFT vs ORB descriptor correspondences and RANSAC epipolar inlier geometry across viewpoints:")
+    c = st.columns(4)
+    i = c[0].slider("Keyframe A", 0, len(kfs) - 2, 0, key=f"{key_prefix}_i")
+    max_gap = min(15, len(kfs) - 1 - i)
+    gap = c[1].slider("Frame Step", 1, max(1, max_gap), min(2, max_gap), key=f"{key_prefix}_gap")
+    nfeat = c[2].select_slider("Max Features", [500, 1000, 2000, 4000], 1500, key=f"{key_prefix}_n")
+    det_choice = c[3].selectbox("Detector", ["Both (SIFT & ORB)", "SIFT", "ORB"], index=0, key=f"{key_prefix}_det")
+    j = min(i + gap, len(kfs) - 1)
+
+    img1 = cv2.imread(kfs[i])
+    img2 = cv2.imread(kfs[j])
+    if img1 is None or img2 is None:
+        st.warning("Could not read keyframe images.")
+        return
+
+    from src.sfm.feature_extractor import FeatureExtractor
+    from src.sfm.feature_matcher import FeatureMatcher
+    h, w = img1.shape[:2]
+    f = focal_px if focal_px else 1.2 * max(h, w)
+    k_mat = np.array([[f, 0, w / 2], [0, f, h / 2], [0, 0, 1.0]])
+
+    detectors = ("SIFT", "ORB") if "Both" in det_choice else (det_choice,)
+    cols = st.columns(len(detectors))
+    rows = []
+    for col, det in zip(cols, detectors):
+        ext = FeatureExtractor(detector=det, n_features=nfeat)
+        f1, f2 = ext.extract(img1), ext.extract(img2)
+        mt = FeatureMatcher(matcher_type="FLANN" if det == "SIFT" else "BF", lowe_ratio=0.75).match(f1, f2)
+        inl, good = 0, []
+        if mt.final_matches_count >= 8:
+            _, mask = cv2.findEssentialMat(mt.matched_pts1, mt.matched_pts2, k_mat, method=cv2.RANSAC,
+                                           prob=0.999, threshold=1.0)
+            if mask is not None:
+                good = [mm for mm, keep in zip(mt.final_matches, mask.ravel()) if keep]
+                inl = len(good)
+        vis = cv2.drawMatches(img1, f1.keypoints, img2, f2.keypoints, good[:: max(1, len(good) // 120)], None,
+                              matchColor=(0, 255, 0), flags=cv2.DrawMatchesFlags_NOT_DRAW_SINGLE_POINTS)
+        col.image(cv2.cvtColor(vis, cv2.COLOR_BGR2RGB), width="stretch",
+                  caption=f"{det}: {inl} geometrically verified inliers ({f1.num_keypoints} & {f2.num_keypoints} kps)")
+        rows.append({
+            "Detector": det,
+            "Keypoints (Image A)": f1.num_keypoints,
+            "Keypoints (Image B)": f2.num_keypoints,
+            "Matches after Ratio Test": mt.final_matches_count,
+            "RANSAC Inliers": inl,
+            "Inlier Ratio": f"{100 * inl / max(mt.final_matches_count, 1):.0f}%",
+            "Extraction Time": f"{(f1.extraction_time_ms + f2.extraction_time_ms):.1f} ms",
+            "Matching Time": f"{mt.matching_time_ms:.1f} ms"
+        })
+    st.dataframe(pd.DataFrame(rows), hide_index=True, width="stretch")
+
+
 # ============================================================================ pages
 def page_overview():
     render_client_header(
@@ -285,28 +343,34 @@ def page_walkthrough():
         st.error("No results found in outputs/objectron. Run: python -m experiments.objectron_batch")
         return
 
-    # Prominent Category Selector at the top of the main page
+    # Real deployment video as premier benchmark item alongside the 10 Objectron objects
+    options = ["⭐ Real Tabletop Bottle (VID_20261102_015654418.mp4)"] + list(dirs.keys())
+
     c_sel, c_stat = st.columns([3, 1])
     with c_sel:
         label = st.selectbox(
-            "🎯 Select Object Category to Inspect (10 Benchmark Objects):",
-            list(dirs.keys()),
-            format_func=lambda x: f"📦 {x.title()}",
+            "🎯 Select Video / Object Category to Inspect:",
+            options,
+            format_func=lambda x: x if x.startswith("⭐") else f"📦 {x.title()}",
             key="walkthrough_category_selector",
-            help="Switch between any of the 10 reconstructed Objectron objects."
+            help="Switch between the real deployment video and the 10 benchmark Objectron objects."
         )
     with c_stat:
+        disp_title = "Real Bottle (VID)" if label.startswith("⭐") else label.title()
         st.markdown(
             f"""
             <div style="background:#FFFFFF; border:1px solid #D6D9DF; border-radius:10px; padding:8px 14px; margin-top:24px; text-align:center;">
                 <span style="font-size:0.72rem; color:#8F9192; text-transform:uppercase; font-weight:700; letter-spacing:0.04em;">Selected Model</span><br>
-                <span style="font-size:0.92rem; font-weight:700; color:#3D766D;">{label.title()}</span>
+                <span style="font-size:0.92rem; font-weight:700; color:#3D766D;">{disp_title}</span>
             </div>
             """,
             unsafe_allow_html=True,
         )
 
-    render_walkthrough(Path(dirs[label]))
+    if label.startswith("⭐"):
+        page_dev_video()
+    else:
+        render_walkthrough(Path(dirs[label]))
 
 
 def render_walkthrough(rdir: Path):
@@ -368,6 +432,8 @@ def render_walkthrough(rdir: Path):
         cm = o3.toggle("Show camera path", value=True, key="sfm_cm")
         st.plotly_chart(scene_figure(scene, cols_, obj, cams, hl, bx, cm), width="stretch", key="sfm_fig")
         st.caption("Drag to rotate, scroll to zoom. Reconstruction by COLMAP; units are arbitrary (no metric scale).")
+        with st.expander("🔍 Interactive Feature Matching & Epipolar Verification (Root-SIFT vs ORB)", expanded=False):
+            render_feature_matching_interactive(kfs, focal_px=m.get("colmap_focal_px", 1300), key_prefix=f"walk_{rdir.name}")
 
     with t3:
         c = st.columns(4)
@@ -805,12 +871,36 @@ def page_dev_video():
     c[1].metric("Object 3D Anchor", "[1.11, 0.45, 5.68] m")
     c[2].metric("Clean Dense Points", f"{clean_pts_cnt:,} points ({density_mult:.1f}x)")
     c[3].metric("Consensus Classification", f"{cand_name} ({cand_conf:.1f}%)")
+
+    dev_vid = ROOT / "VID_20261102_015654418.mp4"
+    if dev_vid.exists():
+        v1, v2 = st.columns([1, 2])
+        with v1:
+            st.video(str(dev_vid))
+            st.caption("Deployment Baseline Video (`VID_20261102_015654418.mp4`: 9.6s, 1080p, 60fps)")
+        with v2:
+            st.markdown(
+                """
+                **Deployment Benchmark Object Profile:**
+                - **Target:** Transparent tabletop water bottle (specular, textureless plastic).
+                - **Tracking:** 47 keyframes selected by Laplacian variance, 100% camera registration (47/47).
+                - **Dense Geometry:** 75,515 clean multi-view points (15.5x density gain over sparse SfM).
+                - **Watertight Poisson Surface Mesh:** 234,297 triangles, 117,599 vertices.
+                - **Classification Decision:** Fused Bottle prediction (42.8% confidence Bayesian consensus).
+                """
+            )
+
     t1, t2, t3, t4 = st.tabs(["Interactive 3D scene", "Dense 3D & Fusion (Audited & Repaired)", "Object localisation", "Fitted bottle model"])
     with t1:
         f = OUT / "objects_3d" / "scene_interactive.html"
         if f.exists():
             st.components.v1.html(f.read_text(encoding="utf-8"), height=680)
         st.caption("Own-SfM reconstruction with the object points, the 3D boxes and the fitted bottle model.")
+
+        real_kfs = sorted(str(p) for p in (OUT / "real_video_validation" / "keyframes").glob("*.png"))
+        if real_kfs:
+            with st.expander("🔍 Interactive Feature Matching & Epipolar Verification (Root-SIFT vs ORB on Real Keyframes)", expanded=False):
+                render_feature_matching_interactive(real_kfs, focal_px=1300, key_prefix="dev_bottle_fm")
     with t2:
         st.subheader("Dense Monocular Depth Fusion & Multimodal AI Classification (Audited & Repaired)")
         st.markdown(
@@ -1012,12 +1102,10 @@ def page_upload():
 
 PAGES = {
     "Overview": page_overview,
-    "Pipeline walkthrough": page_walkthrough,
-    "Try your own video": page_upload,
-    "Live demos": page_live,
-    "Experiments": page_experiments,
-    "All ten videos": page_all_videos,
-    "Development video": page_dev_video,
+    "3D Reconstruction Studio": page_walkthrough,
+    "Benchmark Telemetry (10/10)": page_all_videos,
+    "Scientific Experiments": page_experiments,
+    "Upload Custom Video": page_upload,
 }
 
 render_sidebar_brand()

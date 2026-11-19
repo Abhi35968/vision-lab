@@ -80,7 +80,6 @@ models/weights/*
 outputs/objectron/*/depth_cache/*.npy
 
 # Loose root files and unused YOLO models
-VID_20261102_015654418.mp4
 yolov8*.pt
 yolo11n.pt
 yolo26n.pt
