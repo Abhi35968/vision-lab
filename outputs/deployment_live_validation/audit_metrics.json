@@ -1,50 +1,50 @@
 {
   "mesh_and_pcd_stats": {
-    "pcd_points": 114206,
+    "pcd_points": 112767,
     "pcd_min": [
-      -2.9047599102959882,
-      -4.022606107720079,
-      6.406047486765314
+      -3.242032634978874,
+      -3.9779795169231673,
+      6.18457252125581
     ],
     "pcd_max": [
-      -0.23661465138059834,
-      3.336556104402411,
-      9.091544025774324
+      -0.5701553997856977,
+      3.3712103000487468,
+      8.857088203411372
     ],
     "pcd_extent": [
-      2.66814525891539,
-      7.35916221212249,
-      2.6854965390090095
+      2.6718772351931763,
+      7.349189816971914,
+      2.672515682155562
     ],
-    "pcd_aspect_ratio_h_to_d": 2.7492,
-    "pcd_circularity_xz": 1.0065,
-    "mesh_vertices": 145294,
-    "mesh_faces": 289576,
+    "pcd_aspect_ratio_h_to_d": 2.7502,
+    "pcd_circularity_xz": 1.0002,
+    "mesh_vertices": 148817,
+    "mesh_faces": 296527,
     "mesh_min": [
-      -2.94614029,
-      -4.04272842,
-      6.42383528
+      -3.27793241,
+      -4.00287294,
+      6.20446825
     ],
     "mesh_max": [
-      -0.17934561,
-      3.35667896,
-      9.10851574
+      -0.5166378,
+      3.3913064,
+      8.86821747
     ],
     "mesh_extent": [
-      2.7667946800000003,
-      7.39940738,
-      2.68468046
+      2.76129461,
+      7.394179339999999,
+      2.6637492199999997
     ],
-    "mesh_aspect_ratio_h_to_d": 2.7146,
-    "mesh_circularity_xz": 0.9703,
+    "mesh_aspect_ratio_h_to_d": 2.7259,
+    "mesh_circularity_xz": 0.9647,
     "is_watertight": false,
-    "euler_number": -294,
-    "num_connected_components": 34,
-    "num_boundary_edges": 1976,
+    "euler_number": -281,
+    "num_connected_components": 30,
+    "num_boundary_edges": 2005,
     "is_winding_consistent": true,
-    "degenerate_faces": 2481,
+    "degenerate_faces": 2470,
     "is_edge_manifold": false,
-    "is_vertex_manifold": true,
+    "is_vertex_manifold": false,
     "is_orientable": false,
     "is_self_intersecting": true
   },
@@ -365,8 +365,8 @@
     },
     {
       "image": "kf_007_orig00113.jpg",
-      "visible_points": 4786,
-      "coverage_pct": 95.72
+      "visible_points": 4788,
+      "coverage_pct": 95.76
     },
     {
       "image": "kf_010_orig00173.jpg",
