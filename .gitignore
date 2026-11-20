@@ -48,6 +48,7 @@ data/modelnet40/
 data/objectron_test_subset/
 data/uploads/
 *.zip
+!scripts/colab_mvs_input.zip
 *.tar.gz
 *.log
 
