@@ -1,0 +1,8 @@
+{
+  "status": "success",
+  "dense_points_count": 504386,
+  "mesh_vertices_count": 242096,
+  "mesh_triangles_count": 481373,
+  "dense_ply_path": "mvs_output/mvs/fused.ply",
+  "dense_mesh_ply": "mvs_output/mvs/mvs_poisson_mesh.ply"
+}

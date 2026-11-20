@@ -1,0 +1,81 @@
+{
+  "point_clouds": {
+    "baseline_depth_anything": {
+      "name": "Baseline (Depth Anything + Gradient Filter)",
+      "exists": true,
+      "points_count": 112767,
+      "bounding_box_extent": [
+        2.6719,
+        7.3492,
+        2.6725
+      ],
+      "height_y": 7.3492,
+      "width_x": 2.6719,
+      "depth_z": 2.6725,
+      "circularity_zx_ratio": 1.0002,
+      "radial_mean": 0.6353,
+      "radial_std": 0.3203,
+      "radial_relative_error_pct": 50.41
+    },
+    "tsdf_volume_fusion": {
+      "name": "Open3D TSDF Volume Integration",
+      "exists": true,
+      "points_count": 53027,
+      "bounding_box_extent": [
+        9.0567,
+        11.2349,
+        9.3
+      ],
+      "height_y": 11.2349,
+      "width_x": 9.0567,
+      "depth_z": 9.3,
+      "circularity_zx_ratio": 1.0269,
+      "radial_mean": 2.7137,
+      "radial_std": 2.2805,
+      "radial_relative_error_pct": 84.04
+    },
+    "colmap_patchmatch_mvs": {
+      "name": "COLMAP CUDA PatchMatch MVS",
+      "exists": true,
+      "points_count": 504386,
+      "bounding_box_extent": [
+        29.7076,
+        20.697,
+        32.2144
+      ],
+      "height_y": 20.697,
+      "width_x": 29.7076,
+      "depth_z": 32.2144,
+      "circularity_zx_ratio": 1.0844,
+      "radial_mean": 5.5041,
+      "radial_std": 1.3381,
+      "radial_relative_error_pct": 24.31
+    }
+  },
+  "meshes": {
+    "baseline_poisson": {
+      "name": "Baseline Poisson Mesh",
+      "exists": true,
+      "vertices_count": 148817,
+      "triangles_count": 296527,
+      "is_watertight": false,
+      "surface_area": 118.8787
+    },
+    "tsdf_marching_cubes": {
+      "name": "TSDF Marching Cubes Mesh",
+      "exists": true,
+      "vertices_count": 31724,
+      "triangles_count": 61004,
+      "is_watertight": false,
+      "surface_area": 69.8329
+    },
+    "colmap_poisson": {
+      "name": "COLMAP PatchMatch Poisson Mesh",
+      "exists": true,
+      "vertices_count": 242096,
+      "triangles_count": 481373,
+      "is_watertight": false,
+      "surface_area": 1020.3999
+    }
+  }
+}

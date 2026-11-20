@@ -86,9 +86,9 @@ def main():
     
     # Paths
     pcd_baseline = root / "outputs" / "deployment_live_validation" / "final_object_only_cloud.ply"
-    mesh_baseline = root / "outputs" / "deployment_live_validation" / "poisson_mesh.ply"
+    mesh_baseline = root / "outputs" / "deployment_live_validation" / "final_reconstructed_mesh.ply"
     
-    pcd_tsdf = root / "outputs" / "deployment_live_validation" / "tsdf_fusion" / "tsdf_volume_cloud.ply"
+    pcd_tsdf = root / "outputs" / "deployment_live_validation" / "tsdf_fusion" / "tsdf_volume_point_cloud.ply"
     mesh_tsdf = root / "outputs" / "deployment_live_validation" / "tsdf_fusion" / "tsdf_volume_mesh.ply"
     
     pcd_colmap = root / "outputs" / "colab_mvs_results" / "fused.ply"
