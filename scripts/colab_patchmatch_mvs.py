@@ -73,8 +73,11 @@ def run_mvs_pipeline(
     logger.info("Image undistortion complete.")
 
     # 2. PatchMatch Stereo (CUDA accelerated)
-    logger.info("Step 2: Running Dense PatchMatch Stereo (CUDA)...")
-    try:
+    stereo_dm_dir = mvs_dir / "stereo" / "depth_maps"
+    if stereo_dm_dir.exists() and len(list(stereo_dm_dir.glob("*.bin"))) >= 28:
+        logger.info(f"PatchMatch Stereo depth maps already exist ({len(list(stereo_dm_dir.glob('*.bin')))} files). Skipping re-computation.")
+    else:
+        logger.info("Step 2: Running Dense PatchMatch Stereo (CUDA)...")
         pm_opts = pycolmap.PatchMatchOptions()
         pm_opts.max_image_size = max_image_size
         pm_opts.window_radius = 5
@@ -87,39 +90,22 @@ def run_mvs_pipeline(
             workspace_path=str(mvs_dir),
             options=pm_opts,
         )
-    except Exception as e:
-        logger.warning(f"pycolmap.patch_match_stereo failed: {e}. Trying CLI fallback...")
-        import subprocess
-        subprocess.run([
-            "colmap", "patch_match_stereo",
-            "--workspace_path", str(mvs_dir),
-            "--PatchMatchStereo.geom_consistency", "true",
-            "--PatchMatchStereo.max_image_size", str(max_image_size),
-        ], check=True)
-    logger.info("PatchMatch Stereo complete.")
+        logger.info("PatchMatch Stereo complete.")
 
     # 3. Stereo Fusion
     logger.info("Step 3: Running Stereo Multi-View Fusion...")
     dense_fused_ply = mvs_dir / "fused.ply"
-    try:
-        fusion_opts = pycolmap.StereoFusionOptions()
-        fusion_opts.min_num_pixels = min_num_consistent # View consistency check across views
+    fusion_opts = pycolmap.StereoFusionOptions()
+    fusion_opts.min_num_pixels = min_num_consistent # View consistency check across views
 
-        pycolmap.stereo_fusion(
-            output_path=str(dense_fused_ply),
-            workspace_path=str(mvs_dir),
-            output_type="PLY",
-            options=fusion_opts,
-        )
-    except Exception as e:
-        logger.warning(f"pycolmap.stereo_fusion failed: {e}. Trying CLI fallback...")
-        import subprocess
-        subprocess.run([
-            "colmap", "stereo_fusion",
-            "--workspace_path", str(mvs_dir),
-            "--output_path", str(dense_fused_ply),
-            "--StereoFusion.min_num_pixels", str(min_num_consistent),
-        ], check=True)
+    rec = pycolmap.stereo_fusion(
+        output_path=str(dense_fused_ply),
+        workspace_path=str(mvs_dir),
+        output_type="PLY",
+        options=fusion_opts,
+    )
+    if not dense_fused_ply.exists() and rec is not None:
+        rec.export_PLY(str(dense_fused_ply))
     logger.info(f"Stereo fusion complete. Saved to {dense_fused_ply}")
 
     # 4. Load Dense Point Cloud & Diagnostics
@@ -129,17 +115,20 @@ def run_mvs_pipeline(
 
     # 5. Poisson Surface Reconstruction from Dense MVS Cloud
     logger.info("Step 4: Generating Poisson Surface Mesh from MVS Cloud...")
-    pcd.estimate_normals(search_param=o3d.geometry.KDTreeSearchParamHybrid(radius=0.05, max_nn=30))
-    pcd.orient_normals_consistent_tangent_plane(k=15)
-    
-    mesh, densities = o3d.geometry.TriangleMesh.create_from_point_cloud_poisson(pcd, depth=9)
-    # Trim low-density extrapolated triangles
-    dens_np = np.asarray(densities)
-    thresh = np.percentile(dens_np, 5)
-    mesh.remove_vertices_by_mask(dens_np < thresh)
-
     dense_mesh_ply = mvs_dir / "mvs_poisson_mesh.ply"
-    o3d.io.write_triangle_mesh(str(dense_mesh_ply), mesh)
+    if len(pts) > 0:
+        pcd.estimate_normals(search_param=o3d.geometry.KDTreeSearchParamHybrid(radius=0.05, max_nn=30))
+        pcd.orient_normals_consistent_tangent_plane(k=15)
+        mesh, densities = o3d.geometry.TriangleMesh.create_from_point_cloud_poisson(pcd, depth=9)
+        dens_np = np.asarray(densities)
+        if len(dens_np) > 0:
+            thresh = np.percentile(dens_np, 5)
+            mesh.remove_vertices_by_mask(dens_np < thresh)
+        o3d.io.write_triangle_mesh(str(dense_mesh_ply), mesh)
+    else:
+        logger.warning("No dense points available for Poisson meshing.")
+        mesh = o3d.geometry.TriangleMesh()
+        o3d.io.write_triangle_mesh(str(dense_mesh_ply), mesh)
 
     elapsed = round(time.time() - t0, 2)
     summary = {
