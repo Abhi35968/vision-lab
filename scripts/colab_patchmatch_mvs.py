@@ -35,28 +35,41 @@ def run_mvs_pipeline(
 
     # 1. Undistort Images
     logger.info("Step 1: Running Image Undistortion...")
-    try:
-        undistort_opts = pycolmap.UndistortCameraOptions()
-        undistort_opts.max_image_size = max_image_size
+    undistort_opts = pycolmap.UndistortCameraOptions()
+    undistort_opts.max_image_size = max_image_size
 
+    try:
         pycolmap.undistort_images(
             output_path=str(mvs_dir),
             input_path=str(sparse_dir),
             image_path=str(images_dir),
             output_type="COLMAP",
-            options=undistort_opts,
+            undistort_options=undistort_opts,
         )
-    except Exception as e:
-        logger.warning(f"pycolmap.undistort_images failed: {e}. Trying CLI fallback...")
-        import subprocess
-        subprocess.run([
-            "colmap", "image_undistorter",
-            "--image_path", str(images_dir),
-            "--input_path", str(sparse_dir),
-            "--output_path", str(mvs_dir),
-            "--output_type", "COLMAP",
-            "--max_image_size", str(max_image_size),
-        ], check=True)
+    except TypeError:
+        # Fallback to positional arguments
+        try:
+            pycolmap.undistort_images(
+                str(mvs_dir),
+                str(sparse_dir),
+                str(images_dir),
+                [],
+                "COLMAP",
+                pycolmap.FileCopyType.copy,
+                -1,
+                undistort_opts,
+            )
+        except Exception as e:
+            logger.warning(f"pycolmap.undistort_images failed: {e}. Trying CLI fallback...")
+            import subprocess
+            subprocess.run([
+                "colmap", "image_undistorter",
+                "--image_path", str(images_dir),
+                "--input_path", str(sparse_dir),
+                "--output_path", str(mvs_dir),
+                "--output_type", "COLMAP",
+                "--max_image_size", str(max_image_size),
+            ], check=True)
     logger.info("Image undistortion complete.")
 
     # 2. PatchMatch Stereo (CUDA accelerated)
