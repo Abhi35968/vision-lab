@@ -166,3 +166,30 @@ class TestDepthAnythingEstimator:
         assert Path(res.summary_json_path).exists()
         assert res.density_multiplier > 0.0
 
+    def test_depth_gradient_filtering_unproject(self):
+        """Verifies that depth gradient filtering eliminates steep edge discontinuities."""
+        estimator = DepthAnythingEstimator()
+        
+        # Synthetic depth: flat plane at Z=1.0 with a steep step jump to Z=5.0
+        h, w = 100, 100
+        depth = np.ones((h, w), dtype=np.float32) * 1.0
+        depth[:, 50:] = 5.0  # Sharp step discontinuity at column 50
+        
+        K = np.array([[100.0, 0, 50], [0, 100.0, 50], [0, 0, 1]], dtype=np.float64)
+        R = np.eye(3)
+        t = np.zeros(3)
+
+        # Without gradient filtering
+        pts_all = estimator.unproject_dense_cloud(
+            depth, R, t, K, stride=1, max_points=10000, max_depth_gradient=None
+        )
+
+        # With depth gradient filtering (relative threshold 0.10)
+        pts_filtered = estimator.unproject_dense_cloud(
+            depth, R, t, K, stride=1, max_points=10000, max_depth_gradient=0.10
+        )
+
+        # Filtered point cloud should discard the steep discontinuity edge pixels
+        assert len(pts_filtered) < len(pts_all)
+        assert len(pts_filtered) > 0
+

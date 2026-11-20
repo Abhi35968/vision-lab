@@ -291,9 +291,11 @@ class DepthAnythingEstimator:
         object_mask: Optional[np.ndarray] = None,
         stride: int = 4,                   # Subsample pixels for CPU performance
         max_points: int = 15000,
+        max_depth_gradient: Optional[float] = None,
     ) -> np.ndarray:
         """
         Unprojects aligned depth pixels into a dense 3D point cloud in world coordinates.
+        Optional max_depth_gradient filters out boundary edge ramps (flying pixels).
         """
         h, w = aligned_depth.shape[:2]
         K_inv = np.linalg.inv(camera_K)
@@ -307,6 +309,16 @@ class DepthAnythingEstimator:
         if object_mask is not None:
             small_mask = object_mask[::stride, ::stride]
             valid_mask = valid_mask & (small_mask > 0)
+
+        # Optional Depth Gradient Filtering: reject flying pixels and boundary edge ramps
+        if max_depth_gradient is not None and max_depth_gradient > 0:
+            z_smooth = cv2.GaussianBlur(aligned_depth.astype(np.float32), (3, 3), 0)
+            gx = cv2.Sobel(z_smooth, cv2.CV_32F, 1, 0, ksize=3)
+            gy = cv2.Sobel(z_smooth, cv2.CV_32F, 0, 1, ksize=3)
+            grad_mag = np.sqrt(gx**2 + gy**2)
+            rel_grad = grad_mag / np.maximum(z_smooth, 1e-4)
+            small_grad_mask = (rel_grad <= max_depth_gradient)[::stride, ::stride]
+            valid_mask = valid_mask & small_grad_mask
 
         xx_v = xx[valid_mask]
         yy_v = yy[valid_mask]

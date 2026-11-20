@@ -48,6 +48,8 @@ class DenseFusionConfig:
     enable_mesh_generation: bool = True   # Poisson surface reconstruction
     poisson_depth: int = 9                # Octree depth for Poisson reconstruction (higher = more detail)
     output_dir: str = "outputs/dense_depth"
+    enable_depth_gradient_filtering: bool = True # Discard edge pixels with steep depth jumps (flying pixels)
+    max_depth_gradient: float = 0.08      # Relative gradient ||grad(Z)||_2 / Z threshold (scale-invariant)
 
     def to_dict(self) -> dict:
         return asdict(self)
@@ -291,6 +293,16 @@ class MultiViewDenseFuser:
 
             inv_z = np.clip(scale_a * depth_rel + b_shift, 1e-4, 10.0)
             metric_z = 1.0 / inv_z
+
+            # Depth Gradient Filtering: reject flying pixels and boundary edge ramps
+            if self.config.enable_depth_gradient_filtering and self.config.max_depth_gradient > 0:
+                z_smooth = cv2.GaussianBlur(metric_z.astype(np.float32), (3, 3), 0)
+                gx = cv2.Sobel(z_smooth, cv2.CV_32F, 1, 0, ksize=3)
+                gy = cv2.Sobel(z_smooth, cv2.CV_32F, 0, 1, ksize=3)
+                grad_mag = np.sqrt(gx**2 + gy**2)
+                rel_grad = grad_mag / np.maximum(z_smooth, 1e-4)
+                grad_valid = rel_grad <= self.config.max_depth_gradient
+                clean_mask = clean_mask & grad_valid
 
             # 4. Unproject masked pixels
             stride = self.config.stride
