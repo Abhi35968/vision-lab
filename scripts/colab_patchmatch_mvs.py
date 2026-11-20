@@ -108,6 +108,7 @@ def run_mvs_pipeline(
         pycolmap.stereo_fusion(
             output_path=str(dense_fused_ply),
             workspace_path=str(mvs_dir),
+            output_type="PLY",
             options=fusion_opts,
         )
     except Exception as e:
