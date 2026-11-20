@@ -35,45 +35,77 @@ def run_mvs_pipeline(
 
     # 1. Undistort Images
     logger.info("Step 1: Running Image Undistortion...")
-    undistort_opts = pycolmap.UndistortCameraOptions()
-    undistort_opts.max_image_size = max_image_size
+    try:
+        undistort_opts = pycolmap.UndistortCameraOptions()
+        undistort_opts.max_image_size = max_image_size
 
-    pycolmap.undistort_images(
-        output_path=str(mvs_dir),
-        input_path=str(sparse_dir),
-        image_path=str(images_dir),
-        output_type="COLMAP",
-        options=undistort_opts,
-    )
+        pycolmap.undistort_images(
+            output_path=str(mvs_dir),
+            input_path=str(sparse_dir),
+            image_path=str(images_dir),
+            output_type="COLMAP",
+            options=undistort_opts,
+        )
+    except Exception as e:
+        logger.warning(f"pycolmap.undistort_images failed: {e}. Trying CLI fallback...")
+        import subprocess
+        subprocess.run([
+            "colmap", "image_undistorter",
+            "--image_path", str(images_dir),
+            "--input_path", str(sparse_dir),
+            "--output_path", str(mvs_dir),
+            "--output_type", "COLMAP",
+            "--max_image_size", str(max_image_size),
+        ], check=True)
     logger.info("Image undistortion complete.")
 
     # 2. PatchMatch Stereo (CUDA accelerated)
     logger.info("Step 2: Running Dense PatchMatch Stereo (CUDA)...")
-    pm_opts = pycolmap.PatchMatchOptions()
-    pm_opts.max_image_size = max_image_size
-    pm_opts.window_radius = 5
-    pm_opts.window_step = 1
-    pm_opts.num_samples = 15
-    pm_opts.num_iterations = 5
-    pm_opts.geom_consistency = True
+    try:
+        pm_opts = pycolmap.PatchMatchOptions()
+        pm_opts.max_image_size = max_image_size
+        pm_opts.window_radius = 5
+        pm_opts.window_step = 1
+        pm_opts.num_samples = 15
+        pm_opts.num_iterations = 5
+        pm_opts.geom_consistency = True
 
-    pycolmap.patch_match_stereo(
-        workspace_path=str(mvs_dir),
-        options=pm_opts,
-    )
+        pycolmap.patch_match_stereo(
+            workspace_path=str(mvs_dir),
+            options=pm_opts,
+        )
+    except Exception as e:
+        logger.warning(f"pycolmap.patch_match_stereo failed: {e}. Trying CLI fallback...")
+        import subprocess
+        subprocess.run([
+            "colmap", "patch_match_stereo",
+            "--workspace_path", str(mvs_dir),
+            "--PatchMatchStereo.geom_consistency", "true",
+            "--PatchMatchStereo.max_image_size", str(max_image_size),
+        ], check=True)
     logger.info("PatchMatch Stereo complete.")
 
     # 3. Stereo Fusion
     logger.info("Step 3: Running Stereo Multi-View Fusion...")
     dense_fused_ply = mvs_dir / "fused.ply"
-    fusion_opts = pycolmap.StereoFusionOptions()
-    fusion_opts.min_num_pixels = min_num_consistent # View consistency check across views
+    try:
+        fusion_opts = pycolmap.StereoFusionOptions()
+        fusion_opts.min_num_pixels = min_num_consistent # View consistency check across views
 
-    pycolmap.stereo_fusion(
-        output_path=str(dense_fused_ply),
-        workspace_path=str(mvs_dir),
-        options=fusion_opts,
-    )
+        pycolmap.stereo_fusion(
+            output_path=str(dense_fused_ply),
+            workspace_path=str(mvs_dir),
+            options=fusion_opts,
+        )
+    except Exception as e:
+        logger.warning(f"pycolmap.stereo_fusion failed: {e}. Trying CLI fallback...")
+        import subprocess
+        subprocess.run([
+            "colmap", "stereo_fusion",
+            "--workspace_path", str(mvs_dir),
+            "--output_path", str(dense_fused_ply),
+            "--StereoFusion.min_num_pixels", str(min_num_consistent),
+        ], check=True)
     logger.info(f"Stereo fusion complete. Saved to {dense_fused_ply}")
 
     # 4. Load Dense Point Cloud & Diagnostics
